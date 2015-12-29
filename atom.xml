@@ -58,8 +58,8 @@
     <link href="http://iiiyu.com/2015/01/20/2014-oh-my-star-app-annual-summary/"/>
     <id>http://iiiyu.com/2015/01/20/2014-oh-my-star-app-annual-summary/</id>
     <published>2015-01-20T15:33:41.000Z</published>
-    <updated>2015-01-21T15:00:35.000Z</updated>
-    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons%E3%80%82org/licenses/by-nc/4%E3%80%820/deed%E3%80%82zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu%E3%80%82com/atom%E3%80%82xml" target="_blank" rel="external">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+    <updated>2015-12-29T18:23:27.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
 <h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>最近啊一堆一堆的人们在晒自己的 App 收入。其实吧，2014年。我也参与弄了个工作以外的 App 出来。不过一直觉得这点收入太低实在不好意思说出来。不过看着大家都晒的好欢乐的样子也忍不住说说。（其实是看见有人垫底儿，哈我就不告诉你是谁）</p>
 <h2 id="Oh_My_Star__u7F18_u8D77"><a href="#Oh_My_Star__u7F18_u8D77" class="headerlink" title="Oh My Star 缘起"></a>Oh My Star 缘起</h2><h3 id="u8F6F_u4EF6_u60F3_u6CD5"><a href="#u8F6F_u4EF6_u60F3_u6CD5" class="headerlink" title="软件想法"></a>软件想法</h3><p>这个想法其实挺早就由各种混沌的想法构成了。最开始的时候是大概 2013 年初左右，现在坐在我旁边的 linjunpop 高富帅他在 Github 上的 Star Repo 已经直逼2000+。王放放童鞋的也快1000+ 的 Star 数量。然后大家就在说做一个 App 来管理啊来管理。不过说归说。对于一群懒癌末期的人来说。说完我们就去联机打游戏去了。</p>
 <p>不过我的 Star 数量也开始变得多起来。得益于我的渣记忆力和 Github 对已经 Star 过的项目的渣搜索能力。经常找一些记得 Star 过的项目，但是它已经淹没在茫茫 Repo 海了。</p>
@@ -92,7 +92,7 @@
 <ol>
 <li>我们是一个 Github 周边应用。如果可以，我很想把章鱼猫给搞进去。但是我们仔细看了 Github 版权和授权。是不可以出现章鱼猫的。</li>
 <li>那不能出现我就想着，出现一部分是可以的吧。所以有个触手。暗喻章鱼猫。</li>
-<li>这个触手在搞毛呢， 在整理星星啊。暗喻我们是一个管理 Github Star 的应用。 </li>
+<li>这个触手在搞毛呢， 在整理星星啊。暗喻我们是一个管理 Github Star 的应用。</li>
 </ol>
 <p>嗯那，这就是我华丽的草图。<br><img src="http://ww4.sinaimg.cn/large/a6d3226bgw1eohj2w7jg2j21kw1kwk9m.jpg" alt=""></p>
 <p>平潇大大就依靠我已经够详细的草图把 Oh My Star 的现在版本的 icon 画好了。<br><img src="http://ww1.sinaimg.cn/large/a6d3226bgw1eohj3axxr6j210y10ctf7.jpg" alt=""><br>(其实吧，现在有一个第三版本的图标哦。这是后话了)</p>
@@ -141,7 +141,7 @@
 <p>答 ： 遥遥无期（遁走）</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons%E3%80%82org/licenses/by-nc/4%E3%80%820/deed%E3%80%82zh_TW">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu%E3%80%82com/atom%E3%80%82xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+    <![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by/4.0/">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
 <h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>最近啊一堆一堆的人们在晒自己的 App 收入。其实吧，2014年。我也参与弄了个工作以外的 App 出来。不过一直觉得这点收入太低实在不好意思说出来。不过看着大家都晒的好欢乐的样子也忍不住说说。（其实是看见有人垫底儿，哈我就不告诉你是谁）</p>
 <h2 id="Oh_My_Star__u7F18_u8D77"><a href="#Oh_My_Star__u7F18_u8D77" class="headerlink" title="Oh My Star 缘起"></a>Oh My Star 缘起</h2><h3 id="u8F6F_u4EF6_u60F3_u6CD5"><a href="#u8F6F_u4EF6_u60F3_u6CD5" class="headerlink" title="软件想法"></a>软件想法</h3><p>这个想法其实挺早就由各种混沌的想法构成了。最开始的时候是大概 2013 年初左右，现在坐在我旁边的 linjunpop 高富帅他在 Github 上的 Star Repo 已经直逼2000+。王放放童鞋的也快1000+ 的 Star 数量。然后大家就在说做一个 App 来管理啊来管理。不过说归说。对于一群懒癌末期的人来说。说完我们就去联机打游戏去了。</p>
 <p>不过我的 Star 数量也开始变得多起来。得益于我的渣记忆力和 Github 对已经 Star 过的项目的渣搜索能力。经常找一些记得 Star 过的项目，但是它已经淹没在茫茫 Repo 海了。</p>

@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><meta name="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计"/><title>iOS笔记 (10) | 萧宸宇</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"/><link rel="stylesheet" type="text/css" href="/css/pure-min.css"/><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css"/><link rel="stylesheet" type="text/css" href="/css/style.css"/><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"/><link rel="alternate" type="application/atom+xml" href="/atom.xml"/></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">iOS笔记 (10)</h1><a id="logo" href="/">萧宸宇</a><p class="description">如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。</p></div><div id="nav-menu"><a href="/" class="current"><i class="icon-home"> 首页</i></a><a href="/archives/"><i class="icon-archive"> 归档</i></a><a href="/about-me/"><i class="icon-about"> 关于</i></a><a href="/atom.xml"><i class="icon-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post post-page"><h1 class="post-title">iOS笔记 (10)</h1><div class="post-meta">2012 Aug 13日 | </div><span data-disqus-identifier="2012/08/13/learning-ios-notes-ten/" class="disqus-comment-count"></span><div class="post-content"><h1 id="u5173_u4E8E_u56DE_u8C03_u51FD_u6570_u2014_u2014Delegate_u7684_u90A3_u4E9B_u4E8B"><a href="#u5173_u4E8E_u56DE_u8C03_u51FD_u6570_u2014_u2014Delegate_u7684_u90A3_u4E9B_u4E8B" class="headerlink" title="关于回调函数——Delegate的那些事"></a>关于回调函数——Delegate的那些事</h1><h2 id="u5E8F"><a href="#u5E8F" class="headerlink" title="序"></a>序</h2><p>iOS笔记也终于迈入两位数之列。在此里程碑下。明显要拿出点诚意来好好写一写。所以，我决定写一下早已改写的delegate。</p>
+<h2 id="u4EC0_u4E48_u662F_u56DE_u8C03_u51FD_u6570"><a href="#u4EC0_u4E48_u662F_u56DE_u8C03_u51FD_u6570" class="headerlink" title="什么是回调函数"></a>什么是回调函数</h2><p>我们先不管delegate，我们先来说说回调函数(callback).<a href="http://zh.wikipedia.org/wiki/回调函数" target="_blank" rel="external">wiki</a>的解释在这里。</p>
+<pre><code>回调函数，或简称回调，是指通过函数参数传递到其它代码的，某一块可执行代码的引用。
+</code></pre><p>好我来说所自己理解过后的解释:</p>
+<ol>
+<li>如果不用回调函数可不可以写程序。(明显可以)</li>
+<li>那为什么要用回调函数这种东西。(现代开发软件过程中其实一直在强调一些相同的东西:抽象、复用)</li>
+<li>复用是为了提高生产效率。提高生产效率，才能创造更大的价值。</li>
+<li>怎么复用——抽象。只用抽象出来的东西才有复用的价值。</li>
+<li>从代码量各种角度来看，回调似乎是复用代码了。但是回调不仅仅如此。更大的作用是解耦。</li>
+<li>解耦简单说来就是让程序结构更好，更容易读，更容易修改，更容易修改的其中一个基本方法。</li>
+<li>回调怎么解耦。A做一把椅子，但是步骤很多。其中一个步骤上漆应该是B来做。因为B是专门做上漆(B有油漆，有刷子，有技术。B持有上漆这个步骤最佳实践)。正确的方法肯定不是A自己去买油漆刷子把这个步骤做了。而是叫B来把这个步骤做好。然后A继续组装椅子。直到椅子做好。 </li>
+</ol>
+<p>扯了这么多。其实就是wiki上解释的哪些而已。如果还不明白，再看一次wiki。再多写写代码吧。</p>
+<a id="more"></a>
+<h2 id="u90A3_u4EC0_u4E48_u662Fdelegate"><a href="#u90A3_u4EC0_u4E48_u662Fdelegate" class="headerlink" title="那什么是delegate"></a>那什么是delegate</h2><p>找了一个比较专业的解释<a href="http://www.uml.org.cn/j2ee/200411036.htm" target="_blank" rel="external">这里</a></p>
+<p>对于delegate不是一个具体的技术，它是一个设计模式。他是面向对象编程思想里面的一种基础方法。好如果你看了我的第一个笔记的话，还记得我描述MVC的比喻么<a href="http://www.iiiyu.com/blog/2012/02/28/learning-ios-notes-one/" target="_blank" rel="external">这里</a>为了描述方便我还是搬运一次来这里把。</p>
+<pre><code>controller一直叫唤狗腿子view，叫view干啥view就干啥。某天，view出事情了，这时候view想
+
+在出事情的时候通知一下controller主子。controller主子也不是没有人性，在controller设置
+
+一个target。这时候要是出现了什么事情view这个狗腿子要发一个action给主子controller就好了。有
+
+时候view狗腿子要和主子controller步调保持一致（synchronize 同步）这个时候要怎么做呢。在
+
+controller里面设置view狗腿的delegate（代表）这个delegate就通过一个protocol来设置
+
+（协议。哈哈 objective-c的语法出现了。）
+
+view狗腿是不会拥有显示的数据，如果狗腿需要数据的时候数据会通过协议来取得。controllers几
+
+乎都是data source（但不是model），因为controller是把model里面的信息格式化以后给view
+
+的。 那model能直接跟controller交流么？答案是不，model必须独立于UI之外。（好一个不为五
+
+斗米折腰）。 那model有一些忠义之言（信息更新）要进谏给controller怎么办。 model就自己想
+
+办法弄了一个广播电台（类似broadcast mechanism广播机制。PS：学过设计模式的童鞋还hold住
+
+么）controllers 或者其他model就可以“收听”到感兴趣的内容。view可能也有“收听”这个功能，
+
+但是很可能收到的不是model这个台。
+</code></pre><p>其实这个故事是根据老头第一课的视频加keynote自己联想出来的。来回顾一下这张经典的keynote<br><img src="http://farm9.staticflickr.com/8448/7780946470_05ee760924.jpg" alt="keynote"></p>
+<ol>
+<li>这个是iOS中MVC的最好诠释</li>
+<li>上面把iOS里面的回调方式常用的都画出来了。只差一个block样式的现代接口。(理论上来说，我应该会把每一个回调都写一篇blog，尽请期待)</li>
+</ol>
+<p>所以，在我理解中MVC三者都是很独立自主的。他们之间的联系就靠这些回调来进行沟通。</p>
+<ol>
+<li>target action</li>
+<li>delegate &amp; data source</li>
+<li>Notification &amp; KVO</li>
+</ol>
+<p>根据我这几个月以来的编写感悟而言，这张keynote真的太经典了。delegate从view回来一般是三个函数(will should did)都是在view的不同阶段进行回调都是很有用的时候。比如view将要显示的时候(带有will的delegate函数)。已经完成了的显示的(带有did的函数)。所以delegate是什么时候用。</p>
+<p>就是view狗腿在可能主子Controller需要知道的时候设置了一种通知方式。可以想象成，从大殿之外飞奔进来一个狗腿说：”报<del>~我准备去抢花姑娘了。圣上有何吩咐”。controller说:”带点长腿 A罩杯的回来” 。然后狗腿飞奔出去办事。过了一会狗腿又飞奔进来:”报</del>~~抢花姑娘回来了，圣上有何吩咐”。controller说:”带到xx宫，洗干净等我”。狗腿的报告主子是可以不理会的。(这句主要是为了解释protocol里面的optional关键字)这个例子可能比较恶趣味+不怎么清楚。但是技术的东西我们还是弄娱乐点吧。</p>
+<h2 id="u5B9E_u73B0delegate"><a href="#u5B9E_u73B0delegate" class="headerlink" title="实现delegate"></a>实现delegate</h2><p>ok，说了这么多的东西。我主要想解释为什么会有delegate这种东西。它的应用场景。接下来，我会借助这些文章:</p>
+<p><a href="http://marshal.easymorse.com/tech/objc-委托模式" target="_blank" rel="external">文章1</a></p>
+<p><a href="http://haoxiang.org/2011/08/ios-delegate-and-protocol/" target="_blank" rel="external">文章2</a> </p>
+<p><a href="http://popcornylu.blogspot.com/2011/07/delegate.html" target="_blank" rel="external">文章3</a> </p>
+<p>来上面的例子来解释怎么用delegate。</p>
+<p>对于delegate不是一个具体的技术，它是一个设计模式。这是我上篇开头说的。那objective-c当中怎么实现delegate呢。用protocol。</p>
+<p>一般会这样写</p>
+<p>狗腿.h</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">MyClassDelegate</span> &lt;<span class="title">NSObject</span>&gt;</span></span><br><span class="line"><span class="keyword">@optional</span></span><br><span class="line">- (<span class="keyword">void</span>) will抢花姑娘:(MyClass*)myClass;</span><br><span class="line">- (<span class="keyword">void</span>) did抢花姑娘:(MyClass *)myClass;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MyClass</span></span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">id</span>&lt;MyClassDelegate&gt; delegate;</span><br><span class="line">    FlowerGirl *flowerGirl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) delegate;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) flowerGirl;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>这里为什么要用weak。<a href="http://popcornylu.blogspot.com/2011/07/delegate.html" target="_blank" rel="external">这里</a>有详细的分析。自备云梯</p>
+<p>还有一个注意的地方是optional这个key，如果没有这个key，那成为这个狗腿的主子都要把这些方法实现了(比如xxx侵犯了我朝领土，请圣上发令。这种肯定要处理，不处理的话就是臭sb。不配做老大)。而有这个key的话，在这个key(上面的方法一定实现)，key下面的方法是可选的不必一定实现(比如抢来花姑娘，可以不去做任何动作)。</p>
+<p>这样，我们就完成了狗腿的delegate声明。</p>
+<p>狗腿.m</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="variable">@implementation</span> MyClass</span><br><span class="line"></span><br><span class="line"><span class="function">-</span>(void) 抢花姑娘</span><br><span class="line">&#123;</span><br><span class="line">	    <span class="tag">if</span> ([self.delegate <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(will抢花姑娘:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.delegate will抢花姑娘:self]</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// do something 出去抢花姑娘</span></span><br><span class="line">    <span class="comment">// 并且抢到了</span></span><br><span class="line">    </span><br><span class="line">    	if ([self.delegate <span class="attribute">respondsToSelector</span>:<span class="variable">@selector</span>(did抢花姑娘:)]) &#123;</span><br><span class="line">        <span class="attr_selector">[self.delegate did抢花姑娘:self]</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">@end</span></span><br></pre></td></tr></table></figure>
+<p>这里要注意的是[self.delegate respondsToSelector:xxx]方法。这个方法用于检验主子有没有实现xxx方法，如果实现了，在做xxx。没有没有实现的话就不做xxx了。如代码所示.</p>
+<p>主子.m</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> 主子()&lt;<span class="title">MyClassDelegate</span>&gt;</span>&#123;</span><br><span class="line">    MyClass *myClass;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> 主子</span></span><br><span class="line">- (<span class="keyword">void</span>)init</span><br><span class="line">&#123;</span><br><span class="line">   ...</span><br><span class="line">   myClass = [MyClass new];</span><br><span class="line">   myClass<span class="variable">.delegate</span> = <span class="keyword">self</span>;</span><br><span class="line">   [myClass 抢花姑娘];</span><br><span class="line">   ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>) will抢花姑娘:(MyClass*)myClass</span><br><span class="line">&#123;</span><br><span class="line">    myClass<span class="variable">.flowerGirl</span> = flowerGirl(腿长，A);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>) did抢花姑娘:(MyClass *)myClass</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">self</span> 送去xxx宫:myClass<span class="variable">.flowerGirl</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>具体就是这样。代码是伪码一般，只是写着写着就想着对应我的恶趣味例子。鄙视一下自己。</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>我觉得我扯了这么多，包括贴出来的文章地址看完以后，你应该对delegate有一个感性的认识了把。如果你对blog内容有满意or不满意和错误的地方。欢迎指出。我一定改进。谢谢。</p>
+</div><div class="tags"><a href="/tags/iOS/">iOS</a></div><div class="post-nav"><a href="/2012/09/02/learning-ios-notes-eleven/" class="pre"><i class="icon-previous">iOS笔记 (11)</i></a><a href="/2012/08/12/learning-ios-notes-nine/" class="next">iOS笔记 (9)<i class="icon-next"></i></a></div><div id="disqus_thread"><script>var disqus_shortname = 'iyunsn';
+var disqus_identifier = '2012/08/13/learning-ios-notes-ten/';
+var disqus_title = 'iOS笔记 (10)';
+var disqus_url = 'http://iiiyu.com/2012/08/13/learning-ios-notes-ten/';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//iyunsn.disqus.com/count.js" async="async"></script></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><input placeholder="Search" type="text" class="st-default-search-input"/></div><div class="widget"><div class="widget-title">标签</div><div class="tagcloud"><a href="/tags/just-talk/" style="font-size: 15px;">just-talk</a> <a href="/tags/Software/" style="font-size: 15px;">Software</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/read-book-notes/" style="font-size: 15px;">read book notes</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a> <a href="/tags/Design/" style="font-size: 15px;">Design</a> <a href="/tags/Emacs/" style="font-size: 15px;">Emacs</a></div></div><div class="widget"><div class="widget-title">最新文章</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/01/31/read-the-tipping-point/">读书笔记 「引爆点」</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/20/2014-oh-my-star-app-annual-summary/">2014年 Oh My Star 总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/16/read-contagious/">读书笔记 「疯传」</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/12/26/learning-ios-notes-thirty-six/">iOS 学习笔记 (36)  ReactiveCocoa 用 RACSignal 替代 Delegate</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/10/20/iCloud-and-iCloud-Drive/">iCloud 和 iCloud Drive</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/04/23/learn-ui-design-two/">怎样使用Sketch 3切图 —— 从想入设计大门的菜逼进化到切图仔（未完成）</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/04/08/learning-ios-notes-thirty-five/">iOS笔记(35) 格志周年系列之夏令时(三) 临时花絮</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/03/25/learn-ui-design-one/">学习UI设计笔记(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/03/19/learning-ios-notes-thirty-four/">iOS笔记(34) 格志周年系列之夏令时(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/03/18/learning-ios-notes-thirty-three/">iOS笔记(33) 格志周年系列之夏令时(一)</a></li></ul></div><div class="widget"><div class="widget-title">最近评论</div><script type="text/javascript" src="//iyunsn.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title">友情链接</div><ul></ul><a href="http://www.ohmystarapp.com/" title="Oh My Star" target="_blank">Oh My Star</a><ul></ul><a href="http://griddiaryapp.com" title="Grid Diary" target="_blank">Grid Diary</a></div></div></div></div><div id="footer">© <a href="/" rel="nofollow">萧宸宇.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div><a id="rocket" href="#top" class="show"></a><script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/js/totop.js" type="text/javascript"></script><script src="/js/fancybox.pack.js" type="text/javascript"></script>
+<script src="/js/jquery.fancybox.js" type="text/javascript"></script><link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css"><script>(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+_st('install','Nm83mrKyygUM42socQtA','2.0.0');
+</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-29764460-1','auto');ga('send','pageview');
+</script></div></body></html>

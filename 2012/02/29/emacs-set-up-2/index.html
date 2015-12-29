@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><meta name="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计"/><title>调教Emacs(二)——更好 更强 更快 | 萧宸宇</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"/><link rel="stylesheet" type="text/css" href="/css/pure-min.css"/><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css"/><link rel="stylesheet" type="text/css" href="/css/style.css"/><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"/><link rel="alternate" type="application/atom+xml" href="/atom.xml"/></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">调教Emacs(二)——更好 更强 更快</h1><a id="logo" href="/">萧宸宇</a><p class="description">如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。</p></div><div id="nav-menu"><a href="/" class="current"><i class="icon-home"> 首页</i></a><a href="/archives/"><i class="icon-archive"> 归档</i></a><a href="/about-me/"><i class="icon-about"> 关于</i></a><a href="/atom.xml"><i class="icon-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post post-page"><h1 class="post-title">调教Emacs(二)——更好 更强 更快</h1><div class="post-meta">2012 Feb 29日 | </div><span data-disqus-identifier="2012/02/29/emacs-set-up-2/" class="disqus-comment-count"></span><div class="post-content"><h1 id="u66F4_u597D__u66F4_u5F3A__u66F4_u5FEB"><a href="#u66F4_u597D__u66F4_u5F3A__u66F4_u5FEB" class="headerlink" title="更好 更强 更快"></a>更好 更强 更快</h1><p><a href="/blog/2012/02/26/emacs-set-up-1/">上次</a>的那些操作只能让你存活下来。</p>
+<p>现在让我们感觉更好一些。</p>
+<p>有时候，你可能按了一次C-c或者M-x。然后发现自己按错了。想消除这些命令这时候你可是使用</p>
+<pre><code>C-g 取消操作
+</code></pre><p>如果你不确定你现在按没有按命令。你可以狂按几次C-g。</p>
+<a id="more"></a>
+<h2 id="u5149_u6807_u79FB_u52A8"><a href="#u5149_u6807_u79FB_u52A8" class="headerlink" title="光标移动"></a>光标移动</h2><h3 id="u66F4_u597D_u7684_u5149_u6807_u79FB_u52A8"><a href="#u66F4_u597D_u7684_u5149_u6807_u79FB_u52A8" class="headerlink" title="更好的光标移动"></a>更好的光标移动</h3><pre><code>C-a 行首
+C-e 行尾
+M-f 下一个单词
+M-b 上一个单词
+</code></pre><h3 id="u66F4_u5FEB_u7684_u5149_u6807_u79FB_u52A8"><a href="#u66F4_u5FEB_u7684_u5149_u6807_u79FB_u52A8" class="headerlink" title="更快的光标移动"></a>更快的光标移动</h3><pre><code>M-m 移动到第一个非空格字符 (back-to-indentation)
+M-a 句子头
+M-e 句子尾
+M-{ 段落头
+M-} 段落尾
+C-v 下一页
+M-v 上一页
+M-&lt; 文件头
+M-&gt; 文件尾 
+M-r 窗口中间
+M-x goto-char RET N 文件的第 N 字节
+M-x goto-line RET N 文件第 N 行
+</code></pre><h3 id="u66F4_u5F3A_u7684_u5149_u6807_u79FB_u52A8"><a href="#u66F4_u5F3A_u7684_u5149_u6807_u79FB_u52A8" class="headerlink" title="更强的光标移动"></a>更强的光标移动</h3><pre><code>C-M-a 到函数头
+C-M-e 到函数尾
+C-M-f 到下一个同级语法结构 
+C-M-b 到上一个同级语法结构
+C-M-d 进入到下一级结构里
+C-M-u 进入到上一级结构里
+</code></pre><p>   文档一般都有各种结构，比如LISP里有S表达式，C语言里的函数，LaTeX 里的 \begin{…}…\end{…} … 如果我们能够已文档的语法单位来移动，就会使操作非常高效。</p>
+<p>   defun。efun 在 LISP 里就是最高一级的 sexp，而在 C 语言里，它的含义就是函数。</p>
+<p>C-M-a   到 defun 头<br>C-M-e   到 defun 尾</p>
+<p>这样，我们在C语言程序里可以一个函数一个函数的跳过。也可以从一个函数中间一下跳到函数开头或末尾。</p>
+<p>语法单位(sexp)。语法单位在各种 major mode 有不同的定义：</p>
+<p>lisp-mode: 一个S表达式。</p>
+<p>c-mode: 一个变量名，一个 (…), 一个 {…}, 一个 […], …<br>所以在 Emacs 里，寻找匹配的括号可以在括号处使用 C-M-f 和 C-M-b.</p>
+<p>Gnus: 一个thread。包括所有的 Re:<br>其实 defun 可以被看作最高一级的 sexp。所以范围小一点的移动操作就是在同级 sexp 之间移动。</p>
+<p>C-M-f   到下一个同级语法结构<br>C-M-b   到上一个同级语法结构</p>
+<p>注意，这种移动不能越过语法结构的边界而进入上一级结构。所以，你如果在</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="built_in">i</span>=<span class="number">0</span>; <span class="built_in">i</span>&lt;<span class="number">10</span>; <span class="built_in">i</span>++) <span class="cell">&#123; ...&#125;</span></span><br></pre></td></tr></table></figure>
+<p>的 for 循环的括号里向右移动，到达右边括号时，就会被提示到达边界。<br>注意，文档中的注释在这两个操作中会被跳过，这是非常方便的。</p>
+<p>进入和退出子结构:</p>
+<p>在LISP中，S表达式是嵌套的括号，进入子结构就是进入到这一级 (…) 里面。而在 C 语言中，进入子结构就是进入 (…), {…}, […] 的里面。 C-M-d: 进入到下一级结构里。C-M-u: 进入到上一级结构里。</p>
+<p>C-M-a, C-M-e, C-M-f, C-M-b, C-M-d, C-M-u 这几个命令组合起来可以迅速的在程序里移动。往往手可以按住 C-M 不放，所以还是很顺手的。</p>
+<p>如果你还对光标移动欲罢不能，<a href="http://mmmyddd.freeshell.net/wiki/emacs/moving-cursor.html" target="_blank" rel="external">这里</a>有高清大图让你慢慢把玩。</p>
+<h2 id="u64CD_u4F5C"><a href="#u64CD_u4F5C" class="headerlink" title="操作"></a>操作</h2><pre><code>C-g 取消操作
+C-space = C-@ 选择操作区
+C-d 删除一个字符
+M-d 删除一个单词
+C-u xxx 多次命令
+C-k 删除到尾
+C-w 删除区域
+M-w 复制区域
+C-y 粘贴
+
+M-0 C-y 向前剪切
+M-z x 从光标删除到第一x
+
+
+C-s 搜索
+C-r 逆向搜索
+C-M-s 正则搜索
+
+M-x replace-string 替换文本
+</code></pre><p>其实不管是Emacs还是Vim。这些动作你都要在不断的使用中变成下意识的动作。这样，你在键盘上的效率就会越来越高。</p>
+<p>随便说一句，推荐学Emacs的原因还有。在终端里面我用过的bash和zsh都是支持Emacs按键的。Mac OS里面所有的文本输入框也是部分支持Emacs的。虽然man等是支持vim的按键方式，可是我们不是还有info是Emacs的方式么。</p>
+</div><div class="tags"><a href="/tags/Emacs/">Emacs</a></div><div class="post-nav"><a href="/2012/03/05/learning-ios-notes-two/" class="pre"><i class="icon-previous">iOS笔记 (2)</i></a><a href="/2012/02/28/learning-ios-notes-one/" class="next">iOS笔记 (1)<i class="icon-next"></i></a></div><div id="disqus_thread"><script>var disqus_shortname = 'iyunsn';
+var disqus_identifier = '2012/02/29/emacs-set-up-2/';
+var disqus_title = '调教Emacs(二)——更好 更强 更快';
+var disqus_url = 'http://iiiyu.com/2012/02/29/emacs-set-up-2/';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//iyunsn.disqus.com/count.js" async="async"></script></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><input placeholder="Search" type="text" class="st-default-search-input"/></div><div class="widget"><div class="widget-title">标签</div><div class="tagcloud"><a href="/tags/just-talk/" style="font-size: 15px;">just-talk</a> <a href="/tags/Software/" style="font-size: 15px;">Software</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/read-book-notes/" style="font-size: 15px;">read book notes</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a> <a href="/tags/Design/" style="font-size: 15px;">Design</a> <a href="/tags/Emacs/" style="font-size: 15px;">Emacs</a></div></div><div class="widget"><div class="widget-title">最新文章</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/01/31/read-the-tipping-point/">读书笔记 「引爆点」</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/20/2014-oh-my-star-app-annual-summary/">2014年 Oh My Star 总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/16/read-contagious/">读书笔记 「疯传」</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/12/26/learning-ios-notes-thirty-six/">iOS 学习笔记 (36)  ReactiveCocoa 用 RACSignal 替代 Delegate</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/10/20/iCloud-and-iCloud-Drive/">iCloud 和 iCloud Drive</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/04/23/learn-ui-design-two/">怎样使用Sketch 3切图 —— 从想入设计大门的菜逼进化到切图仔（未完成）</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/04/08/learning-ios-notes-thirty-five/">iOS笔记(35) 格志周年系列之夏令时(三) 临时花絮</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/03/25/learn-ui-design-one/">学习UI设计笔记(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/03/19/learning-ios-notes-thirty-four/">iOS笔记(34) 格志周年系列之夏令时(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2014/03/18/learning-ios-notes-thirty-three/">iOS笔记(33) 格志周年系列之夏令时(一)</a></li></ul></div><div class="widget"><div class="widget-title">最近评论</div><script type="text/javascript" src="//iyunsn.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title">友情链接</div><ul></ul><a href="http://www.ohmystarapp.com/" title="Oh My Star" target="_blank">Oh My Star</a><ul></ul><a href="http://griddiaryapp.com" title="Grid Diary" target="_blank">Grid Diary</a></div></div></div></div><div id="footer">© <a href="/" rel="nofollow">萧宸宇.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div><a id="rocket" href="#top" class="show"></a><script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/js/totop.js" type="text/javascript"></script><script src="/js/fancybox.pack.js" type="text/javascript"></script>
+<script src="/js/jquery.fancybox.js" type="text/javascript"></script><link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css"><script>(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+_st('install','Nm83mrKyygUM42socQtA','2.0.0');
+</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-29764460-1','auto');ga('send','pageview');
+</script></div></body></html>

@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[萧宸宇]]></title>
+  <subtitle><![CDATA[如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://iiiyu.com/"/>
+  <updated>2015-02-05T02:27:00.000Z</updated>
+  <id>http://iiiyu.com/</id>
+  
+  <author>
+    <name><![CDATA[ChenYu Xiao]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[读书笔记 「引爆点」]]></title>
+    <link href="http://iiiyu.com/2015/01/31/read-the-tipping-point/"/>
+    <id>http://iiiyu.com/2015/01/31/read-the-tipping-point/</id>
+    <published>2015-01-31T15:08:19.000Z</published>
+    <updated>2015-02-05T02:27:00.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons%E3%80%82org/licenses/by-nc/4%E3%80%820/deed%E3%80%82zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu%E3%80%82com/atom%E3%80%82xml" target="_blank" rel="external">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>嗯，在一月的最后一天的最后一个小时开始写这篇读书笔记。也就算做这个月输出了3篇 blog。如果对比2014年这种令人发指的输出量来说。对于自己不得不说是一个巨大的进步。</p>
+<p>这本「引爆点」是在去上海开年会的来回路程上扫完的。顺便说一句，Sumi 除了Kevin Cao。其它全部在上海喝了残血回程的。 我还内伤了回来在医院躺了2天。 这是后话了。可见战斗力下降的厉害。</p>
+<p>最近我看书，一边看、一边会去联系一堆事物进行思考。因此现在的读书笔记也是想到什么写什么。并不是上学时候那种读书笔记顺序条例整齐的。算做观后随笔之类的吧。</p>
+<p>最后的一句扯淡，我不应该怎么晚才看到这本书。</p>
+<a id="more"></a>
+<h2 id="u5173_u4E8E_u672C_u4E66"><a href="#u5173_u4E8E_u672C_u4E66" class="headerlink" title="关于本书"></a>关于本书</h2><p>由于我断网了，所以我无法查询到「引爆点」的成书时间。不过根据书里面的各种信息透露。我推断「引爆点」成书应该在2000年之前，1996年以后。说这个的原因是说，现在的和过去不久的一些流行过的概念。应该都出自此书。比如影响里面最深刻的破窗效应。比如罗永浩说过的搞定最前面的一拨人就能引发流行的理论。（插一句2014年的老罗单口相声还没看呢）</p>
+<p>所以，很多人应该很早前就看过本书。并且从书里面学到了很多智慧来运用在日常的生活当中。而且就拿出里面的片段出来都可以变成单独的流行文章。所以，我不应该怎么晚才看到这本书。暴露出自己最近10年来的阅读量远远小于自己设定的的阅读量。</p>
+<p>如果还没有看过「引爆点」，强烈推荐。</p>
+<h2 id="u4F9D_u65E7_u662F_u5728_u7814_u7A76_u4EBA_u554A"><a href="#u4F9D_u65E7_u662F_u5728_u7814_u7A76_u4EBA_u554A" class="headerlink" title="依旧是在研究人啊"></a>依旧是在研究人啊</h2><p>前两天才说过，貌似除了自然学科。其他的都是在研究人。对人和人性的探究，从 DNA 到思想。</p>
+<p>我觉得「引爆点」的作者马尔科姆·格拉德威尔应该是试图从科学的角度系统的说明为何一个东西会在某个标准性的时间或者事件以后成为流行的原因。</p>
+<p>马尔科姆·格拉德威尔选择的所有例子都是围绕着社会问题来进行选择的。美国独立战争的开端、普通大众流行的鞋子、及其成功学前儿童所看的电视节目、吸烟吸毒、整顿地铁降低犯罪率、小岛上的自杀等等。方向并不单一。而且我经常在国外的书里面看到，在大学里面进行的志愿者实验来佐证自己的观点。我从来没有听说过我的大学有进行过类似为了科学研究一个事情用这样的随机普通样本进行的试验。仅从这点上来看，天朝的大学离现代正在的大学差距不是一星半点。当然可能我读的大学和能接触到的大学都比较low。有以偏概全的嫌疑。不过我还是坚持这种天朝所有大学离真正的科学、民主、自由的现代大学有十万八千里的距离的观点。</p>
+<p>继续扯远一些，其实现代文明社会和天朝都有在研究人。但是给我的感觉是孑然不同的。我的感觉现代文明社会研究人，把每个人都当作一个独立的个体来研究。不管怎么样，是伟大、普通平凡、还是十恶不赦。在当作科学来研究的时候。都是平等的。但是天朝不是，天朝是啥。就自己感受吧。</p>
+<h2 id="u300C_u5F15_u7206_u70B9_u300D_u548C__u300C_u539A_u9ED1_u5B66_u300D"><a href="#u300C_u5F15_u7206_u70B9_u300D_u548C__u300C_u539A_u9ED1_u5B66_u300D" class="headerlink" title="「引爆点」和 「厚黑学」"></a>「引爆点」和 「厚黑学」</h2><p>两个毫不相关的书，在我心里却有一些联系。</p>
+<p>「引爆点」看完以后我发现其实它根本没有直接跟互联网跟移动互联网有半毛钱的关系。但是它确实是在这个圈子里倍受推崇。看封面和封腰都有一堆大佬什么联袂推荐，很是反感。为什么呢，因为如果理解了流行的趋势，做出了倍受欢迎的互联网产品这都是金灿灿的钱钱啊，能不倍受推崇么。可是在我心里就有这么觉得变扭呢。我觉得马尔科姆·格拉德威尔写这本书，更加想解决的是能不能降低未成年人吸烟吸毒的人数。能不能提高儿童学习的效率。能不能降低城市的犯罪概率等等。简单来说就是如何运用这些原理来拯救世界。但是却被安利来做赚钱的东西。简单说来就是杀鸡用牛刀、高射炮打蚊子。说不出的别扭。</p>
+<p>同样的情况发生在我看完「厚黑学」以后。在看之前我对「厚黑学」的想象是这是一本教人如何黑心假面的书。如何教人变成一个油腔滑调的人的书。在我的幼稚的心智里面觉得是一本贬义的书，一本黑暗的书。但是我某天无聊买回来看完以后觉得我靠真的可以算一本奇书。书里提到的方法和写下的当时的环境。作者提出的厚黑之术居然是为了拯救当时千疮百孔、摇摇欲坠的中国。而且按照我认知里面推算，应该是可行的方案。也就是说，「厚黑学」我觉得能算做国术，是有大智慧的。一个具有大智慧的治国之术在天朝大地流行的原因跟无数人挤破脑袋要去考公务员的原因是一样的时候，心中泛起当下所在的天朝是多么的荒诞无稽。</p>
+<p>所以这两本书都给我一种作者是心怀天下交出了绝世武功本想要世人拯救世界，却被世人天天拿来打野鸡烤了吃。</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>貌似我的记忆方法一直有问题，所以我有些事情会相当的记不住。人名就算一个。特别是国外翻译的人名。我脑子里面几乎就没几个。挤破脑袋只能想起K·K叫凯文·凯利。现在，我应该郑重的多记忆几次马尔科姆·格拉德威尔。今年应该会把他的几本书都扫一遍。</p>
+<p>最后 ，「引爆点」5星推荐。并不是因为它可以让你一下就能做出个淘宝爆款出来。而是书里用科学的态度来说明了我们世界里面一些真实运作的原理。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons%E3%80%82org/licenses/by-nc/4%E3%80%820/deed%E3%80%82zh_TW">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu%E3%80%82com/atom%E3%80%82xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>嗯，在一月的最后一天的最后一个小时开始写这篇读书笔记。也就算做这个月输出了3篇 blog。如果对比2014年这种令人发指的输出量来说。对于自己不得不说是一个巨大的进步。</p>
+<p>这本「引爆点」是在去上海开年会的来回路程上扫完的。顺便说一句，Sumi 除了Kevin Cao。其它全部在上海喝了残血回程的。 我还内伤了回来在医院躺了2天。 这是后话了。可见战斗力下降的厉害。</p>
+<p>最近我看书，一边看、一边会去联系一堆事物进行思考。因此现在的读书笔记也是想到什么写什么。并不是上学时候那种读书笔记顺序条例整齐的。算做观后随笔之类的吧。</p>
+<p>最后的一句扯淡，我不应该怎么晚才看到这本书。</p>]]>
+    
+    </summary>
+    
+      <category term="read book notes" scheme="http://iiiyu.com/tags/read-book-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2014年 Oh My Star 总结]]></title>
+    <link href="http://iiiyu.com/2015/01/20/2014-oh-my-star-app-annual-summary/"/>
+    <id>http://iiiyu.com/2015/01/20/2014-oh-my-star-app-annual-summary/</id>
+    <published>2015-01-20T15:33:41.000Z</published>
+    <updated>2015-01-21T15:00:35.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons%E3%80%82org/licenses/by-nc/4%E3%80%820/deed%E3%80%82zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu%E3%80%82com/atom%E3%80%82xml" target="_blank" rel="external">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>最近啊一堆一堆的人们在晒自己的 App 收入。其实吧，2014年。我也参与弄了个工作以外的 App 出来。不过一直觉得这点收入太低实在不好意思说出来。不过看着大家都晒的好欢乐的样子也忍不住说说。（其实是看见有人垫底儿，哈我就不告诉你是谁）</p>
+<h2 id="Oh_My_Star__u7F18_u8D77"><a href="#Oh_My_Star__u7F18_u8D77" class="headerlink" title="Oh My Star 缘起"></a>Oh My Star 缘起</h2><h3 id="u8F6F_u4EF6_u60F3_u6CD5"><a href="#u8F6F_u4EF6_u60F3_u6CD5" class="headerlink" title="软件想法"></a>软件想法</h3><p>这个想法其实挺早就由各种混沌的想法构成了。最开始的时候是大概 2013 年初左右，现在坐在我旁边的 linjunpop 高富帅他在 Github 上的 Star Repo 已经直逼2000+。王放放童鞋的也快1000+ 的 Star 数量。然后大家就在说做一个 App 来管理啊来管理。不过说归说。对于一群懒癌末期的人来说。说完我们就去联机打游戏去了。</p>
+<p>不过我的 Star 数量也开始变得多起来。得益于我的渣记忆力和 Github 对已经 Star 过的项目的渣搜索能力。经常找一些记得 Star 过的项目，但是它已经淹没在茫茫 Repo 海了。</p>
+<p>一直到大概2013年8月份的时候。我感觉吧，我特别需要一个管理 Github Star 的工具。没有怎么办，自己做呗。</p>
+<p>鉴于我的渣编程能力和懒癌末期，我决定拖一个人来一起弄。所以，我把我师兄 Noark9 忽悠下水了。</p>
+<a id="more"></a>
+<h3 id="u540D_u5B57"><a href="#u540D_u5B57" class="headerlink" title="名字"></a>名字</h3><p>名字其实我挺早前就想好的，追述到我第一次使用 Oh My Zsh 的时候。惊为天人。感觉这个 shell 真她妈的叼。又再次鉴于我渣一般的洋文能力。我那会暗暗下定决心。我以后的项目都要叫 Oh My XXX。 简单又好记。还是向 Oh My Zsh 的致敬。（这个想法在微博上被萌妹子 Gril iOS 一语道破。这是后话。然后出现了也喜欢用 Oh My XXX 来命名自己项目的16岁少年 NSTongG，这更是后后话了 ）</p>
+<p>所以，霸气的确定 这个管理 Github Star 的 App。名字叫做 Oh My Star。</p>
+<h2 id="u524D_u671F_u8C03_u7814"><a href="#u524D_u671F_u8C03_u7814" class="headerlink" title="前期调研"></a>前期调研</h2><p>要钱没钱，要啥没啥。就有个想法，做个东西。还要忽悠其他人来做。这个不靠谱啊不靠谱，所以我装模作样的做了一下号称是前期调研的东西去忽悠我师兄。</p>
+<p>我大概查看了一下 Github 的 ALEXA 排名。然后用 IP 数量加上预估拥有 Mac 的人的数量再乘了一个极小的百分比。得到最终 Oh My Star 的用户在1万用户到2万用户之间。</p>
+<p>按照1万用户，9.9刀的定价计算</p>
+<blockquote>
+<p>10000 x 9.9 x 6.1 x 0.7  = 422730 rmb</p>
+</blockquote>
+<p>五五分以后，一人有20万耶。</p>
+<p>马上就可以迎娶白富美，当上 CEO。走向人生巅峰了哦。</p>
+<p>Noark9 被成功忽悠。 Get it.</p>
+<h2 id="u7EA0_u7ED3_u7684_u63A8_u8FDB"><a href="#u7EA0_u7ED3_u7684_u63A8_u8FDB" class="headerlink" title="纠结的推进"></a>纠结的推进</h2><h3 id="u5F00_u53D1"><a href="#u5F00_u53D1" class="headerlink" title="开发"></a>开发</h3><p>在幻想了人生巅峰以后。我们两个开始着手开发来着。那会我 iOS 都没有玩溜，Noark9 刚刚购买了 Macbook Air 的两个 OS X 初哥就开始吭哧吭哧写代码了。</p>
+<p>我算懂一点点 Cocoa Touch。但是点开 Cocoa 的类。各种傻眼。还是她妈的很不一样啊。随便调用一下跟预期不符合啊。我熟悉的 ViewCotnroller 呢。 怎么拖出来怪怪的。怎么随便拖个 TextField 会多个东西嵌套着。然后，格志爆 iCloud bug 了。恩我跟师兄说了声去去就回，然后就留下我师兄一个人吭哧吭哧的弄了。去的时候喵了一眼恩，我师兄还在装 Ruby 呢。(我这么黑他不会被砍死哈)</p>
+<p>过程就是各种腥风血雨啊。无数次想要放弃都是师兄抗过来了啊。（我就主要弄了下 Core Data 和 iCloud 部分）</p>
+<p>所以 iOS 和 OS X 其实很不一样。从使用方式到产品设计再到代码编写。我倾向于认为他们是两套系统。只是恰好都使用了 Objective - C 而已（那会没有 发布 Swift好吧）当然目前两者开始大规模融合。不过我认为因为使用场景的不同，再设计产品的时候依然需要认为是两套系统。</p>
+<h3 id="u8BBE_u8BA1"><a href="#u8BBE_u8BA1" class="headerlink" title="设计"></a>设计</h3><p>程序员写程序最怕啥。 做出来丑的像坨翔。师兄说这个样子看着不行啊。这么丑谁会花9.9刀买呢。 没人买，怎么去取自己的白富美啊。被师兄这么一说我也是鸭梨很大啊。所以我暗暗下定决心，不能让 Oh My Star 看起来太丑。</p>
+<h4 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h4><p>当时我们大 Sumi 还是有全职设计师的哦。还是妹子哦。于是我花了两顿 KFC 的代价。忽悠了我们张玲玲同学来画 Oh My Star 的 UI。期间又不定期花费若干干锅田鸡、KFC 等资源。</p>
+<h4 id="u56FE_u6807"><a href="#u56FE_u6807" class="headerlink" title="图标"></a>图标</h4><p>现在的图标是第二个版本。</p>
+<p>第一个版本是我先用了一天学习了一下 Sketch。然后花了 2-3 天鲁了一个图标出来。像这样的<br><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1eohixrvbz4j212m13y0we.jpg" alt=""></p>
+<p>我会告诉你这个五角星的角度我算了几页草稿纸</p>
+<p>后面上线以后有人说跟 QQ 空间一样一样的。然后师兄就开始用幽怨的眼神看我。意思是说操谁会花9.9刀买个 QQ 空间啊。这样我的白富美是娶不上了。我又再次暗暗下定决心，不能让 Oh My Star 的 icon 看起来太丑。</p>
+<p>可是我画的师兄不满意啊。愁死我了。最后没办法我就在微博上找设计师啊。一个一个厚颜无耻的发私信过去说我是小鲜肉啊。赶紧点我点我啊。人家一看这是神经病吧，一开始没人理我。睡了一天晚上起来，后来有个设计师回复我了。是平潇大大。然后我就画了一个极其华丽的草图过去给他。</p>
+<p>解释一下我的意图：</p>
+<ol>
+<li>我们是一个 Github 周边应用。如果可以，我很想把章鱼猫给搞进去。但是我们仔细看了 Github 版权和授权。是不可以出现章鱼猫的。</li>
+<li>那不能出现我就想着，出现一部分是可以的吧。所以有个触手。暗喻章鱼猫。</li>
+<li>这个触手在搞毛呢， 在整理星星啊。暗喻我们是一个管理 Github Star 的应用。 </li>
+</ol>
+<p>嗯那，这就是我华丽的草图。<br><img src="http://ww4.sinaimg.cn/large/a6d3226bgw1eohj2w7jg2j21kw1kwk9m.jpg" alt=""></p>
+<p>平潇大大就依靠我已经够详细的草图把 Oh My Star 的现在版本的 icon 画好了。<br><img src="http://ww1.sinaimg.cn/large/a6d3226bgw1eohj3axxr6j210y10ctf7.jpg" alt=""><br>(其实吧，现在有一个第三版本的图标哦。这是后话了)</p>
+<h4 id="u5B98_u7F51"><a href="#u5B98_u7F51" class="headerlink" title="官网"></a>官网</h4><p><a href="http://ohmystarapp.com" target="_blank" rel="external">官网</a>的介绍是我写了中文，师兄以及贺锦同学帮忙翻译的。官网是我找了我高中同学夔大做的。官网之所以这么丑，是因为我真的找不到人来设计了。555。师兄我尽力了。</p>
+<h4 id="u89C6_u9891"><a href="#u89C6_u9891" class="headerlink" title="视频"></a>视频</h4><p>由于官网太丑。洋文介绍也不知道介绍清楚没有。我决定，弄个视频出来。然后我花了一天晚上写了个剧本。花了一下午录制了一下。花了几天学习了一下 iMovie 然后做出来了现在官网上的<a href="http://vimeo.com/83384649" target="_blank" rel="external">那个视频</a>。</p>
+<h2 id="u63A8_u5E7F"><a href="#u63A8_u5E7F" class="headerlink" title="推广"></a>推广</h2><p>当上线以后，我以为。我就可以坐收绿油油的美刀了。可惜我错了。根本没有人购买！我做了个这么叼的诶噗噗出来。居然没有人知道。才意识到推广的作用。</p>
+<p>推广做了以下几种</p>
+<ol>
+<li>论坛 V2EX Ruby-China</li>
+<li>Weibo 的几个大 V：池院长 巧哥 大别 onevcat 等</li>
+<li>邮件</li>
+</ol>
+<p>论坛就自己去发的帖子，然后弄了抽奖。送了一些兑换码。也有一些朋友支持。</p>
+<p>然后厚着已经没有的脸皮去找池院长，巧哥。他们在微信公众号里面和微博推了。继续厚着脸皮找大别、onevcat。然后他们再微博上推了一下。同时配合着做了一周的半价。</p>
+<p>说两个事情，一个是大家都很好，虽然平时感觉他们都是高冷的状态。但是一听说是独立开发者做的。大家都还是很 nice 的帮着宣传。二是，冰点这一周销售了到目前为止的80%以上的销量。所以很是感谢帮忙。</p>
+<p>邮件是怎么一会事情呢。当时冰点一周过后，立马没有人买了。很是着急。然后我想了个办法，我在 Github 人肉找了一些 Star 数量超过500的人。然后发邮件去推销 Oh My Star。这样我一天发30封左右的邮件。可能会卖出1-2份。但是带来了巨大的副作用。有2个人直接回复骂娘。然后说 Oh My Star 是垃圾应用。其中一个还去推上@Github 说我滥用邮箱。叫把 Oh My Star 从 Github 里面除名。骂我可以，骂 Oh My Star 就怎么都忍不了。本来准备叫师兄批量爬邮箱然后发送推广邮件的。我反思了一下，觉得这个行为确实很不妥。然后就停止了发送邮件的这个行为。</p>
+<h2 id="u76EE_u524D_u6536_u76CA"><a href="#u76EE_u524D_u6536_u76CA" class="headerlink" title="目前收益"></a>目前收益</h2><h3 id="u6392_u540D"><a href="#u6392_u540D" class="headerlink" title="排名"></a>排名</h3><p>被推广的第二天我一上线。喵神就说我发达了。 我一头雾水。然后他说已经在Developer Tools 中国区付费榜上排第一了。我一看我操，还真是。心里还是有点小激动搭。赶紧打开iTC去看卖了多少。结果才10几份。我这个落差的心情啊。连开发者的本都没有回来。不过由于各种时差的关系其实比这个多一些。只是报表还没出来。后来居然出现在了中国区付费总榜前10了。其实那会也就50几份。后来一直冲到总版第三。虽然只是短短的几个小时，但是对我来说这个意义还是非常大的。说出去也是可以装逼了的。</p>
+<h3 id="u6536_u76CA"><a href="#u6536_u76CA" class="headerlink" title="收益"></a>收益</h3><p>目前用户是 414.<br>购买用户是 265.其中80%是冰点购入<br>目前上线一年总收益是1300刀。（没有算2年的 Mac 开发者。一堆其他投入： KFC 啥的）然后五五分。（我感觉我需要躲着我师兄了）<br><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1eohivjh2z7j21kw0r9aco.jpg" alt=""></p>
+<p>多说两句：其实吧，感觉没有赚钱相反用的更多了。因为一旦我看见卖出一个，我就会说，恩今天可以加个肉。 卖出2个我就会,恩今天这个贵的 App 可以入了。这样不知不觉其实钱都还没有拿到手。就花费出去了，结果第二天一看，人家退款了。欲哭无泪啊都。</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><h3 id="u611F_u8C22"><a href="#u611F_u8C22" class="headerlink" title="感谢"></a>感谢</h3><p>首先感谢购买和使用 Oh My Star 的用户。然后再次感谢这篇文章里面出现过的所有人。哦对了有两个没有提到 一个是 ianva 他提供了现在 readme 的样式文件。一个是 Ruby-China 上为 Oh My Star 写了一个 alfred workflow 的用户。同样很感谢。</p>
+<h3 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h3><p>我和师兄以及全部参与 Oh My Star 项目的人。全部都是在线上沟通以及协作。<br>使用到了一下工具：</p>
+<ol>
+<li>Github</li>
+<li>QQ</li>
+<li>Trello</li>
+<li>Heroku</li>
+<li>Gmail</li>
+</ol>
+<h3 id="u8FD9_u4E00_u5E74_u5B66_u4E60_u5230_u4E86_u4EC0_u4E48"><a href="#u8FD9_u4E00_u5E74_u5B66_u4E60_u5230_u4E86_u4EC0_u4E48" class="headerlink" title="这一年学习到了什么"></a>这一年学习到了什么</h3><ol>
+<li>以后我做的软件将会永远不降价。因为根据我自己的体验来说。本来我很开心的买了 App 使用着。就算隔了半年之久看见他降价了我还是会很伤心。同样我的用户也会有这样的感受。所以以后我做的软件将会永远不降价。</li>
+<li>因为 MAS 的机制和一些市场上的考虑。不管是 iOS 还是 OS X 的 App 。都应该是 免费 + IAP 模式。这样一定是主流的配置。</li>
+</ol>
+<h3 id="u95EE__26amp_3B__u7B54"><a href="#u95EE__26amp_3B__u7B54" class="headerlink" title="问 &amp; 答"></a>问 &amp; 答</h3><p>问：Oh My Star 以后会降价么</p>
+<p>答：不会</p>
+<p>问：Oh My Star 以后会涨价么</p>
+<p>答：看心情</p>
+<p>问：怎么购买 Oh My Star</p>
+<p>答：猛击<a href="https://itunes.apple.com/us/app/oh-my-star/id788446112?l=en&amp;mt=12" target="_blank" rel="external">连接</a></p>
+<p>问 ：OMS 很久没有更新了，还会维护更新么。</p>
+<p>答 ：会。16岁很厉害的小哥 NSTongG 已经答应帮 OMS 修复 bug 了。</p>
+<p>问 ： OMS 的未来有什么打算</p>
+<p>答 ： 有一个大大的计划</p>
+<p>问 ： 那这个大大的计划会去实现么</p>
+<p>答 ： 会</p>
+<p>问 ： 什么时候呢</p>
+<p>答 ： 遥遥无期（遁走）</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons%E3%80%82org/licenses/by-nc/4%E3%80%820/deed%E3%80%82zh_TW">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu%E3%80%82com/atom%E3%80%82xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>最近啊一堆一堆的人们在晒自己的 App 收入。其实吧，2014年。我也参与弄了个工作以外的 App 出来。不过一直觉得这点收入太低实在不好意思说出来。不过看着大家都晒的好欢乐的样子也忍不住说说。（其实是看见有人垫底儿，哈我就不告诉你是谁）</p>
+<h2 id="Oh_My_Star__u7F18_u8D77"><a href="#Oh_My_Star__u7F18_u8D77" class="headerlink" title="Oh My Star 缘起"></a>Oh My Star 缘起</h2><h3 id="u8F6F_u4EF6_u60F3_u6CD5"><a href="#u8F6F_u4EF6_u60F3_u6CD5" class="headerlink" title="软件想法"></a>软件想法</h3><p>这个想法其实挺早就由各种混沌的想法构成了。最开始的时候是大概 2013 年初左右，现在坐在我旁边的 linjunpop 高富帅他在 Github 上的 Star Repo 已经直逼2000+。王放放童鞋的也快1000+ 的 Star 数量。然后大家就在说做一个 App 来管理啊来管理。不过说归说。对于一群懒癌末期的人来说。说完我们就去联机打游戏去了。</p>
+<p>不过我的 Star 数量也开始变得多起来。得益于我的渣记忆力和 Github 对已经 Star 过的项目的渣搜索能力。经常找一些记得 Star 过的项目，但是它已经淹没在茫茫 Repo 海了。</p>
+<p>一直到大概2013年8月份的时候。我感觉吧，我特别需要一个管理 Github Star 的工具。没有怎么办，自己做呗。</p>
+<p>鉴于我的渣编程能力和懒癌末期，我决定拖一个人来一起弄。所以，我把我师兄 Noark9 忽悠下水了。</p>]]>
+    
+    </summary>
+    
+      <category term="just-talk" scheme="http://iiiyu.com/tags/just-talk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[读书笔记 「疯传」]]></title>
+    <link href="http://iiiyu.com/2015/01/16/read-contagious/"/>
+    <id>http://iiiyu.com/2015/01/16/read-contagious/</id>
+    <published>2015-01-16T15:37:06.000Z</published>
+    <updated>2015-01-16T17:37:38.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons%E3%80%82org/licenses/by-nc/4%E3%80%820/deed%E3%80%82zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu%E3%80%82com/atom%E3%80%82xml" target="_blank" rel="external">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>连续三年了，我都只有1月有写过读书笔记。今年又是如此。我只能为自己找个台阶下。懒癌末期患者，请这个世界多给一点点宽容。</p>
+<p>记不得上次看完一本书是什么时候了，最近一年来如果一本书看了超过24小时。那我是绝对的看不完。 能看完的都是花了一个通宵就看了。</p>
+<p>对了，元旦在动车上重新看了一下修摩托车。 那本书看了2年了，断断续续的。就没有看完过。</p>
+ <a id="more"></a>
+<h2 id="u75AF_u4F20"><a href="#u75AF_u4F20" class="headerlink" title="疯传"></a>疯传</h2><h3 id="u75C5_u6BD2_u5F0F_u4F20_u64AD"><a href="#u75C5_u6BD2_u5F0F_u4F20_u64AD" class="headerlink" title="病毒式传播"></a>病毒式传播</h3><p>开头和结尾都说了一个事情。就是近年来出现了一些爆炸性的传播事件和产品。他们的传播方式都是类似病毒的传播方式。</p>
+<p>来来来科普一下<a href="http://zh%E3%80%82wikipedia%E3%80%82org/wiki/%E7%97%85%E6%AF%92#%E3%80%82E7%E3%80%8297%E3%80%8285%E3%80%82E6%E3%80%82AF%E3%80%8292%E3%80%82E8%E3%80%8288%E3%80%8287%E3%80%82E4%E3%80%82BA%E3%80%82BA%E3%80%82E9%E3%80%82A1%E3%80%829E%E3%80%82E7%E3%80%8296%E3%80%82BE%E3%80%82E7%E3%80%8297%E3%80%8285" target="_blank" rel="external">病毒</a>。<a href="http://zh%E3%80%82wikipedia%E3%80%82org/wiki/%E7%97%85%E6%AF%92%E8%90%A5%E9%94%80" target="_blank" rel="external">病毒营销</a></p>
+<p>而整本书就是在说，要构建一次病毒营销需要怎么做。并且有一些实验结果和真实世界的案例来支撑他要表达的理论。</p>
+<h3 id="u516D_u6761_u539F_u5219_SETPPS"><a href="#u516D_u6761_u539F_u5219_SETPPS" class="headerlink" title="六条原则 SETPPS"></a>六条原则 SETPPS</h3><p>疯传的主体主要围绕着下面六条原则在进行表述。</p>
+<h4 id="u793E_u4EA4_u8D27_u5E01"><a href="#u793E_u4EA4_u8D27_u5E01" class="headerlink" title="社交货币"></a>社交货币</h4><p>我们会共享那些让我们显得更优秀的事情。</p>
+<h4 id="u8BF1_u56E0"><a href="#u8BF1_u56E0" class="headerlink" title="诱因"></a>诱因</h4><p>顶尖的记忆，风口浪尖的提醒。</p>
+<h4 id="u60C5_u7EEA"><a href="#u60C5_u7EEA" class="headerlink" title="情绪"></a>情绪</h4><p>当我们关心时，我们回去共享。</p>
+<h4 id="u516C_u5171_u6027"><a href="#u516C_u5171_u6027" class="headerlink" title="公共性"></a>公共性</h4><p>构建可视的、正面的事物。</p>
+<h4 id="u5B9E_u7528_u4EF7_u503C"><a href="#u5B9E_u7528_u4EF7_u503C" class="headerlink" title="实用价值"></a>实用价值</h4><p>如果有用，人们会情不自禁的共享。</p>
+<h4 id="u6545_u4E8B"><a href="#u6545_u4E8B" class="headerlink" title="故事"></a>故事</h4><p>以闲聊为幌子的信息传播</p>
+<p>以上大概就是这本30块。240页的精华终结内容。</p>
+<h2 id="u81EA_u5DF1_u7684_u601D_u8003_uFF08_u4E0B_u9762_u662F_u5410_u69FD_u65F6_u95F4_uFF09"><a href="#u81EA_u5DF1_u7684_u601D_u8003_uFF08_u4E0B_u9762_u662F_u5410_u69FD_u65F6_u95F4_uFF09" class="headerlink" title="自己的思考（下面是吐槽时间）"></a>自己的思考（下面是吐槽时间）</h2><h3 id="u4EBA"><a href="#u4EBA" class="headerlink" title="人"></a>人</h3><p>其实吧，我觉得。除了一些探索宇宙奥秘或者探索其他普通人感觉没啥用的科学领域。这个世界的绝大部分人类。都是在研究人。</p>
+<p>我开个馆子吧。 要研究人喜欢吃啥。<br>我卖个衣服吧。要研究人喜欢穿啥。<br>我想当个总统吧。要研究把其他人的选票搞过来。<br>我想当升个官吧。要研究领导的喜好。<br>我想做个 App 吧。要研究最近的人缺啥东西。<br>我想拍个电视剧吧。要研究这人体的胸要怎么才能不在摄像范围内。</p>
+<p>「疯传」通篇读下来。无非就是人性二字。</p>
+<h3 id="u6211_u601D_u8003_u7684_u516D_u6761_u539F_u5219"><a href="#u6211_u601D_u8003_u7684_u516D_u6761_u539F_u5219" class="headerlink" title="我思考的六条原则"></a>我思考的六条原则</h3><h4 id="u793E_u4EA4_u8D27_u5E01-1"><a href="#u793E_u4EA4_u8D27_u5E01-1" class="headerlink" title="社交货币"></a>社交货币</h4><p>人是社交动物。社交是人的一部分。人并不能在这个世界上单独存在。所以，病毒营销的基石就是说。人终归要交流的。但你在交流的时候，你需要一些素材。这些素材用来满足你的虚荣心，荣誉感。让你在社交中显得与众不同。显的更加优秀。</p>
+<p>这个道理对于从小喜欢看动物世界的我来说非常容易理解。这是天性。是一种繁殖的本能。把自己突出于周围的同类。可以获得更加优秀的交配对象。从而产下优良的后代。这种天性我估摸着是写到 DNA 里面的。所以你可以看到都是晒美食、晒豪车、晒出国旅游。</p>
+<p>在我看来都是基因里面在说：“hi，我是个强壮又富有魅力的异性哦。来一起啪啪啪吧”</p>
+<p>扯远了。拉回来，作者提出了社交货币（Social Currency）这种概念是什么意思呢。其实还是很好理解的。货币用来干嘛？交换嘛。那社交货币也是用来交换使用的。货币还具备了流通性。所以作者的这个提法我认为是恰到好处的。</p>
+<p>所以这条原则其实就是说。要传播的基石。首先这个事件或者产品要能体现出知道你这个事情的人的优越性。说人话就是：知道这个事情的人就可以升职、加薪、当上 CEO 、迎娶白富美。走向人生巅峰了。至少感觉如此。</p>
+<h4 id="u8BF1_u56E0-1"><a href="#u8BF1_u56E0-1" class="headerlink" title="诱因"></a>诱因</h4><p>这个世界上没有平白无故的爱、也没有莫名其妙的恨。你要传播一个事件或者产品。你肯定需要一个理由。<br>爱一个人需要理由吗？需要吗？需要吗！<br>诱因相当于这个事件的前置铺垫。看这个章节的时候，我脑海里面总会出现美剧里面的一些画面。大概就是看上去无关紧要的地方。恰好是关键的点。</p>
+<p>就像蝴蝶效应一样。诱因的在于，它导致的结果会放大很多个数量级。卷起海啸。</p>
+<h4 id="u60C5_u7EEA-1"><a href="#u60C5_u7EEA-1" class="headerlink" title="情绪"></a>情绪</h4><p>还是在说人。人这种复杂的物种在开心和难过的时候都会做出一些强烈的举动。所以，可以利用这一点，来进行传播。书中也很明确的说了。开心和难过都具备很高的传播性质。</p>
+<p>举个开心的例子：国足2连胜<br>举个悲伤的例子：姚贝娜病逝</p>
+<h4 id="u516C_u5171_u6027-1"><a href="#u516C_u5171_u6027-1" class="headerlink" title="公共性"></a>公共性</h4><p>这个感觉没啥好说的，如果是大熊猫要明天要灭绝了。肯定全世界都陷入悲痛。但是如果是 Sumi 肠粉要挂了。 明天就我悲伤了。</p>
+<h4 id="u5B9E_u7528_u4EF7_u503C-1"><a href="#u5B9E_u7528_u4EF7_u503C-1" class="headerlink" title="实用价值"></a>实用价值</h4><p>举个例子：先不管到底实用不实用的问题。你看 QQ 空间 or WeChat 里面爹妈辈转发那些惨不忍睹的“使用 xx 小技巧”“xx 健康饮食大法”。 你就可以知道如果具备实用价值 or 看上去具备实用价值的东西是容易传播的。</p>
+<h4 id="u6545_u4E8B-1"><a href="#u6545_u4E8B-1" class="headerlink" title="故事"></a>故事</h4><p>能说的一手好故事太 tm 重要了。你都不用说的多长。能在140字以内吧故事说好了。你都是日入几十万的人了呢。（原谅我的夸张）我们称为段子手。能吧传播的东西埋藏在故事里面的。 我们叫软文。<br>这个很好找例子，最近有关注 天才小熊猫。 微博上写软文目测不说第一，前三应该有的。你去看看他的转发量就知道一个好故事是多么具备传播力量。</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>书中提到 「引爆点」这本书多次。 下本书应该就是它了。</li>
+<li>都什么年代了，生病了能不能相信科学，相信现代医学。那可是你自己的命呐。</li>
+<li>好多想吐槽的，写着写着就忘记了</li>
+<li>over </li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons%E3%80%82org/licenses/by-nc/4%E3%80%820/deed%E3%80%82zh_TW">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu%E3%80%82com/atom%E3%80%82xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>连续三年了，我都只有1月有写过读书笔记。今年又是如此。我只能为自己找个台阶下。懒癌末期患者，请这个世界多给一点点宽容。</p>
+<p>记不得上次看完一本书是什么时候了，最近一年来如果一本书看了超过24小时。那我是绝对的看不完。 能看完的都是花了一个通宵就看了。</p>
+<p>对了，元旦在动车上重新看了一下修摩托车。 那本书看了2年了，断断续续的。就没有看完过。</p>]]>
+    
+    </summary>
+    
+      <category term="read book notes" scheme="http://iiiyu.com/tags/read-book-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS 学习笔记 (36)  ReactiveCocoa 用 RACSignal 替代 Delegate]]></title>
+    <link href="http://iiiyu.com/2014/12/26/learning-ios-notes-thirty-six/"/>
+    <id>http://iiiyu.com/2014/12/26/learning-ios-notes-thirty-six/</id>
+    <published>2014-12-26T10:36:31.000Z</published>
+    <updated>2014-12-28T14:30:22.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>最近又在看  ReactiveCocoa 了（下面用 RAC 来替代 ReactiveCocoa）。虽然依然是 hello world 级别。但是 hello world 也是可以分级别的。这次自我感觉是一个偏向中级的 hello world。</p>
+<p>我们先来张图：</p>
+<p><img src="http://ww4.sinaimg.cn/large/a6d3226bgw1enpq6o5sz5j20ai09uglz.jpg" alt=""></p>
+<p>在 RAC 的文档和一些介绍 RAC 的 Keynote 资料里面我们可以看到说 RACSignal 可以来替代 Delegate、 Block Callbacks、Target Action、KVO、Notifications。</p>
+<p>但是貌似没有一种 hello world 的方式来进行说明如何替代的。</p>
+<p>插嘴:在中文 blog 里面见过几个写 RAC 的比较好哒。一个是<a href="http://limboy.me" target="_blank" rel="external">limboy大大</a>的几篇深入浅出令人叹为观止，李忠大大不但研究透彻了然后还结合自己的实战经验写成很好的文章来分享。 另一个是<a href="http://blog.sunnyxx.com/tags/Reactive%20Cocoa%20Tutorial/" target="_blank" rel="external">sunnyxx的Reactive Cocoa Tutorial系列</a>这个系列比较偏向研究 RAC 是如何实现和工作的。</p>
+<p>我这个人比较笨，最喜欢写 hello world。那就找时间一个一个来写呗。</p>
+<p>写之前 Google 了一下。所以以下内容大量参考:<a href="http://spin.atomicobject.com/2014/02/03/objective-c-delegate-pattern/" target="_blank" rel="external">Replacing the Objective-C “Delegate Pattern” with ReactiveCocoa</a>。能看原文就去看看。然后忽略掉以下的 hello world 就好了。</p>
+<a id="more"></a>
+<h2 id="u5B9E_u73B0_u529F_u80FD_u8BF4_u660E"><a href="#u5B9E_u73B0_u529F_u80FD_u8BF4_u660E" class="headerlink" title="实现功能说明"></a>实现功能说明</h2><p>本来想改成 TableView 的。改着改着感觉 TableView 的话。可能会牵扯到 MVVM 的问题。 才能架构出来一个正确的程序结构。而我只想说明简单的写清楚如何替代Delegate。所以相当于一个中文简化版本的 <a href="http://spin.atomicobject.com/2014/02/03/objective-c-delegate-pattern/" target="_blank" rel="external">Replacing the Objective-C “Delegate Pattern” with ReactiveCocoa</a>了。</p>
+<p>那就跟他一样写搜索把。然后实现过程中发现 iOS 8 用新的 UISearchController 来替代了 UISearchDisplayController 了。 </p>
+<h2 id="UISearchController_Delegate__u5E38_u89C4_u5B9E_u73B0"><a href="#UISearchController_Delegate__u5E38_u89C4_u5B9E_u73B0" class="headerlink" title="UISearchController Delegate 常规实现"></a>UISearchController Delegate 常规实现</h2><p>一般来说我们会设置protocol.</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.searchController.searchResultsUpdater = <span class="keyword">self</span>;</span><br><span class="line"><span class="keyword">self</span>.searchController.<span class="keyword">delegate</span> = <span class="keyword">self</span>;</span><br></pre></td></tr></table></figure>
+<p>然后去委托的类里面实现相关的方法</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">#pragma</span> <span class="keyword">mark </span>- UISearchResultsUpdating</span><br><span class="line"></span><br><span class="line">- (void)updateSearchResultsForSearchController:(UISearchController *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="preprocessor">if</span> (searchController.searchBar<span class="preprocessor">.text</span>.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">self.searchResults </span>= [<span class="keyword">self </span>search:searchController.searchBar<span class="preprocessor">.text</span>]<span class="comment">;</span></span><br><span class="line">    &#125; <span class="preprocessor">else</span> &#123;</span><br><span class="line">        <span class="keyword">self.searchResults </span>= <span class="keyword">self.searchTexts;</span><br><span class="line"></span>    &#125;</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self.tableView </span>reloadData]<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#pragma mark - UISearchControllerDelegate</span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)willPresentSearchController:(<span class="built_in">UISearchController</span> *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.searching</span> = <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)willDismissSearchController:(<span class="built_in">UISearchController</span> *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.searching</span> = <span class="literal">NO</span>;</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.tableView</span> reloadData];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>普通情况下我们就是这样来使用 Delegate 的。</p>
+<p>平淡无奇。下面我们来用 RACSignal 的实现方法。</p>
+<h2 id="UISearchController_Delegate_RACSignal__u5B9E_u73B0"><a href="#UISearchController_Delegate_RACSignal__u5B9E_u73B0" class="headerlink" title="UISearchController Delegate RACSignal 实现"></a>UISearchController Delegate RACSignal 实现</h2><p>第一个要明确的是：我们要做什么。</p>
+<h3 id="u5E38_u89C4_u6A21_u5F0F"><a href="#u5E38_u89C4_u6A21_u5F0F" class="headerlink" title="常规模式"></a>常规模式</h3><p>根据常规代码来看:</p>
+<ol>
+<li>我们需要在每次输入词变化的时候进行搜索。</li>
+<li>需要在进入和退出搜索的时候知道当前状态</li>
+</ol>
+<p>1对应的就是实现- (void)updateSearchResultsForSearchController:(UISearchController *)searchController</p>
+<p>2对应的是实现- (void)willPresentSearchController:(UISearchController <em>)searchController 和 - (void)willDismissSearchController:(UISearchController </em>)searchController。</p>
+<p>现在，让我们来转换为 RAC 的思维模式思考问题。 </p>
+<h3 id="RAC__u6A21_u5F0F"><a href="#RAC__u6A21_u5F0F" class="headerlink" title="RAC 模式"></a>RAC 模式</h3><ol>
+<li>UI 上需要搜索结果的 NSArray</li>
+<li>搜索结果由搜索关键字得来。</li>
+<li>每次修改关键字都应该更新搜索结果。</li>
+</ol>
+<p>因此我们要想办法吧 UI 上需要的数据和修改关键字这个动作绑定起来。 </p>
+<p>同理可以很容易想到。我们也需要把当前 UI 是否处于搜索状态跟会改变搜索状态的动作绑定起来。 </p>
+<p>要怎么绑定呢？ 拥有刚刚 RAC 超过 Hello World 实力的我，想到，我需要构建出来两个RACSignal。</p>
+<p>然后进行类似：</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RAC<span class="list">(<span class="keyword">self</span>, searchResults)</span> = SignalA<span class="comment">;</span></span><br><span class="line">RAC<span class="list">(<span class="keyword">self</span>, searching)</span> = SignalB<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>这样的绑定就皆大欢喜了。 </p>
+<p>主要用到了下面两个 RAC 的方法：</p>
+<p><strong>rac_signalForSelector:fromProtocol:</strong></p>
+<p>这个方法主要是把 protocal 转为一个 Signal 便于使用。值得注意的是这个函数返回的是一个 RACTuple。 这个 RACTuple 包含了 Selector 方法里面所有的参数。这样需要用到的时候主要按照顺序来获取。</p>
+<p><strong>rac_liftSelector:withSignalsFromArray:</strong></p>
+<p>这个方法它的意思是当传入的 Signals 都至少sendNext过一次，接下来只要其中任意一个signal有了新的内容。就会去触发第一个 selector 参数的方法。</p>
+<p>构造两个 Signal 的代码如下 </p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  UISearchController+RAC.m</span></span><br><span class="line"></span><br><span class="line">- (RACSignal *)rac_textSignal</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.searchResultsUpdater</span> = <span class="keyword">self</span>;</span><br><span class="line">    RACSignal *signal = objc_getAssociatedObject(<span class="keyword">self</span>, _cmd);</span><br><span class="line">    <span class="keyword">if</span> (signal != <span class="literal">nil</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> signal;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    signal = [[<span class="keyword">self</span> rac_signalForSelector:<span class="keyword">@selector</span>(updateSearchResultsForSearchController:) fromProtocol:<span class="class"><span class="keyword">@protocol</span>(<span class="title">UISearchResultsUpdating</span>)] <span class="title">map</span>:^<span class="title">id</span>(<span class="title">RACTuple</span> *<span class="title">tuple</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">UISearchController</span> *searchController = tuple<span class="variable">.first</span>;</span><br><span class="line">        <span class="keyword">return</span> searchController<span class="variable">.searchBar</span><span class="variable">.text</span>;</span><br><span class="line">    &#125;];</span><br><span class="line"></span><br><span class="line">    objc_setAssociatedObject(<span class="keyword">self</span>, _cmd, signal, OBJC_ASSO<span class="built_in">CIATION_RETAIN_NONATOMIC</span>);</span><br><span class="line">    <span class="keyword">return</span> signal;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (RACSignal *)rac_isActiveSignal</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span><span class="variable">.delegate</span> = <span class="keyword">self</span>;</span><br><span class="line">    RACSignal *signal = objc_getAssociatedObject(<span class="keyword">self</span>, _cmd);</span><br><span class="line">    <span class="keyword">if</span> (signal != <span class="literal">nil</span>) <span class="keyword">return</span> signal;</span><br><span class="line"></span><br><span class="line">    RACSignal *willPresentSearching = [[<span class="keyword">self</span> rac_signalForSelector:<span class="keyword">@selector</span>(willPresentSearchController:) fromProtocol:<span class="class"><span class="keyword">@protocol</span>(<span class="title">UISearchControllerDelegate</span>)] <span class="title">mapReplace</span>:@<span class="title">YES</span>];</span></span><br><span class="line">    RACSignal *willDismissSearching = [[<span class="keyword">self</span> rac_signalForSelector:<span class="keyword">@selector</span>(willDismissSearchController:) fromProtocol:<span class="class"><span class="keyword">@protocol</span>(<span class="title">UISearchControllerDelegate</span>)] <span class="title">mapReplace</span>:@<span class="title">NO</span>];</span></span><br><span class="line">    signal = [RACSignal merge:@[willPresentSearching, willDismissSearching]];</span><br><span class="line">    objc_setAssociatedObject(<span class="keyword">self</span>, _cmd, signal, OBJC_ASSO<span class="built_in">CIATION_RETAIN_NONATOMIC</span>);</span><br><span class="line">    <span class="keyword">return</span> signal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最终绑定代码如下：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  RACMasterViewController.m</span></span><br><span class="line"></span><br><span class="line">    RAC(<span class="keyword">self</span>, searchResults) = [<span class="keyword">self</span> rac_liftSelector:<span class="keyword">@selector</span>(search:) withSignalsFromArray:@[<span class="keyword">self</span><span class="variable">.searchController</span><span class="variable">.rac_textSignal</span>]];</span><br><span class="line">    [<span class="keyword">self</span><span class="variable">.searchController</span><span class="variable">.rac_textSignal</span> subscribeNext:^(<span class="keyword">id</span> x) &#123;</span><br><span class="line">        [<span class="keyword">self</span><span class="variable">.tableView</span> reloadData];</span><br><span class="line">    &#125;];</span><br><span class="line">    RAC(<span class="keyword">self</span>, searching) = [<span class="keyword">self</span><span class="variable">.searchController</span> rac_isActiveSignal];</span><br></pre></td></tr></table></figure>
+<p>这样我们就写完了一个用 RAC 来替代 Delegate （protocol） 的例子</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>使用 RAC 其实最重要的思维的转变。 这个转变在写代码的时候如果我没有思考的很清楚。 那我写出来就一团乱麻。还是需要多加锻炼 MVVM 的思维。</p>
+<p><a href="https://github.com/iiiyu/RACSignalDemo" target="_blank" rel="external">实例代码已经上传Github</a></p>
+<p>下集预告 用 RACSignal 替代 Block Callbacks。有人会期待么？</p>
+<h2 id="u8D44_u6599"><a href="#u8D44_u6599" class="headerlink" title="资料"></a>资料</h2><ol>
+<li><a href="http://limboy.me" target="_blank" rel="external">limboy大大</a></li>
+<li><a href="http://blog.sunnyxx.com/tags/Reactive%20Cocoa%20Tutorial/" target="_blank" rel="external">sunnyxx的Reactive Cocoa Tutorial系列</a></li>
+<li><a href="http://spin.atomicobject.com/2014/02/03/objective-c-delegate-pattern/" target="_blank" rel="external">Replacing the Objective-C “Delegate Pattern” with ReactiveCocoa</a></li>
+<li><a href="https://speakerdeck.com/robpearson/reactivecocoa-lessons-learned" target="_blank" rel="external">ReactiveCocoa Lessons Learned</a></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>最近又在看  ReactiveCocoa 了（下面用 RAC 来替代 ReactiveCocoa）。虽然依然是 hello world 级别。但是 hello world 也是可以分级别的。这次自我感觉是一个偏向中级的 hello world。</p>
+<p>我们先来张图：</p>
+<p><img src="http://ww4.sinaimg.cn/large/a6d3226bgw1enpq6o5sz5j20ai09uglz.jpg" alt=""></p>
+<p>在 RAC 的文档和一些介绍 RAC 的 Keynote 资料里面我们可以看到说 RACSignal 可以来替代 Delegate、 Block Callbacks、Target Action、KVO、Notifications。</p>
+<p>但是貌似没有一种 hello world 的方式来进行说明如何替代的。</p>
+<p>插嘴:在中文 blog 里面见过几个写 RAC 的比较好哒。一个是<a href="http://limboy.me">limboy大大</a>的几篇深入浅出令人叹为观止，李忠大大不但研究透彻了然后还结合自己的实战经验写成很好的文章来分享。 另一个是<a href="http://blog.sunnyxx.com/tags/Reactive%20Cocoa%20Tutorial/">sunnyxx的Reactive Cocoa Tutorial系列</a>这个系列比较偏向研究 RAC 是如何实现和工作的。</p>
+<p>我这个人比较笨，最喜欢写 hello world。那就找时间一个一个来写呗。</p>
+<p>写之前 Google 了一下。所以以下内容大量参考:<a href="http://spin.atomicobject.com/2014/02/03/objective-c-delegate-pattern/">Replacing the Objective-C “Delegate Pattern” with ReactiveCocoa</a>。能看原文就去看看。然后忽略掉以下的 hello world 就好了。</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iCloud 和 iCloud Drive]]></title>
+    <link href="http://iiiyu.com/2014/10/20/iCloud-and-iCloud-Drive/"/>
+    <id>http://iiiyu.com/2014/10/20/iCloud-and-iCloud-Drive/</id>
+    <published>2014-10-19T16:25:52.000Z</published>
+    <updated>2014-11-02T17:24:40.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><ol>
+<li>好久没有写 blog 了。 </li>
+<li>最近发现很多人对 iCloud 和 iCloud Drive 有些误解。而还没有看见中文里面有一个比较正确的说法。</li>
+<li>加上近两年来工作就是在学习 iCloud 如何使用。最近一个月做客服小弟回复了 N 个 iCloud 的问题。所以感觉还是有一些价值的。特意想记录一下。</li>
+</ol>
+<h2 id="u662F_u5426_u5347_u7EA7_u5230_iCloud_Drive"><a href="#u662F_u5426_u5347_u7EA7_u5230_iCloud_Drive" class="headerlink" title="是否升级到 iCloud Drive"></a>是否升级到 iCloud Drive</h2><p>在 iOS 8 刚刚上线的时候，用户更新了以后。第一次会跳出来，说需要重新升级的 iCloud Drive。因为没有更多的信息和提示，我想一个正常的用户应该都会去点击升级。结果就是导致很多使用 iCloud 这个功能的 App 数据出现问题。或者导致了设备之间的不同步。那会有很多文章在建议不要升级 iCloud Drive。所以可能会给后来升级到 iOS 8 的用户造成一定的心里作用说升级 iCloud Drive 是不可靠的。</p>
+<p>其实根据我两年来 iCloud 的经验和测试结果。 iOS 8 的 iCloud Drive 是一个 Apple 云端的一次最重要的里程碑。 是 iCloud 这个技术在 Apple 产品系列上第一次做到了可用的状态。等了三年终于有个云的模样了。</p>
+<p>当时不建议升级 iCloud Drive 的理由其实就两个：</p>
+<ol>
+<li>对于开发者来说，由于 Apple 为了保密 iPhone 6 和 iPhone 6 Plus。 其实在9月发布会之前。 iOS 8 的 最后两个 Beta 版本是没有提供给开发者的。在能获得的最后的 Beta 版本上。 开发者使用 iCloud 依然各种莫名其妙的问题。一直到 GM 版本才变得正常。这样导致 GM 到发布正式的版本之间的时间。大部分开发者还无法把更新 iCloud 的技术及时的完善在自己的 App 里面。</li>
+<li>另外一个是在 iOS 8 已经放出来的时候，OS X 10.10 还没有放出来。这样如果你是一个 Apple 一套的普通用户。就会导致你一些全平台使用 iCloud 技术的 App无法相互同步。所以在当时确实这样情况的普通用户应该谨慎更新。</li>
+</ol>
+<p>现在11月了这两个问题随着开发者对 App 的完善和 OS X 10.10 释出。其实都不是问题了。大家可以放心大胆的升级了。</p>
+<a id="more"></a>
+<h2 id="iCloud__u5347_u7EA7_u5230_iCloud_Drive__u5177_u4F53_u662F_u505A_u4E86_u4EC0_u4E48_u4E8B_u60C5"><a href="#iCloud__u5347_u7EA7_u5230_iCloud_Drive__u5177_u4F53_u662F_u505A_u4E86_u4EC0_u4E48_u4E8B_u60C5" class="headerlink" title="iCloud 升级到 iCloud Drive 具体是做了什么事情"></a>iCloud 升级到 iCloud Drive 具体是做了什么事情</h2><p>首先需要明确的是，iCloud 升级到 iCloud Drive。只跟你的 Apple ID 相关。并且这个过程不可以逆转。</p>
+<h3 id="u666E_u901A_u7528_u6237"><a href="#u666E_u901A_u7528_u6237" class="headerlink" title="普通用户"></a>普通用户</h3><p>对于普通用户来说应当就是一次在服务端的数据迁移。把之前的存储在 iCloud 服务器上的全部数据迁移到了 iCloud Drive 的服务器。从此以后你的 iCloud 数据都是从 iCloud Drive 服务器上读取了。</p>
+<p>基于这种逻辑支持 iCloud 的应用，理论上 100% 可以使用 iCloud Drive。</p>
+<p>但是事实上并不是所有的应用在升级了 iCloud Drive 以后都可以使用。</p>
+<p>Why？</p>
+<p>先解释一个现象，就是在一开始升级了 iOS 8 然后升级了 iCloud Drive 立马就打开了某 App 发现 iCloud 的数据没了。 结果睡觉起来再打开就有了。这种的原因很简单，就是 iCloud 服务器上的数据迁移到 iCloud Drive 服务器上是需要拷贝时间的。数据还没有迁移完成的时候你打开当然没有。等到数据迁移完成了，你再打开它就有数据了。</p>
+<h3 id="u5F00_u53D1_u8005"><a href="#u5F00_u53D1_u8005" class="headerlink" title="开发者"></a>开发者</h3><p>PS：普通用户可以略过此小结<br>这次 iOS 8 的升级，一开始就是对使用 iCloud 开发者的一次噩梦。</p>
+<ol>
+<li>iCloud 服务器数据到 iCloud Drive 服务器数据的迁移。</li>
+<li>客户端下面 iCloud 的 Container ID 发生变化。之前是 Term ID.xxxx。现在是 iCloud.xxxx。当然已经上架的应用的 Container ID 是还存在的。但是这个变化从来就没有在文档里面提过（可能现在有了，反正当时没有看见过）导致的结果就是如果容器空间没有选择正确。必然读取不到老数据。</li>
+<li>由于 iOS 8 升级需要很大的空间，有部分用户可能是选择重新安装一个新 iOS 8 或者是入了一台新的手机。 但是没有升级 iCloud Drive。这种情况下，会导致 App 无法找到 iCloud 的路径。也是坑的不行</li>
+</ol>
+<p>目前能回忆起来比较坑的就这两个，这些都是开发者必须处理的情况。如果开发者花费巨大的力气处理好了，用户其实是感受不到的。这是最好的情况。如果技术不过关，处理不好。用户就上门开始骂了。（PS：这是一个悲伤的故事）</p>
+<h2 id="CloudKit"><a href="#CloudKit" class="headerlink" title="CloudKit"></a>CloudKit</h2><p>CloudKit 是今年提出来的新技术。</p>
+<h3 id="u666E_u901A_u7528_u6237-1"><a href="#u666E_u901A_u7528_u6237-1" class="headerlink" title="普通用户"></a>普通用户</h3><p>使用这个技术的 App 都是靠谱的</p>
+<h3 id="u5F00_u53D1_u8005-1"><a href="#u5F00_u53D1_u8005-1" class="headerlink" title="开发者"></a>开发者</h3><p>简单说来就是一个 Apple 版本的 Parse。具体去看文档不展开说明了。</p>
+<h2 id="u4E00_u4E9B_u5B58_u50A8_u8DEF_u5F84_u7684_u8BF4_u660E"><a href="#u4E00_u4E9B_u5B58_u50A8_u8DEF_u5F84_u7684_u8BF4_u660E" class="headerlink" title="一些存储路径的说明"></a>一些存储路径的说明</h2><h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>iOS 由于沙箱的原因。其实普通用户看不见什么。不过可以肯定的是。在系统路径下面。 iOS 是有 iCloud 数据的缓存目录进行数据缓存的。简单说来就是使用 iCloud 的应用在删除的时候。 iCloud 缓存里面的数据是不会立马删除的。什么时候清空，未知。</p>
+<h3 id="OS_X"><a href="#OS_X" class="headerlink" title="OS X"></a>OS X</h3><p>OS X 可以看见的就比较多了。</p>
+<h4 id="Finder__u91CC_u9762_u7684_iCloud_Drive"><a href="#Finder__u91CC_u9762_u7684_iCloud_Drive" class="headerlink" title="Finder 里面的 iCloud Drive"></a>Finder 里面的 iCloud Drive</h4><p>这里其实由两个部分组成：</p>
+<ol>
+<li>是 /Library/Mobile Documents/comappleCloudDocs</li>
+<li>是使用 iCloud 技术把一些数据文件存储到了自己 iCloud 容器路径下的 Documents 目录里面。</li>
+</ol>
+<p>把 Finder 里面这个 iCloud Drive 当作 Dropbox （网盘）使用。那你丢进去的文件数据都是在<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="escape">`/</span>Library/Mobile Documents/comappleCloudDocs</span><br></pre></td></tr></table></figure></p>
+<p>`这里路径下面。</p>
+<p>而你为什么可以看见一些 App 名字的文件夹呢。就是第二个部分容器自己的 Documents 目录。你可能会问为啥不是全部使用 iCloud 技术的都有这个目录呢？</p>
+<p>我来举例说明把在 Apple 生态里面。商店里面的程序都是沙盒的。相互之间都是独立的。不过有一个地方是可以看到沙盒内部，在开发文档里面也是同样描述那就是 Documents 的路径。举例一个 iOS App 如果你在Documents 下面有文件，那你在 iTunes App 的那页下面是可以看到这些文件。同样的概念延续到了 iCloud 上。当 App 的文件存于他自己 iCloud 路径下的 Documents 文件夹下面的时候。你就可以在 Finder 中 iCloud Drive看到。App iCloud 容器下另外的路径是不会显示到 Finder 下面的时候，所以并不是使用了 iCloud 的应用都在这里有文件夹。这些都取决于开发商对自己 App 的设计和实现。</p>
+<h4 id="/Library/Mobile_Documents"><a href="#/Library/Mobile_Documents" class="headerlink" title="/Library/Mobile Documents"></a>/Library/Mobile Documents</h4><p>这个路径下就是 iCloud 数据在 OS X 的缓存路径。理论上来说，这个路径下是跟 iCloud Drive 服务器上的数据同步的。（没升级 iCloud Drive 就是跟 iCloud 服务器上的数据同步的）</p>
+<h4 id="/Library/Caches/CloudKit"><a href="#/Library/Caches/CloudKit" class="headerlink" title="/Library/Caches/CloudKit"></a>/Library/Caches/CloudKit</h4><p>CloudKit 的缓存路径</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>毫不谦虚的说，本文虽然条例不是清晰。但是是目前中文说明里面对这次 iCloud 变更目前位置最详细的解释。（PS：看在写到凌晨n点的情况下。做自己吹一下）</p>
+<ol>
+<li>一定要升级 iCloud Drive，这样对大家都好。用户可以得到更好的体验。开发者可以使用新的技术做出更加好玩的东西出来。</li>
+<li>能使用 iCloud 技术的厂家都不容易。请善待他们。</li>
+<li>我是一个 iCloud 黑。</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><ol>
+<li>好久没有写 blog 了。 </li>
+<li>最近发现很多人对 iCloud 和 iCloud Drive 有些误解。而还没有看见中文里面有一个比较正确的说法。</li>
+<li>加上近两年来工作就是在学习 iCloud 如何使用。最近一个月做客服小弟回复了 N 个 iCloud 的问题。所以感觉还是有一些价值的。特意想记录一下。</li>
+</ol>
+<h2 id="u662F_u5426_u5347_u7EA7_u5230_iCloud_Drive"><a href="#u662F_u5426_u5347_u7EA7_u5230_iCloud_Drive" class="headerlink" title="是否升级到 iCloud Drive"></a>是否升级到 iCloud Drive</h2><p>在 iOS 8 刚刚上线的时候，用户更新了以后。第一次会跳出来，说需要重新升级的 iCloud Drive。因为没有更多的信息和提示，我想一个正常的用户应该都会去点击升级。结果就是导致很多使用 iCloud 这个功能的 App 数据出现问题。或者导致了设备之间的不同步。那会有很多文章在建议不要升级 iCloud Drive。所以可能会给后来升级到 iOS 8 的用户造成一定的心里作用说升级 iCloud Drive 是不可靠的。</p>
+<p>其实根据我两年来 iCloud 的经验和测试结果。 iOS 8 的 iCloud Drive 是一个 Apple 云端的一次最重要的里程碑。 是 iCloud 这个技术在 Apple 产品系列上第一次做到了可用的状态。等了三年终于有个云的模样了。</p>
+<p>当时不建议升级 iCloud Drive 的理由其实就两个：</p>
+<ol>
+<li>对于开发者来说，由于 Apple 为了保密 iPhone 6 和 iPhone 6 Plus。 其实在9月发布会之前。 iOS 8 的 最后两个 Beta 版本是没有提供给开发者的。在能获得的最后的 Beta 版本上。 开发者使用 iCloud 依然各种莫名其妙的问题。一直到 GM 版本才变得正常。这样导致 GM 到发布正式的版本之间的时间。大部分开发者还无法把更新 iCloud 的技术及时的完善在自己的 App 里面。</li>
+<li>另外一个是在 iOS 8 已经放出来的时候，OS X 10.10 还没有放出来。这样如果你是一个 Apple 一套的普通用户。就会导致你一些全平台使用 iCloud 技术的 App无法相互同步。所以在当时确实这样情况的普通用户应该谨慎更新。</li>
+</ol>
+<p>现在11月了这两个问题随着开发者对 App 的完善和 OS X 10.10 释出。其实都不是问题了。大家可以放心大胆的升级了。</p>]]>
+    
+    </summary>
+    
+      <category term="just-talk" scheme="http://iiiyu.com/tags/just-talk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[怎样使用Sketch 3切图 —— 从想入设计大门的菜逼进化到切图仔（未完成）]]></title>
+    <link href="http://iiiyu.com/2014/04/23/learn-ui-design-two/"/>
+    <id>http://iiiyu.com/2014/04/23/learn-ui-design-two/</id>
+    <published>2014-04-22T17:00:06.000Z</published>
+    <updated>2014-10-19T16:27:51.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<p><strong>本文未完成懒得屏蔽了</strong></p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>Sketch 3发布了，而且在国内设计圈产生了一阵不小的影响。（好吧，我承认我混的不是这个圈子）作为一个拥有Sketch 2的老用户来说。这颗闪亮的钻石本来只我才知道他的好。就像小时候发现了一个出租激情小电影的小店铺，突然某一天冒出来一堆人也来租。那种小秘密被打破莫名的失落感。</p>
+<p>好吧，其实这个是一个好事情。用的人多了，素材也会多。教程也会多。</p>
+<p>顺便一提Sketch 3的发布之前MengTo大神的<a href="http://designcode.io" target="_blank" rel="external">Design Code</a>新书也在不断更新中。严重怀疑是商量好一起来坑钱包的。 配合的这么天衣无缝。在Sketch 3还没有正式发布的时候，MengTo大神更新的视频就是用的Sketch 3 beta版本。弄的我还以为我的Sketch 2是不是打开姿势不正确。</p>
+<p>写这篇的原型是因为看到weibo上有小朋友，居然用我大切图神器Sketch的姿势不对。所以虽然不是什么高级的功能。但是鉴于跟我一样徘徊在设计大门的朋友还是很多，我就记录一下。</p>
+<p>在没有Sketch之前，设计师给过来的素材都是psd的。作为一个有节操的少年，虽然我拥有CS4的教育版本，但是我还是会用Pixelmator去切图。（PS：主要是不会使用PS！）不过由于兼容性的问题Pixelmator切图会丢失psd的一些图层效果。所以后来一直是设计师把图给切好了在给过来。（明明是想办法偷懒！！）</p>
+<p>不过后来，有了Sketch这货，我也就开始自己尝试切图。而且Sketch可以直接切出1x和2x。莫名的快感。（不要说PS有插件能做这个事情。我真不会和买不起PS）</p>
+<a id="more"></a>
+<h2 id="u5D2D_u65B0_u7684Sketch_3_u65B0_u5207_u56FE_u529F_u80FD"><a href="#u5D2D_u65B0_u7684Sketch_3_u65B0_u5207_u56FE_u529F_u80FD" class="headerlink" title="崭新的Sketch 3新切图功能"></a>崭新的Sketch 3新切图功能</h2><p>虽然Sketch 2中切图可以导出1x和2x。可是很多时候还是感觉切图不方便。主要是因为Slice在更加深的一层。如果画布上的图有更新和变动。Slice需要一起更新的话还要点过去。但是一般情况下，只有需要切图的时候才要点过去。导致每次需要调整Slice的位置和大小很不爽快。而且Slice的命名也需要多余的点击去修改。</p>
+<p>这些问题在Sketch 3里面都得到了改进！</p>
+<ol>
+<li>把Slice提到最外面，做为设计的同一个层级。</li>
+<li>Slice虽然现在是一等公民，可是有可以选择显示or不显示。相当方便。</li>
+<li>更加智能的认出要切的部分。</li>
+</ol>
+<h2 id="u5207_u56FE_u6280_u80FD_u8FDB_u5316"><a href="#u5207_u56FE_u6280_u80FD_u8FDB_u5316" class="headerlink" title="切图技能进化"></a>切图技能进化</h2><h2 id="u5C0F_u7ED3"><a href="#u5C0F_u7ED3" class="headerlink" title="小结"></a>小结</h2>]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<p><strong>本文未完成懒得屏蔽了</strong></p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>Sketch 3发布了，而且在国内设计圈产生了一阵不小的影响。（好吧，我承认我混的不是这个圈子）作为一个拥有Sketch 2的老用户来说。这颗闪亮的钻石本来只我才知道他的好。就像小时候发现了一个出租激情小电影的小店铺，突然某一天冒出来一堆人也来租。那种小秘密被打破莫名的失落感。</p>
+<p>好吧，其实这个是一个好事情。用的人多了，素材也会多。教程也会多。</p>
+<p>顺便一提Sketch 3的发布之前MengTo大神的<a href="http://designcode.io">Design Code</a>新书也在不断更新中。严重怀疑是商量好一起来坑钱包的。 配合的这么天衣无缝。在Sketch 3还没有正式发布的时候，MengTo大神更新的视频就是用的Sketch 3 beta版本。弄的我还以为我的Sketch 2是不是打开姿势不正确。</p>
+<p>写这篇的原型是因为看到weibo上有小朋友，居然用我大切图神器Sketch的姿势不对。所以虽然不是什么高级的功能。但是鉴于跟我一样徘徊在设计大门的朋友还是很多，我就记录一下。</p>
+<p>在没有Sketch之前，设计师给过来的素材都是psd的。作为一个有节操的少年，虽然我拥有CS4的教育版本，但是我还是会用Pixelmator去切图。（PS：主要是不会使用PS！）不过由于兼容性的问题Pixelmator切图会丢失psd的一些图层效果。所以后来一直是设计师把图给切好了在给过来。（明明是想办法偷懒！！）</p>
+<p>不过后来，有了Sketch这货，我也就开始自己尝试切图。而且Sketch可以直接切出1x和2x。莫名的快感。（不要说PS有插件能做这个事情。我真不会和买不起PS）</p>]]>
+    
+    </summary>
+    
+      <category term="Design" scheme="http://iiiyu.com/tags/Design/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS笔记(35) 格志周年系列之夏令时(三) 临时花絮]]></title>
+    <link href="http://iiiyu.com/2014/04/08/learning-ios-notes-thirty-five/"/>
+    <id>http://iiiyu.com/2014/04/08/learning-ios-notes-thirty-five/</id>
+    <published>2014-04-08T14:49:48.000Z</published>
+    <updated>2014-04-08T15:55:53.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>说曹操，曹操到。嘛当，还说总结一下时间的问题。这不blog这个系列没有写完。又爆了出一个时间相关的Bug。我只能说编程路茫茫，吾将上下求索。这次就着热乎着，来说是一个遇到了什么问题。</p>
+<h2 id="u9047_u5230_u7684_u95EE_u9898"><a href="#u9047_u5230_u7684_u95EE_u9898" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>有日本用户反馈，新版本更新以后，他日历上的时间全部乱了。而且无法写入日记。经过与用户沟通（感谢喵神onevcat的日文人肉翻译）分析得到用户使用和历（日本日历）。然后debug进去果然日期全部乱了。跟进去debug了一番，发现是之前解决夏令时的函数只考虑了公历！！！而iOS系统默认有三种日历。公历、和历、佛历。又一次无情的证明了我是一个天朝土包子。</p>
+<a id="more"></a>
+<h2 id="iOS__26amp_3B_26amp_3B_OS_X__u652F_u6301_u7684_u65E5_u5386"><a href="#iOS__26amp_3B_26amp_3B_OS_X__u652F_u6301_u7684_u65E5_u5386" class="headerlink" title="iOS &amp;&amp; OS X 支持的日历"></a>iOS &amp;&amp; OS X 支持的日历</h2><p>这个问题的出现提醒了我，地球上不同的人们其实是使用着不同的日历。（在这之前学习到的是地球上的人们过着不同的时区，有夏令时和没夏令时的时间）。</p>
+<p>iOS从Settings-&gt;General-&gt;International-&gt;Calendar。</p>
+<p><img src="http://ww4.sinaimg.cn/large/a6d3226bgw1ef8l1icf7pj20hs0vkdgp.jpg" alt=""></p>
+<p>可以看到是默认只是支持公历、和历、佛历。</p>
+<p><img src="http://ww4.sinaimg.cn/large/a6d3226bgw1ef8lfdww4aj20il0cewfz.jpg" alt=""></p>
+<p>OS X 要多一些…（好吧，大部分我都不认识）</p>
+<p>那到底iOS &amp;&amp; OS X支持哪些日历呢。</p>
+<p>看这里内建的有这些<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSLocale_Class/Reference/Reference.html#jumpTo_50" target="_blank" rel="external">NSLocale Calendar Keys</a> (PS: 经过测试农历那个之前处于半残疾状态)</p>
+<h2 id="u7528_u4EE3_u7801_u6D4B_u8BD5_u4E00_u4E0B"><a href="#u7528_u4EE3_u7801_u6D4B_u8BD5_u4E00_u4E0B" class="headerlink" title="用代码测试一下"></a>用代码测试一下</h2><p>我遇到的问题是我获得00:00:00的方法是直接用string然后反向设置小时、分钟、秒数得来的。所以，当日历不同的时候date-&gt;string就不一样了！！！这样我只判断了公历的时候，和历和佛历就错了。</p>
+<p>详细代码可以查考这个<a href="https://github.com/iiiyu/TestNSDateFormatterOnMac" target="_blank" rel="external">TestNSDateFormatterOnMac</a></p>
+<p>我fork了一个霓虹大神改动的。 添加了佛历的对比。</p>
+<p><img src="http://ww1.sinaimg.cn/large/a6d3226bgw1ef8m65ylz2j20lq0gtgo8.jpg" alt=""></p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>做好一个App其实挺难的，做好一款全球化的App更是难上加难。特别是我这种天朝土鳖，写程序的时候脑子里面就没全球化的意识。</p>
+<p>附上一个今天在推上看到的心酸笑话：</p>
+<p>编历法的玛雅码农想「我做个日历做上一千年应该就够用了吧」；编UNIX的码农想「我写个OS能用到2038年应该就够用了吧」；编RFC791的码农想「我整个IP能给42.9亿人用应该就够用了吧」——都给全世界添了乱子。我们做码农的一定要引以为戒 #读日语推有感#</p>
+<h2 id="u4E00_u4E9B_u53C2_u8003"><a href="#u4E00_u4E9B_u53C2_u8003" class="headerlink" title="一些参考"></a>一些参考</h2><p><a href="http://zh.wikipedia.org/wiki/農曆" target="_blank" rel="external">农历 wiki</a></p>
+<p><a href="http://zh.wikipedia.org/wiki/希伯來曆" target="_blank" rel="external">希伯來历 wiki</a></p>
+<p><a href="http://zh.wikipedia.org/wiki/ISO_8601" target="_blank" rel="external">ISO 8601 wiki</a></p>
+<p><a href="http://www.unicode.org/reports/tr35/tr35-25.html#Date_Format_Patterns" target="_blank" rel="external">UNICODE LOCALE DATA MARKUP LANGUAGE (LDML)</a></p>
+<p><a href="http://balunsoftware.jp/info/2013/06/nsdateformatter-japanese/" target="_blank" rel="external">NSDateFormatter で、和暦の変換に固定する</a></p>
+<p><a href="http://kevin-wu.net/ios-locale-and-calendar-tips/" target="_blank" rel="external">在开发iOS程序时对日期处理的总结</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>说曹操，曹操到。嘛当，还说总结一下时间的问题。这不blog这个系列没有写完。又爆了出一个时间相关的Bug。我只能说编程路茫茫，吾将上下求索。这次就着热乎着，来说是一个遇到了什么问题。</p>
+<h2 id="u9047_u5230_u7684_u95EE_u9898"><a href="#u9047_u5230_u7684_u95EE_u9898" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>有日本用户反馈，新版本更新以后，他日历上的时间全部乱了。而且无法写入日记。经过与用户沟通（感谢喵神onevcat的日文人肉翻译）分析得到用户使用和历（日本日历）。然后debug进去果然日期全部乱了。跟进去debug了一番，发现是之前解决夏令时的函数只考虑了公历！！！而iOS系统默认有三种日历。公历、和历、佛历。又一次无情的证明了我是一个天朝土包子。</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[学习UI设计笔记(一)]]></title>
+    <link href="http://iiiyu.com/2014/03/25/learn-ui-design-one/"/>
+    <id>http://iiiyu.com/2014/03/25/learn-ui-design-one/</id>
+    <published>2014-03-25T15:12:21.000Z</published>
+    <updated>2014-03-25T15:53:16.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>那啥， 我知道NSDate的坑没有搞定。缓缓，缓缓。我在开个新坑来着。恩恩这个坑就是记录一下怎么学习Sketch 这个软件的。</p>
+<p>首先，我买了本<a href="http://www.amazon.cn/更优秀的APP-31个APP用户界面设计经典案例-白润华/dp/B00ELMXLOK/ref=sr_1_1?ie=UTF8&amp;qid=1395760594&amp;sr=8-1&amp;keywords=31app" target="_blank" rel="external">更优秀的APP-31个APP用户界面设计经典案例</a>。 高手勿喷，这种图文并茂，手把手的交比较适合我这种菜鸟。</p>
+<p>这本书的唯一好处是他的例子是Ai的。而Sketch也是矢量图。所以我以为会有些类似的操作。（其实根本是两个软件啊！！！！）</p>
+<p>然后我准备把他说的31个例子都用Sketch来模仿一边。恩，先把Sketch的大部分功能运用熟练再说（就是花了小几百不想让他吃灰而已）</p>
+<a id="more"></a>
+<h2 id="Sketch_u8D44_u6599"><a href="#Sketch_u8D44_u6599" class="headerlink" title="Sketch资料"></a>Sketch资料</h2><p><a href="http://www.bohemiancoding.com/sketch/" target="_blank" rel="external">官网</a></p>
+<p>Sketch的资料其实并不是很多，原因之一是能熟练使用Adobe一套的大家（除了我）都能很快的入手。所以像我这样完全没有用过Photoshop的人在贵圈是一种奇葩。</p>
+<p>所以中文资料就特别特别不多，不多的意思是图灵社区的某个大神把操作手册翻译了一下</p>
+<p><a href="http://www.ituring.com.cn/book/1305?q=Sketch" target="_blank" rel="external">Sketch中文手册</a></p>
+<p>在没有发布的时候我就知道了，我满怀憧憬的等待这本书的上线。结果，嗯嗯很不错的一本使用手册。</p>
+<p>洋文资料最多的就是MengTo大神的</p>
+<p><a href="http://blog.mengto.com" target="_blank" rel="external">大神blog</a></p>
+<p>而且大神最近在预发售一本<a href="http://designcode.io" target="_blank" rel="external">design+code</a>。现在购买打5折哦。(免费为大神打个广告)</p>
+<p>官方视频都在Vimeo上自带神器</p>
+<p><a href="https://vimeo.com/57072774" target="_blank" rel="external">iOS Design using Sketch. Part one: iOS Navigation Bar</a></p>
+<p><a href="https://vimeo.com/57590796" target="_blank" rel="external">iOS Design using Sketch. Part two: iOS Toolbar</a></p>
+<p>对了，据可靠小道消息，这货的3.0要发布了。又是一次交钱的时刻。穷死了。</p>
+<h2 id="Github_u5730_u5740"><a href="#Github_u5730_u5740" class="headerlink" title="Github地址"></a>Github地址</h2><p>咱程序员就要有程序员的范，每次的Sketch我都会丢到这个地址上，如果需要下源文件研究一下的同学知道去哪里找了把。</p>
+<p><a href="https://github.com/iiiyu/learn-ui-design" target="_blank" rel="external">learn-ui-design</a></p>
+<p>鉴于最近的网络情况，自带神器。</p>
+<h2 id="u5927_u5E45_u5927_u5E45_u7684_u8D34_u56FE"><a href="#u5927_u5E45_u5927_u5E45_u7684_u8D34_u56FE" class="headerlink" title="大幅大幅的贴图"></a>大幅大幅的贴图</h2><h3 id="0"><a href="#0" class="headerlink" title="0"></a>0</h3><p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1eesf0yhz53j20zg0lmaew.jpg" alt="0"></p>
+<p>恩，按照教程，我手绘了一张图片，然后用手机拍照了放到Sketch里面。</p>
+<h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1eesf3zl60jj20zg0lmn1i.jpg" alt="1"></p>
+<p>拖了一个椭圆，然后选中铅笔工具，描绘了一下那个小尾巴。</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p><img src="http://ww4.sinaimg.cn/large/a6d3226bgw1eesf54xa8kj20zg0lmaf1.jpg" alt="2"></p>
+<p>选中他们两个，进行Union操作。</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p><img src="http://ww3.sinaimg.cn/large/a6d3226bgw1eesf5vjl8kj20zg0lmdkp.jpg" alt="3"></p>
+<p>拖一个正方形出来</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3><p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1eesf6sqy2sj20zg0lmwjs.jpg" alt="4"></p>
+<p>正方形旋转45度</p>
+<h3 id="5"><a href="#5" class="headerlink" title="5"></a>5</h3><p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1eesf7fq37ij20zg0lm0xy.jpg" alt="5"></p>
+<p>在正方形上双击会出现可以编辑的关键点</p>
+<h3 id="6"><a href="#6" class="headerlink" title="6"></a>6</h3><p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1eesf7ukiefj20zg0lm0xz.jpg" alt="6"></p>
+<p>删除掉最右边的关键点，变成一个三角形</p>
+<h3 id="7"><a href="#7" class="headerlink" title="7"></a>7</h3><p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1eesf979g3dj20zg0lmtd3.jpg" alt="7"></p>
+<p>把气泡弄出来看一下整体效果</p>
+<h3 id="8"><a href="#8" class="headerlink" title="8"></a>8</h3><p><img src="http://ww3.sinaimg.cn/large/a6d3226bgw1eesf9x1vynj20zg0lmdkr.jpg" alt="8"></p>
+<p>随便上个颜色试试</p>
+<h3 id="9"><a href="#9" class="headerlink" title="9"></a>9</h3><p><img src="http://ww1.sinaimg.cn/large/a6d3226bgw1eesfacyshyj20zg0lm0vn.jpg" alt="9"></p>
+<p>最终版本，我尽力了。</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>恩，2014年的一个要努力的目标就是把自己的品味搞上去。恩呢，加油。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>那啥， 我知道NSDate的坑没有搞定。缓缓，缓缓。我在开个新坑来着。恩恩这个坑就是记录一下怎么学习Sketch 这个软件的。</p>
+<p>首先，我买了本<a href="http://www.amazon.cn/更优秀的APP-31个APP用户界面设计经典案例-白润华/dp/B00ELMXLOK/ref=sr_1_1?ie=UTF8&amp;qid=1395760594&amp;sr=8-1&amp;keywords=31app">更优秀的APP-31个APP用户界面设计经典案例</a>。 高手勿喷，这种图文并茂，手把手的交比较适合我这种菜鸟。</p>
+<p>这本书的唯一好处是他的例子是Ai的。而Sketch也是矢量图。所以我以为会有些类似的操作。（其实根本是两个软件啊！！！！）</p>
+<p>然后我准备把他说的31个例子都用Sketch来模仿一边。恩，先把Sketch的大部分功能运用熟练再说（就是花了小几百不想让他吃灰而已）</p>]]>
+    
+    </summary>
+    
+      <category term="Design" scheme="http://iiiyu.com/tags/Design/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS笔记(34) 格志周年系列之夏令时(二)]]></title>
+    <link href="http://iiiyu.com/2014/03/19/learning-ios-notes-thirty-four/"/>
+    <id>http://iiiyu.com/2014/03/19/learning-ios-notes-thirty-four/</id>
+    <published>2014-03-19T12:37:48.000Z</published>
+    <updated>2014-03-20T15:28:55.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>恩，两月没更新blog，hexo都出来新主题来着。其实昨天为了找个背景图找了一小时我会随便乱说。就是为了找一个配合网站标题的背景图。其实hexo默认的就蛮好了，但是为了显示那么一点点与众不同还是替换了一下。</p>
+<p>扯淡结束，接上一篇<a href="http://iiiyu.com/2014/03/18/learning-ios-notes-thirty-three/">格志周年系列之夏令时(一)</a></p>
+<h2 id="u7B2C_u4E00_u9636_u6BB5Bug"><a href="#u7B2C_u4E00_u9636_u6BB5Bug" class="headerlink" title="第一阶段Bug"></a>第一阶段Bug</h2><p>上次说过一个中国高富帅用户发Email来说，他去泰国旅游的时候，日记都不见了。</p>
+<p>其实不是日记不见了，日记都好好的躺在sqlite文件里面。而是查询不出来了。日记的保存是用了一个函数去获得了每天的00:00:00. 然后作为唯一标识来区别和查询。  </p>
+<p>那日期出了啥问题？</p>
+<p>我们来快速的分析一下</p>
+<p>调用的是</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSDate</span> *) dateAtStartOfDay</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">NSDateComponents</span> *components = [CURRENT_<span class="built_in">CALENDAR</span> components:DATE_CO<span class="built_in">MPONENTS</span> fromDate:<span class="keyword">self</span>];</span><br><span class="line">	components<span class="variable">.hour</span> = <span class="number">0</span>;</span><br><span class="line">	components<span class="variable">.minute</span> = <span class="number">0</span>;</span><br><span class="line">	components<span class="variable">.second</span> = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> [CURRENT_<span class="built_in">CALENDAR</span> dateFromComponents:components];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>里面有两个宏</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">define</span> DATE_COMPONENTS (NSYearCalendarUnit| NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekCalendarUnit |  NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit)</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> CURRENT_CALENDAR [NSCalendar currentCalendar]</span></span><br></pre></td></tr></table></figure>
+<p>假设你使用过Cocoa时间这些类的话能很容易的看出。dateAtStartOfDay函数就是把你持有的date以当前日历为基础，其他不改，小时，分钟，秒钟设置都为0。这样就能得到一个基于当前日历下的date这一天的00:00:00。</p>
+<p>简单看上去没有什么问题，回到高富帅的问题。他出国玩一圈咋时间就变了呢？答案是[NSCalendar currentCalendar]改变了。NSCalendar的改变使得dateAtStartOfDay返回的时间也变了。debug到这一步才发觉靠当初为什么没有想到有时区的这个问题。</p>
+<p>自己给自己找一个理由就是到目前为止，我只用过大天朝的+8时间。潜意识里面根本没有说换一个时区这样的概念。(后来某一天我翻了本C语言的书第一章就说了国际化时间的问题，再后来weibo上大家都纷纷表示时间是编程里面一个基础点而且做好不容易，只能说我还是太菜太年轻了。这些是后话了)</p>
+<p>说道这里那就开始科普一下地球上时间的问题</p>
+<a id="more"></a>
+<h2 id="u4E16_u754C_u65F6_u95F4"><a href="#u4E16_u754C_u65F6_u95F4" class="headerlink" title="世界时间"></a>世界时间</h2><p>由于人类历史的缘由，地球上以大概的地理位置画分时区。<a href="http://en.wikipedia.org/wiki/Time_zone" target="_blank" rel="external">Time Zone Wiki</a></p>
+<p>我认为时间是大爆炸以后产生的扩张现象，在可预见的人类的历史上肯定是不可逆转的。所以每一个时刻对于人类来说应该是唯一的。但是，在这同一个时刻里面，在地球的不同地方使用着不同的时间格式来表现着。我认为这是相当不科学的一个事情。随着人类文明的进步，我觉得最后应该会全世界时间大统一的。</p>
+<p>回到现实中还是要解决现在因为时区而产生的问题。</p>
+<h2 id="iOS_u4E2D_u7684_u65F6_u95F4"><a href="#iOS_u4E2D_u7684_u65F6_u95F4" class="headerlink" title="iOS中的时间"></a>iOS中的时间</h2><p>在Cocoa里面，获取一个当前时间是</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"Now:%@"</span>, [<span class="built_in">NSDate</span> date]);</span><br></pre></td></tr></table></figure>
+<p>Log出来应该是一个 xxxx-xx-xx xx:xx:xx +0000。但是聪明的你，人如果处在大天朝内马上发现这个时间比你电脑上的时间少了8小时。</p>
+<p>恩,因为NSDate记录的是一个绝对的值。这个值代表的意思是UTC时区的绝对时间。我们就把它看作为我们写Cocoa程序的一个绝对时间，千万要记住这一点。因为接下来的一堆概念会把人弄晕的。（我就晕了好久#_#）</p>
+<p><a href="http://zh.wikipedia.org/wiki/協調世界時" target="_blank" rel="external">UTC Wiki</a></p>
+<p>与UTC有点关系的GMT时间，稍作了解避免搞混了。（实在分不清，你就记住UTC是一个更加精准的标准时间）</p>
+<p><a href="http://zh.wikipedia.org/zh-cn/格林尼治平时" target="_blank" rel="external">GMT Wiki</a></p>
+<p>那NSDate存储了一个什么值来代表时间呢？可以简单的认为他是记录了一个浮点数。这个浮点数代表什么呢？我们注意到头文件里面有个这样的方法timeIntervalSince1970。</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// seconds</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"seconds %lf"</span>, [[<span class="built_in">NSDate</span> date] timeIntervalSince1970]);</span><br></pre></td></tr></table></figure>
+<p>在写文章的此时此刻打印出来是“1395324408.535384”。简单运算一下</p>
+<pre><code>1395324408.535384 / 60 / 60 / 24 / 365 ≈ 44.245446745
+
+2014.x - 44.x ≈ 1970
+</code></pre><p>看到这里，就可以很明确的认为用NSDate来存储的时间是从1970-01-01 00:00:00 到那个时刻所经历的秒数。</p>
+<p>为什么是1970？如果你接触过一些计算机的知识或者其他编程语言或者数据库等。你都可能在时间相关的地方会发现1970很眼熟的样子。<a href="https://duckduckgo.com" target="_blank" rel="external">放鸭</a>搜索了一下。找到一些比较权威的说法。</p>
+<p>首先能找到权威解释是<a href="http://en.wikipedia.org/wiki/Unix_time" target="_blank" rel="external">Unix time</a>。简单粗暴的来说就是我们现在用的 <em>nix 以及基于 </em>nix的一堆东西（包括了现在使用的绝大部分东西）都是1970年极其以后出现的。那时候大家觉得就从1970-01-01 00:00:00开始算时间是个不错的主意。就这么一直延续下来了。（PS：忽略了一堆32bit or 64bit的点。需要详细解释的看url）</p>
+<p>看NSDate头文件还</p>
+<p>发现一个有意思的宏</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hexcolor">#def</span>ine NSTimeIntervalSince1970  <span class="number">978307200.0</span></span><br></pre></td></tr></table></figure>
+<p>稍微做了一下运算。可以知道这是从1970-01-01 00:00:00 到2001-01-01 00:00:00经过的秒数。稍微思考一下应该是用来进行了优化运算的。</p>
+<p>待续。。。</p>
+<h2 id="u5C0F_u7ED3"><a href="#u5C0F_u7ED3" class="headerlink" title="小结"></a>小结</h2><p>这么一点字又写了两天，还是要每天坚持啊。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>恩，两月没更新blog，hexo都出来新主题来着。其实昨天为了找个背景图找了一小时我会随便乱说。就是为了找一个配合网站标题的背景图。其实hexo默认的就蛮好了，但是为了显示那么一点点与众不同还是替换了一下。</p>
+<p>扯淡结束，接上一篇<a href="http://iiiyu.com/2014/03/18/learning-ios-notes-thirty-three/">格志周年系列之夏令时(一)</a></p>
+<h2 id="u7B2C_u4E00_u9636_u6BB5Bug"><a href="#u7B2C_u4E00_u9636_u6BB5Bug" class="headerlink" title="第一阶段Bug"></a>第一阶段Bug</h2><p>上次说过一个中国高富帅用户发Email来说，他去泰国旅游的时候，日记都不见了。</p>
+<p>其实不是日记不见了，日记都好好的躺在sqlite文件里面。而是查询不出来了。日记的保存是用了一个函数去获得了每天的00:00:00. 然后作为唯一标识来区别和查询。  </p>
+<p>那日期出了啥问题？</p>
+<p>我们来快速的分析一下</p>
+<p>调用的是</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSDate</span> *) dateAtStartOfDay</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">NSDateComponents</span> *components = [CURRENT_<span class="built_in">CALENDAR</span> components:DATE_CO<span class="built_in">MPONENTS</span> fromDate:<span class="keyword">self</span>];</span><br><span class="line">	components<span class="variable">.hour</span> = <span class="number">0</span>;</span><br><span class="line">	components<span class="variable">.minute</span> = <span class="number">0</span>;</span><br><span class="line">	components<span class="variable">.second</span> = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> [CURRENT_<span class="built_in">CALENDAR</span> dateFromComponents:components];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>里面有两个宏</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">define</span> DATE_COMPONENTS (NSYearCalendarUnit| NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekCalendarUnit |  NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit)</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> CURRENT_CALENDAR [NSCalendar currentCalendar]</span></span><br></pre></td></tr></table></figure>
+<p>假设你使用过Cocoa时间这些类的话能很容易的看出。dateAtStartOfDay函数就是把你持有的date以当前日历为基础，其他不改，小时，分钟，秒钟设置都为0。这样就能得到一个基于当前日历下的date这一天的00:00:00。</p>
+<p>简单看上去没有什么问题，回到高富帅的问题。他出国玩一圈咋时间就变了呢？答案是[NSCalendar currentCalendar]改变了。NSCalendar的改变使得dateAtStartOfDay返回的时间也变了。debug到这一步才发觉靠当初为什么没有想到有时区的这个问题。</p>
+<p>自己给自己找一个理由就是到目前为止，我只用过大天朝的+8时间。潜意识里面根本没有说换一个时区这样的概念。(后来某一天我翻了本C语言的书第一章就说了国际化时间的问题，再后来weibo上大家都纷纷表示时间是编程里面一个基础点而且做好不容易，只能说我还是太菜太年轻了。这些是后话了)</p>
+<p>说道这里那就开始科普一下地球上时间的问题</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS笔记(33) 格志周年系列之夏令时(一)]]></title>
+    <link href="http://iiiyu.com/2014/03/18/learning-ios-notes-thirty-three/"/>
+    <id>http://iiiyu.com/2014/03/18/learning-ios-notes-thirty-three/</id>
+    <published>2014-03-18T13:23:35.000Z</published>
+    <updated>2014-03-19T13:08:28.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>两月没写blog，没羞没皮了。以后作息规律一些，blog更新还是频繁一些。格志在2014年2月11日就整整上线一周年了。2013一年做格志，由于自己的技术实在比较菜。导致从上线的第一天起，整个团队跟着一直打补丁。小的坑就不说了，大的坑有两，一个iCloud + Core Data世界性难题。一个是全球时间问题。这篇blog就用来专门记下时间的坑。中间还有个插曲——格志在三月上线了2.0的全新专门为iOS 7设计的版本。时间问题在去年10月份改完以为对了就没有改过。结果3月9号是3月的第二个周日，美国地区进入夏令时。格志中又再次发生了时间问题，导致日记显示不全。之前开会说过放错不可怕，可怕的是放同样的错误。再次放错以后我都呆住了。那可是我写过测试用例的啊。结果当时一run测试就挂掉了。瞬间脑子蒙掉。然后上周通宵了一天，基本每天到3点把世界时间问题给彻底搞定。（希望是彻底）所以趁着我现在还有印象，记录一下。</p>
+<a id="more"></a>
+<h2 id="u56FD_u9645_u5316"><a href="#u56FD_u9645_u5316" class="headerlink" title="国际化"></a>国际化</h2><p>我们所以会遇到世界时间的问题主要有几个原因：</p>
+<ol>
+<li>格志的定位是一个全球市场的产品</li>
+<li>我们团队(真实情况是我是一个土鳖)并没有很国际化的背景</li>
+<li>格志是一个颗粒度为天的日记应用（Day One等另外几个比较出名的App其实是一个moment为颗粒度）</li>
+<li>格志在设计数据存储的时候用了时间作为日记的唯一标识符号</li>
+</ol>
+<p>所以，最初的版本。我是用了一天的00:00:00分来作为日记的时间。</p>
+<p>用了这个库</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">https:</span><span class="comment">//github.com/erica/NSDate-Extensions</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// pod </span></span><br><span class="line">pod <span class="string">'NSDate-Extensions'</span>, <span class="string">'~&gt; 0.0.1'</span></span><br></pre></td></tr></table></figure>
+<p>里面的这个方法(先贴出来)</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSDate</span> *) dateAtStartOfDay</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">NSDateComponents</span> *components = [CURRENT_<span class="built_in">CALENDAR</span> components:DATE_CO<span class="built_in">MPONENTS</span> fromDate:<span class="keyword">self</span>];</span><br><span class="line">	components<span class="variable">.hour</span> = <span class="number">0</span>;</span><br><span class="line">	components<span class="variable">.minute</span> = <span class="number">0</span>;</span><br><span class="line">	components<span class="variable">.second</span> = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> [CURRENT_<span class="built_in">CALENDAR</span> dateFromComponents:components];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>来获取每天开始的时间。</p>
+<p>然后第一个版本我们就这样欢乐开心的上线了。然后iCloud爆大坑。开始填了2个月的iCloud坑和数据修复。在某个时间，一个中国高富帅用户发Email来说，他去泰国旅游的时候，日记都不见了。我才隐约发觉日记的时间有问题！！</p>
+<p>日期出了啥问题？</p>
+<p>待续</p>
+<h2 id="u5C0F_u7ED3"><a href="#u5C0F_u7ED3" class="headerlink" title="小结"></a>小结</h2><p>上周作息实在不规律，现在需要调整一下。本来应该一次性写完发的，但是怕自己懒惰（比如上次的开了头就没有继续，所以我决定每天都写一点就算少一点还是把他发掉）</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>两月没写blog，没羞没皮了。以后作息规律一些，blog更新还是频繁一些。格志在2014年2月11日就整整上线一周年了。2013一年做格志，由于自己的技术实在比较菜。导致从上线的第一天起，整个团队跟着一直打补丁。小的坑就不说了，大的坑有两，一个iCloud + Core Data世界性难题。一个是全球时间问题。这篇blog就用来专门记下时间的坑。中间还有个插曲——格志在三月上线了2.0的全新专门为iOS 7设计的版本。时间问题在去年10月份改完以为对了就没有改过。结果3月9号是3月的第二个周日，美国地区进入夏令时。格志中又再次发生了时间问题，导致日记显示不全。之前开会说过放错不可怕，可怕的是放同样的错误。再次放错以后我都呆住了。那可是我写过测试用例的啊。结果当时一run测试就挂掉了。瞬间脑子蒙掉。然后上周通宵了一天，基本每天到3点把世界时间问题给彻底搞定。（希望是彻底）所以趁着我现在还有印象，记录一下。</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[读 Jony Ive The Genius Behind Apple's Greatest Products 笔记]]></title>
+    <link href="http://iiiyu.com/2014/01/08/read-jony-ive/"/>
+    <id>http://iiiyu.com/2014/01/08/read-jony-ive/</id>
+    <published>2014-01-08T12:51:37.000Z</published>
+    <updated>2014-10-19T16:16:32.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>发现之前的读书笔记写的好少啊。 都是每年的一月份写一次，然后一整年都没有写。其实并不是没有看书而已，只是看了没写而已。2013除了专业的书籍还是看了一些乱七八糟的书籍。比如开始看王小波，看冯唐。对了<a href="http://weibo.com/ooyor" target="_blank" rel="external">ooyor</a>大神同学去台湾做出国毕业旅行游的时候还给我带来了一本冯唐实体的小黄书《不二》。还有就是2013年初看完柴静的《看见》和李承鹏《全世界人民都知道》,而且还去不在书店签了4本。亲笔签名哦！其他的看了也就没有印象了。</p>
+<p>其实读大学以来，每年的书籍开销都是一笔不小的数目。这就造成了一个严重的问题！每次不管是短途迁移还是长途迁移都搬书搬的欲仙欲死。所以，2013我都是可以买电子书坚决不买实体书。如果没有电子书，我就等电子书出来。如果没有电子书，不是很想看的就不买了。电子书多好迁移啊，一个iPad就带走千万本。不过也有些郁闷，我KK的全套在字节社里面结果现在字节社快挂的样子，多看上买了目前最多的书，但是被小米收掉以后不喜欢它的作风。现在我已经全面的转向了豆瓣读书。图灵社区也买了些然后丢多看里面看。（多看在我这里已经沦为Good Reader的替代品）。</p>
+<p>恩，2014希望我想看的书都出电子版吧！让电子化来的更加猛烈一些。</p>
+<h2 id="Jony_Ive"><a href="#Jony_Ive" class="headerlink" title="Jony Ive"></a>Jony Ive</h2><p>这次的书总有种是为了敛财而来，作为一个Apple的脑残粉。其实Apple这40年来的各种事件和经历。已经在无数的书籍、文章、电影里面一次一次的重复了很多很多次。每看一次就对Apple的印象丰满一些。到现在Apple在我心中已经是一种具体的形状。这次的Jony Ive传记对我来说，也只是对于Apple印象的一个补充而已。</p>
+<h3 id="u5E74_u5C11_u6210_u540D"><a href="#u5E74_u5C11_u6210_u540D" class="headerlink" title="年少成名"></a>年少成名</h3><p>大英帝国的子民，而大英帝国好歹是工业革命的发起地。虽然美帝现在势不可挡。但是200年来的现代化进程底蕴是天朝这种年轻的2b国度无法比拟的。而且Jony Ive人家老爸<br>人家16-7岁的时候就已经各种拿奖了。</p>
+<h1 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h1><p>这篇blog的创建时间是1月8号。现在时刻是3月18号。所以我还是把他发掉把。只开了头而已。现在记不住了。</p>
+<p>一月到三月瞟过的书有：</p>
+<p>「从你的全世界路过」 （看错作者买错书了）</p>
+<p>三本Objective C的</p>
+<p>GEB瞟了几页。</p>
+<p>豆瓣上冲了150.忘记买了些啥了记得有几本挺贵。反正是不在多看上买书了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留]]>
+    </summary>
+    
+      <category term="read book notes" scheme="http://iiiyu.com/tags/read-book-notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[2013年度总结]]></title>
+    <link href="http://iiiyu.com/2013/12/31/2013-annual-summary/"/>
+    <id>http://iiiyu.com/2013/12/31/2013-annual-summary/</id>
+    <published>2013-12-31T13:57:54.000Z</published>
+    <updated>2014-02-17T04:21:47.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u751F_u6D3B"><a href="#u751F_u6D3B" class="headerlink" title="生活"></a>生活</h2><h3 id="u6CE8_u5B9A_u7684_u6F02_u6CCA"><a href="#u6CE8_u5B9A_u7684_u6F02_u6CCA" class="headerlink" title="注定的漂泊"></a>注定的漂泊</h3><p>在16岁的时候，我就会隐约觉得我会一生注定漂泊。这种感觉以我的文字水平很难用完整表达出来。不过18岁以后的每一年换一个住的地方。直接用事实验证了这个16岁的直觉。本来以为我会在厦大住够2年的，命中注定，天煞孤星。房子要拆迁只有另外找地方了。继续这一年一个地方的节奏。</p>
+<a id="more"></a>
+<h3 id="u6781_u54C1_u623F_u4E1C"><a href="#u6781_u54C1_u623F_u4E1C" class="headerlink" title="极品房东"></a>极品房东</h3><p>我想如果不是今天发生的事情我是不会写入的。说真的我一直觉得国足，城管，整个教育，盗版，没节操，所有的敏感词。其实都是表面，去深究根本原因的人们都消失不见了。所以在这种无力的大环境前提下。面对这些事情我常常手足无措，不知道应该用什么样的态度去面对这些事情。我只能告诉自己，这是一个又一个生动又真实的移民广告。来生不做中国人。拉回来说，现在应该称为前房东。来厦门几次找房子都很仓促。都没有留下足够的时间来好好的找房子。第一次是来面试结束以后，一直住酒店。厦门的酒店价格大家懂的。然后也是找了中介就草草决定。电梯海景房，一套隔断成6套。我的是其中之一。旁边有个貌似厦大的女生。经常去夜店，凌晨2-3点回来。这个没啥，关键带一群女生回来。喝了些多不多的酒。然后开始评论男人，给男人打电话扯淡。嘛当，几个月搞的神经衰弱啊。 直接说了没有用。几次想怕起来搞个小电影开最大声音。但是觉得我都出声提醒警告无效的情况下。貌似也没用。然后就是住了半年房东要涨200，当时怕过不了试用，就直接滚蛋没干签一年。然后最后几天天天中介带人过来看，态度很嚣张。最后退房的时候，我在帝都找妹子去了。委托了蒋韩同学过去退押金。一个很能扯淡的河南汉子硬是被两中年妇女说的毫无招架之力。唉。反正被扣了钱。不过也难为他了。找啊找，然后我们投资人说有个朋友的朋友有住房子。当时遇到国庆要去帝都找妹子。找房子带搬家就一周时间。然后想着恩好像有点熟人类似的关系应该没啥问题就定下来了，没有签合同（这个为现在埋下了巨大的隐患）。厦大里面最古老的房子没有之一，每层有共用厕所（没有独立卫生间）。唯一两个电器空调和热水器。我进去的时候起码画了2000添置洗衣机，电磁炉等物品才能住的。第二次交租突然告诉我有个物业管理费，嘛当，当初就写了个收据，没啥合同。一定说是跟我说过的。恶心坏了。没窗帘，我自己挂。空调坏了，我自己修。电灯坏了我自己换。嘛当，想着也没有啥大事情就自己弄好了。不要这么娘炮。天天找房东。结果呢一年到期人家2话不说，呵呵因为物价上涨，所以房租也要涨。我从来没有拖欠过每次交租。而且他是教职工租房房子，很是便宜，然后一年到期的头7天突然跟我说下一年的房租要涨200.之前跟我没有任何联系。因为没有合同人家就是要涨就涨。但是他的房子几乎没啥成本，是厦大租给教职工做福利的。然后我想找房子，但是那个月突然有工作要忙。最后没能找到满意的。我只能说是要继续住。然后叫他过来当面说了1小时。晓之以情，动之以理。最后喉咙都感觉出血的情况下。在他带来各种不平等条约的合同上只涨100.签了1年。这不，住了没2月就要拆。收到消息到搬走也之有10天左右的时间。就在2013.12.30日我打电话跟房东说我2013.12.31日要搬走。然后晚上过来交接一下房租的事情。（这个时候我有一个月的押金，和交了3个月只住了两个月的房租）他满口答应没有问题。 2013.12.31日晚我回到老房子跟他打电话问他什么时候过来交接。第一，他矢口否认我交过一个月的押金。并且否认之后签的合同上同样写着交了押金的条目。第二，以其他理由推脱不能来交接。真的，当时我整就无语在空中。然后我叫他当面过来对质。我还有他写的收据。然后我拍照发过去给他。他又说2014年1月1日。转帐给我。基于很多很多小的细节。我在离开房子的时候拍了些照片。以防止要出什么妖蛾子。</p>
+<p>在这个劣币驱逐良币。权利利益群体更加压迫普通群体的地方。我唯一找到的解决方案就是移民。</p>
+<p>这段写的异常愤怒。下面写点轻松的。</p>
+<h3 id="u5B8C_u5168_u6B63_u7248_u5316"><a href="#u5B8C_u5168_u6B63_u7248_u5316" class="headerlink" title="完全正版化"></a>完全正版化</h3><p>其实，全面转到Linux的时候，已经很少用盗版了，除了虚拟机里面的Windows是盗版。然后全面用Mac以后，几乎没有啥盗版。只是一开始的时候也没入啥App。但是2013年，我买正版没有三千也有两千了把。第一次买超过100rmb App的时候还是很纠结。但是买过了以后就没啥感觉了。然后买了几次以后。感觉300左右的App还是能在接受的范围内。所以，看到心仪的App一般就入了。6rmb这种几乎都是顺点的。所以，2013年对我来说是完全正版化的一年。对了，我没有虚拟机，所以我也没有用Windwos。所以，现在我可以自豪的说，我现在Mac上面全部App是正版。当然今年的正版化，我还尝试过音乐。不过iTunes里面中国区买不到。天朝的几家付费的我都冲过一两个月尝试了一下。但是都没有心仪的。不过后来Xiami For Mac。确实做的好，本来我对虾米的印象是很糟糕的。但是Xiami For Mac居然能改变我对虾米的看法。真的做的好。然后今年去电影院的次数也满多，iMax也看了不少场。对了，如果你一定要揪出来说，我只能说我承认我看的爱情动作片还是盗版。不过我也会尝试着弄成正版。</p>
+<h2 id="u5DE5_u4F5C"><a href="#u5DE5_u4F5C" class="headerlink" title="工作"></a>工作</h2><h3 id="Sumi"><a href="#Sumi" class="headerlink" title="Sumi"></a>Sumi</h3><p>来厦门也快两年，其实长开智以后，只要某一刻突然停下来回头瞅瞅，都会发出时间过的好快的感觉。文人骚客说就是“人生天地之间，若白驹过隙，忽然而已”。 </p>
+<p>2013过年一来，大概迷茫过3-4个月的样子。迷茫的原因是我周围都是一堆“一条龙”能搞定的人儿。我所谓的”一条龙”就是现在流行的”full stack developer”。</p>
+<p>我boss Kevin Cao。 泪流满面，工作室来过好多波人参观。如果是熟悉的人都会说一句“Kevin是我见过从设计到技术都能达到国际水准的一个人”。如果不熟悉的人听到啥“Grid Diary是你设计的？还是你写的？我这么多年来第一次见过又能设计又能写代码的”。可想我一个hello world级别的小菜程序员压力有多大了么。</p>
+<p>90后”一条龙”王放放同学，泪流满面，从后端，前端，设计，iOS，Android, MacOSX App.一条龙了。居然tm的还是文科生跨界友情客串。你叫一个读了破壁坑爹4年的软件工程专业的88年大龄hello world级别程序员情何以堪。</p>
+<p>90后“一条龙”廖逸聪小朋友， 泪流满面，又是一个从后端，前端，设计，iOS，Android, MacOSX App.一条龙了。而且华丽丽的看清楚了破壁坑爹的软件学院本质。大二休学闯荡江湖。然后见到我的时候大部分时间拉着我聊南怀瑾。然后时不时的送自己烤的小饼干给我吃。嘛当，不仅可以写的一手好代码，还能做的好一手小饼干。恩我去面壁思过去了。</p>
+<p>当看到我司RoR高富帅写起iOS也绝不含糊。旁边的100平土豪灰用起Photoshop也是一溜一溜的时候。我就纠结了，嘛当，写个程序写hello world级别。连个PS都不会用。太丢人了。</p>
+<p>在这样一群优秀的人儿当中，那时候我想，嘛当我也可以画图的嘛。好歹小学时候画小金鱼拿过小红花的。这样我跟小聪妹子骗来了一本「像艺术家一样思考」。然后郑重其事的去厦大小超市里面买了铅笔和纸准备学习画画。初级目标是理解美。中级目标是也能自己熟练的捣鼓点UI。终极目标是向Boss那样一条龙下来。而且是高水准的一条龙。</p>
+<p>可是事实就是任何东西没有经过一万小时的锤炼是无法成为专家的。只有幼儿园水平却想着要弄出专家级别的东西。而弄不出来的时候我心情就会变的很压抑、烦躁。白天工作的时候思绪就会不集中，素描也没有能坚持下去。就画了大概2周左右的时间。</p>
+<p>在学习素描的过程中，我不仅仅想学画画这样一个技能。我就是想一口吃成一个胖子。我还同时看着后端而且后端我还在Golang Ruby NodeJS中徘徊。今天这个配置环境Go写个hello world折腾一下。明天弄个Vim环境试试Ruby的写法。 大后天弄个Textmate的bundle写一下NodeJS。每个东西都浅尝辄止的学习。却想做出一个庞大的系统出来。</p>
+<p>最后，我居然还在开始看着OSX编程。也不知道脑子咋想的。觉得自己在iOS端输出不够，就逃避的想说恩。我去先学一学OSX。到时候项目快速推进到OSX上。来弥补我在iOS端的薄弱输出。事实是OSX上面的坑更多。各种API一点都没有iOS上的好用。而且桌面端的思路跟移动端的思路完全是两个概念。双修其实是有难度有门槛的事情。</p>
+<p>各种折腾2-3个月，我还是那个我。无法画出漂亮的UI，写不出比hello world更加复杂的后端，写不了OSX的程序，本来应该写好的iOS代码的质量也没有得到提高。时间成本在折腾中流失。</p>
+<p>在我的各种愤怒中。萌小萌同学和Boss让我意识到。如果单项技能没有一万小时的修炼是无法达到我想要的高度的。而我不能三心二意的做事情。这样反而影响到了工作质量。</p>
+<p>我用了一段时间艰难的让自己承认自己只是一个天资普通的人。我只有踏踏实实的一个小时一个小时单线程的努力。累计到了一万小时才是最终的王道。</p>
+<h3 id="u4EE3_u7801__26amp_3B_26amp_3B__u6280_u672F"><a href="#u4EE3_u7801__26amp_3B_26amp_3B__u6280_u672F" class="headerlink" title="代码 &amp;&amp; 技术"></a>代码 &amp;&amp; 技术</h3><p>今年早些时候，Allen Xu（又是一个全端工程师，你们够了！！！天天刺激我）的引荐。我有幸被唐巧加入他的群里。诚惶诚恐，巧哥的群有点像传说中大佬caoz的群的方式。进群的唯一标准是巧哥觉得你ok。虽然不可能像caoz的群里那种随便一个都是大佬。但是目测巧哥的群里大部分伙伴们的实力（其实就是除了我）应该能代表目前中国iOS&amp;&amp;Cocoa的顶级实力。肯定有一些潜伏的大神还没有露面出现。不过现在群列表里都是开发这百万用户，千万用户，亿级用户产品的大大们。平时有个啥问题丢进群里。几乎是立马可以得到解决方案。群里也经常分享整个业界的最新资讯。2013年能进巧哥的群，是一个非常大的惊喜。从里面收获颇多。</p>
+<p>2013年的代码质量从被review的情况上来看，可读性依然一塌糊涂。最更本的原因是我只会一个一个的单词（还经常打错）。而无法连成一句完整的话。其实我有很努力的去改进这个问题。都变成每次写代码，起函数名字是整个写代码过程中花费时间最长的部分。但是效果不明显。</p>
+<p>今年技术关注的重点依然集中于iCloud。由于过年前的匆忙修改，并且没有覆盖测试，导致iCloud出错。最终导致Grid Diary没能一炮而红。其实主要责任是我的。为了解决第一次发布版本的错误。我们用了整整2个月，不停的推出版本来修复错误。而因为没有写测试用例覆盖测试。往往我们修复了一个问题，结果就引出了其他问题。关于Gird Diary这一年遇到的坑。我觉得可以重新写一篇blog了。</p>
+<p>然后为了解决iCloud + Core Data同步的问题。又去尝试设计过iCloud + Document的方法去同步。然后在建立索引。但是由于demo完成度太低。和老用户升级带来的麻烦。此方案最终抛弃。所以现在依然是iCloud + Core Data的同步方式。</p>
+<p>今年另外一个重点关注的东西是ReactiveCocoa。虽然我还是hello world级别。不过在github上watch一个这样活跃的项目收获还是巨大的。可以看到什么是开发的热情和执行的高效。看到他们为了一个名字而讨论怎么样才合适。所以ReactiveCocoa对我来说不仅仅带来了一种新的设计思想和代码编写方式。它还为我展示了一个国际化开源项目的活力。</p>
+<h2 id="u611F_u60C5"><a href="#u611F_u60C5" class="headerlink" title="感情"></a>感情</h2><h3 id="u7236_u6BCD"><a href="#u7236_u6BCD" class="headerlink" title="父母"></a>父母</h3><p>其实在16-7岁的时候跟父母的关系其实蛮紧张的。因为年少吧，现在能多为其他人考虑问题以后。那就多体谅父母。只是亲尚在，不远游。自己在外面漂泊着如果父母有个什么事情也帮助不了的时候觉得自己挺自私的。不过爸妈还是很尊重我的意思，我也很感谢他们并没有强迫我去做我不喜欢做的事情。</p>
+<h3 id="u840C_u5C0F_u840C"><a href="#u840C_u5C0F_u840C" class="headerlink" title="萌小萌"></a>萌小萌</h3><p>和萌小萌有时候也会斗斗小脾气，拌拌小嘴。经过无数次的商量。异地恋的弊端应该都全部解决了。然后今年准备去给未来丈母娘看看，希望能是一个好的结果。</p>
+<h3 id="u5144_u5F1F"><a href="#u5144_u5F1F" class="headerlink" title="兄弟"></a>兄弟</h3><p>今年好兄弟应该说还是比较圆满了。老闷和飞哥多年后的今天终于找到了各自的真爱，可喜可贺。wwl荣升当爹不说，多年的盘终于出去取得突破性进展。回去抱大腿的日子指日可待。六的结婚日程应该已经提上日程，大豪宅已经住上，差不多也是当爹的节奏了。鑫哥？鑫哥号称只剩下钱了。随时可以回去抱大腿了。</p>
+<h2 id="u8BA1_u5212"><a href="#u8BA1_u5212" class="headerlink" title="计划"></a>计划</h2><p>说好听点我并不是一个循规蹈矩的人。说实际情况就是自制力极其差，拖延症状严重。每次制定的新年计划都是像是个安慰剂。安慰一下拖沓了一年的自己。给自己心里暗示说恩下一年会做的好一点。其实25年来每次都这样的说法，而每次只有等到12月31日的时候来悔恨自己。</p>
+<p>所以此时此刻我很矛盾。 不知道是否应该把2014年的计划下来。</p>
+<p>2014年，我希望我能好好的学习一下洋文。</p>
+<p>2014年，我希望萌小萌能快乐过每一天。</p>
+<p>2014年，我希望长辈身体健康。</p>
+<p>2014年，我希望我能和Sumi继续走在改变世界的路上。</p>
+<h2 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h2><p>最后，这就是我2013年的一些碎碎念。从2013一直写到了2014. 就给我的伙伴们当个乐呵乐呵的东西看看呗。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u751F_u6D3B"><a href="#u751F_u6D3B" class="headerlink" title="生活"></a>生活</h2><h3 id="u6CE8_u5B9A_u7684_u6F02_u6CCA"><a href="#u6CE8_u5B9A_u7684_u6F02_u6CCA" class="headerlink" title="注定的漂泊"></a>注定的漂泊</h3><p>在16岁的时候，我就会隐约觉得我会一生注定漂泊。这种感觉以我的文字水平很难用完整表达出来。不过18岁以后的每一年换一个住的地方。直接用事实验证了这个16岁的直觉。本来以为我会在厦大住够2年的，命中注定，天煞孤星。房子要拆迁只有另外找地方了。继续这一年一个地方的节奏。</p>]]>
+    
+    </summary>
+    
+      <category term="just-talk" scheme="http://iiiyu.com/tags/just-talk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS笔记(32) UbiquityStoreManager 学习笔记1]]></title>
+    <link href="http://iiiyu.com/2013/12/25/learning-ios-notes-thirty-two/"/>
+    <id>http://iiiyu.com/2013/12/25/learning-ios-notes-thirty-two/</id>
+    <published>2013-12-25T15:22:33.000Z</published>
+    <updated>2014-04-01T04:25:19.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>现在都是进入互联网时代，一个互联网的App数据肯定是存在互联网上的。到处都是云，到处都是服务器。如果数据是存储在云端or服务器端。每次数据的读取和修改直接作用于服务器。这样不管你用多少设备，多少平台。数据都能保证是唯一的。但是还有些App需要一些更好的性能和效果的时候往往等不起网络的数据传来传去。这时候需要一些折中的办法来解决这些问题。iCloud就是Apple给出的解决方案。就普通用户来看，iCloud应该是在Apple系中的最优选择。但是从开发者的角度来看iCloud就是个无穷无尽的深渊。</p>
+<p>全球有很多开发者致力开发第三方库以便让iCloud能被使用。 </p>
+<p>UbiquityStoreManager就是其中之一。</p>
+<a id="more"></a>
+<h2 id="UbiquityStoreManager"><a href="#UbiquityStoreManager" class="headerlink" title="UbiquityStoreManager"></a>UbiquityStoreManager</h2><p><a href="https://github.com/lhunath/UbiquityStoreManager" target="_blank" rel="external">UbiquityStoreManager</a>是一个core data持久化层的控制器.</p>
+<p>UbiquityStoreManager在iOS 6时代是使用GPLv3协议。所以好像使用者不是很多。iOS 7 Core Data 关于iCloud引入了新的机制和新API以后UbiquityStoreManager迅速跟进。并且更换了协议使用了Apache v2。所以如果你有iOS 7的App想使用iCloud + Core Data这种hard模式。UbiquityStoreManager是第一个应该推荐的库.</p>
+<p>UbiquityStoreManager不同于其他解决方案。大部分都是在iCloud上面继续构建一层来保证数据同步的完整一致性。UbiquityStoreManager仅仅是解决了就只单纯使用iCloud就会遇到的问题。比如数据出错了怎么办。从本地数据迁移到iCloud数据。从修改日记来重建数据库等。</p>
+<h2 id="UbiquityStoreManager_u89E3_u51B3_u7684_u95EE_u9898"><a href="#UbiquityStoreManager_u89E3_u51B3_u7684_u95EE_u9898" class="headerlink" title="UbiquityStoreManager解决的问题"></a>UbiquityStoreManager解决的问题</h2><ul>
+<li>提供在iCloud和本地Store直接切换</li>
+<li>在用户没有iCloud store 的时候自动的把local data 合并到iCloud(使用本地数据重建iCloud)</li>
+<li>所有与iCloud有联系的事件处理 iCloud帐号删除、iCloud数据删除、本地数据导入、其他设备变换ubiquitous、恢复有错误的transaction logs</li>
+<li>其他的一些实用功能：从transaction logs重建cloud store、 从cloud store 重建transaction logs、 删除cloud store、 Ability to nuke the entire cloud container、 把一个store里面全部的entities合并到另外一个store</li>
+</ul>
+<p>在iCloud + CoreData的官方解决方案中，对于开发者来说完全的黑箱子操作。难于开发和调试bug。而且经验不足完全会被很多坑拉进泥潭里面。使得开发更本无法进行下去。所以仔细研究UbiquityStoreManager。是我建议踏入iCloud + Core Data开发的必修课。</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>只是我学习中的一点笔记和注释翻译而已。留给自己看看。如果有不对的地方，欢迎指出。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="u5F00_u7BC7_u626F_u6DE1"><a href="#u5F00_u7BC7_u626F_u6DE1" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>现在都是进入互联网时代，一个互联网的App数据肯定是存在互联网上的。到处都是云，到处都是服务器。如果数据是存储在云端or服务器端。每次数据的读取和修改直接作用于服务器。这样不管你用多少设备，多少平台。数据都能保证是唯一的。但是还有些App需要一些更好的性能和效果的时候往往等不起网络的数据传来传去。这时候需要一些折中的办法来解决这些问题。iCloud就是Apple给出的解决方案。就普通用户来看，iCloud应该是在Apple系中的最优选择。但是从开发者的角度来看iCloud就是个无穷无尽的深渊。</p>
+<p>全球有很多开发者致力开发第三方库以便让iCloud能被使用。 </p>
+<p>UbiquityStoreManager就是其中之一。</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[简单测评Bong(深度吐槽,胆小、承受能力差和心脏病人需要陪同观看。谢谢合作)]]></title>
+    <link href="http://iiiyu.com/2013/12/21/evaluation-bong/"/>
+    <id>http://iiiyu.com/2013/12/21/evaluation-bong/</id>
+    <published>2013-12-21T11:47:02.000Z</published>
+    <updated>2014-02-17T04:21:39.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<p>##开篇扯淡</p>
+<p>今天为了测试Bong支持游泳的说法，我差点挂在厦大的游泳馆里面。这天太冷了，而我自己又对自己的身体素质预估不住，跑去露天的游泳池。偌大一个标准池就我一个人，随意做了几下准备运动抵不住冷风吹，深吸一口气眼睛一闭跳进去。XXX，我能说脏话么。蛋都要冻掉的节奏啊，心中顿时把年少时候在电视上看到冬天跳入结冰河水游泳的新闻编者草泥马过了千万遍。顿时想转身起来，但是一想到下去还钥匙时候丢人死了。就奋力的向前游。接下来，我体验到了在水里皮肤会有痛的经历。记忆力从来没有过的。由于水温比身体温度低很多全身的皮肤感到刺痛，寒冷刺皮肤啊。扛着想今天至少要游1km吧。游了200m的时候开始全身麻木or适应了刺痛感，好过一点。咬牙游到600m的时候还觉得可以到1000m的结果650m米的时候开始感到不适。以自己科学常识隐约觉得是体温下降太多导致。所以就在700m的时候翻身上岸。经过长途跋涉回到宿舍里面赶紧冲了一个热水澡。然后躲到被窝里面小睡了1个小时才感觉命回来了。</p>
+<p>我并没有才入手就吐槽，而是使用了5天。打了两次羽毛球，游了一次泳。才开始吐槽的哦。</p>
+<a id="more"></a>
+<p>##缘由</p>
+<p>2013这一年没入啥大件，但是小东西弄了一堆。也蛮浪费钱的唉。智能穿戴设备去年年末火的时候就一直寻思着入一个看看，不过一直狠不下心来。而今年入夏以后主要运动几经波折固定在了游泳上，深度观察以后觉得靠谱的两家<a href="http://www.fitbit.com" target="_blank" rel="external">fitbit</a>和<a href="https://jawbone.com" target="_blank" rel="external">jawbone</a>的手环都不能支持游泳。所以一直在等待一个支持游泳的手环出来。</p>
+<p>然后在11月的某天，看weibo的时候看到kenwone上在卖一个国产手环，听说过的另外一个国产手环(咕咚)节操早就掉没了。这个好像还不错的样子。点过去一看。靠可以检测游泳，最重要的是一个VIP特权。号称这一批用户可以永久享受每一代设备更新。我靠爱占小便宜技能开启。然后怂恿着大厨先弄了一个。然后自己也就付款了一个。小算盘打着，这么高调。至少能撑过2代吧。那就至少有两个。有两个的话，就差不多保本有赚了。啊哈哈。</p>
+<p>所以我入Bong有三个理由</p>
+<ol>
+<li>我想试试智能手环之类</li>
+<li>支持游泳</li>
+<li>性价比</li>
+</ol>
+<p>##Bong的整个运营</p>
+<p>买了bong，然后关注了多关注了bong。weibo时不时瞅两眼。</p>
+<p>说微信公共帐号。这次发现公共帐号还是蛮有必要的。</p>
+<ol>
+<li>保存了每天更新</li>
+<li>虽然在我看来每天的内容做的一般。但是起码有人味。不那么机械冷冰冰。</li>
+</ol>
+<p>通过weixin好感度提高蛮多的。</p>
+<p>然后说第一次跳票，其实都很能理解。所以第一次听说也才10几个的退款率。整个前期运营功不可没。</p>
+<p>不过后来的整个运营就只能用惨不忍睹来形容了。</p>
+<p>跳票以后的进度不清楚。然后承诺的15号发货。15号虽然发了大部分(猜测)。但是被发货的用户们(我)对整个顺丰订单毫无信息。已经习惯了taobao系流程的我来说很不习惯。没有安全感。就算整个订单系统来不及做。丢一个excel表格起码也能丢上去把。起码能有个地方能查到啊。很遗憾什么都没有。</p>
+<p>我知道bong现在才8个人。按照官方说法是有1400个要发。算发一个需要5分钟。简单算术8个人需要做15个小时才能发完。按照官方说法感觉肯定发一个的时间超过5分钟。所以觉得他们在一天之类肯定发不完。</p>
+<p>我想说的是，说是跳票到15号。不是就算到15号才拿到货开始发把。既然跳票了，应该把这个发货时间也算进去。比如说15号发，应该是13号左右开始包装填写。然后15号叫来顺丰就妥妥的一次性发出去。坐等用户反馈。都使用跳票技能，就多跳两天准备充分肯定更好。</p>
+<p>##开启吐槽模式</p>
+<p>###到手</p>
+<p>恩，怀着激动的心情。我在17号拿到了bong。</p>
+<p>下面是多图杀流量时间</p>
+<p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1ebrmul7yq1j20hs0nutcs.jpg" alt=""></p>
+<p>盒子怎么说呢。之前在weixin上运营的时候玩了一手，说是第一批盒子质量不好，换了一批，当时似曾相识的感觉。不过我以为是为了追求品质。不过打开顺丰袋子的一个感觉是。艹，这个不会是第一批盒子吧。浓浓的山寨感觉。</p>
+<p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1ebrn32vsfkj20hs0nujuy.jpg" alt=""></p>
+<p>恩knewone还多送了点东西，不过自己这张贴纸感觉不喜欢。本来想贴到电脑上的。但是上手感觉质量跟github的贴纸有一定差距加上这个小怪物不是我的菜。就没有贴了。然后是钥匙收纳盒。没想到用到哪里。自己住的地方被告知20天内搬离。又是一把辛酸泪。</p>
+<p><img src="http://ww1.sinaimg.cn/large/a6d3226bgw1ebrn7laek8j20hs0nuwhv.jpg" alt=""></p>
+<p>恩 bong的包装盒就不多说了，几张卡片。一张有团队成员签名。一张是类似说明书。两张强调VIP的尊贵身份。</p>
+<p>###吐槽手环本身</p>
+<p>首先是外形</p>
+<p>官网上是这样<br><img src="http://ww1.sinaimg.cn/large/a6d3226bgw1ebrnhjrlbuj20z10k9769.jpg" alt=""></p>
+<p>实际上是这样</p>
+<p><img src="http://ww1.sinaimg.cn/large/a6d3226bgw1ebrnospqpyj20jm0qadj0.jpg" alt=""></p>
+<p>首先，两头是细的这种设计。啥时候变成了水桶腰设计。</p>
+<p>第二，我买的是黑色的把。为啥看着跟银色一个样子。这是cosplay iPhone5s的太空灰么。</p>
+<p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1ebrnxonhknj20hs0nuwi1.jpg" alt=""><br>我不知道这张能不能清楚的看到。灯的地方被胶糊住了。这个感觉太恶心了。是拿到手以后最恶心的地方。也可能是期望抱太高了，导致的心里落差。前期的运营以为bong是注重细节的团队。但是嘴上说说和实际做到是有差距的。这里我看见了bong的差距。</p>
+<p><img src="http://ww2.sinaimg.cn/large/a6d3226bgw1ebro51k5cqj20hs0nuwi1.jpg" alt=""><br>转过来，我第一次看见bong是怎么充电的。一直说的都是点触式充电。才知道 原来后面有两个孔啊。保密性做的很好啊。然后图上在两个充电孔下面也能清楚的看到，明显的由于某次没有对准而导致使劲压下去造成的刮痕。再次觉得嘴上说说和实际做到是有差距的。</p>
+<p>手环的两侧接缝触有一层摸上去明显不平整。</p>
+<p>正面上有一条淡淡的线。觉得应该是材质本身的线。但是出现在正面稍微仔细就能看见。</p>
+<p>嗯，基本上硬件部分就这么多了。</p>
+<p>###吐槽说明书以及整个引导流程</p>
+<p>说明书叫那个简单啊，一个卡片几句话搞定。还以为是已经设计到返璞归真的地步了手上即用。但是还是看了一遍。(此时此刻卡片没在，而且是5天前发生的事情了，凭借印象说了)</p>
+<p>首先出现的是一句最好使用PC链接。环顾四周，方圆10米内没有发现一台PC。那OSX可以不可以，我也不知道。唉，先插上试试呗。</p>
+<p>接下来一句话引起了我的注意。说的是插上大概五分钟就可以拿下来使用了。！！！！！</p>
+<p>插上大概五分钟？是多于五分钟 还是小于5分钟？如果不插会发生什么呢？插到5分钟的时候会发生什么呢？ 插久了又会发生什么呢？有没有提示啊。靠。那5分钟我需要怎么计算呢。打开手机的秒表功能么。我很难想象一个让我都手足无措的东西。去介绍给媳妇儿用。或者带给爸妈用。</p>
+<p>然后我以为App里面应该会有详细说明的！！！！结果没有！！！连接前和连接后都没有。</p>
+<p>###吐槽App</p>
+<p>自己做iOS的，难免吐狠了点。bong团队看到了不要介意。又或者你们都拿到投资了要不把App外包给我们国际大厂Sumi来做把。</p>
+<ol>
+<li>第一次发短信的时候注册不上</li>
+<li>远看想扁平化设计 近看背景还有材质</li>
+<li>这是Moves的白天版本么</li>
+<li>每次打开都要Loading。为啥不先打开再载入数据啊</li>
+<li>我在第三天的时候app叫重新登录一次。然后第一天的数据没了。</li>
+<li>为啥tableview上的排列时间是00:00在最上面。不应该是当前时间在第一个位置么</li>
+<li>除了跑步以外，其他的都归类到运动里面去了么。分类太少了</li>
+<li>各种统计图表有待改进</li>
+<li>电量检测不准确 第一次使用了一小时看掉了10%多的电量。现在用了5天了。掉了7%的电量。而且最近两天都没有电量变化</li>
+</ol>
+<p>##吐槽使用中的情况</p>
+<ol>
+<li>早上唤醒的时候只有一次。现在是冬天啊，不能多摇几次么</li>
+<li>一开始我带左手，后来打羽毛球的时候想想带在了右手。导致刷牙的时候会震动一下进入类似散步模式。</li>
+<li>不能识别多种运动</li>
+<li>记得说过可以记步的。但是实际没有。觉得有记步的数据会更好。</li>
+</ol>
+<p>##总结</p>
+<p>好累啊 写一晚上了就这么多把</p>
+<p>###优点</p>
+<ul>
+<li>自动识别睡眠</li>
+<li>防水 可游泳， 虽然我也游了200m的自由泳但是没有识别</li>
+<li>如果发第二代的话性价比高</li>
+</ul>
+<p>###缺点<br>今天blog内容。</p>
+<p>##One more thing</p>
+<p>如果给我来运营，我会把这次bong的人数控制在200人左右。尽量做好第一批口碑。然后把第一批变成死忠粉。根据反馈来不断迭代很进化。然后在把已经行之有效的小米打法拿来打一次。</p>
+<p>其实跳票的时候 只退了10几个人我觉得已经几乎要做到了。但是如果说能收到以后在退款。我想这个数量应该是惊人的。而且把之前前期做的所有努力付之一炬。</p>
+<p>然后App的话我会提供很多种运动种类给用户选择。然后数据上传做数据分析和机器学习。这样以后就能识别更多的运动类型了。</p>
+<p>恩 福利就说这么多。多的留着啊哈哈。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<p>##开篇扯淡</p>
+<p>今天为了测试Bong支持游泳的说法，我差点挂在厦大的游泳馆里面。这天太冷了，而我自己又对自己的身体素质预估不住，跑去露天的游泳池。偌大一个标准池就我一个人，随意做了几下准备运动抵不住冷风吹，深吸一口气眼睛一闭跳进去。XXX，我能说脏话么。蛋都要冻掉的节奏啊，心中顿时把年少时候在电视上看到冬天跳入结冰河水游泳的新闻编者草泥马过了千万遍。顿时想转身起来，但是一想到下去还钥匙时候丢人死了。就奋力的向前游。接下来，我体验到了在水里皮肤会有痛的经历。记忆力从来没有过的。由于水温比身体温度低很多全身的皮肤感到刺痛，寒冷刺皮肤啊。扛着想今天至少要游1km吧。游了200m的时候开始全身麻木or适应了刺痛感，好过一点。咬牙游到600m的时候还觉得可以到1000m的结果650m米的时候开始感到不适。以自己科学常识隐约觉得是体温下降太多导致。所以就在700m的时候翻身上岸。经过长途跋涉回到宿舍里面赶紧冲了一个热水澡。然后躲到被窝里面小睡了1个小时才感觉命回来了。</p>
+<p>我并没有才入手就吐槽，而是使用了5天。打了两次羽毛球，游了一次泳。才开始吐槽的哦。</p>]]>
+    
+    </summary>
+    
+      <category term="just-talk" scheme="http://iiiyu.com/tags/just-talk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS笔记(31) CocoaPods 手把手五分钟教你制作自己的podspec文件]]></title>
+    <link href="http://iiiyu.com/2013/12/19/learning-ios-notes-thirty-one/"/>
+    <id>http://iiiyu.com/2013/12/19/learning-ios-notes-thirty-one/</id>
+    <published>2013-12-19T12:11:16.000Z</published>
+    <updated>2014-02-17T04:20:45.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<p>##开篇扯淡<br>圣诞渐进，各种App都在黑五一波冰点。可以遇见的是12月25号前也会有一大波来临。但是！！！今年买软件貌似已经花了很多钱了。而且，也没有几个想入的了。所以就忍忍吧。</p>
+<p>然后，做个宣传啊。我们国际化大厂Sumi的App Grid Diary在紧锣密鼓的开发2.0. 完全iOS7设计。各种给力。到时候希望能给大家带来一个好的App吧。</p>
+<a id="more"></a>
+<p>##CocoaPods</p>
+<p>CocoaPods 不必在介绍了吧。如果你是一个iOS or OSX的开发者。然后你跟我说你还没有用过CocoaPods。我肯定会觉得你不够潮(low爆了)。</p>
+<p>其实我之前又写过两篇介绍CocoaPods的</p>
+<p>只不过时间有点久远了。而且CocoaPods更新很快。有了很多新的特性和功能。 截至我写这篇blog。我的pod version是0.28.0。</p>
+<p>不过还是具有参考价值</p>
+<p><a href="http://iiiyu.com/2012/10/26/learning-ios-notes-fourteen/">使用CocoaPods</a></p>
+<p><a href="http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/">配置自己的CocoaPods库</a></p>
+<p>##五分钟手把手</p>
+<p>在上面的<a href="http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/">配置自己的CocoaPods库</a>里面。当时只是初步的使用pods。在学习的过程中。很多理解都很浅显。现在终于用了一年多CocoaPods。有点小心得就来记录一下。</p>
+<p>github现在每天必看网站。一个是工作需要，另外一个是上面神奇的东西太多太多了。学无止境啊。</p>
+<p>使用CocoaPods管理第三方库有时候就会遇到这样的尴尬。好不容易找到了一个心仪的库,却发现CocoaPods里面搜索不到。</p>
+<p>怎么办 怎么办</p>
+<p>来乖。手把手交你来写hello world。</p>
+<p>栗子：  <a href="https://github.com/premosystems/XCAsyncTestCase" target="_blank" rel="external">XCAsyncTestCase</a></p>
+<p>首先，去把它fork到自己的项目里面去。(什么不会fork？去面壁去)</p>
+<p>然后，把fork到自己帐号下的项目clone出来 cd进去</p>
+<p>输入</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod spec create <span class="string">https:</span><span class="comment">//github.com/iiiyu/XCAsyncTestCase</span></span><br></pre></td></tr></table></figure>
+<p>接着你会看到</p>
+<p><img src="http://ww4.sinaimg.cn/large/686e6613gw1ebpcdvd99xj20lc09f0ui.jpg" alt=""></p>
+<p>这个很正常，很多项目都没有tag。反正在自己的下面。可以瞎搞。给项目加入一个tag。以便pod能自动识别。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">tag</span> -<span class="keyword">a</span> <span class="number">0.0</span>.<span class="number">1</span> -<span class="keyword">m</span> <span class="string">"Tag release 0.0.1”</span><br><span class="line"></span></span><br><span class="line">git push —<span class="keyword">tags</span></span><br><span class="line"></span><br><span class="line">rm -rf XCAsyncTestCase.podspec</span><br><span class="line"></span><br><span class="line">pod spec create http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iiiyu/XCAsyncTestCase</span><br></pre></td></tr></table></figure>
+<p>接着你会看到</p>
+<p><img src="http://ww1.sinaimg.cn/large/686e6613gw1ebpcfwf0wsj20i6023mxh.jpg" alt=""></p>
+<p>OK。 然后用你自己喜欢的编辑器打开。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">mate</span> <span class="tag">XCAsyncTestCase</span><span class="class">.podspec</span></span><br></pre></td></tr></table></figure>
+<p>接着其实不用怎么改里面的内容 </p>
+<p>我把注释删掉 作者改成原来的作者。然后需要的源码位置改成正确的</p>
+<p>大概就是这样</p>
+<p><img src="http://ww2.sinaimg.cn/large/686e6613gw1ebpcik0lh1j20ry0db0v9.jpg" alt=""></p>
+<p>当然 最重要的是s.source_files这个。你要把你要包含的文件路径找对了。 然后用通配符匹配好了。就OK了。</p>
+<p>当然其他项，你看看注释啥的 选择性的填一些。在这里是一个五分钟的hello world。不深入讨论</p>
+<p>接着 把修改好的文件push到github上去</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span> XCAsyncTestCase.podspec</span><br><span class="line"></span><br><span class="line">git commit -<span class="keyword">am</span> <span class="string">"add XCAsyncTestCase.podspec file”</span><br><span class="line"></span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>最后，在你项目的Podfile里面加入这个第三方库的地址。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="string">'XCAsyncTestCase'</span>, :git =&gt; <span class="string">'https://github.com/iiiyu/XCAsyncTestCase.git'</span></span><br></pre></td></tr></table></figure>
+<p>就可以畅快的使用pod install了</p>
+<p>五分钟打完收工有木有。很简单直白有木有。</p>
+<p>当然这里只是一个hello world。 如果库中有一些高端设置比如要包含资源文件啊。 加入库依赖啊。 配置一些xcconfig。更多内容 请查看<a href="http://cocoapods.org" target="_blank" rel="external">越来越好看的官方网站</a></p>
+<p>##CocoaPods福利时间</p>
+<p>以下是我平时使用经常用到的Podfile会用到的一些写法。</p>
+<h3 id="u798F_u5229_u4E00"><a href="#u798F_u5229_u4E00" class="headerlink" title="福利一"></a>福利一</h3><p>首先是有一些库编译时候会有警告。但是作为一个有洁癖的人呢不想看见这些</p>
+<p>可以在platform :ios,  ‘x.0’的后面加入这句</p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function_or_atom">inhibit_all_warnings</span><span class="exclamation_mark">!</span></span><br></pre></td></tr></table></figure>
+<p>这样编译这些第三方库的时候就没有那些烦人的小警告了。</p>
+<h3 id="u798F_u5229_u4E8C"><a href="#u798F_u5229_u4E8C" class="headerlink" title="福利二"></a>福利二</h3><p>使用福利一是不是很爽呢。但是有一个神库ReactiveCocoa。当你关闭所有警告的时候。它就编译不过了。可急坏了。其实很简单对他单独设置打开编译警告就好了</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="string">'ReactiveCocoa'</span>, <span class="string">'~&gt; 2.1.8'</span>, :inhibit_warnings =&gt; <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="u798F_u5229_u4E09"><a href="#u798F_u5229_u4E09" class="headerlink" title="福利三"></a>福利三</h3><p>如果你有多个Targets需要pod的库怎么办<br>也很简单。Podfile的头部加入</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">link_with</span> [<span class="string">'AAAAA'</span>, <span class="string">'BBBBB'</span>]</span><br></pre></td></tr></table></figure>
+<p>AAAAA和BBBBB都是你target的名字，这样不同的target都会有pod库了。我主要是用来解决Unit Test需要pod install一些库的问题。当初也是找了老半天才找到。</p>
+<p>##总结<br>CocoaPods很好用。而且一直在进化。我发现我怎么写介绍都只停留在很浅显的基础上。更多更深入的内容需要自己使用了。然后慢慢积累的。总之。不用CocoaPods的Cocoa开发太不潮了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<p>##开篇扯淡<br>圣诞渐进，各种App都在黑五一波冰点。可以遇见的是12月25号前也会有一大波来临。但是！！！今年买软件貌似已经花了很多钱了。而且，也没有几个想入的了。所以就忍忍吧。</p>
+<p>然后，做个宣传啊。我们国际化大厂Sumi的App Grid Diary在紧锣密鼓的开发2.0. 完全iOS7设计。各种给力。到时候希望能给大家带来一个好的App吧。</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS学习笔记(30) Core Data是如何保存的？]]></title>
+    <link href="http://iiiyu.com/2013/12/02/learning-ios-notes-thirty/"/>
+    <id>http://iiiyu.com/2013/12/02/learning-ios-notes-thirty/</id>
+    <published>2013-12-02T10:33:18.000Z</published>
+    <updated>2014-02-17T04:20:41.000Z</updated>
+    <content type="html"><![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u573A_u626F_u6DE1"><a href="#u5F00_u573A_u626F_u6DE1" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>恩 一个月没有写一篇blog了。恩。就这样把。</p>
+<a id="more"></a>
+<p>学习使用Core Data也一年多了。之前以为3个月就可以登堂入室。事实是我图样图森破。到现在我也才勉强hello world而已。</p>
+<p>比如这个问题 <strong>Core Data是如何保存的</strong>。</p>
+<p>一直使用<a href="http://github.com/magicalpanda/MagicalRecord" target="_blank" rel="external">MagicalRecord</a> 都被宠习惯了。 直接就调用MR_saveToPersistentStoreAndWait。反正能存进去，也没有太仔细的思考。</p>
+<p>恩 最近对Core Data的技能点在进行增加中。所以还是多记录一些。</p>
+<p>恰好看见了 DM大神的 blog <a href="http://mentalfaculty.tumblr.com/post/65682908577/how-does-core-data-save" target="_blank" rel="external">How Does Core Data Save?</a></p>
+<p>也不算翻译，就是自己写个自己的精简版本看看。</p>
+<h2 id="Core_Data_u662F_u5982_u4F55_u4FDD_u5B58_u7684"><a href="#Core_Data_u662F_u5982_u4F55_u4FDD_u5B58_u7684" class="headerlink" title="Core Data是如何保存的"></a>Core Data是如何保存的</h2><ol>
+<li>当然是NSManagedObjectContext调用save方法的时候。</li>
+<li>这时候context里面持有的那些NSManagedObject将会自己调用自己的willSave方法。</li>
+<li>NSManagedObjectContextWillSaveNotification发出。</li>
+<li>开始验证。这个验证可能是你在data model里面写的。也可以是在NSManagedObject里面代码写的。</li>
+<li>验证结束以后数据就合并到NSPersistentStoreCoordinator和NSPersistentStore里面。</li>
+<li>如果你在合并的时候更改了数据。这时候会重新验证数据。</li>
+<li>这个时候已经把需要验证过的合并数据存到持久化介质当中。</li>
+<li>最后NSManagedObjectContextDidSaveNotification这个通知发出。</li>
+</ol>
+<h2 id="u53C2_u8003_u8D44_u6599"><a href="#u53C2_u8003_u8D44_u6599" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://mentalfaculty.tumblr.com/post/65682908577/how-does-core-data-save" target="_blank" rel="external">How Does Core Data Save?</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="u5F00_u573A_u626F_u6DE1"><a href="#u5F00_u573A_u626F_u6DE1" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>恩 一个月没有写一篇blog了。恩。就这样把。</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS学习笔记(29) 爱不释手的ReactiveCocoa之UIButton]]></title>
+    <link href="http://iiiyu.com/2013/10/15/learning-ios-notes-twenty-nine/"/>
+    <id>http://iiiyu.com/2013/10/15/learning-ios-notes-twenty-nine/</id>
+    <published>2013-10-15T13:53:11.000Z</published>
+    <updated>2014-02-17T04:20:26.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u5F00_u573A_u626F_u6DE1"><a href="#u5F00_u573A_u626F_u6DE1" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>ReactiveCocoa的迭代速度相当快，一群富有才华和激情的人们在不断的进化ReactiveCocoa。欣欣向荣的景象啊。我这种hello world级别的也就只能使用他们的劳动成果了。上篇blog的时候我还在用1.9.x的版本 现在我已经全面转向2.x了。值得注意的是霓虹友人提交的cocoapods上ReactiveCocoa 2.1 版本我无法编译通过。目前我使用的还是2.0的版本。</p>
+<p>介于一个月没有更新blog的速度，这次来写少一点的内容。</p>
+<a id="more"></a>
+<h2 id="u4F20_u7EDF_u7684UIButton_Target_Action__u65B9_u5F0F"><a href="#u4F20_u7EDF_u7684UIButton_Target_Action__u65B9_u5F0F" class="headerlink" title="传统的UIButton Target Action 方式"></a>传统的UIButton Target Action 方式</h2><p>之前我们使用UIButton的点击方法一般有两种。一种是直接从xib里面拖一个IBAction出来在里面写代码。</p>
+<p>另外一种是代码创建的 比如这样 </p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UIButton *myButton = [[UIButton alloc] init...];</span><br><span class="line">[myButton <span class="string">addTarget:</span>something <span class="string">action:</span><span class="annotation">@selector</span>(myAction) <span class="string">forControlEvents:</span>UIControlEventTouchUpInside];</span><br></pre></td></tr></table></figure>
+<p>然后在下面写一个myAction的方法来进行操作。</p>
+<p>这样对我来说存在两个问题：</p>
+<ol>
+<li>button对应的方法分开了。在阅读代码的时候，当我想知道这个button对应的方法或者反过来action方法对应的button。通常需要跳转一次以上才能知道。(也许是我的阅读代码习惯比较原始)</li>
+<li>我在action方法里面如果需要引用一个变量的时候，无法使用局部变量。通常就需要把这个资源设计为一个property。尽管这个资源或者变量只是在action里面调用一次。(这个也许是我写代码的问题)</li>
+</ol>
+<p>这两个可能在我遇见ReactiveCocoa都不能叫问题。但是在ReactiveCocoa里面我发现了更加优美的解决方法。好开心。</p>
+<h2 id="ReactiveCocoa_u65B9_u5F0F_u7684UIButton"><a href="#ReactiveCocoa_u65B9_u5F0F_u7684UIButton" class="headerlink" title="ReactiveCocoa方式的UIButton"></a>ReactiveCocoa方式的UIButton</h2><p>由于ReactiveCocoa高深的知识点，我也弄不太清楚。下面我只是说明怎么用的hello world级别。更多内容请阅读github上的项目主页。</p>
+<p>如果使用xib。只需拖一个IBOutlet的property出来。比如这样</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UIButton</span> *xibButton;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *helloWorld = <span class="string">@"hello world!!!"</span>;</span><br><span class="line"><span class="keyword">self</span><span class="variable">.xibButton</span><span class="variable">.rac_command</span> = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(<span class="keyword">id</span> input) &#123;</span><br><span class="line">	<span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, helloWorld);</span><br><span class="line">	<span class="keyword">return</span> [RACSignal empty];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>如果是代码创建一切照旧</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *helloWorld = <span class="string">@"hello world!!!"</span>;</span><br><span class="line"><span class="built_in">UIButton</span> *myButton = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeSystem</span>];</span><br><span class="line">myButton<span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">50</span>);</span><br><span class="line">[myButton setTitle:<span class="string">@"Say"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.view</span> addSubview:myButton];</span><br><span class="line">myButton<span class="variable">.rac_command</span> = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(<span class="keyword">id</span> input) &#123;</span><br><span class="line">	<span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, helloWorld);</span><br><span class="line">	<span class="keyword">return</span> [RACSignal empty];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>这些代码我一般写在viewDidLoad方法里面。当然你可以在正确的地方使用他们。<br>运行试试。哇。魔法一般。完全解决我在传统的UIButton遇到的两个问题。</p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>嗯嗯，这种小主题的blog写起来轻松愉快。大概40分钟就可以完成。以后要多多写小主题。这样跟写程序一样，化繁为简。这次就少扯淡了。期待我的下篇blog。啊哈哈</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u5F00_u573A_u626F_u6DE1"><a href="#u5F00_u573A_u626F_u6DE1" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>ReactiveCocoa的迭代速度相当快，一群富有才华和激情的人们在不断的进化ReactiveCocoa。欣欣向荣的景象啊。我这种hello world级别的也就只能使用他们的劳动成果了。上篇blog的时候我还在用1.9.x的版本 现在我已经全面转向2.x了。值得注意的是霓虹友人提交的cocoapods上ReactiveCocoa 2.1 版本我无法编译通过。目前我使用的还是2.0的版本。</p>
+<p>介于一个月没有更新blog的速度，这次来写少一点的内容。</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS学习笔记(28) ReactiveCocoa 迎接下一个更加美好的世界（2013-10-13 update 2.0）]]></title>
+    <link href="http://iiiyu.com/2013/09/11/learning-ios-notes-twenty-eight/"/>
+    <id>http://iiiyu.com/2013/09/11/learning-ios-notes-twenty-eight/</id>
+    <published>2013-09-11T12:45:13.000Z</published>
+    <updated>2014-02-17T04:20:35.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u626F_u6DE1"><a href="#u626F_u6DE1" class="headerlink" title="扯淡"></a>扯淡</h2><p>习惯了，每次再写技术的东西的时候总要唠叨几句。本来唠叨的东西我应该会写成另外的blog。不过每次给自己下了一个底线要少少的写这些唠叨的话语。原因一是觉得我爱唠叨的话语可能会导致blog被墙。原因之二我不希望我变成一个IT评论家。</p>
+<p>对了,我发现我还是挺爱挖坑的。目前有两坑没有填完。一个是Core Data系列。一个是iCloud系列。两个系列我都只写了一个Hello World级别并没有再深入的继续写。恩，要抓紧了。其实ReactiveCocoa这个我觉得也可以作为一个系列来写。不过想了想我这种Hello World的水平。也写不出这么多来。就暂时写一篇好了。</p>
+<a id="more"></a>
+<h2 id="u4EC0_u4E48_u662FReactiveCocoa"><a href="#u4EC0_u4E48_u662FReactiveCocoa" class="headerlink" title="什么是ReactiveCocoa"></a>什么是ReactiveCocoa</h2><p>如果你有看Github的Trending Objective-C榜单，那你肯定是见过ReactiveCocoa了。如果你在weibo上关注唐巧、onevcat等国内一线知名开发者。那也应该听说过ReactiveCocoa了。</p>
+<p>ReactiveCocoa更加被Mattt Thompson大神称为开启一个新Objective-C纪元。</p>
+<p>当然也有人声称ReactiveCocoa是Cocoa的未来。<a href="http://spin.atomicobject.com/2013/04/28/reactivecocoa/" target="_blank" rel="external">ReactiveCocoa: The Future of Cocoa Programming</a></p>
+<p>我自己粗犷把现在的Objective-C分为两个阶段。</p>
+<p>第一个阶段就是我学Cocoa开发之前的阶段：就是把Objective-C做出来的那群NeXT的大神，确定面向对象思想，确定消息机制，确定各种模式最后变成了Apple的主力开发语言。到后面OS X的各种库。iOS的各种库。</p>
+<p>第二个阶段就是我学Cocoa开发之后的阶段：开始clang发力，配合Objective-C的快速进化：ARC，block，现代Objective-C语法。使其Objective-C不断获得现代语言类如Ruby, Python的优秀特性。</p>
+<p>现在，说的最多的就是ReactiveCocoa将会把Objective-C带到下一个里程碑中。</p>
+<p>ReactiveCocoa是一个基于Functional Reactive Programming编程思想的Objective-C实现开源的第三方库。最初的作者是Github的大神（Josh Abernathy &amp; Justin Spahr-Summers）。应该是再开发Github For Mac时候的附属产物。当然，我们必需得明白有时候附属产物要比真主牛逼的多了去了。比如万艾可，再比如青霉素，再再比如老干妈。</p>
+<p>等等 什么是Functional Reactive Programming</p>
+<h3 id="Functional_Reactive_Programming"><a href="#Functional_Reactive_Programming" class="headerlink" title="Functional Reactive Programming"></a>Functional Reactive Programming</h3><p><a href="http://en.wikipedia.org/wiki/Functional_reactive_programming" target="_blank" rel="external">wiki解释</a></p>
+<h4 id="Reactive_Programming"><a href="#Reactive_Programming" class="headerlink" title="Reactive Programming"></a>Reactive Programming</h4><p><a href="http://zh.wikipedia.org/wiki/响应式编程" target="_blank" rel="external">wiki 响应式编程</a></p>
+<h4 id="Functional_programming"><a href="#Functional_programming" class="headerlink" title="Functional programming"></a>Functional programming</h4><p><a href="http://en.wikipedia.org/wiki/Functional_programming" target="_blank" rel="external">wiki Functional programming</a></p>
+<p>恩 简单来说 </p>
+<pre><code>Functional Reactive Programming = Functional programming + Reactive Programming
+</code></pre><p>(PS:特么太偷懒了还是解释一下)</p>
+<p>简单以</p>
+<p>a = b + c</p>
+<p>为例</p>
+<p>通常情况下在执行a = b + c的值的时候b和c当时是什么值。a就是当时的b+c。然后后来不管b和c怎么变化，a都不会改变。</p>
+<p>但是在Execl中设置a格子=b格子+c格子的值。a的值就会随着b和c值的改变而改变。然后我还可以搞的高级一点f = a + d。 f格子的值也会随着b、c、d的值而改变。这就是使用Functional Reactive Programming以后会发生的情况。</p>
+<p>Reactive的特性使得可以随时响应变化。Functional的特性使得他们可以串起来。</p>
+<h3 id="u6765_u81EA_u5FAE_u8F6F_u5B9E_u9A8C_u5BA4_u7684_u7F16_u7A0B_u601D_u60F3"><a href="#u6765_u81EA_u5FAE_u8F6F_u5B9E_u9A8C_u5BA4_u7684_u7F16_u7A0B_u601D_u60F3" class="headerlink" title="来自微软实验室的编程思想"></a>来自微软实验室的编程思想</h3><p>在<a href="https://github.com/ReactiveCocoa/ReactiveCocoa/blob/master/README.md#more-info" target="_blank" rel="external">ReactiveCocoa的readme</a>我们看到ReactiveCocoa是基于.NET的Reactive Extensions(Rx)来的。啧啧身为一个脑残果粉不解释的我。也必须承认微软其实曾经一度集聚这世界上一大批大牛。这批大牛在闲着玩的时候做出来的玩具也指不定哪天就拯救世界了。</p>
+<h4 id="Rx"><a href="#Rx" class="headerlink" title="Rx"></a>Rx</h4><p>所以我也找了点Rx的资料来看看</p>
+<p>中文里面比较全面的是这个<br><a href="http://www.cnblogs.com/yangecnu/archive/2012/11/03/Introducting_ReactiveExtensions.html" target="_blank" rel="external">Reactive Extensions入门</a></p>
+<p>里面有一堆链接和一个视频。c#实在看不懂，就只看了15分钟左右。不过那看上去蛮帅的哥们一开始说他在编程中遇到的问题。恰巧是我最近遇到的问题：就是我有两个在非主线程的异步操作。而我有可能需要等两个异步操作都完成的时候进行下一步操作。这种情况我一直没有找到比较优美的解决方法。直到遇见ReactiveCocoa，仿佛看见了希望。</p>
+<h4 id="Model-View-ViewModel"><a href="#Model-View-ViewModel" class="headerlink" title="Model-View-ViewModel"></a>Model-View-ViewModel</h4><p><a href="http://en.wikipedia.org/wiki/Model_View_ViewModel" target="_blank" rel="external">洋文wiki</a></p>
+<p><a href="http://baike.baidu.com/view/3507915.htm" target="_blank" rel="external">中文wiki</a></p>
+<p>FRP倾向于技术理论上的方法论。MVVM则是程序模式的方法论。就好比FRP给了一把解牛的刀。MVVM就是如何解牛的方法论。</p>
+<p>相对来说MVVM通常跟MVC拿来比较。在我看来，没有绝对的好和坏。找个适合的就好了。再说我对两个东西的了解不够深入。</p>
+<p><a href="http://cocoasamurai.blogspot.com/2013/03/basic-mvvm-with-reactivecocoa.html" target="_blank" rel="external">Basic MVVM with ReactiveCocoa</a></p>
+<p>这篇blog应该就写的蛮清楚了。</p>
+<p>这是github上iOS的 MVVM例子<a href="https://github.com/Machx/MVVM-IOS-Example" target="_blank" rel="external">MVVM-IOS-Example</a></p>
+<p>大家可以感受一下。</p>
+<h2 id="ReactiveCocoa_u7684_u57FA_u672C_u4F7F_u7528_u65B9_u6CD5"><a href="#ReactiveCocoa_u7684_u57FA_u672C_u4F7F_u7528_u65B9_u6CD5" class="headerlink" title="ReactiveCocoa的基本使用方法"></a>ReactiveCocoa的基本使用方法</h2><p>(终于写到正主了,泪流满面)</p>
+<p>这里借用Limboy的<a href="http://blog.leezhong.com/ios/2013/06/19/frp-reactivecocoa.html" target="_blank" rel="external">blog</a>中的一段话作为开场解释。(因为我想了好久都没有想出超过他的比喻方法)</p>
+<pre><code>ReactiveCocoa是github去年开源的一个项目，是在iOS平台上对FRP的实现。FRP的核心是信号，信号在ReactiveCocoa(以下简称RAC)中是通过RACSignal来表示的，信号是数据流，可以被绑定和传递。
+可以把信号想象成水龙头，只不过里面不是水，而是玻璃球(value)，直径跟水管的内径一样，这样就能保证玻璃球是依次排列，不会出现并排的情况(数据都是线性处理的，不会出现并发情况)。水龙头的开关默认是关的，除非有了接收方(subscriber)，才会打开。这样只要有新的玻璃球进来，就会自动传送给接收方。可以在水龙头上加一个过滤嘴(filter)，不符合的不让通过，也可以加一个改动装置，把球改变成符合自己的需求(map)。也可以把多个水龙头合并成一个新的水龙头(combineLatest:reduce:)，这样只要其中的一个水龙头有玻璃球出来，这个新合并的水龙头就会得到这个球。
+</code></pre><h3 id="u66FF_u4EE3KVO"><a href="#u66FF_u4EE3KVO" class="headerlink" title="替代KVO"></a>替代KVO</h3><p><del>官方例子：官方的例子貌似用了比较老的函数。我改完以后看见<a href="http://www.jdon.com/45581" target="_blank" rel="external">什么是函数响应式编程(Functional Reactive Programming:FRP)</a>他也是这么改的。说明一下。</del></p>
+<p>经过后来的使用才发现特么官方例子是2.0的。 现在重新改一下。随便说一句，用cocoapods安装的2.1.编译不过。具体原因还没有看。建议使用2.0</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"></span><br><span class="line">[RACObserve(<span class="keyword">self</span>, username) subscribeNext:^(<span class="built_in">NSString</span> *newName) &#123;</span><br><span class="line">								<span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, newName);</span><br><span class="line">							&#125;];</span><br></pre></td></tr></table></figure>
+<p>在这句代码以后，只要你的username有变化。都可以打印出来。实现了KVO的功能却减少了无数的代码。体现了绑定和响应。</p>
+<p>高级一个点的官方例子</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">[<span class="collection">[RACObserve<span class="list">(<span class="keyword">self</span>, username)</span></span><br><span class="line">  filter:^<span class="list">(<span class="keyword">NSString</span> *newName)</span> <span class="collection">&#123;</span><br><span class="line">		return <span class="collection">[newName hasPrefix:@<span class="string">"j"</span>]</span><span class="comment">;</span></span><br><span class="line">	&#125;</span>]</span></span><br><span class="line"> subscribeNext:^<span class="list">(<span class="keyword">NSString</span> *newName)</span> <span class="collection">&#123;</span><br><span class="line">	 NSLog<span class="list">(@<span class="string">"%@"</span>, newName)</span><span class="comment">;</span></span><br><span class="line"> &#125;</span>]</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>第一个例子是简单的所有变化都会响应到。但是可能我只想响应部分情况。这时候就用filter来过滤。filter的block返回YES的情况就是需要触发的情况。其他就补返回。所以这代码以后。 username以j开头的才能打印出来。</p>
+<h3 id="u6D41_u7684_u5B9E_u73B0"><a href="#u6D41_u7684_u5B9E_u73B0" class="headerlink" title="流的实现"></a>流的实现</h3><p>以下是<a href="http://www.teehanlax.com/blog/getting-started-with-reactivecocoa/" target="_blank" rel="external">Getting Started with ReactiveCocoa</a>的例子和图片</p>
+<p>如何以最少的代码实现一个时钟应用</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">RAC(<span class="keyword">self</span>, timeLabel<span class="variable">.text</span>) = [[[RACSignal interval:<span class="number">1</span> onScheduler:[RACScheduler currentScheduler]] startWith:[<span class="built_in">NSDate</span> date]] map:^<span class="keyword">id</span> (<span class="built_in">NSDate</span> *value) &#123;</span><br><span class="line">	<span class="built_in">NSLog</span>(<span class="string">@"value:%@"</span>, value);</span><br><span class="line">	<span class="built_in">NSDateComponents</span> *dateComponents = [[<span class="built_in">NSCalendar</span> currentCalendar] components:<span class="built_in">NSHourCalendarUnit</span> |</span><br><span class="line">	 <span class="built_in">NSMinuteCalendarUnit</span> | </span><br><span class="line">	 <span class="built_in">NSSecondCalendarUnit</span> fromDate:value];</span><br><span class="line">	<span class="keyword">return</span> [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%02ld:%02ld:%02ld"</span>, (<span class="keyword">long</span>)dateComponents<span class="variable">.hour</span>, (<span class="keyword">long</span>)dateComponents<span class="variable">.minute</span>, (<span class="keyword">long</span>)dateComponents<span class="variable">.second</span>];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>实现的逻辑顺序是这样的。设置一个间隔为一秒。从现在开始调用的函数。并把当前实际传入。 这个函数返回一个NSString。 然后把这个NSString和界面上的textField绑定在了一起。从而实现了我认为我见过最简单时钟程序。表现了流和绑定响应。</p>
+<p><img src="http://teehanlax.com.s3.amazonaws.com/wordpress/wp-content/uploads/chaining.png" alt="原blog中对上述代码的流的形容图"></p>
+<h3 id="u7EC4_u5408"><a href="#u7EC4_u5408" class="headerlink" title="组合"></a>组合</h3><p>几乎每个ReactiveCocoa的Demo里面都会出现的例子。</p>
+<p>(继续盗图图)</p>
+<p><img src="http://blog.leezhong.com/image/FRP_register_demo.png" alt=""></p>
+<p>这个是用的leezhong的图。 应该是从<a href="https://speakerdeck.com/andrewsardone/reactivecocoa-at-mobidevday-2013" target="_blank" rel="external">这个演讲PPT里面来的，点过去还有视频哦</a></p>
+<p>就是说在必需验证每个所填写的数值符合标准。Button才能点击。</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">RAC</span>(<span class="keyword">self</span>, submitButton.enabled) = [<span class="constant">RACSignal</span> <span class="symbol">combineLatest:</span><span class="annotation">@[self.usernameField.rac_textSignal,</span><br><span class="line">				 self.passwordField.rac_textSignal]</span></span><br><span class="line">	<span class="symbol">reduce:</span>^id (<span class="constant">NSString</span> *userName, <span class="constant">NSString</span> *password) &#123;</span><br><span class="line">	<span class="keyword">return</span> @(userName.length &gt;= <span class="number">6</span> &amp;&amp; password.length &gt;= <span class="number">6</span>);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>简单的解释就是把usernameField和passwordField的信号绑定在了一起做reduce处理以后。返回一个BOOL值去跟self.submitButton.enabled进行绑定。</p>
+<p><img src="http://teehanlax.com.s3.amazonaws.com/wordpress/wp-content/uploads/combining.png" alt=""></p>
+<p>囧。再次发现和leezhong借用的代码和图都是一样的。</p>
+<h3 id="u5F02_u6B65_u548C_u7F51_u7EDC"><a href="#u5F02_u6B65_u548C_u7F51_u7EDC" class="headerlink" title="异步和网络"></a>异步和网络</h3><p>(丢个链接 等心情好了 在补。。。)</p>
+<p><a href="https://github.com/ReactiveCocoa/ReactiveCocoa#when-to-use-reactivecocoa" target="_blank" rel="external">when-to-use-reactivecocoa</a></p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>其实我对ReactiveCocoa了解还是在hello world阶段。 很多东西都理解的很粗糙。上面这一大陀blog。很多地方写的肯定不好。欢迎指出。其实很多时候觉得确实中文原创的技术文章十分少。很大一部分都是翻译的。国外的技术文章也确实写的牛写的好。但是总觉得自己应该写点自己思考的东西。</p>
+<p>对于ReactiveCocoa来说，我认为它确实是一个好东西。正如leezhong所说</p>
+<pre><code>RAC统一了对KVO、UI Event、Network request、Async work的处理，因为它们本质上都是值的变化(Values over time)。
+</code></pre><p>其实App上90%的操作不就只有这些么。所以我会一直对ReactiveCocoa投入时间去学习和使用。顺便说一句。阿里Mac Lab出品的Xiami for Mac。是我见过国内最好的Mac App之一。他们也用了ReactiveCocoa。然后你可以想象对他们做出那些响应交互ReactiveCocoa为他们提供了强有力的输出。</p>
+<h2 id="u53C2_u8003_u8D44_u6599"><a href="#u53C2_u8003_u8D44_u6599" class="headerlink" title="参考资料"></a>参考资料</h2><h3 id="FRP"><a href="#FRP" class="headerlink" title="FRP"></a>FRP</h3><p><a href="http://en.wikipedia.org/wiki/Functional_reactive_programming" target="_blank" rel="external">wiki Functional reactive programming</a></p>
+<p><a href="http://blog.zhaojie.me/2009/09/functional-reactive-programming-for-csharp.html" target="_blank" rel="external">趣味编程：Functional Reactive Programming</a></p>
+<p><a href="http://www.haskell.org/haskellwiki/Functional_Reactive_Programming" target="_blank" rel="external">haskell Functional Reactive Programming</a></p>
+<p><a href="http://zh.wikipedia.org/wiki/响应式编程" target="_blank" rel="external">wiki 响应式编程</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Functional_programming" target="_blank" rel="external">wiki Functional programming</a></p>
+<p><a href="http://www.infoq.com/cn/articles/functional-reactive-programming" target="_blank" rel="external">函数式反应型编程(FRP) —— 实时互动应用开发的新思路</a></p>
+<p><a href="http://www.jdon.com/45581" target="_blank" rel="external">什么是函数响应式编程(Functional Reactive Programming:FRP)</a></p>
+<p><a href="http://www.cnblogs.com/yangecnu/archive/2012/11/03/Introducting_ReactiveExtensions.html" target="_blank" rel="external">Reactive Extensions入门</a></p>
+<h3 id="ReactiveCocoa"><a href="#ReactiveCocoa" class="headerlink" title="ReactiveCocoa"></a>ReactiveCocoa</h3><p><a href="http://blog.leezhong.com/ios/2013/06/19/frp-reactivecocoa.html" target="_blank" rel="external">ReactiveCocoa与Functional Reactive Programming</a></p>
+<p><a href="https://speakerdeck.com/joshaber/better-code-for-a-better-world" target="_blank" rel="external">Better Code for a Better World by Josh Abernathy</a></p>
+<p><a href="http://nshipster.com/reactivecocoa/" target="_blank" rel="external">nshipster Reactive​Cocoa</a></p>
+<p><a href="http://spin.atomicobject.com/2013/04/28/reactivecocoa/" target="_blank" rel="external">ReactiveCocoa: The Future of Cocoa Programming</a></p>
+<p><a href="http://www.teehanlax.com/blog/getting-started-with-reactivecocoa/" target="_blank" rel="external">Getting Started with ReactiveCocoa</a></p>
+<p><a href="http://www.teehanlax.com/blog/reactivecocoa/" target="_blank" rel="external">Functional Reactive Programming on iOS with ReactiveCocoa</a></p>
+<p><a href="https://github.com/ReactiveCocoa/ReactiveCocoa/blob/master/Documentation/BasicOperators.md" target="_blank" rel="external">Basic Operators</a></p>
+<p><a href="http://cocoasamurai.blogspot.com/2013/03/basic-mvvm-with-reactivecocoa.html" target="_blank" rel="external">Basic MVVM with ReactiveCocoa<br>MVC - One Pattern to Rule them all</a></p>
+<p><a href="http://twocentstudios.com/blog/2013/04/03/the-making-of-vinylogue/#design" target="_blank" rel="external">How I Wrote Vinylogue for iOS With ReactiveCocoa</a></p>
+<p><a href="https://github.com/RoCry/rocry.github.com/wiki/Project_ReactiveCocoa" target="_blank" rel="external">来自好友RoCry的推荐</a></p>
+<p><a href="https://speakerdeck.com/andrewsardone/reactivecocoa-at-mobidevday-2013" target="_blank" rel="external">ReactiveCocoa at MobiDevDay 2013</a></p>
+<p><a href="https://vimeo.com/65637501" target="_blank" rel="external">ReactiveCocoa at MobiDevDay 2013视频</a></p>
+<p><a href="http://blog.maybeapps.com/#fn:p42894317939-5" target="_blank" rel="external">Input and Output</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u626F_u6DE1"><a href="#u626F_u6DE1" class="headerlink" title="扯淡"></a>扯淡</h2><p>习惯了，每次再写技术的东西的时候总要唠叨几句。本来唠叨的东西我应该会写成另外的blog。不过每次给自己下了一个底线要少少的写这些唠叨的话语。原因一是觉得我爱唠叨的话语可能会导致blog被墙。原因之二我不希望我变成一个IT评论家。</p>
+<p>对了,我发现我还是挺爱挖坑的。目前有两坑没有填完。一个是Core Data系列。一个是iCloud系列。两个系列我都只写了一个Hello World级别并没有再深入的继续写。恩，要抓紧了。其实ReactiveCocoa这个我觉得也可以作为一个系列来写。不过想了想我这种Hello World的水平。也写不出这么多来。就暂时写一篇好了。</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS学习笔记(27) iCloud(三) key-Value Stroe]]></title>
+    <link href="http://iiiyu.com/2013/09/02/learning-ios-notes-twenty-seven/"/>
+    <id>http://iiiyu.com/2013/09/02/learning-ios-notes-twenty-seven/</id>
+    <published>2013-09-02T14:21:13.000Z</published>
+    <updated>2014-02-17T04:20:22.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u4EC0_u4E48_u662FNSUserDefaults"><a href="#u4EC0_u4E48_u662FNSUserDefaults" class="headerlink" title="什么是NSUserDefaults"></a>什么是NSUserDefaults</h2><p>NSUserDefaults的持久化本体是一个<a href="http://zh.wikipedia.org/zh/Plist" target="_blank" rel="external">plist</a>.内存单例是一个操作类似NSDictionary的类。 而NSUserDefaults的出现我想是因为在每一个程序当中。我们都会设定一些选项。比如桌面壁纸、声音大小、提醒日期等，我们希望就算App关闭以后。我们再次打开的时候还在的东西。但是它并不适合存储App中关键的内容和用户自己产生的大量数据。 大量数据应该用更加合理的方式去做持久化(Document or Core Data).</p>
+<a id="more"></a>
+<h3 id="NSUserDefaults_u7B80_u5355_u4EE3_u7801_u8BB2_u89E3"><a href="#NSUserDefaults_u7B80_u5355_u4EE3_u7801_u8BB2_u89E3" class="headerlink" title="NSUserDefaults简单代码讲解"></a>NSUserDefaults简单代码讲解</h3><p>使用NSUserDefaults其实巨简单。 </p>
+<p>大概步骤如下:</p>
+<ol>
+<li>首先通过一个单例获得持久化plist的内存映射。</li>
+<li>然后就可以用这个单例的实例类进行读写操作。</li>
+<li>读当然没啥问题，但是写了的话这时候只是操作了在内存里面的这个单例实例。需要做持久化的动作。为什么这个动作要自己来做呢。我想是持久化都是进行IO操作。而IO操作其实很多时候就是性能的瓶颈所在。我们可能很短的时间内一次性操作很多次NSUserDefaults。这样就只用在结束的时候保存一次。IO操作就很少。反之如果每次写NSUserDefaults的时候都去做持久化。那刚刚的情况就会在很短的时间内操作多次IO。这是应该避免的。</li>
+</ol>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 首先把数据从plist里面读到内存里面的单例来</span></span><br><span class="line">NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 进行增加or修改操作</span></span><br><span class="line">[standardDefaults <span class="string">setObject:</span>@<span class="string">"a123456789"</span> <span class="string">forKey:</span>@<span class="string">"userID"</span>];</span><br><span class="line">[standardDefaults <span class="string">setInteger:</span><span class="number">24</span> <span class="string">forKey:</span>@<span class="string">"age"</span>];</span><br><span class="line">[standardDefaults <span class="string">setBool:</span>YES <span class="string">forKey:</span>@<span class="string">"isLogin"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除操作</span></span><br><span class="line">[standardDefaults <span class="string">removeObjectForKey:</span>@<span class="string">"debts"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从内存里面写入plist进行持久化</span></span><br><span class="line">[standardDefaults synchronize];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取操作</span></span><br><span class="line">NSString *userID = [standardDefaults <span class="string">stringForKey:</span>@<span class="string">"userID"</span>];</span><br><span class="line">BOOL isLogin = [standardDefaults <span class="string">boolForKey:</span>@<span class="string">"isLogin"</span>];</span><br></pre></td></tr></table></figure>
+<p>当然还有现代一点的写法。下面两种都是一个效果</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 常见方法</span></span><br><span class="line"><span class="built_in">NSUserDefaults</span> *standardDefaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line"><span class="keyword">if</span> ([standardDefaults stringForKey:<span class="string">@"favoriteColor"</span>] == <span class="literal">nil</span>) &#123;</span><br><span class="line">[standardDefaults setObject:<span class="string">@"Green"</span> forKey:<span class="string">@"favoriteColor"</span>];</span><br><span class="line">[standardDefaults synchronize];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 现代高端上档次方法</span></span><br><span class="line"><span class="built_in">NSUserDefaults</span> *standardDefaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line">[standardDefaults registerDefaults:@&#123;<span class="string">@"favoriteColor"</span>: <span class="string">@"Green"</span>&#125;];</span><br><span class="line">[standardDefaults synchronize];</span><br></pre></td></tr></table></figure>
+<h2 id="iCloud_u7684Key-Value"><a href="#iCloud_u7684Key-Value" class="headerlink" title="iCloud的Key-Value"></a>iCloud的Key-Value</h2><p>简单的，可以把iCloud的key-value当作一个在云端的NSUserDefaults。</p>
+<p>我的用法是，App的Setting最终设置决定的还是NSUserDefaults。iCloud的Key-Value作为数据源来对NSUserDefaults进行修改。这样的优点在于，就算iCloud关闭或者iCloud的数据没有同步回来。你的App依然可以正常的工作和运行。</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSUserDefaults</span> *standardDefaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br></pre></td></tr></table></figure>
+<p>对应</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br></pre></td></tr></table></figure>
+<p>其他操作跟NSUserDefaults一样一样的。</p>
+<p>只有一个值得注意的是NSUbiquitousKeyValueStore需要去监听<br>NSUbiquitousKeyValueStoreDidChangeExternallyNotification事件。就可以知道NSUbiquitousKeyValueStore是否已经同步更新完成。</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br><span class="line">[[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="keyword">self</span></span><br><span class="line">          selector:<span class="keyword">@selector</span>(updateKVStoreItems:)</span><br><span class="line">          name:<span class="built_in">NSUbiquitousKeyValueStoreDidChangeExternallyNotification</span></span><br><span class="line">          object:store];</span><br><span class="line">[store synchronize];</span><br></pre></td></tr></table></figure>
+<p>然后实现updateKVStoreItems:方法</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)updateKVStoreItems:(<span class="built_in">NSNotification</span>*)notification &#123;</span><br><span class="line">   <span class="comment">// Get the list of keys that changed.</span></span><br><span class="line">   <span class="built_in">NSDictionary</span>* userInfo = [notification userInfo];</span><br><span class="line">   <span class="built_in">NSNumber</span>* reasonForChange = [userInfo objectForKey:<span class="built_in">NSUbiquitousKeyValueStoreChangeReasonKey</span>];</span><br><span class="line">   <span class="built_in">NSInteger</span> reason = -<span class="number">1</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// If a reason could not be determined, do not update anything.</span></span><br><span class="line">   <span class="keyword">if</span> (!reasonForChange)</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// Update only for changes from the server.</span></span><br><span class="line">   reason = [reasonForChange integerValue];</span><br><span class="line">   <span class="keyword">if</span> ((reason == <span class="built_in">NSUbiquitousKeyValueStoreServerChange</span>) ||</span><br><span class="line">         (reason == <span class="built_in">NSUbiquitousKeyValueStoreInitialSyncChange</span>)) &#123;</span><br><span class="line">      <span class="comment">// If something is changing externally, get the changes</span></span><br><span class="line">      <span class="comment">// and update the corresponding keys locally.</span></span><br><span class="line">      <span class="built_in">NSArray</span>* changedKeys = [userInfo objectForKey:<span class="built_in">NSUbiquitousKeyValueStoreChangedKeysKey</span>];</span><br><span class="line">      <span class="built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br><span class="line">      <span class="built_in">NSUserDefaults</span>* userDefaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line"> </span><br><span class="line">      <span class="comment">// This loop assumes you are using the same key names in both</span></span><br><span class="line">      <span class="comment">// the user defaults database and the iCloud key-value store</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="built_in">NSString</span>* key <span class="keyword">in</span> changedKeys) &#123;</span><br><span class="line">         <span class="keyword">id</span> value = [store objectForKey:key];</span><br><span class="line">         [userDefaults setObject:value forKey:key];</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>超级简单吧。</p>
+<h2 id="u7B2C_u4E09_u65B9_u5E93_u63A8_u8350"><a href="#u7B2C_u4E09_u65B9_u5E93_u63A8_u8350" class="headerlink" title="第三方库推荐"></a>第三方库推荐</h2><p>当然有大神写的第三方库。并且实现了NSUserDefaults白名单功能。因为可能你存在NSUserDefaults里面的东西不想要也不需要全部同步到NSUbiquitousKeyValueStore上去把。</p>
+<p>对了忘记说一点NSUbiquitousKeyValueStore可是有大小和条目限制的。你不要把他当作无穷无尽的东西来用。具体限制是最大空间1 MB。 最多1024个key。记住不要拿来当作主要数据存储哦。</p>
+<p>MK大神应该还是如雷贯耳的把。 不知道么。 MKNetworkKit是他写的。还不知道么。<br><a href="http://www.amazon.com/gp/product/1118449959/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1118449959&amp;linkCode=as2&amp;tag=blogmugunthku-20" target="_blank" rel="external">iOS 6 Programming Pushing the Limits: Advanced Application Development for Apple iPhone, iPad and iPod Touch</a> 可是他写的哦。我和我的小伙伴都从MK大神的书里面学到很多不错的东西</p>
+<p><a href="https://github.com/MugunthKumar/MKiCloudSync" target="_blank" rel="external">MKiCloudSync</a></p>
+<p><a href="https://github.com/Daij-Djan/DDiCloudSync" target="_blank" rel="external">DDiCloudSync</a></p>
+<p><a href="https://github.com/futuretap/FTiCloudSync" target="_blank" rel="external">FTiCloudSync</a></p>
+<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>参考资料：</p>
+<p><a href="https://developer.apple.com/library/ios/documentation/cocoa/Conceptual/UserDefaults/Introduction/Introduction.html" target="_blank" rel="external">Preferences and Settings Programming Guide</a></p>
+<p><a href="http://gibuloto.com/blog/nsuserdefaults/" target="_blank" rel="external">NSUserDefaults (plist) 筆記</a></p>
+<p><a href="http://www.doubleencore.com/2013/03/back-to-basics-forgotten-nsuserdefaults/" target="_blank" rel="external">Back to Basics: Forgotten NSUserDefaults</a></p>
+<p><a href="http://www.techotopia.com/index.php/Synchronizing_iPhone_iOS_5_Key-Value_Data_using_iCloud" target="_blank" rel="external">Synchronizing iPhone iOS 5 Key-Value Data using iCloud</a></p>
+<p><a href="http://useyourloaf.com/blog/2011/10/24/sync-preference-data-with-icloud.html" target="_blank" rel="external">Sync Preference Data With iCloud</a></p>
+<p><a href="http://www.raywenderlich.com/6015/beginning-icloud-in-ios-5-tutorial-part-1" target="_blank" rel="external">Beginning iCloud in iOS 5 Tutorial Part 1</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u4EC0_u4E48_u662FNSUserDefaults"><a href="#u4EC0_u4E48_u662FNSUserDefaults" class="headerlink" title="什么是NSUserDefaults"></a>什么是NSUserDefaults</h2><p>NSUserDefaults的持久化本体是一个<a href="http://zh.wikipedia.org/zh/Plist">plist</a>.内存单例是一个操作类似NSDictionary的类。 而NSUserDefaults的出现我想是因为在每一个程序当中。我们都会设定一些选项。比如桌面壁纸、声音大小、提醒日期等，我们希望就算App关闭以后。我们再次打开的时候还在的东西。但是它并不适合存储App中关键的内容和用户自己产生的大量数据。 大量数据应该用更加合理的方式去做持久化(Document or Core Data).</p>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS学习笔记(26) iCloud(二) 准备工作]]></title>
+    <link href="http://iiiyu.com/2013/08/26/learning-ios-notes-twenty-six/"/>
+    <id>http://iiiyu.com/2013/08/26/learning-ios-notes-twenty-six/</id>
+    <published>2013-08-26T14:43:11.000Z</published>
+    <updated>2014-02-17T04:20:19.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u5F00_u53D1_u652F_u6301iCloud_u7684_u4E0A_u534A_u90E8_u5206_u524D_u671F_u51C6_u5907"><a href="#u5F00_u53D1_u652F_u6301iCloud_u7684_u4E0A_u534A_u90E8_u5206_u524D_u671F_u51C6_u5907" class="headerlink" title="开发支持iCloud的上半部分前期准备"></a>开发支持iCloud的上半部分前期准备</h2><ul>
+<li><p>需要申请一个开发者的帐号。理论上iOS和Mac OSX的都OK。考虑到我只有iOS的情况下，我的文章里面的例子默认只是iOS的。</p>
+</li>
+<li><p>你需要一台iOS设备，并且iOS版本必须大于等于5.最好大于等于6. 最最好大于等于7。</p>
+</li>
+<li><p>Xcode不用说至少是MAS里面最新的</p>
+</li>
+<li><p>然后去建立App Bundle ID的页面去把iCloud支持打开。</p>
+</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/686e6613jw1e88hq7q78aj20sa0g2tav.jpg" alt="1"></p>
+<p><img src="http://ww1.sinaimg.cn/large/686e6613jw1e88hqn9gdej20s60h2wgz.jpg" alt="2"></p>
+<p><img src="http://ww1.sinaimg.cn/large/686e6613jw1e88hqn9gdej20s60h2wgz.jpg" alt="3"></p>
+<p><img src="http://ww2.sinaimg.cn/large/686e6613jw1e88hts5dkpj20k70en75m.jpg" alt="4"></p>
+<ul>
+<li>bundle id需要生成带你测试设备的证书</li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/686e6613jw1e88htyxylrj20rw0egmzm.jpg" alt="5"></p>
+<p>(PS:截图太累了 换成文章描述)</p>
+<p>这样才能算iCloud的前期工作做完了一半。</p>
+<p><strong>以下涉及到NDA内容请自行屏蔽</strong><br><a id="more"></a></p>
+<ul>
+<li>据说Xcode5里面支持直接开启iCloud支持，推送服务支持等。不用去登录网页了。</li>
+</ul>
+<ul>
+<li>据说Xcode5支持iCloud调试了不需要真机了。可是特么只是支持iCloud Key-Value。Document和Core Data还是需要你一台强力的真机。</li>
+</ul>
+<p>(详细和剩下的大家自行脑补)</p>
+<h2 id="u5F00_u53D1_u652F_u6301iCloud_u7684_u4E0B_u534A_u90E8_u5206_u524D_u671F_u51C6_u5907"><a href="#u5F00_u53D1_u652F_u6301iCloud_u7684_u4E0B_u534A_u90E8_u5206_u524D_u671F_u51C6_u5907" class="headerlink" title="开发支持iCloud的下半部分前期准备"></a>开发支持iCloud的下半部分前期准备</h2><ul>
+<li>建立一个跟上部分bundle id一样的工程项目</li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/686e6613jw1e88iciw7yaj212w0qfn0a.jpg" alt="6"></p>
+<ul>
+<li><p>然后在工程里面把entitlements勾上以后。</p>
+</li>
+<li><p>支持key-value stroe把勾选上</p>
+</li>
+<li><p>支持Document和Core Data要添加ubiquity containers</p>
+</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/686e6613jw1e88id4vlv3j20jc0a63z9.jpg" alt="7"></p>
+<p>到这里，总算是把准备工作弄好了。每一个支持iCloud的App。都必须经过上面的步骤。不可跳过直接去写代码。切记切记。</p>
+<h2 id="u5F00_u53D1iCloud_u57FA_u672C_u601D_u7EF4"><a href="#u5F00_u53D1iCloud_u57FA_u672C_u601D_u7EF4" class="headerlink" title="开发iCloud基本思维"></a>开发iCloud基本思维</h2><ol>
+<li>iCloud是网络远端的数据存储服务。最终目的是确保所有设备上的所有数据一致性。 </li>
+<li>使用iCloud的机制不是纯网络服务。简单的说就是在没有网络的情况下。你的App应该是可以畅通无阻的运行，并且没有缺失功能。iCloud存储的是数据的源头，App里面应该会有对应的缓存确保这样的机制。所以有多少台设备，就有多少份缓存的数据。</li>
+<li>缓存数据的份数多了，为了保持数据的一致性。需要同步机制来保持更新，这时候不可避免的会产生数据冲突。就需要解决冲突。</li>
+</ol>
+<p>所以，只要是使用了iCloud。不论那种形式。我们都必须面对下面的几种情况并且需要对这些情况进行响应的处理：</p>
+<ol>
+<li>何时开启iCloud同步服务</li>
+<li>在App内部关闭了iCloud以后，App的应对措施。</li>
+<li>在App外部关闭了iCloud以后，App的应对措施。</li>
+<li>开启iCloud以后，iCloud数据和本地数据之间的处理。</li>
+<li>开启iCloud以后，正在同步数据时，UI的应对措施。</li>
+<li>使用iCloud以后，当数据完成更新的时候。UI的应对措施。</li>
+<li>iCloud数据冲突时候App的处理。</li>
+</ol>
+<p>以上是临时能回忆起来的一些需要处理的情况。真实情况可能要复杂的多。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u5F00_u53D1_u652F_u6301iCloud_u7684_u4E0A_u534A_u90E8_u5206_u524D_u671F_u51C6_u5907"><a href="#u5F00_u53D1_u652F_u6301iCloud_u7684_u4E0A_u534A_u90E8_u5206_u524D_u671F_u51C6_u5907" class="headerlink" title="开发支持iCloud的上半部分前期准备"></a>开发支持iCloud的上半部分前期准备</h2><ul>
+<li><p>需要申请一个开发者的帐号。理论上iOS和Mac OSX的都OK。考虑到我只有iOS的情况下，我的文章里面的例子默认只是iOS的。</p>
+</li>
+<li><p>你需要一台iOS设备，并且iOS版本必须大于等于5.最好大于等于6. 最最好大于等于7。</p>
+</li>
+<li><p>Xcode不用说至少是MAS里面最新的</p>
+</li>
+<li><p>然后去建立App Bundle ID的页面去把iCloud支持打开。</p>
+</li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/686e6613jw1e88hq7q78aj20sa0g2tav.jpg" alt="1"></p>
+<p><img src="http://ww1.sinaimg.cn/large/686e6613jw1e88hqn9gdej20s60h2wgz.jpg" alt="2"></p>
+<p><img src="http://ww1.sinaimg.cn/large/686e6613jw1e88hqn9gdej20s60h2wgz.jpg" alt="3"></p>
+<p><img src="http://ww2.sinaimg.cn/large/686e6613jw1e88hts5dkpj20k70en75m.jpg" alt="4"></p>
+<ul>
+<li>bundle id需要生成带你测试设备的证书</li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/686e6613jw1e88htyxylrj20rw0egmzm.jpg" alt="5"></p>
+<p>(PS:截图太累了 换成文章描述)</p>
+<p>这样才能算iCloud的前期工作做完了一半。</p>
+<p><strong>以下涉及到NDA内容请自行屏蔽</strong><br>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
+    
+  </entry>
+  
+</feed>

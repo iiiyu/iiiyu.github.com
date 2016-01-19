@@ -4,7 +4,7 @@
   <subtitle><![CDATA[如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://iiiyu.com/"/>
-  <updated>2016-01-18T16:29:39.000Z</updated>
+  <updated>2016-01-19T01:58:39.000Z</updated>
   <id>http://iiiyu.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://iiiyu.com/2016/01/12/2016-IT-professionals-Getting-Started/"/>
     <id>http://iiiyu.com/2016/01/12/2016-IT-professionals-Getting-Started/</id>
     <published>2016-01-11T23:33:32.000Z</published>
-    <updated>2016-01-18T16:29:39.000Z</updated>
+    <updated>2016-01-19T01:58:39.000Z</updated>
     <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
 <h2 id="u788E_u788E_u5FF5"><a href="#u788E_u788E_u5FF5" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>2016年才开始，再次感慨时光如逝。2015一年面基了好多人，其中认识了好多小朋友。有的小朋友真的很厉害，而有的小朋友也有我在当时年纪的迷茫。觉得在28岁这样“长者”的年纪，自己也算做一个有故事的男同学。写下这一篇文章，也算写给18岁的自己。至少证明我来过这个世界。</p>
 <p>在2012年，我以当时的能看见的未来写过一篇<a href="http://iiiyu.com/2012/02/09/junior-it-people-c-study-guide/">IT人士入门指南</a>。</p>
@@ -91,10 +91,8 @@
 <p>如果你对数学的有孜孜不倦的好奇之心，安全领域一定会满足你。</p>
 <p>当你横空出世、崭露头角。巨头们都必须得花重金抢你。</p>
 <h4 id="u5176_u4ED6"><a href="#u5176_u4ED6" class="headerlink" title="其他"></a>其他</h4><p>在存技术领域里面，还有一些可能比较边缘的职位，可能是需要足够大的公司才能专门独立出来。</p>
-<p>#####测试</p>
-<p>白盒黑盒，能抓住Bug的都是好盒子。</p>
-<p>#####运维</p>
-<p>运维掌握着整个公司的服务器资源，公司的所有程序都得跑在运维搭建好的环境里面。公司网站挂了，服务挂了。可能第一个背锅的人。</p>
+<h5 id="u6D4B_u8BD5"><a href="#u6D4B_u8BD5" class="headerlink" title="测试"></a>测试</h5><p>白盒黑盒，能抓住Bug的都是好盒子。</p>
+<h5 id="u8FD0_u7EF4"><a href="#u8FD0_u7EF4" class="headerlink" title="运维"></a>运维</h5><p>运维掌握着整个公司的服务器资源，公司的所有程序都得跑在运维搭建好的环境里面。公司网站挂了，服务挂了。可能第一个背锅的人。</p>
 <h3 id="u4EA7_u54C1"><a href="#u4EA7_u54C1" class="headerlink" title="产品"></a>产品</h3><p>最重要的事情说三遍：</p>
 <p>并不是人人都能成为合格的产品经理！产品经理的入门门槛很高！<br>并不是人人都能成为合格的产品经理！产品经理的入门门槛很高！<br>并不是人人都能成为合格的产品经理！产品经理的入门门槛很高！</p>
 <p>路漫漫其修远兮，吾将上下而求索。</p>

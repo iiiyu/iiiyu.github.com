@@ -4,7 +4,7 @@
   <subtitle><![CDATA[如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://iiiyu.com/"/>
-  <updated>2016-01-28T06:45:49.000Z</updated>
+  <updated>2016-02-24T15:26:00.000Z</updated>
   <id>http://iiiyu.com/</id>
   
   <author>
@@ -13,6 +13,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[鱼子酱的胡思乱想 —— 天下武功唯快不破]]></title>
+    <link href="http://iiiyu.com/2016/02/23/A-product-manager-cranky-Martial-arts-world-but-not-fast-breaking/"/>
+    <id>http://iiiyu.com/2016/02/23/A-product-manager-cranky-Martial-arts-world-but-not-fast-breaking/</id>
+    <published>2016-02-23T15:36:06.000Z</published>
+    <updated>2016-02-24T15:26:00.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u7528_u5FEB_u5F3A_u884C_u89E3_u91CA_u4EC0_u4E48_u662F_u4EF7_u503C"><a href="#u7528_u5FEB_u5F3A_u884C_u89E3_u91CA_u4EC0_u4E48_u662F_u4EF7_u503C" class="headerlink" title="用快强行解释什么是价值"></a>用快强行解释什么是价值</h2><p>我们常常说，要做带给用户有价值的东西。但是到底什么是有价值的东西呢？如果用快来解释的话，大概分两种情况</p>
+<ol>
+<li>之前做不到，但是之后可以做到。</li>
+<li>之前只能很慢的做到，之后能更快的做到。<br>这两种情况都能给用户带来价值。</li>
+</ol>
+<h2 id="u7528_u5FEB_u5F3A_u884C_u89E3_u91CA_u4F20_u7EDF_u884C_u4E1A_u7684_u4F8B_u5B50"><a href="#u7528_u5FEB_u5F3A_u884C_u89E3_u91CA_u4F20_u7EDF_u884C_u4E1A_u7684_u4F8B_u5B50" class="headerlink" title="用快强行解释传统行业的例子"></a>用快强行解释传统行业的例子</h2><ol>
+<li>为了更快的行动速度：飞机&gt;高铁&gt;汽车&gt;马车&gt;双腿。</li>
+<li>麦当劳肯德基更快的做出食物</li>
+<li>机械化农业更快的完成工作</li>
+<li>机械化工业同上</li>
+</ol>
+<p>他们产生的经济效益也是类似的，越快得到的利润越多。</p>
+<h2 id="u7528_u5FEB_u5F3A_u884C_u89E3_u91CA_u79FB_u52A8_u4E92_u8054_u7F51_u7684_u4F8B_u5B50"><a href="#u7528_u5FEB_u5F3A_u884C_u89E3_u91CA_u79FB_u52A8_u4E92_u8054_u7F51_u7684_u4F8B_u5B50" class="headerlink" title="用快强行解释移动互联网的例子"></a>用快强行解释移动互联网的例子</h2><ol>
+<li>微信是做到了更快的交流（个人认为 Telegram 更快一些）</li>
+<li>Uber做到了更快的叫车服务（滴滴一样）</li>
+<li>ele做到了更快的送餐服务（美团、百度等等外卖一样）</li>
+<li>陌陌做到了更快搭讪陌生人</li>
+<li>支付宝做到了更快的付款（微信跟支付宝差不多， Apple Pay 更快但是层面不是同样的东西）</li>
+<li>众地图应用做到了更快的导航寻路</li>
+<li>微博做到了更快的扩散内容<br>……<br>等等等这个列表可以一直列下去。所有做的好的产品都可以强行用快来解释。</li>
+</ol>
+<h2 id="u5F97_u5230_u7684_u7B80_u5355_u7ED3_u8BBA__u2014_u2014__u5929_u4E0B_u6B66_u529F_u552F_u5FEB_u4E0D_u7834"><a href="#u5F97_u5230_u7684_u7B80_u5355_u7ED3_u8BBA__u2014_u2014__u5929_u4E0B_u6B66_u529F_u552F_u5FEB_u4E0D_u7834" class="headerlink" title="得到的简单结论 —— 天下武功唯快不破"></a>得到的简单结论 —— 天下武功唯快不破</h2><p>简单的判断一个产品有没用价值，价值的大小。可以跟现有产品进行比较，如果它比现有产品更快达到目的那就是有价值的东西。提高的速度越快，相应的价值也就越大。</p>
+<p>因此在做产品或者是创业中， 就算撞车到了一个相同领域。只要你能保持是同类产品中最快解决问题的。那就是能保持竞争优势。而且这里的快是更加广义的快，你的技术团队比对手跟快的迭代产品，你的公关比对手更快的消除负面影响。你的运营团队能比对手更快的写出高质量的内容。 殊途同归 —— 天下武功唯快不破</p>
+<p>当然只用快来衡量价值是片面的，不严谨的。思考到这里，我突然觉的可以用一些简单的理论和数值来构建一个简单的价值计算公式。不过那就是后面看看我有没有心情把他写出来吧。</p>
+<h2 id="u788E_u788E_u5FF5"><a href="#u788E_u788E_u5FF5" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>年前爆出的张小龙的饭否其中有句这样的话“要提防那些blog写得好的产品经理，因为在Blog上花的时间越多，在产品上花的时间就越少。原来还以为有例外，现在看起来无一例外。”</p>
+<p>由此引发出来“要提防那些Blog写得好的程序员，因为在Blog上花的时间越多，在工作上花的时间就越少。原来还以为有例外，现在看起来无一例外。”</p>
+<p>五味杂陈，到底要不要写Blog的。我不知道自己算不算blog写的好。如果不算，那岂不是变成Blog也写的烂，产品 or 技术也烂的人。 如果算，那是不是仅仅是Blog写的好呢。</p>
+<p>我承认，如果我要产出一个我觉得还行的文章，我起码需要四五个小时的时间，一般横跨2-3天的时间。我也知道很多对这个世界有着很多独特的思考的产品大牛和技术大牛。他们忙着做自己想做的事情，并没有时间写Blog。不写Blog并不妨碍他们成为大牛。我也还见过一些天天在SNS上蹦跶，发篇Blog恨不得把所有人都@上，其实水平可能还需要更多时间的打磨的人。</p>
+<p>兜兜转转，我想天下熙熙攘攘，就算是一条咸鱼，我要努力证明我的不同。继续写Blog吧！！！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u7528_u5FEB_u5F3A_u884C_u89E3_u91CA_u4EC0_u4E48_u662F_u4EF7_u503C"><a href="#u7528_u5FEB_u5F3A_u884C_u89E3_u91CA_u4EC0_u4E48_u662F_u]]>
+    </summary>
+    
+      <category term="PM" scheme="http://iiiyu.com/tags/PM/"/>
+    
+      <category term="产品汪" scheme="http://iiiyu.com/tags/%E4%BA%A7%E5%93%81%E6%B1%AA/"/>
+    
+      <category term="胡思乱想" scheme="http://iiiyu.com/tags/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[读书笔记「微信思维」]]></title>
@@ -75,7 +123,7 @@
     <link href="http://iiiyu.com/2016/01/19/CoreData-VS-Realm/"/>
     <id>http://iiiyu.com/2016/01/19/CoreData-VS-Realm/</id>
     <published>2016-01-19T02:22:16.000Z</published>
-    <updated>2016-02-23T15:21:16.000Z</updated>
+    <updated>2016-02-23T15:21:49.000Z</updated>
     <content type="html"><![CDATA[<p>本文具有强烈的个人感情色彩,如有观看不适,请尽快关闭。本文仅作为个人学习记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
 <h2 id="u788E_u788E_u5FF5"><a href="#u788E_u788E_u5FF5" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>OhMyStar 2 也进行了一段时日，我把持久化的方式从CoreData 换到了 Realm。有些感悟，顺手就记录一下吧。以下评论都是自己很主观的感受，无实际测试数据支持。</p>
 <h2 id="u8BBA_iOS__u7684_u6301_u4E45_u5316"><a href="#u8BBA_iOS__u7684_u6301_u4E45_u5316" class="headerlink" title="论 iOS 的持久化"></a>论 iOS 的持久化</h2><p>iOS 持久化其实也没多少选择， 高端一点CoreData、Realm、FMDB、KV类(LevelDB等)。低端一些直接一个 NSArray 就写成 Plist 也能持久化下来。</p>
@@ -1207,44 +1255,6 @@
     <summary type="html">
     <![CDATA[<p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
 <h2 id="u5F00_u573A_u626F_u6DE1"><a href="#u5F00_u573A_u626F_u6DE1" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>恩 一个月没有写一篇blog了。恩。就这样把。</p>]]>
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[iOS学习笔记(29) 爱不释手的ReactiveCocoa之UIButton]]></title>
-    <link href="http://iiiyu.com/2013/10/15/learning-ios-notes-twenty-nine/"/>
-    <id>http://iiiyu.com/2013/10/15/learning-ios-notes-twenty-nine/</id>
-    <published>2013-10-15T13:53:11.000Z</published>
-    <updated>2014-02-17T04:20:26.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u5F00_u573A_u626F_u6DE1"><a href="#u5F00_u573A_u626F_u6DE1" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>ReactiveCocoa的迭代速度相当快，一群富有才华和激情的人们在不断的进化ReactiveCocoa。欣欣向荣的景象啊。我这种hello world级别的也就只能使用他们的劳动成果了。上篇blog的时候我还在用1.9.x的版本 现在我已经全面转向2.x了。值得注意的是霓虹友人提交的cocoapods上ReactiveCocoa 2.1 版本我无法编译通过。目前我使用的还是2.0的版本。</p>
-<p>介于一个月没有更新blog的速度，这次来写少一点的内容。</p>
-<a id="more"></a>
-<h2 id="u4F20_u7EDF_u7684UIButton_Target_Action__u65B9_u5F0F"><a href="#u4F20_u7EDF_u7684UIButton_Target_Action__u65B9_u5F0F" class="headerlink" title="传统的UIButton Target Action 方式"></a>传统的UIButton Target Action 方式</h2><p>之前我们使用UIButton的点击方法一般有两种。一种是直接从xib里面拖一个IBAction出来在里面写代码。</p>
-<p>另外一种是代码创建的 比如这样 </p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UIButton *myButton = [[UIButton alloc] init...];</span><br><span class="line">[myButton <span class="string">addTarget:</span>something <span class="string">action:</span><span class="annotation">@selector</span>(myAction) <span class="string">forControlEvents:</span>UIControlEventTouchUpInside];</span><br></pre></td></tr></table></figure>
-<p>然后在下面写一个myAction的方法来进行操作。</p>
-<p>这样对我来说存在两个问题：</p>
-<ol>
-<li>button对应的方法分开了。在阅读代码的时候，当我想知道这个button对应的方法或者反过来action方法对应的button。通常需要跳转一次以上才能知道。(也许是我的阅读代码习惯比较原始)</li>
-<li>我在action方法里面如果需要引用一个变量的时候，无法使用局部变量。通常就需要把这个资源设计为一个property。尽管这个资源或者变量只是在action里面调用一次。(这个也许是我写代码的问题)</li>
-</ol>
-<p>这两个可能在我遇见ReactiveCocoa都不能叫问题。但是在ReactiveCocoa里面我发现了更加优美的解决方法。好开心。</p>
-<h2 id="ReactiveCocoa_u65B9_u5F0F_u7684UIButton"><a href="#ReactiveCocoa_u65B9_u5F0F_u7684UIButton" class="headerlink" title="ReactiveCocoa方式的UIButton"></a>ReactiveCocoa方式的UIButton</h2><p>由于ReactiveCocoa高深的知识点，我也弄不太清楚。下面我只是说明怎么用的hello world级别。更多内容请阅读github上的项目主页。</p>
-<p>如果使用xib。只需拖一个IBOutlet的property出来。比如这样</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UIButton</span> *xibButton;</span><br></pre></td></tr></table></figure>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *helloWorld = <span class="string">@"hello world!!!"</span>;</span><br><span class="line"><span class="keyword">self</span><span class="variable">.xibButton</span><span class="variable">.rac_command</span> = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(<span class="keyword">id</span> input) &#123;</span><br><span class="line">	<span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, helloWorld);</span><br><span class="line">	<span class="keyword">return</span> [RACSignal empty];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
-<p>如果是代码创建一切照旧</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *helloWorld = <span class="string">@"hello world!!!"</span>;</span><br><span class="line"><span class="built_in">UIButton</span> *myButton = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeSystem</span>];</span><br><span class="line">myButton<span class="variable">.frame</span> = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">50</span>);</span><br><span class="line">[myButton setTitle:<span class="string">@"Say"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.view</span> addSubview:myButton];</span><br><span class="line">myButton<span class="variable">.rac_command</span> = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(<span class="keyword">id</span> input) &#123;</span><br><span class="line">	<span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, helloWorld);</span><br><span class="line">	<span class="keyword">return</span> [RACSignal empty];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
-<p>这些代码我一般写在viewDidLoad方法里面。当然你可以在正确的地方使用他们。<br>运行试试。哇。魔法一般。完全解决我在传统的UIButton遇到的两个问题。</p>
-<h2 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h2><p>嗯嗯，这种小主题的blog写起来轻松愉快。大概40分钟就可以完成。以后要多多写小主题。这样跟写程序一样，化繁为简。这次就少扯淡了。期待我的下篇blog。啊哈哈</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u5F00_u573A_u626F_u6DE1"><a href="#u5F00_u573A_u626F_u6DE1" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>ReactiveCocoa的迭代速度相当快，一群富有才华和激情的人们在不断的进化ReactiveCocoa。欣欣向荣的景象啊。我这种hello world级别的也就只能使用他们的劳动成果了。上篇blog的时候我还在用1.9.x的版本 现在我已经全面转向2.x了。值得注意的是霓虹友人提交的cocoapods上ReactiveCocoa 2.1 版本我无法编译通过。目前我使用的还是2.0的版本。</p>
-<p>介于一个月没有更新blog的速度，这次来写少一点的内容。</p>]]>
     
     </summary>
     

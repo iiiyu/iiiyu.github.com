@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /about-me/
+Allow: /pages/
+Allow: /2012/
+Allow: /2013/
+Allow: /2014/
+Allow: /2015/
+Allow: /2016/
+Allow: /2017/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fancybox/
+
+Sitemap: http://www.iiiyu.com/sitemap.xml
+Sitemap: http://www.iiiyu.com/baidusitemap.xml

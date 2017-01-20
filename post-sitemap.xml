@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://iiiyu.com</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2017/01/20/2017-world-theory-of-evolution/</loc>
+        <lastmod>2017-01-20T08:40:43.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2016/09/27/2016-Social-Product-Analysis/</loc>
+        <lastmod>2016-09-28T15:40:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2016/06/14/2016-iOS-Human-Interface-Guidelines-1/</loc>
+        <lastmod>2016-06-14T16:14:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2016/01/19/CoreData-VS-Realm/</loc>
+        <lastmod>2016-05-26T03:30:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2016/02/23/A-product-manager-cranky-Martial-arts-world-but-not-fast-breaking/</loc>
+        <lastmod>2016-02-24T15:53:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2016/01/25/Read-Wechat-Thinking-Note/</loc>
+        <lastmod>2016-01-28T06:42:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2016/01/12/2016-IT-professionals-Getting-Started/</loc>
+        <lastmod>2016-01-21T03:06:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/02/22/learning-ios-notes-fifteen/</loc>
+        <lastmod>2015-12-29T18:24:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2015/01/20/2014-oh-my-star-app-annual-summary/</loc>
+        <lastmod>2015-12-29T18:23:27.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2015/01/31/read-the-tipping-point/</loc>
+        <lastmod>2015-02-05T02:27:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2015/01/16/read-contagious/</loc>
+        <lastmod>2015-01-16T17:37:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2014/12/26/learning-ios-notes-thirty-six/</loc>
+        <lastmod>2014-12-28T14:30:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/11/18/excellent-design-vs-baddesign/</loc>
+        <lastmod>2014-12-26T10:38:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/26/emacs-set-up-1/</loc>
+        <lastmod>2014-12-26T10:37:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/01/01/2012-annual-summary/</loc>
+        <lastmod>2014-12-26T10:37:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2014/10/20/iCloud-and-iCloud-Drive/</loc>
+        <lastmod>2014-11-02T17:24:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2014/04/23/learn-ui-design-two/</loc>
+        <lastmod>2014-10-19T16:27:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2014/01/08/read-jony-ive/</loc>
+        <lastmod>2014-10-19T16:16:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2014/04/08/learning-ios-notes-thirty-five/</loc>
+        <lastmod>2014-04-08T15:55:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/04/15/learning-ios-notes-twenty/</loc>
+        <lastmod>2014-04-01T04:28:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/12/25/learning-ios-notes-thirty-two/</loc>
+        <lastmod>2014-04-01T04:25:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/08/19/learning-ios-notes-twenty-five/</loc>
+        <lastmod>2014-04-01T03:48:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2014/03/25/learn-ui-design-one/</loc>
+        <lastmod>2014-03-25T15:53:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2014/03/19/learning-ios-notes-thirty-four/</loc>
+        <lastmod>2014-03-20T15:28:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2014/03/18/learning-ios-notes-thirty-three/</loc>
+        <lastmod>2014-03-19T13:08:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/12/31/2013-annual-summary/</loc>
+        <lastmod>2014-02-17T04:21:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/29/emacs-set-up-2/</loc>
+        <lastmod>2014-02-17T04:21:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/03/14/emacs-set-up-3/</loc>
+        <lastmod>2014-02-17T04:21:43.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/12/21/evaluation-bong/</loc>
+        <lastmod>2014-02-17T04:21:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/07/how-to-install-octopress-on-heroku/</loc>
+        <lastmod>2014-02-17T04:21:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/10/25/ios-notes-navigation/</loc>
+        <lastmod>2014-02-17T04:21:33.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/03/25/ioscon-guangzhou/</loc>
+        <lastmod>2014-02-17T04:21:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/26/january-reading-notea/</loc>
+        <lastmod>2014-02-17T04:21:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/02/02/january-reading-noteb/</loc>
+        <lastmod>2014-02-17T04:21:27.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/09/junior-it-people-c-study-guide/</loc>
+        <lastmod>2014-02-17T04:21:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/07/07/learning-ios-notes-eight/</loc>
+        <lastmod>2014-02-17T04:21:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/03/29/learning-ios-notes-eighteen/</loc>
+        <lastmod>2014-02-17T04:21:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/09/02/learning-ios-notes-eleven/</loc>
+        <lastmod>2014-02-17T04:21:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/04/03/learning-ios-notes-five/</loc>
+        <lastmod>2014-02-17T04:21:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/03/21/learning-ios-notes-four/</loc>
+        <lastmod>2014-02-17T04:21:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/10/26/learning-ios-notes-fourteen/</loc>
+        <lastmod>2014-02-17T04:21:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/08/12/learning-ios-notes-nine/</loc>
+        <lastmod>2014-02-17T04:21:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/04/01/learning-ios-notes-nineteen/</loc>
+        <lastmod>2014-02-17T04:21:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/28/learning-ios-notes-one/</loc>
+        <lastmod>2014-02-17T04:20:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/05/06/learning-ios-notes-seven/</loc>
+        <lastmod>2014-02-17T04:20:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/03/11/learning-ios-notes-seventeen/</loc>
+        <lastmod>2014-02-17T04:20:54.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/04/25/learning-ios-notes-six/</loc>
+        <lastmod>2014-02-17T04:20:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/</loc>
+        <lastmod>2014-02-17T04:20:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/08/13/learning-ios-notes-ten/</loc>
+        <lastmod>2014-02-17T04:20:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/10/21/learning-ios-notes-thirteen/</loc>
+        <lastmod>2014-02-17T04:20:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/12/19/learning-ios-notes-thirty-one/</loc>
+        <lastmod>2014-02-17T04:20:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/12/02/learning-ios-notes-thirty/</loc>
+        <lastmod>2014-02-17T04:20:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/03/08/learning-ios-notes-three/</loc>
+        <lastmod>2014-02-17T04:20:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/09/29/learning-ios-notes-twelve/</loc>
+        <lastmod>2014-02-17T04:20:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/09/11/learning-ios-notes-twenty-eight/</loc>
+        <lastmod>2014-02-17T04:20:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/06/03/learning-ios-notes-twenty-fort/</loc>
+        <lastmod>2014-02-17T04:20:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/10/15/learning-ios-notes-twenty-nine/</loc>
+        <lastmod>2014-02-17T04:20:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/04/17/learning-ios-notes-twenty-one/</loc>
+        <lastmod>2014-02-17T04:20:24.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/09/02/learning-ios-notes-twenty-seven/</loc>
+        <lastmod>2014-02-17T04:20:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/08/26/learning-ios-notes-twenty-six/</loc>
+        <lastmod>2014-02-17T04:20:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/05/23/learning-ios-notes-twenty-three/</loc>
+        <lastmod>2014-02-17T04:20:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/04/29/learning-ios-notes-twenty-two/</loc>
+        <lastmod>2014-02-17T04:20:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/03/05/learning-ios-notes-two/</loc>
+        <lastmod>2014-02-17T04:20:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/03/19/learning-mac-notes-one/</loc>
+        <lastmod>2014-02-17T04:20:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/04/20/new-beginning/</loc>
+        <lastmod>2014-02-17T04:20:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/11/06/second-life-this-animal-year/</loc>
+        <lastmod>2014-02-17T04:20:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/01/14/simple-configuration-ponydebugger/</loc>
+        <lastmod>2014-02-17T04:19:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/10/24/talk-about-the-2012-apple-conference/</loc>
+        <lastmod>2014-02-17T04:19:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/03/14/talk-about-the-software/</loc>
+        <lastmod>2014-02-17T04:19:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/26/the-end-of-2012-plans/</loc>
+        <lastmod>2014-02-17T04:19:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/07/30/thinking/</loc>
+        <lastmod>2014-02-17T04:19:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2013/08/22/tu-cao-duo-kan/</loc>
+        <lastmod>2014-02-17T04:19:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/09/what-is-sizeof/</loc>
+        <lastmod>2014-02-17T04:19:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/02/05/why-have-a-blog/</loc>
+        <lastmod>2014-02-17T04:19:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2012/12/16/why-the-xiaomi-will-be-successful/</loc>
+        <lastmod>2014-02-17T04:19:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

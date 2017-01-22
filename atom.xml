@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iiiyu.com/"/>
-  <updated>2017-01-20T08:40:43.000Z</updated>
+  <updated>2017-01-22T07:13:22.000Z</updated>
   <id>http://iiiyu.com/</id>
   
   <author>
@@ -14,6 +14,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>被误解的微信小程序</title>
+    <link href="http://iiiyu.com/2017/01/22/Be-misunderstood-of-the-miniapp/"/>
+    <id>http://iiiyu.com/2017/01/22/Be-misunderstood-of-the-miniapp/</id>
+    <published>2017-01-22T02:14:53.000Z</published>
+    <updated>2017-01-22T07:13:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文具有强烈的个人感情色彩,如有观看不适,请尽快关闭. 本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用,请尊重版权并且保留原文链接,谢谢您的理解合作. 如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<p><img src="https://ww2.sinaimg.cn/large/006y8lVagy1fbzeytom91j30dw0a5tag.jpg" alt=""></p>
+<h2 id="自媒体的瞎几把解读"><a href="#自媒体的瞎几把解读" class="headerlink" title="自媒体的瞎几把解读"></a>自媒体的瞎几把解读</h2><p>前几天一篇《小程序上线7天，罗胖带着1000万用户跑了……》到处都能看见，而里面就罗振宇的一个微信聊天截图而已。搞得好像仿佛微信掉了1000万日活似的。好像得到的那些用户就不用微信似的。都TM瞎几把跟着起哄。当下这个时间点怎么看着黑小程序变成了一个政治正确的事情。跟两三个月前万众瞩目，全民吹捧形成了巨大的反差。</p>
+<p>所以，需要带着独立思考去看待小程序这个事情。对理解小程序、理解这个世界的基本前提。</p>
+<p>其实吧，不必把小程序这么妖魔化。在我看来这是微信进化自然的结果。不负责任的猜想，类似的进化应该也在 Facebook、Line 里面发生着。（PS：支付宝那个小程序技术上算同类型，但是我觉得产品上不是一个东西。因为支付宝本来就不应该是微信 Copy 啊）</p>
+<a id="more"></a>
+<h2 id="微信-OS-？"><a href="#微信-OS-？" class="headerlink" title="微信 OS ？"></a>微信 OS ？</h2><p>要弄清小程序，首先要弄清楚什么是微信。小程序为什么诞生在现在这个时间点？是因为微信自身发展进化到了一个操作系统！</p>
+<p>传统操作系统是什么，是管理计算机硬件与软件资源的计算机程序，它提供了进程管理、内存管理以及磁盘与文件系统等等基础功能，而在这个基础功能上，我们才能提供使用这些资源开发出来的更多的软件比如：Office、Photoshop、游戏等等。为人类带来价值的事情。</p>
+<p>如果微信已经是一个操作系统。这个观点并不是我第一个提出，很早之前就有人在说这个话了。微信是一个操作系统这个怎么来理解呢？</p>
+<p>在我个人来看在小程序之前，微信都是在进化成接管所有用户的使用入口。把基于硬件之上的真正的操作系统，又再一次的抽象和封装了起来。这样的进化结果有：</p>
+<ol>
+<li>所有用户都可以用微信作为主要移动互联网的使用基础平台。</li>
+<li>超越了不同硬件和不同平台。iOS 用户和 Android 用户的大统一。</li>
+</ol>
+<p>微信操作系统的基本元素是基于社交和IM的明白，所以如果以传统操作系统的思维去思考肯定行不通。</p>
+<h2 id="微信小程序的正确姿势"><a href="#微信小程序的正确姿势" class="headerlink" title="微信小程序的正确姿势"></a>微信小程序的正确姿势</h2><p>首先，明确一下概念：</p>
+<ol>
+<li>不要以做 App 的思路做小程序！</li>
+<li>不要照搬 App 的样子做小程序！</li>
+<li>不要觉得 App 是什么小程序就要做到什么！</li>
+</ol>
+<p>最简单的道理就是 App 是简历在手机操作系统上的产物，你用手机操作系统为基础的产品思路去弄了微信操作系统上的小程序产品。怎么可能做的好么。</p>
+<p>微信操作系统的特点：</p>
+<ol>
+<li>做到了中国境内迄今为止最大的用户覆盖</li>
+<li>几乎做到用户唯一识别</li>
+<li>有最好的移动互联网沟通体验</li>
+</ol>
+<p>然后，我认为小程序适合做什么：</p>
+<ol>
+<li>通过二维码连接人与万物，本质是连接物后面的服务。</li>
+<li>做微信操作系统的功能增强，简单说来就是 IM 插件。</li>
+</ol>
+<p>举两个例子：</p>
+<ol>
+<li>共享单车特别适合这个人与物连接的场景，最大的价值是用户使用了单车服务。线上产品不论是 App 还是小程序都只是为了连接人和单车的关系然后提供服务。所以，我坚信除非这些共享自行车企业倒闭。只要做了小程序的，我相信在不远的将来小程序里面的使用量一定会超过自己的 App。</li>
+<li>知道 Slack 不。 如果你的产品能增强现有微信的聊天功能，一定是微信操作系统下需要的东西。针对细分聊天情景下的聊天增强辅助一定是有价值的。如果还是无法想象，那去搜索一个叫“动动文字”的小程序试试看。</li>
+</ol>
+<p>所以只有对自己提供的服务和微信生态有深入的了解。才能思考产品价值和微信生态之间共处的关系。设计基于小程序的产品，业务流程都会为了适应微信生态发生改变。信任微信操作系统这一基本建设，才是做一个合格微信小程序的前提。你把 App 整个思路搬进来，我个人是呵呵呵的态度。</p>
+<h2 id="对微信的期望"><a href="#对微信的期望" class="headerlink" title="对微信的期望"></a>对微信的期望</h2><p>虽然现在小程序开放的功能有限。但是微信如果真的是以一个操作系统方向去进化的话，功能增强指日可待。我能想象一堆协同服务的都只用专注于服务。而不用在纠结 IM 上的基本功能。 </p>
+<p>罗马不是一天建成的， iOS 也不是第一天就有这么多功能的。在2017年1月这个时间点里面。我依然对微信未来的进化会变的更好。</p>
+<h2 id="最后的碎碎念"><a href="#最后的碎碎念" class="headerlink" title="最后的碎碎念"></a>最后的碎碎念</h2><p>对了，我也觉得微信封闭不好。但是从宏观来说微信封闭是历史选择进化的部分，不想细说。只是作为被国内同行衬托的一股清流。给微信多一点期待还是一件自然而然的事情。希望微信真的能做到微信操作系统的那一天，我拭目以待。           </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文具有强烈的个人感情色彩,如有观看不适,请尽快关闭. 本文仅作为个人学习记录使用,也欢迎在&lt;a href=&quot;http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW&quot;&gt;许可协议&lt;/a&gt;范围内转载或使用,请尊重版权并且保留原文链接,谢谢您的理解合作. 如果您觉得本站对您能有帮助,您可以使用&lt;a href=&quot;http://iiiyu.com/atom.xml&quot;&gt;RSS&lt;/a&gt;方式订阅本站,这样您将能在第一时间获取本站信息.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ww2.sinaimg.cn/large/006y8lVagy1fbzeytom91j30dw0a5tag.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;自媒体的瞎几把解读&quot;&gt;&lt;a href=&quot;#自媒体的瞎几把解读&quot; class=&quot;headerlink&quot; title=&quot;自媒体的瞎几把解读&quot;&gt;&lt;/a&gt;自媒体的瞎几把解读&lt;/h2&gt;&lt;p&gt;前几天一篇《小程序上线7天，罗胖带着1000万用户跑了……》到处都能看见，而里面就罗振宇的一个微信聊天截图而已。搞得好像仿佛微信掉了1000万日活似的。好像得到的那些用户就不用微信似的。都TM瞎几把跟着起哄。当下这个时间点怎么看着黑小程序变成了一个政治正确的事情。跟两三个月前万众瞩目，全民吹捧形成了巨大的反差。&lt;/p&gt;
+&lt;p&gt;所以，需要带着独立思考去看待小程序这个事情。对理解小程序、理解这个世界的基本前提。&lt;/p&gt;
+&lt;p&gt;其实吧，不必把小程序这么妖魔化。在我看来这是微信进化自然的结果。不负责任的猜想，类似的进化应该也在 Facebook、Line 里面发生着。（PS：支付宝那个小程序技术上算同类型，但是我觉得产品上不是一个东西。因为支付宝本来就不应该是微信 Copy 啊）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="产品汪" scheme="http://iiiyu.com/tags/%E4%BA%A7%E5%93%81%E6%B1%AA/"/>
+    
+      <category term="胡思乱想" scheme="http://iiiyu.com/tags/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/"/>
+    
+      <category term="随便瞎扯" scheme="http://iiiyu.com/tags/%E9%9A%8F%E4%BE%BF%E7%9E%8E%E6%89%AF/"/>
+    
+      <category term="产品思考" scheme="http://iiiyu.com/tags/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title>2017年世界进化论</title>
@@ -59,7 +131,7 @@
     <link href="http://iiiyu.com/2016/09/27/2016-Social-Product-Analysis/"/>
     <id>http://iiiyu.com/2016/09/27/2016-Social-Product-Analysis/</id>
     <published>2016-09-27T06:49:43.000Z</published>
-    <updated>2016-09-28T15:40:01.000Z</updated>
+    <updated>2017-01-22T07:12:54.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="背景分析"><a href="#背景分析" class="headerlink" title="背景分析"></a>背景分析</h1><h2 id="这是最好的时代，也是最坏的时代"><a href="#这是最好的时代，也是最坏的时代" class="headerlink" title="这是最好的时代，也是最坏的时代"></a>这是最好的时代，也是最坏的时代</h2><p>2016年，号称直播元年。</p>
 <p>因为手机的普及率更加广阔了，手机的性能上来了，网络速度更快了。</p>
@@ -123,7 +195,13 @@
     </summary>
     
     
-      <category term="产品思考 随便瞎扯" scheme="http://iiiyu.com/tags/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83-%E9%9A%8F%E4%BE%BF%E7%9E%8E%E6%89%AF/"/>
+      <category term="PM" scheme="http://iiiyu.com/tags/PM/"/>
+    
+      <category term="产品汪" scheme="http://iiiyu.com/tags/%E4%BA%A7%E5%93%81%E6%B1%AA/"/>
+    
+      <category term="随便瞎扯" scheme="http://iiiyu.com/tags/%E9%9A%8F%E4%BE%BF%E7%9E%8E%E6%89%AF/"/>
+    
+      <category term="产品思考" scheme="http://iiiyu.com/tags/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
@@ -132,7 +210,7 @@
     <link href="http://iiiyu.com/2016/06/14/2016-iOS-Human-Interface-Guidelines-1/"/>
     <id>http://iiiyu.com/2016/06/14/2016-iOS-Human-Interface-Guidelines-1/</id>
     <published>2016-06-14T15:11:34.000Z</published>
-    <updated>2016-06-14T16:14:20.000Z</updated>
+    <updated>2017-01-22T07:11:58.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文具有强烈的个人感情色彩,如有观看不适,请尽快关闭. 本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW" target="_blank" rel="external">许可协议</a>范围内转载或使用,请尊重版权并且保留原文链接,谢谢您的理解合作. 如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
 <a id="more"></a>
@@ -162,7 +240,11 @@
     </summary>
     
     
-      <category term="产品思考 产品汪 胡思乱想 随便瞎扯" scheme="http://iiiyu.com/tags/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83-%E4%BA%A7%E5%93%81%E6%B1%AA-%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3-%E9%9A%8F%E4%BE%BF%E7%9E%8E%E6%89%AF/"/>
+      <category term="PM" scheme="http://iiiyu.com/tags/PM/"/>
+    
+      <category term="产品汪" scheme="http://iiiyu.com/tags/%E4%BA%A7%E5%93%81%E6%B1%AA/"/>
+    
+      <category term="随便瞎扯" scheme="http://iiiyu.com/tags/%E9%9A%8F%E4%BE%BF%E7%9E%8E%E6%89%AF/"/>
     
   </entry>
   
@@ -1223,45 +1305,6 @@
     
     
       <category term="just-talk" scheme="http://iiiyu.com/tags/just-talk/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS笔记(32) UbiquityStoreManager 学习笔记1</title>
-    <link href="http://iiiyu.com/2013/12/25/learning-ios-notes-thirty-two/"/>
-    <id>http://iiiyu.com/2013/12/25/learning-ios-notes-thirty-two/</id>
-    <published>2013-12-25T15:22:33.000Z</published>
-    <updated>2014-04-01T04:25:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="external">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="http://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
-<h2 id="开篇扯淡"><a href="#开篇扯淡" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>现在都是进入互联网时代，一个互联网的App数据肯定是存在互联网上的。到处都是云，到处都是服务器。如果数据是存储在云端or服务器端。每次数据的读取和修改直接作用于服务器。这样不管你用多少设备，多少平台。数据都能保证是唯一的。但是还有些App需要一些更好的性能和效果的时候往往等不起网络的数据传来传去。这时候需要一些折中的办法来解决这些问题。iCloud就是Apple给出的解决方案。就普通用户来看，iCloud应该是在Apple系中的最优选择。但是从开发者的角度来看iCloud就是个无穷无尽的深渊。</p>
-<p>全球有很多开发者致力开发第三方库以便让iCloud能被使用。 </p>
-<p>UbiquityStoreManager就是其中之一。</p>
-<a id="more"></a>
-<h2 id="UbiquityStoreManager"><a href="#UbiquityStoreManager" class="headerlink" title="UbiquityStoreManager"></a>UbiquityStoreManager</h2><p><a href="https://github.com/lhunath/UbiquityStoreManager" target="_blank" rel="external">UbiquityStoreManager</a>是一个core data持久化层的控制器.</p>
-<p>UbiquityStoreManager在iOS 6时代是使用GPLv3协议。所以好像使用者不是很多。iOS 7 Core Data 关于iCloud引入了新的机制和新API以后UbiquityStoreManager迅速跟进。并且更换了协议使用了Apache v2。所以如果你有iOS 7的App想使用iCloud + Core Data这种hard模式。UbiquityStoreManager是第一个应该推荐的库.</p>
-<p>UbiquityStoreManager不同于其他解决方案。大部分都是在iCloud上面继续构建一层来保证数据同步的完整一致性。UbiquityStoreManager仅仅是解决了就只单纯使用iCloud就会遇到的问题。比如数据出错了怎么办。从本地数据迁移到iCloud数据。从修改日记来重建数据库等。</p>
-<h2 id="UbiquityStoreManager解决的问题"><a href="#UbiquityStoreManager解决的问题" class="headerlink" title="UbiquityStoreManager解决的问题"></a>UbiquityStoreManager解决的问题</h2><ul>
-<li>提供在iCloud和本地Store直接切换</li>
-<li>在用户没有iCloud store 的时候自动的把local data 合并到iCloud(使用本地数据重建iCloud)</li>
-<li>所有与iCloud有联系的事件处理 iCloud帐号删除、iCloud数据删除、本地数据导入、其他设备变换ubiquitous、恢复有错误的transaction logs</li>
-<li>其他的一些实用功能：从transaction logs重建cloud store、 从cloud store 重建transaction logs、 删除cloud store、 Ability to nuke the entire cloud container、 把一个store里面全部的entities合并到另外一个store</li>
-</ul>
-<p>在iCloud + CoreData的官方解决方案中，对于开发者来说完全的黑箱子操作。难于开发和调试bug。而且经验不足完全会被很多坑拉进泥潭里面。使得开发更本无法进行下去。所以仔细研究UbiquityStoreManager。是我建议踏入iCloud + Core Data开发的必修课。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是我学习中的一点笔记和注释翻译而已。留给自己看看。如果有不对的地方，欢迎指出。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文仅作为个人学习记录使用,也欢迎在&lt;a href=&quot;http://creativecommons.org/licenses/by-nc/3.0/deed.zh&quot;&gt;许可协议&lt;/a&gt;范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用&lt;a href=&quot;http://iiiyu.com/atom.xml&quot;&gt;RSS&lt;/a&gt;方式订阅本站,这样您将能在第一时间获取本站信息.&lt;/p&gt;
-&lt;h2 id=&quot;开篇扯淡&quot;&gt;&lt;a href=&quot;#开篇扯淡&quot; class=&quot;headerlink&quot; title=&quot;开篇扯淡&quot;&gt;&lt;/a&gt;开篇扯淡&lt;/h2&gt;&lt;p&gt;现在都是进入互联网时代，一个互联网的App数据肯定是存在互联网上的。到处都是云，到处都是服务器。如果数据是存储在云端or服务器端。每次数据的读取和修改直接作用于服务器。这样不管你用多少设备，多少平台。数据都能保证是唯一的。但是还有些App需要一些更好的性能和效果的时候往往等不起网络的数据传来传去。这时候需要一些折中的办法来解决这些问题。iCloud就是Apple给出的解决方案。就普通用户来看，iCloud应该是在Apple系中的最优选择。但是从开发者的角度来看iCloud就是个无穷无尽的深渊。&lt;/p&gt;
-&lt;p&gt;全球有很多开发者致力开发第三方库以便让iCloud能被使用。 &lt;/p&gt;
-&lt;p&gt;UbiquityStoreManager就是其中之一。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="iOS" scheme="http://iiiyu.com/tags/iOS/"/>
     
   </entry>
   

@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>http://iiiyu.com/2017/01/20/2017-world-theory-of-evolution/</loc>
-        <lastmod>2017-01-20T08:40:43.000Z</lastmod>
+        <loc>http://iiiyu.com/2017/01/22/Be-misunderstood-of-the-miniapp/</loc>
+        <lastmod>2017-01-22T07:13:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,7 @@
 
     <url>
         <loc>http://iiiyu.com/2016/09/27/2016-Social-Product-Analysis/</loc>
-        <lastmod>2016-09-28T15:40:01.000Z</lastmod>
+        <lastmod>2017-01-22T07:12:54.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +24,15 @@
 
     <url>
         <loc>http://iiiyu.com/2016/06/14/2016-iOS-Human-Interface-Guidelines-1/</loc>
-        <lastmod>2016-06-14T16:14:20.000Z</lastmod>
+        <lastmod>2017-01-22T07:11:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://iiiyu.com/2017/01/20/2017-world-theory-of-evolution/</loc>
+        <lastmod>2017-01-20T08:40:43.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

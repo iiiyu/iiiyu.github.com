@@ -1,8 +1,691 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计"><title>iOS笔记 (1) | 萧宸宇</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create','UA-29764460-1','auto');ga('send','pageview');</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">iOS笔记 (1)</h1><a id="logo" href="/.">萧宸宇</a><p class="description">如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about-me/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">iOS笔记 (1)</h1><div class="post-meta">Feb 28, 2012<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><a data-disqus-identifier="2012/02/28/learning-ios-notes-one/" href="/2012/02/28/learning-ios-notes-one/#disqus_thread" class="disqus-comment-count"></a><div class="post-content"><h2 id="iOS-系统架构"><a href="#iOS-系统架构" class="headerlink" title="iOS 系统架构"></a>iOS 系统架构</h2><h4 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h4><pre><code>Cocoa Touch
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            iOS笔记 (1) | 
+        
+        萧宸宇
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="萧宸宇">
+    <meta name="description" itemprop="description" content="iOS 系统架构iOSCocoa Touch
+Media
+Core Services
+Core OS
+Core OSOSX kernel
+Power Management
+Mach 3.0
+Keychain Access
+BSD
+Certificates
+Sockets
+File System
+Security 
+Bonjour  
+Core ServicesCollections 
+Core Location
+Address Book
+Net Services
+networking 
+Threading
+File Access
+Preferences
+SQLite
+URL Utilities
+MediaCore Audio
+JPEG PNG TIFF
+OpenAL 
+PDF
+Audio Mixing 
+Quartz(2D)
+Audio Recording
+Core Animation
+Video Playback
+OpenGL ES
+Cocoa TouchMulti-Touch
+Alerts
+Core Motion
+Web View
+View Hierarchy
+Map Kit
+Localization
+Image Picker
+Controls
+Camera
+">
+    <meta name="keywords" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计,iOS">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="萧宸宇">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://iiiyu.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="iOS笔记 (1) | 萧宸宇">
+    <meta property="og:image" content="http://iiiyu.com/img/favicon.png" />
+    <meta property="og:description" content="iOS 系统架构iOSCocoa Touch
+Media
+Core Services
+Core OS
+Core OSOSX kernel
+Power Management
+Mach 3.0
+Keychain Access
+BSD
+Certificates
+Sockets
+File System
+Security 
+Bonjour  
+Core ServicesCollections 
+Core Location
+Address Book
+Net Services
+networking 
+Threading
+File Access
+Preferences
+SQLite
+URL Utilities
+MediaCore Audio
+JPEG PNG TIFF
+OpenAL 
+PDF
+Audio Mixing 
+Quartz(2D)
+Audio Recording
+Core Animation
+Video Playback
+OpenGL ES
+Cocoa TouchMulti-Touch
+Alerts
+Core Motion
+Web View
+View Hierarchy
+Map Kit
+Localization
+Image Picker
+Controls
+Camera
+">
+    <meta property="og:article:tag" content="iOS"> 
+
+    
+        <meta property="article:published_time" content="Tue Feb 28 2012 22:46:00 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Feb 17 2014 12:20:59 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="iOS笔记 (1) | 萧宸宇">
+    <meta name="twitter:description" content="iOS 系统架构iOSCocoa Touch
+Media
+Core Services
+Core OS
+Core OSOSX kernel
+Power Management
+Mach 3.0
+Keychain Access
+BSD
+Certificates
+Sockets
+File System
+Security 
+Bonjour  
+Core ServicesCollections 
+Core Location
+Address Book
+Net Services
+networking 
+Threading
+File Access
+Preferences
+SQLite
+URL Utilities
+MediaCore Audio
+JPEG PNG TIFF
+OpenAL 
+PDF
+Audio Mixing 
+Quartz(2D)
+Audio Recording
+Core Animation
+Video Playback
+OpenGL ES
+Cocoa TouchMulti-Touch
+Alerts
+Core Motion
+Web View
+View Hierarchy
+Map Kit
+Localization
+Image Picker
+Controls
+Camera
+">
+    <meta name="twitter:image" content="http://iiiyu.com/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://iiiyu.com" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://iiiyu.com/2012/02/28/learning-ios-notes-one/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://iiiyu.com/2012/02/28/learning-ios-notes-one/index.html",
+    "headline": "iOS笔记 (1)",
+    "datePublished": "Tue Feb 28 2012 22:46:00 GMT+0800",
+    "dateModified": "Mon Feb 17 2014 12:20:59 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "萧宸宇",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "萧宸宇",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",iOSiOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计",
+    "description": "iOS 系统架构iOSCocoa Touch
+Media
+Core Services
+Core OS
+Core OSOSX kernel
+Power Management
+Mach 3.0
+Keychain Access
+BSD
+Certificates
+Sockets
+File System
+Security 
+Bonjour  
+Core ServicesCollections 
+Core Location
+Address Book
+Net Services
+networking 
+Threading
+File Access
+Preferences
+SQLite
+URL Utilities
+MediaCore Audio
+JPEG PNG TIFF
+OpenAL 
+PDF
+Audio Mixing 
+Quartz(2D)
+Audio Recording
+Core Animation
+Video Playback
+OpenGL ES
+Cocoa TouchMulti-Touch
+Alerts
+Core Motion
+Web View
+View Hierarchy
+Map Kit
+Localization
+Image Picker
+Controls
+Camera
+",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-29764460-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#iOS-系统架构"><span class="post-toc-number">1.</span> <span class="post-toc-text">iOS 系统架构</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#iOS"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">iOS</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Core-OS"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">Core OS</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Core-Services"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">Core Services</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Media"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">Media</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Cocoa-Touch"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">Cocoa Touch</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MVC"><span class="post-toc-number">2.</span> <span class="post-toc-text">MVC</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Objective-C简介"><span class="post-toc-number">3.</span> <span class="post-toc-text">Objective-C简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一句话"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">一句话</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第一节-总括"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">第一节 总括</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第二节对C的扩展"><span class="post-toc-number">3.0.3.</span> <span class="post-toc-text">第二节对C的扩展</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第七节委托"><span class="post-toc-number">3.0.4.</span> <span class="post-toc-text">第七节委托</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第八节-类别"><span class="post-toc-number">3.0.5.</span> <span class="post-toc-text">第八节 类别</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第十节动态识别-（Dynamictypes"><span class="post-toc-number">3.0.6.</span> <span class="post-toc-text">第十节动态识别 （Dynamictypes)</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 52 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                iOS笔记 (1)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>萧宸宇</strong>
+        <span>2月 28, 2012</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/iOS/">iOS</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=iOS笔记 (1)&url=http://iiiyu.com/2012/02/28/learning-ios-notes-one/index.html&pic=http://iiiyu.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=iOS笔记 (1)&url=http://iiiyu.com/2012/02/28/learning-ios-notes-one/index.html&via=萧宸宇" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://iiiyu.com/2012/02/28/learning-ios-notes-one/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://iiiyu.com/2012/02/28/learning-ios-notes-one/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=http://iiiyu.com/2012/02/28/learning-ios-notes-one/index.html&text=iOS笔记 (1)" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="iOS-系统架构"><a href="#iOS-系统架构" class="headerlink" title="iOS 系统架构"></a>iOS 系统架构</h2><h4 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h4><pre><code>Cocoa Touch
 Media
 Core Services
 Core OS
@@ -108,7 +791,7 @@ model跟view是永远不知道对方的。（MVC精髓之一）
 .m 源文件。这个典型的扩展名用来定义源文件，可以同时包含C和Objective-C的代码。
 </code></pre><p>2.#import   </p>
 <p>在ObjC里,包含头文件有比#include更好的方法#import。它的使用和#include相同,并且可以保证你的程序只包含相同的头文件一次。相当于#include+ #pragma once的组合。<br>例如要包含Foundation框架中的Foundation.h文件,可以像下面这样。</p>
-   <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line">   #import&lt;Foundation/Foundation.h&gt;</div><div class="line">   ```      </div><div class="line">   </div><div class="line">   注:每个框架有一个主的头文件,只要包含了这个文件,框架中的所有特性都可以被使用。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">3.@符号</div><div class="line">        </div><div class="line">   @符号是ObjC在C基础上新加的特性之一。常见到的形式有@”字符串”,%@ , @interface,@implement等。@”字符串”表示引用的字符串应该作为Cocoa的NSString元素来处理。@interface等则是对于C的扩展,是ObjC面向对象特性的体现。</div><div class="line">注:这里提一个小技巧,只要看到@符号,就可以认为它是对于C的一个扩展。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">4.NSLog()</div><div class="line"></div><div class="line">   在ObjC中用的打印函数是NSLog(),因为ObjC是加了一点”特殊语料”的C语言,所以也可以用printf()但是NSLog()提供了一些特性,如时间戳,日期戳和自动加换行符等,用起来更方便,所以推荐使用NSLog()。下面是两种输出的对比。</div><div class="line">   </div><div class="line">   使用NSLog()输出任意对象的值时,都会使用%@格式说明。在使用这个说明符时,对象通过一个名为description的方法提供自己的NSLog()格式。</div><div class="line">   </div><div class="line">  下面分别是使用NSLog()和使用printf()的相应输出:</div><div class="line"></div><div class="line">     2010-10-15 14:54:21。42610_15[1973:207] Hello World!</div><div class="line">     </div><div class="line">     Hello World!</div><div class="line">         </div><div class="line"></div><div class="line">注:NS前缀告诉你函数来自Cocoa而不是其他工具包。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">5.BOOL</div><div class="line">   </div><div class="line">   BOOL是ObjC中的布尔类型,它和C中的bool有如下区别</div><div class="line"></div><div class="line">                                                        </div><div class="line">    BOOL YES(1),NO(0)</div><div class="line">         </div><div class="line">    bool true(!0),false(0)</div><div class="line">         </div><div class="line"></div><div class="line">6.id</div><div class="line">    </div><div class="line">   这是ObjC新加的一个数据类型,它是一般的对象类型,能够存储任何类型的方法。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">7.nil</div><div class="line"></div><div class="line">   在ObjC中,相对于C中的NULL,用的是nil。这两者是等价的。下面是nil的定义。</div><div class="line"></div><div class="line">	#define nil NULL</div><div class="line">         </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#### 第三节创建对象</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">1.接口和实现</div><div class="line"></div><div class="line">在ObjC中定义一个类需要有两个部分:接口和实现。接口文件包含了类的声明,定义了实例变量和方法。实现文件包含了具体的函数的实现代码。下图显示了一个叫MyClass的类,它继承自NSObject基类。类的定义总是从@interface开始到@end结束。在类名后面的是父类的名称。实例变量被定义在两个花括号之间。在实例变量下面的是方法的定义。一个分号用来结束一个变量或者方法。</div><div class="line"></div><div class="line">下面的代码显示了MyClass这个类的实现代码。就像类的定义规则一样,类实现文件也被两个标识框起来,一个是@implementation,还有一个是@end。这两个指令标识符告诉编译器程序从哪里开始编译到哪里结束。类中的方法名称的定义和它接口文件中的定义是一样的,除了实现文件中有具体的代码以外。</div><div class="line"></div><div class="line">``` c</div><div class="line">@implementation MyClass</div><div class="line">-(id)initWithString:(NSString *) aName</div><div class="line">&#123;</div><div class="line">    if (self = [super init]) &#123;</div><div class="line">        count count = 0;</div><div class="line">        data = nil;</div><div class="line">        name = [aName copy];</div><div class="line">        return self;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">+(MyClass *)createMyClassWithString: (NSString *) aName</div><div class="line">&#123;</div><div class="line">    return [[[self alloc] initWithString:aName] autorelease];</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
+   <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line">   <span class="meta">#import<span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></div><div class="line">   ```      </div><div class="line">   </div><div class="line">   注:每个框架有一个主的头文件,只要包含了这个文件,框架中的所有特性都可以被使用。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="number">3.</span>@符号</div><div class="line">        </div><div class="line">   @符号是ObjC在C基础上新加的特性之一。常见到的形式有@”字符串”,%@ , @interface,@implement等。@”字符串”表示引用的字符串应该作为Cocoa的NSString元素来处理。@interface等则是对于C的扩展,是ObjC面向对象特性的体现。</div><div class="line">注:这里提一个小技巧,只要看到@符号,就可以认为它是对于C的一个扩展。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="number">4.</span>NSLog()</div><div class="line"></div><div class="line">   在ObjC中用的打印函数是NSLog(),因为ObjC是加了一点”特殊语料”的C语言,所以也可以用<span class="built_in">printf</span>()但是NSLog()提供了一些特性,如时间戳,日期戳和自动加换行符等,用起来更方便,所以推荐使用NSLog()。下面是两种输出的对比。</div><div class="line">   </div><div class="line">   使用NSLog()输出任意对象的值时,都会使用%@格式说明。在使用这个说明符时,对象通过一个名为description的方法提供自己的NSLog()格式。</div><div class="line">   </div><div class="line">  下面分别是使用NSLog()和使用<span class="built_in">printf</span>()的相应输出:</div><div class="line"></div><div class="line">     <span class="number">2010</span><span class="number">-10</span><span class="number">-15</span> <span class="number">14</span>:<span class="number">54</span>:<span class="number">21</span>。<span class="number">42610</span>_15[<span class="number">1973</span>:<span class="number">207</span>] Hello World!</div><div class="line">     </div><div class="line">     Hello World!</div><div class="line">         </div><div class="line"></div><div class="line">注:NS前缀告诉你函数来自Cocoa而不是其他工具包。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="number">5.B</span>OOL</div><div class="line">   </div><div class="line">   BOOL是ObjC中的布尔类型,它和C中的<span class="keyword">bool</span>有如下区别</div><div class="line"></div><div class="line">                                                        </div><div class="line">    BOOL YES(1),NO(0)</div><div class="line">         </div><div class="line">    bool true(!0),false(0)</div><div class="line">         </div><div class="line"></div><div class="line"><span class="number">6.</span>id</div><div class="line">    </div><div class="line">   这是ObjC新加的一个数据类型,它是一般的对象类型,能够存储任何类型的方法。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="number">7.</span>nil</div><div class="line"></div><div class="line">   在ObjC中,相对于C中的<span class="literal">NULL</span>,用的是nil。这两者是等价的。下面是nil的定义。</div><div class="line"></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> nil NULL</span></div><div class="line">         </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#### 第三节创建对象</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="number">1.</span>接口和实现</div><div class="line"></div><div class="line">在ObjC中定义一个类需要有两个部分:接口和实现。接口文件包含了类的声明,定义了实例变量和方法。实现文件包含了具体的函数的实现代码。下图显示了一个叫MyClass的类,它继承自NSObject基类。类的定义总是从@interface开始到@end结束。在类名后面的是父类的名称。实例变量被定义在两个花括号之间。在实例变量下面的是方法的定义。一个分号用来结束一个变量或者方法。</div><div class="line"></div><div class="line">下面的代码显示了MyClass这个类的实现代码。就像类的定义规则一样,类实现文件也被两个标识框起来,一个是@implementation,还有一个是@end。这两个指令标识符告诉编译器程序从哪里开始编译到哪里结束。类中的方法名称的定义和它接口文件中的定义是一样的,除了实现文件中有具体的代码以外。</div><div class="line"></div><div class="line">``` c</div><div class="line">@implementation MyClass</div><div class="line">-(id)initWithString:(NSString *) aName</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (self = [super init]) &#123;</div><div class="line">        count count = <span class="number">0</span>;</div><div class="line">        data = nil;</div><div class="line">        name = [aName copy];</div><div class="line">        <span class="keyword">return</span> self;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">+(MyClass *)createMyClassWithString: (NSString *) aName</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> [[[self alloc] initWithString:aName] autorelease];</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
 <p>   当你要把一个对象保存进变量，要使用指针类型。ObjC同时支持强和弱变量对象。强类型对象在变量类型定义的时候包含了类名。弱对象使用id类型作为实例变量。下面的例子同时显示了定义MyClass中的强弱两种类型的变量</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">MyClass* myObject1;    <span class="comment">// Strong typing</span></div><div class="line">id myObject2;    <span class="comment">// Weak typing</span></div></pre></td></tr></table></figure>
 <p>2.方法</p>
@@ -122,11 +805,11 @@ model跟view是永远不知道对方的。（MVC精髓之一）
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@property BOOL flag;</div><div class="line">@property (copy) NSString* nameObject;              </div><div class="line"><span class="comment">//            Copy the object during assignment.</span></div><div class="line">@property (readonly) UIView* rootView;  <span class="comment">// Create only a getter method</span></div></pre></td></tr></table></figure>
 <p>接口文件中使用@property</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@synthesize</span>            flag,nameObject,rootView;</div><div class="line">```         </div><div class="line"></div><div class="line">实现文件中使用<span class="keyword">@synthesize</span></div><div class="line"></div><div class="line">属性的另一个好处就是，可以使用点（.）语法来访问，如下所示：</div><div class="line">   </div><div class="line">```              </div><div class="line">  myObject.flag = <span class="literal">YES</span>;</div><div class="line">  <span class="built_in">CGRect</span> viewFrame = myObject.rootView.frame;</div><div class="line">```        </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#### 第四节继承</span></div><div class="line"></div><div class="line"> 继承的语法如下，冒号后的标识符是需要继承的类。</div></pre></td></tr></table></figure>
-<p> @interface            Circle : NSObject<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="gradle"></span></div><div class="line"><span class="number">1</span>.不支持多继承</div><div class="line"></div><div class="line">  要注意的是ObjC只支持单继承，如果要实现多继承的话，可以通过类别和协议的方式来实现，这两种方法将在后面进行介绍。</div><div class="line">  </div><div class="line"><span class="number">2</span>.<span class="keyword">Super</span>关键字</div><div class="line"></div><div class="line">ObjC提供某种方式来重写方法，并且仍然调用超类的实现方式。当需要超类实现自身的功能，同时在前面或后面执行某些额外的工作时，这种机制非常有用。为了调用继承方法的实现，需要使用<span class="keyword">super</span>作为方法调用的目标。下面是代码示例：</div></pre></td></tr></table></figure></p>
+<p> @interface            Circle : NSObject<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="attribute">1.不支持多继承</span></div><div class="line"><span class="attribute"></span></div><div class="line">  要注意的是ObjC只支持单继承，如果要实现多继承的话，可以通过类别和协议的方式来实现，这两种方法将在后面进行介绍。</div><div class="line">  </div><div class="line"><span class="attribute">2.Super关键字</span></div><div class="line"><span class="attribute"></span></div><div class="line"><span class="attribute">ObjC提供某种方式来重写方法，并且仍然调用超类的实现方式。当需要超类实现自身的功能，同时在前面或后面执行某些额外的工作时，这种机制非常有用。为了调用继承方法的实现，需要使用super作为方法调用的目标。下面是代码示例：</span></div></pre></td></tr></table></figure></p>
 <p>@implementation Circle<br>-(void)setFillColor: (ShapeColor) c<br>{<br>    if(c== kRedColor){<br>        c = kGreenColor;<br>    }<br>    [super setFillColor: c];<br>}<br>@end<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Super来自哪里呢？它既不是参数也不是实例变量，而是由ObjC编译器提供的某种神奇功能。向<span class="keyword">super</span>发送消息时，实际上是在请求ObjC向该类的超类发送消息。如果超类中没在定义该消息，ObjC将按照通常的方式在继承链中继续查找对应的消息。</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#### 第五节 对象初始化</span></div><div class="line"></div><div class="line"><span class="number">1.</span>分配与初始化</div><div class="line"></div><div class="line">   对象的初始化有两种方法：一种是[类名<span class="keyword">new</span><span class="type"></span>], 第二种是[[类名 alloc]init]。这两种方法是等价的，不过，通常的Cocoa惯例是使用alloc和init,而不使用<span class="keyword">new</span><span class="type"></span>.一般情况下，Cocoa程序员只是在他们不具备足够的水平来熟练使用alloc和init方法时，才将<span class="keyword">new</span><span class="type"></span>作为辅助方法使用。</div><div class="line">         </div><div class="line">   [[类名alloc]init]有两个动作。alloc是分配动作，是从操作系统获得一块内存并将其指定为存放对象的实例变量的位置。同时，alloc方法还将这块内存区域全部初始化为<span class="number">0</span>。与分配动作对应的是初始化。有如下两种初始化写法。</div></pre></td></tr></table></figure></p>
 <p>Car <em>car = [[Class alloc] init];<br>//写法1<br>Car </em>car = [Car alloc];<br>[car init];<br>//写法2<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">应该使用第一种写法，因为init返回的对象可能不是以前的那个。</div><div class="line"></div><div class="line"><span class="number">2.</span>编写初始化方法</div><div class="line"></div><div class="line">下面是一段初始化的代码</div></pre></td></tr></table></figure></p>
 <p>-(id)init<br>{<br>    if(self = [super init]){<br>        engine = [Engine new];<br>        …<br>            }<br>}<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">使用<span class="keyword">self</span>= [<span class="keyword">super</span> <span class="keyword">init</span>]的作用是使超类完成它们自己的初始化工作。同时因为<span class="keyword">init</span>可能返回的是不同的对象，实例变量所在的内存位置到隐藏的<span class="keyword">self</span>参数之间的跳离又是固定的，所以要这样使用。</div><div class="line">注：这部分可以参考书[<span class="number">1</span>]<span class="number">144</span>页。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#### 第六节协议</div><div class="line"></div><div class="line">   这里的协议是正式协议，相对的还有非正式协议，这在类别一节中有介绍。正式协议是一个命名的方法列表。它要求显式地采用协议。采用协议意味着要实现协议的所有方法。否则，编译器会通过生成警告来提醒你。</div><div class="line"><span class="number">1</span>.声明协议</div></pre></td></tr></table></figure></p>
-<p>@protocol NSCopying<br>-(id) copyWithZone：（NSZone *)zone;<br>@end<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">        </div><div class="line"></div><div class="line"><span class="smali">2.采用协议</span></div><div class="line"></div><div class="line">```                  </div><div class="line">@interface Car<span class="keyword"> :</span> NSObject &lt;NSCopying , NSCoding&gt;</div><div class="line">&#123;</div><div class="line">    //<span class="built_in"> instance </span>           variables</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure></p>
+<p>@protocol NSCopying<br>-(id) copyWithZone：（NSZone *)zone;<br>@end<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">        </div><div class="line"></div><div class="line"><span class="attribute">2.采用协议</span></div><div class="line"><span class="attribute"></span></div><div class="line">```                  </div><div class="line">@interface Car : NSObject &lt;NSCopying , NSCoding&gt;</div><div class="line">&#123;</div><div class="line">    // instance            variables</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure></p>
 <p>协议可以采用多个，并且可以按任意顺序列出这些协议，没有什么影响。</p>
 <p>3.ObjC 2.0的新特性</p>
 <p>  ObjC2.0增加了两个新的协议修饰符：@optional和@required,因此你可以像下面这样编写代码：</p>
@@ -139,12 +822,12 @@ model跟view是永远不知道对方的。（MVC精髓之一）
 <h4 id="第八节-类别"><a href="#第八节-类别" class="headerlink" title="第八节 类别"></a>第八节 类别</h4><p> 类别允许你在现有的类中加入新功能，这些类可以是框架中的类，并且不需要扩充它。</p>
 <p>1.声明类别</p>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">NSString</span> (<span class="title">NumberConvenience</span>)</span></div><div class="line">-(<span class="built_in">NSNumber</span> *) lengthAsNumber;</div><div class="line"><span class="keyword">@end</span></div><div class="line">```         </div><div class="line"></div><div class="line">该声明表示，类别的名称是NumberConvenience，而且该类别将向<span class="built_in">NSString</span>类中添加方法。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="number">2.</span>实现类别</div></pre></td></tr></table></figure>
-<p>@implementation NSString (NumberConvenience)<br>-(NSNumber *) lengthAsNumber<br>{<br>    unsigned int length = [self length];<br>    return ([NSNumber numberWithUnsignedInt: length]);<br>}<br>@end<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="objectivec"><span class="number">3.</span>局限性</span></div><div class="line"></div><div class="line">   类别有两方面的局限性。第一，无法向类中添加新的实例变量。类别没有位置容纳实例变量。第二，名称冲突，即类别中的方法与现有的方法重名。当发生名称冲突时，类别具有更高的优先级。这点可以通过增加一个前缀的方法解决。</div><div class="line">   </div><div class="line"><span class="number">4.</span>非正式协议和委托类别</div><div class="line"></div><div class="line">实现委托除了第七节中应用协议的方式，还可以使用类别。具体做法就是把委托对象要实现的方法声明为一个<span class="built_in">NSObject</span>的类别。如下面的代码所示:</div></pre></td></tr></table></figure></p>
+<p>@implementation NSString (NumberConvenience)<br>-(NSNumber *) lengthAsNumber<br>{<br>    unsigned int length = [self length];<br>    return ([NSNumber numberWithUnsignedInt: length]);<br>}<br>@end<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="attribute">3.局限性</span></div><div class="line"><span class="attribute"></span></div><div class="line">   类别有两方面的局限性。第一，无法向类中添加新的实例变量。类别没有位置容纳实例变量。第二，名称冲突，即类别中的方法与现有的方法重名。当发生名称冲突时，类别具有更高的优先级。这点可以通过增加一个前缀的方法解决。</div><div class="line">   </div><div class="line"><span class="attribute">4.非正式协议和委托类别</span></div><div class="line"><span class="attribute"></span></div><div class="line"><span class="attribute">实现委托除了第七节中应用协议的方式，还可以使用类别。具体做法就是把委托对象要实现的方法声明为一个NSObject的类别。如下面的代码所示:</span></div></pre></td></tr></table></figure></p>
 <p>@interface NSObject(NSSomeDelegateMethods)<br>-(void)someMethod;<br>…<br>@end<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">  通过将这些方法声明为<span class="built_in">NSObject</span>的类别，使得只要对象实现了委托方法，任何类的对象都可以成为委托对象。创建一个<span class="built_in">NSObject</span>的类别称为“创建一个非正式协议”。非正式协议只是一种表达方式，它表示“这里有一些你可能想实现的方法”,第六节介绍的协议可以叫做正式协议。</div><div class="line">  </div><div class="line">   非正式协议的作用类似于使用许多<span class="keyword">@optional</span>的正式协议，并且前者正逐渐被后者所代替。</div><div class="line">   </div><div class="line"><span class="number">5.</span>选择器</div><div class="line"></div><div class="line">   选择器只是一个方法名称，它以ObjC运行时使用的特殊方式编码，以快速执行查询。你可以使用<span class="keyword">@selector</span>()预编译指令指定选择器，其中方法名位于圆括号中。如一个类中setEngine:方法的选择器是：</div></pre></td></tr></table></figure></p>
 <p>@selector(setEngine:)<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">   因为选择器可以被传递，可以作为方法的参数使用，甚至可以作为实例变量存储。这样可以生成一些非常强大和灵活的构造。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#### 第九节Posing</span></div><div class="line"></div><div class="line">Posing有点像类别，但不太一样。它允许你扩充一个类，并且全面性地扮演(pose)这个超类。例如：你有一个扩充<span class="built_in">NSArry</span>的<span class="built_in">NSArrayChild</span>对象。如果你让<span class="built_in">NSArrayChild</span>扮演<span class="built_in">NSArry</span>,则在你的代码中所有的<span class="built_in">NSArray</span>都会自动被替代为<span class="built_in">NSArrayChild</span>.</div></pre></td></tr></table></figure></p>
 <p>@interface FractionB: Fraction<br>-(void) print;<br>@end</p>
 <p>@implementation FractionB<br>-(void) print {<br>    printf(“(%i/%i)”, numerator, denominator );<br>}<br>@end</p>
-<p>//Fraction.m<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">```                    </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> *argv[] )</span> </span>&#123;</div><div class="line">    Fraction *frac = [[Fraction alloc] initWithNumerator: <span class="number">3</span> denominator: <span class="number">10</span>];</div><div class="line">    <span class="comment">//print it</span></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"The fraction is: "</span> );</div><div class="line">    [frac print];</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span> );</div><div class="line">            </div><div class="line"></div><div class="line">            </div><div class="line"></div><div class="line">    <span class="comment">//make FractionB pose as Fraction</span></div><div class="line">    [FractionB poseAsClass: [Fraction <span class="keyword">class</span>]];</div><div class="line">    Fraction *frac2 = [[Fraction alloc] initWithNumerator: <span class="number">3</span> denominator: <span class="number">10</span>];</div><div class="line">            </div><div class="line"></div><div class="line">            </div><div class="line"></div><div class="line">    <span class="comment">// print it</span></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"The fraction is: "</span> );</div><div class="line">    [frac2  print];</div><div class="line">    <span class="built_in">printf</span>( <span class="string">"\n"</span> );</div><div class="line">    <span class="comment">//free memory</span></div><div class="line">    [frac release];</div><div class="line">    [frac2 release];</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line">         </div><div class="line"><span class="comment">// Main.m</span></div></pre></td></tr></table></figure></p>
+<p>//Fraction.m<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">```                    </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> *argv[] )</span> </span>&#123;</div><div class="line">    Fraction *frac = [[Fraction alloc] initWithNumerator: <span class="number">3</span> denominator: <span class="number">10</span>];</div><div class="line">    <span class="comment">//print it</span></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"The fraction is: "</span> );</div><div class="line">    [frac print];</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span> );</div><div class="line">            </div><div class="line"></div><div class="line">            </div><div class="line"></div><div class="line">    <span class="comment">//make FractionB pose as Fraction</span></div><div class="line">    [FractionB poseAsClass: [Fraction <span class="class"><span class="keyword">class</span>]];</span></div><div class="line">    Fraction *frac2 = [[Fraction alloc] initWithNumerator: <span class="number">3</span> denominator: <span class="number">10</span>];</div><div class="line">            </div><div class="line"></div><div class="line">            </div><div class="line"></div><div class="line">    <span class="comment">// print it</span></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"The fraction is: "</span> );</div><div class="line">    [frac2  print];</div><div class="line">    <span class="built_in">printf</span>( <span class="string">"\n"</span> );</div><div class="line">    <span class="comment">//free memory</span></div><div class="line">    [frac release];</div><div class="line">    [frac2 release];</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line">         </div><div class="line"><span class="comment">// Main.m</span></div></pre></td></tr></table></figure></p>
 <pre><code>输出
 The fraction is: 3/10
 The fraction is: (3/10)
@@ -161,29 +844,536 @@ square is a kind of object class
 square responds to setSize: method
 square class responds to alloc method
 square instance responds to setSize: method
-</code></pre></div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://iiiyu.com/2012/02/28/learning-ios-notes-one/" data-id="cj2j42tpp00223afyx4ki33cz" class="article-share-link">分享</a><div class="tags"><a href="/tags/iOS/">iOS</a></div><div class="post-nav"><a href="/2012/02/29/emacs-set-up-2/" class="pre">调教Emacs(二)——更好 更强 更快</a><a href="/2012/02/26/emacs-set-up-1/" class="next">调教Emacs(一)——存活</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论 「请确保 disqus.com 可以正常加载」</button></div><script>var disqus_shortname = 'iiiyu';
-var disqus_identifier = '2012/02/28/learning-ios-notes-one/';
-var disqus_title = 'iOS笔记 (1)';
-var disqus_url = 'http://iiiyu.com/2012/02/28/learning-ios-notes-one/';
-$('.btn_click_load').click(function() {
-  (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-  $('.btn_click_load').css('display','none');
-});
-$.ajax({
-  url: 'https://disqus.com/favicon.ico',
-  timeout: 3000,
-  type: 'GET',
-  success: (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    $('.btn_click_load').css('display','none');
-  })(),
-  error: function() {
-    $('.btn_click_load').css('display','block');
-  }
-});</script><script id="dsq-count-scr" src="//iiiyu.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://iiiyu.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Emacs/" style="font-size: 15px;">Emacs</a> <a href="/tags/just-talk/" style="font-size: 15px;">just-talk</a> <a href="/tags/产品汪/" style="font-size: 15px;">产品汪</a> <a href="/tags/随便瞎扯/" style="font-size: 15px;">随便瞎扯</a> <a href="/tags/胡思乱想/" style="font-size: 15px;">胡思乱想</a> <a href="/tags/产品思考/" style="font-size: 15px;">产品思考</a> <a href="/tags/PM/" style="font-size: 15px;">PM</a> <a href="/tags/read-book-notes/" style="font-size: 15px;">read book notes</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a> <a href="/tags/Design/" style="font-size: 15px;">Design</a> <a href="/tags/Software/" style="font-size: 15px;">Software</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/10/2017-smartisan-digital-conference-view/">罗永浩的进化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/22/Be-misunderstood-of-the-miniapp/">被误解的微信小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/20/2017-world-theory-of-evolution/">2017年世界进化论</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/27/2016-Social-Product-Analysis/">2016年中国社交产品分析个人报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/14/2016-iOS-Human-Interface-Guidelines-1/">新 iOS Human Interface Guidelines  产品解读 （一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/A-product-manager-cranky-Martial-arts-world-but-not-fast-breaking/">鱼子酱的胡思乱想 —— 天下武功唯快不破</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/25/Read-Wechat-Thinking-Note/">读书笔记「微信思维」</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/19/CoreData-VS-Realm/">CoreData VS Realm （2016-02-23更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/12/2016-IT-professionals-Getting-Started/">2016年移动互联网职业入门规划指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/31/read-the-tipping-point/">读书笔记 「引爆点」</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//iiiyu.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.ohmyapps.com/" title="Oh My Apps" target="_blank">Oh My Apps</a><ul></ul><a href="http://www.ohmystarapp.com/" title="Oh My Star" target="_blank">Oh My Star</a><ul></ul><a href="http://griddiaryapp.com" title="Grid Diary" target="_blank">Grid Diary</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2017 <a href="/." rel="nofollow">萧宸宇.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+</code></pre>
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://iiiyu.com/2012/02/28/learning-ios-notes-one/">http://iiiyu.com/2012/02/28/learning-ios-notes-one/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" style="display: none">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://iiiyu.com/2012/02/28/learning-ios-notes-one/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://iiiyu.com/2012/02/28/learning-ios-notes-one/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//iiiyu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.btn_click_load').css('display','none');
+        })(),
+        error: function() {
+          $('.btn_click_load').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//iiiyu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2012/02/29/emacs-set-up-2/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2012/02/26/emacs-set-up-1/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="萧宸宇's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        yu@ohmyapps.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: yu@ohmyapps.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about-me" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/iyunsn" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/iiiyu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/10492272/#!/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+        <a href="https://www.v2ex.com/member/iYu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-v2ex">
+                <span class="visuallyhidden">V2EX</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2012&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>萧宸宇
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

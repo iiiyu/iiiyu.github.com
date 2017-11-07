@@ -1,8 +1,515 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计"><title>iOS笔记(16) | 萧宸宇</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create','UA-29764460-1','auto');ga('send','pageview');</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">iOS笔记(16)</h1><a id="logo" href="/.">萧宸宇</a><p class="description">如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about-me/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">iOS笔记(16)</h1><div class="post-meta">Mar 1, 2013<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><a data-disqus-identifier="2013/03/01/learning-ios-notes-sixteen/" href="/2013/03/01/learning-ios-notes-sixteen/#disqus_thread" class="disqus-comment-count"></a><div class="post-content"><h1 id="配置自己的CocoaPods库"><a href="#配置自己的CocoaPods库" class="headerlink" title="配置自己的CocoaPods库"></a>配置自己的CocoaPods库</h1><h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>默认安装的cocoapods确实很好用，可是毕竟自己会写一些库和修改一些第三方库来用。所幸cocoapods确实是一个神器。他可以定义自己的库来用。<br>如何安装Cocoapods，<a href="http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/">请参考这篇</a></p>
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            iOS笔记(16) | 
+        
+        萧宸宇
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="萧宸宇">
+    <meta name="description" itemprop="description" content="配置自己的CocoaPods库序默认安装的cocoapods确实很好用，可是毕竟自己会写一些库和修改一些第三方库来用。所幸cocoapods确实是一个神器。他可以定义自己的库来用。如何安装Cocoapods，请参考这篇">
+    <meta name="keywords" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计,iOS">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="萧宸宇">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://iiiyu.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="iOS笔记(16) | 萧宸宇">
+    <meta property="og:image" content="http://iiiyu.com/img/favicon.png" />
+    <meta property="og:description" content="配置自己的CocoaPods库序默认安装的cocoapods确实很好用，可是毕竟自己会写一些库和修改一些第三方库来用。所幸cocoapods确实是一个神器。他可以定义自己的库来用。如何安装Cocoapods，请参考这篇">
+    <meta property="og:article:tag" content="iOS"> 
+
+    
+        <meta property="article:published_time" content="Fri Mar 01 2013 02:38:47 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Feb 17 2014 12:20:50 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="iOS笔记(16) | 萧宸宇">
+    <meta name="twitter:description" content="配置自己的CocoaPods库序默认安装的cocoapods确实很好用，可是毕竟自己会写一些库和修改一些第三方库来用。所幸cocoapods确实是一个神器。他可以定义自己的库来用。如何安装Cocoapods，请参考这篇">
+    <meta name="twitter:image" content="http://iiiyu.com/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://iiiyu.com" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/index.html",
+    "headline": "iOS笔记(16)",
+    "datePublished": "Fri Mar 01 2013 02:38:47 GMT+0800",
+    "dateModified": "Mon Feb 17 2014 12:20:50 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "萧宸宇",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "萧宸宇",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",iOSiOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计",
+    "description": "配置自己的CocoaPods库序默认安装的cocoapods确实很好用，可是毕竟自己会写一些库和修改一些第三方库来用。所幸cocoapods确实是一个神器。他可以定义自己的库来用。如何安装Cocoapods，请参考这篇",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-29764460-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置自己的CocoaPods库"><span class="post-toc-number">1.</span> <span class="post-toc-text">配置自己的CocoaPods库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#序"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#从头来设置"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">从头来设置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应用场景"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">应用场景</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第一步把代码托管到一个支持git的服务器"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">第一步把代码托管到一个支持git的服务器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第二步删除git-submodule"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">第二步删除git submodule</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第三步为原来的项目添加cocoapods支持"><span class="post-toc-number">1.2.1.3.</span> <span class="post-toc-text">第三步为原来的项目添加cocoapods支持</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第四步创建自己的Podspec文件"><span class="post-toc-number">1.2.1.4.</span> <span class="post-toc-text">第四步创建自己的Podspec文件</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#坑"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">坑</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考文章"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">参考文章</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 52 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                iOS笔记(16)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>萧宸宇</strong>
+        <span>3月 01, 2013</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/iOS/">iOS</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=iOS笔记(16)&url=http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/index.html&pic=http://iiiyu.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=iOS笔记(16)&url=http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/index.html&via=萧宸宇" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/index.html&text=iOS笔记(16)" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="配置自己的CocoaPods库"><a href="#配置自己的CocoaPods库" class="headerlink" title="配置自己的CocoaPods库"></a>配置自己的CocoaPods库</h1><h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>默认安装的cocoapods确实很好用，可是毕竟自己会写一些库和修改一些第三方库来用。所幸cocoapods确实是一个神器。他可以定义自己的库来用。<br>如何安装Cocoapods，<a href="http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/">请参考这篇</a></p>
 <a id="more"></a>
 <h2 id="从头来设置"><a href="#从头来设置" class="headerlink" title="从头来设置"></a>从头来设置</h2><h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>我的boss写了一个基于MagicalRecord的CoreData的iCloud设置的类。也许我们以后要用到的机会毕竟多。单独拿出来成为一个库。现在用cocoapods来做成一个静态库。 我们这个库基于外部的MagicalRecord和SVProgressHUD.这两个库是用git submodule的方法来管理的</p>
 <h4 id="第一步把代码托管到一个支持git的服务器"><a href="#第一步把代码托管到一个支持git的服务器" class="headerlink" title="第一步把代码托管到一个支持git的服务器"></a>第一步把代码托管到一个支持git的服务器</h4><p>我选择了<a href="https://bitbucket.org" target="_blank" rel="external">bitbucket</a>.因为没钱买github。</p>
@@ -14,7 +521,7 @@ ga('create','UA-29764460-1','auto');ga('send','pageview');</script></head><body>
 <p><strong>修改.git/config</strong></p>
 <p>把MagicalRecord和SVProgressHUD的条目删除</p>
 <p><strong>最后commit一下</strong></p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">add</span><span class="bash"> .</span></div><div class="line">$ git commit -m <span class="string">"Remove a submodule"</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git add .</span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit -m <span class="string">"Remove a submodule"</span></span></div></pre></td></tr></table></figure>
 <h4 id="第三步为原来的项目添加cocoapods支持"><a href="#第三步为原来的项目添加cocoapods支持" class="headerlink" title="第三步为原来的项目添加cocoapods支持"></a>第三步为原来的项目添加cocoapods支持</h4><p><strong>先把项目里面引用submodule的地方删除</strong></p>
 <p><strong>添加Podfile到项目目录里面</strong></p>
 <p>内容为</p>
@@ -23,18 +530,18 @@ ga('create','UA-29764460-1','auto');ga('send','pageview');</script></head><body>
 <p><strong>安装Pod</strong></p>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">$pod</span> install</span></div></pre></td></tr></table></figure>
 <p>我的安装结束以后提示</p>
-<figure class="highlight scheme"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[<span class="name">!</span>] The target `SIStore [<span class="name">Debug</span> - Release]' overrides the `HEADER_SEARCH_PATHS' build setting defined in `Pods/Pods.xcconfig<span class="symbol">'.</span></div><div class="line">    - Use the `$(<span class="name">inherited</span>)' flag, or</div><div class="line">    - Remove the build settings from the target.</div></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[!] The target `SIStore [Debug - Release]<span class="string">' overrides the `HEADER_SEARCH_PATHS'</span> build setting defined <span class="keyword">in</span> `Pods/Pods.xcconfig<span class="string">'.</span></div><div class="line"><span class="string">    - Use the `$(inherited)'</span> flag, <span class="keyword">or</span></div><div class="line">    - <span class="keyword">Remove</span> the build settings <span class="keyword">from</span> the target.</div></pre></td></tr></table></figure>
 <p>按照提示修改项目的Build Settings就ok了。</p>
 <p><strong>进入项目中把之前是包入“”的第三方头文件地方改为&lt;&gt;</strong></p>
 <p><strong>添加.gitignore</strong></p>
 <p>.gitignore内容为</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="strong">*.xcodeproj/*</span></div><div class="line">!<span class="strong">*.xcodeproj/project.pbxproj</span></div><div class="line">build</div><div class="line">.DS_Store</div><div class="line">._*</div><div class="line"><span class="title">.svn</span></div><div class="line"><span class="strong">*.xcworkspace</span></div><div class="line">Pods</div><div class="line">Podfile.lock</div></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">*<span class="string">.xcodeproj/</span>*</div><div class="line">!*<span class="string">.xcodeproj/project.pbxproj</span></div><div class="line">build</div><div class="line"><span class="string">.DS_Store</span></div><div class="line"><span class="string">._</span>*</div><div class="line"><span class="string">.svn</span></div><div class="line">*<span class="string">.xcworkspace</span></div><div class="line">Pods</div><div class="line">Podfile.lock</div></pre></td></tr></table></figure>
 <p>打完收工。</p>
 <p>这样就之前的库就可以跑在cocoapods的配置下了</p>
 <h4 id="第四步创建自己的Podspec文件"><a href="#第四步创建自己的Podspec文件" class="headerlink" title="第四步创建自己的Podspec文件"></a>第四步创建自己的Podspec文件</h4><p>初始化一个Podspec文件</p>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">$pod</span> spec create SIStore</span></div></pre></td></tr></table></figure>
 <p>SIStore.podspec内容如下</p>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Be sure to run `pod spec lint SIStore.podspec' to ensure this is a</span></div><div class="line"><span class="comment"># valid spec.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Remove all comments before submitting the spec. Optional attributes are commented.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># For details see: https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format</span></div><div class="line"><span class="comment">#</span></div><div class="line">Pod::Spec.new do |s|</div><div class="line">  s.<span class="attr">name</span>         = <span class="string">"SIStore"</span></div><div class="line">  s.<span class="attr">version</span>      = <span class="string">"0.0.1"</span></div><div class="line">  s.<span class="attr">summary</span>      = <span class="string">"A short description of SIStore."</span></div><div class="line">  <span class="comment"># s.description  = &lt;&lt;-DESC</span></div><div class="line">  <span class="comment">#                   An optional longer description of SIStore</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment">#                   * Markdown format.</span></div><div class="line">  <span class="comment">#                   * Don't worry about the indent, we strip it!</span></div><div class="line">  <span class="comment">#                  DESC</span></div><div class="line">  s.<span class="attr">homepage</span>     = <span class="string">"http://EXAMPLE/SIStore"</span></div><div class="line"></div><div class="line">  <span class="comment"># Specify the license type. CocoaPods detects automatically the license file if it is named</span></div><div class="line">  <span class="comment"># `LICEN&#123;C,S&#125;E*.*', however if the name is different, specify it.</span></div><div class="line">  s.<span class="attr">license</span>      = 'MIT (example)'</div><div class="line">  <span class="comment"># s.license      = &#123; :type =&gt; 'MIT (example)', :file =&gt; 'FILE_LICENSE' &#125;</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Only if no dedicated file is available include the full text of the license.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.license      = &#123;</span></div><div class="line">  <span class="comment">#   :type =&gt; 'MIT (example)',</span></div><div class="line">  <span class="comment">#   :text =&gt; &lt;&lt;-LICENSE</span></div><div class="line">  <span class="comment">#             Copyright (C) &lt;year&gt; &lt;copyright holders&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">#             All rights reserved.</span></div><div class="line"></div><div class="line">  <span class="comment">#             Redistribution and use in source and binary forms, with or without</span></div><div class="line">  <span class="comment">#             ...</span></div><div class="line">  <span class="comment">#   LICENSE</span></div><div class="line">  <span class="comment"># &#125;</span></div><div class="line"></div><div class="line">  <span class="comment"># Specify the authors of the library, with email addresses. You can often find</span></div><div class="line">  <span class="comment"># the email addresses of the authors by using the SCM log. E.g. $ git log</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  s.<span class="attr">author</span>       = &#123; <span class="string">"Xiao ChenYu"</span> =&gt; <span class="string">"apple.iiiyu@gmail.com"</span> &#125;</div><div class="line">  <span class="comment"># s.authors      = &#123; "Xiao ChenYu" =&gt; "apple.iiiyu@gmail.com", "other author" =&gt; "and email address" &#125;</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># If absolutely no email addresses are available, then you can use this form instead.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.author       = 'Xiao ChenYu', 'other author'</span></div><div class="line"></div><div class="line">  <span class="comment"># Specify the location from where the source should be retrieved.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  s.<span class="attr">source</span>       = &#123; :<span class="attr">git</span> =&gt; <span class="string">"http://EXAMPLE/SIStore.git"</span>, :<span class="attr">tag</span> =&gt; <span class="string">"0.0.1"</span> &#125;</div><div class="line">  <span class="comment"># s.source       = &#123; :svn =&gt; 'http://EXAMPLE/SIStore/tags/1.0.0' &#125;</span></div><div class="line">  <span class="comment"># s.source       = &#123; :hg  =&gt; 'http://EXAMPLE/SIStore', :revision =&gt; '1.0.0' &#125;</span></div><div class="line"></div><div class="line">  <span class="comment"># If this Pod runs only on iOS or OS X, then specify the platform and</span></div><div class="line">  <span class="comment"># the deployment target.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.platform     = :ios, '5.0'</span></div><div class="line">  <span class="comment"># s.platform     = :ios</span></div><div class="line"></div><div class="line">  <span class="comment"># ――― MULTI-PLATFORM VALUES ――――――――――――――――――――――――――――――――――――――――――――――――― #</span></div><div class="line"></div><div class="line">  <span class="comment"># If this Pod runs on both platforms, then specify the deployment</span></div><div class="line">  <span class="comment"># targets.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.ios.deployment_target = '5.0'</span></div><div class="line">  <span class="comment"># s.osx.deployment_target = '10.7'</span></div><div class="line"></div><div class="line">  <span class="comment"># A list of file patterns which select the source files that should be</span></div><div class="line">  <span class="comment"># added to the Pods project. If the pattern is a directory then the</span></div><div class="line">  <span class="comment"># path will automatically have '*.&#123;h,m,mm,c,cpp&#125;' appended.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Alternatively, you can use the FileList class for even more control</span></div><div class="line">  <span class="comment"># over the selected files.</span></div><div class="line">  <span class="comment"># (See http://rake.rubyforge.org/classes/Rake/FileList.html.)</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  s.<span class="attr">source_files</span> = 'Classes', 'Classes<span class="comment">/**/</span>*.&#123;h,m&#125;'</div><div class="line"></div><div class="line">  <span class="comment"># A list of file patterns which select the header files that should be</span></div><div class="line">  <span class="comment"># made available to the application. If the pattern is a directory then the</span></div><div class="line">  <span class="comment"># path will automatically have '*.h' appended.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Also allows the use of the FileList class like `source_files' does.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># If you do not explicitly set the list of public header files,</span></div><div class="line">  <span class="comment"># all headers of source_files will be made public.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.public_header_files = 'Classes/**/*.h'</span></div><div class="line"></div><div class="line">  <span class="comment"># A list of resources included with the Pod. These are copied into the</span></div><div class="line">  <span class="comment"># target bundle with a build phase script.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Also allows the use of the FileList class like `source_files' does.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.resource  = "icon.png"</span></div><div class="line">  <span class="comment"># s.resources = "Resources/*.png"</span></div><div class="line"></div><div class="line">  <span class="comment"># A list of paths to preserve after installing the Pod.</span></div><div class="line">  <span class="comment"># CocoaPods cleans by default any file that is not used.</span></div><div class="line">  <span class="comment"># Please don't include documentation, example, and test files.</span></div><div class="line">  <span class="comment"># Also allows the use of the FileList class like `source_files' does.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.preserve_paths = "FilesToSave", "MoreFilesToSave"</span></div><div class="line"></div><div class="line">  <span class="comment"># Specify a list of frameworks that the application needs to link</span></div><div class="line">  <span class="comment"># against for this Pod to work.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.framework  = 'SomeFramework'</span></div><div class="line">  <span class="comment"># s.frameworks = 'SomeFramework', 'AnotherFramework'</span></div><div class="line"></div><div class="line">  <span class="comment"># Specify a list of libraries that the application needs to link</span></div><div class="line">  <span class="comment"># against for this Pod to work.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.library   = 'iconv'</span></div><div class="line">  <span class="comment"># s.libraries = 'iconv', 'xml2'</span></div><div class="line"></div><div class="line">  <span class="comment"># If this Pod uses ARC, specify it like so.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.requires_arc = true</span></div><div class="line"></div><div class="line">  <span class="comment"># If you need to specify any other build settings, add them to the</span></div><div class="line">  <span class="comment"># xcconfig hash.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.xcconfig = &#123; 'HEADER_SEARCH_PATHS' =&gt; '$(SDKROOT)/usr/include/libxml2' &#125;</span></div><div class="line"></div><div class="line">  <span class="comment"># Finally, specify any Pods that this Pod depends on.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># s.dependency 'JSONKit', '~&gt; 1.4'</span></div><div class="line">end</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"></span></div><div class="line"><span class="meta">#</span><span class="bash"> Be sure to run `pod spec lint SIStore.podspec<span class="string">' to ensure this is a</span></span></div><div class="line"><span class="meta">#</span><span class="bash"> valid spec.</span></div><div class="line"><span class="meta">#</span><span class="bash"></span></div><div class="line"><span class="meta">#</span><span class="bash"> Remove all comments before submitting the spec. Optional attributes are commented.</span></div><div class="line"><span class="meta">#</span><span class="bash"></span></div><div class="line"><span class="meta">#</span><span class="bash"> For details see: https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format</span></div><div class="line"><span class="meta">#</span><span class="bash"></span></div><div class="line">Pod::Spec.new do |s|</div><div class="line">  s.name         = "SIStore"</div><div class="line">  s.version      = "0.0.1"</div><div class="line">  s.summary      = "A short description of SIStore."</div><div class="line"><span class="meta">  #</span><span class="bash"> s.description  = &lt;&lt;-DESC</span></div><div class="line"><span class="meta">  #</span><span class="bash">                   An optional longer description of SIStore</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash">                   * Markdown format.</span></div><div class="line"><span class="meta">  #</span><span class="bash">                   * Don<span class="string">'t worry about the indent, we strip it!</span></span></div><div class="line"><span class="meta">  #</span><span class="bash">                  DESC</span></div><div class="line">  s.homepage     = "http://EXAMPLE/SIStore"</div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> Specify the license <span class="built_in">type</span>. CocoaPods detects automatically the license file <span class="keyword">if</span> it is named</span></div><div class="line"><span class="meta">  #</span><span class="bash"> `LICEN&#123;C,S&#125;E*.*<span class="string">', however if the name is different, specify it.</span></span></div><div class="line">  s.license      = 'MIT (example)'</div><div class="line"><span class="meta">  #</span><span class="bash"> s.license      = &#123; :<span class="built_in">type</span> =&gt; <span class="string">'MIT (example)'</span>, :file =&gt; <span class="string">'FILE_LICENSE'</span> &#125;</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> Only <span class="keyword">if</span> no dedicated file is available include the full text of the license.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.license      = &#123;</span></div><div class="line"><span class="meta">  #</span><span class="bash">   :<span class="built_in">type</span> =&gt; <span class="string">'MIT (example)'</span>,</span></div><div class="line"><span class="meta">  #</span><span class="bash">   :text =&gt; &lt;&lt;-LICENSE</span></div><div class="line"><span class="meta">  #</span><span class="bash">             Copyright (C) &lt;year&gt; &lt;copyright holders&gt;</span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash">             All rights reserved.</span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash">             Redistribution and use <span class="keyword">in</span> <span class="built_in">source</span> and binary forms, with or without</span></div><div class="line"><span class="meta">  #</span><span class="bash">             ...</span></div><div class="line"><span class="meta">  #</span><span class="bash">   LICENSE</span></div><div class="line"><span class="meta">  #</span><span class="bash"> &#125;</span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> Specify the authors of the library, with email addresses. You can often find</span></div><div class="line"><span class="meta">  #</span><span class="bash"> the email addresses of the authors by using the SCM <span class="built_in">log</span>. E.g. $ git <span class="built_in">log</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line">  s.author       = &#123; "Xiao ChenYu" =&gt; "apple.iiiyu@gmail.com" &#125;</div><div class="line"><span class="meta">  #</span><span class="bash"> s.authors      = &#123; <span class="string">"Xiao ChenYu"</span> =&gt; <span class="string">"apple.iiiyu@gmail.com"</span>, <span class="string">"other author"</span> =&gt; <span class="string">"and email address"</span> &#125;</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> If absolutely no email addresses are available, <span class="keyword">then</span> you can use this form instead.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.author       = <span class="string">'Xiao ChenYu'</span>, <span class="string">'other author'</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> Specify the location from <span class="built_in">where</span> the <span class="built_in">source</span> should be retrieved.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line">  s.source       = &#123; :git =&gt; "http://EXAMPLE/SIStore.git", :tag =&gt; "0.0.1" &#125;</div><div class="line"><span class="meta">  #</span><span class="bash"> s.source       = &#123; :svn =&gt; <span class="string">'http://EXAMPLE/SIStore/tags/1.0.0'</span> &#125;</span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.source       = &#123; :hg  =&gt; <span class="string">'http://EXAMPLE/SIStore'</span>, :revision =&gt; <span class="string">'1.0.0'</span> &#125;</span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> If this Pod runs only on iOS or OS X, <span class="keyword">then</span> specify the platform and</span></div><div class="line"><span class="meta">  #</span><span class="bash"> the deployment target.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.platform     = :ios, <span class="string">'5.0'</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.platform     = :ios</span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> ――― MULTI-PLATFORM VALUES ――――――――――――――――――――――――――――――――――――――――――――――――― <span class="comment">#</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> If this Pod runs on both platforms, <span class="keyword">then</span> specify the deployment</span></div><div class="line"><span class="meta">  #</span><span class="bash"> targets.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.ios.deployment_target = <span class="string">'5.0'</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.osx.deployment_target = <span class="string">'10.7'</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> A list of file patterns <span class="built_in">which</span> select the <span class="built_in">source</span> files that should be</span></div><div class="line"><span class="meta">  #</span><span class="bash"> added to the Pods project. If the pattern is a directory <span class="keyword">then</span> the</span></div><div class="line"><span class="meta">  #</span><span class="bash"> path will automatically have <span class="string">'*.&#123;h,m,mm,c,cpp&#125;'</span> appended.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> Alternatively, you can use the FileList class <span class="keyword">for</span> even more control</span></div><div class="line"><span class="meta">  #</span><span class="bash"> over the selected files.</span></div><div class="line"><span class="meta">  #</span><span class="bash"> (See http://rake.rubyforge.org/classes/Rake/FileList.html.)</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line">  s.source_files = 'Classes', 'Classes/**/*.&#123;h,m&#125;'</div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> A list of file patterns <span class="built_in">which</span> select the header files that should be</span></div><div class="line"><span class="meta">  #</span><span class="bash"> made available to the application. If the pattern is a directory <span class="keyword">then</span> the</span></div><div class="line"><span class="meta">  #</span><span class="bash"> path will automatically have <span class="string">'*.h'</span> appended.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> Also allows the use of the FileList class like `source_files<span class="string">' does.</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> If you <span class="keyword">do</span> not explicitly <span class="built_in">set</span> the list of public header files,</span></div><div class="line"><span class="meta">  #</span><span class="bash"> all headers of source_files will be made public.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.public_header_files = <span class="string">'Classes/**/*.h'</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> A list of resources included with the Pod. These are copied into the</span></div><div class="line"><span class="meta">  #</span><span class="bash"> target bundle with a build phase script.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> Also allows the use of the FileList class like `source_files<span class="string">' does.</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.resource  = <span class="string">"icon.png"</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.resources = <span class="string">"Resources/*.png"</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> A list of paths to preserve after installing the Pod.</span></div><div class="line"><span class="meta">  #</span><span class="bash"> CocoaPods cleans by default any file that is not used.</span></div><div class="line"><span class="meta">  #</span><span class="bash"> Please don<span class="string">'t include documentation, example, and test files.</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"> Also allows the use of the FileList class like `source_files<span class="string">' does.</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.preserve_paths = <span class="string">"FilesToSave"</span>, <span class="string">"MoreFilesToSave"</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> Specify a list of frameworks that the application needs to link</span></div><div class="line"><span class="meta">  #</span><span class="bash"> against <span class="keyword">for</span> this Pod to work.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.framework  = <span class="string">'SomeFramework'</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.frameworks = <span class="string">'SomeFramework'</span>, <span class="string">'AnotherFramework'</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> Specify a list of libraries that the application needs to link</span></div><div class="line"><span class="meta">  #</span><span class="bash"> against <span class="keyword">for</span> this Pod to work.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.library   = <span class="string">'iconv'</span></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.libraries = <span class="string">'iconv'</span>, <span class="string">'xml2'</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> If this Pod uses ARC, specify it like so.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.requires_arc = <span class="literal">true</span></span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> If you need to specify any other build settings, add them to the</span></div><div class="line"><span class="meta">  #</span><span class="bash"> xcconfig <span class="built_in">hash</span>.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.xcconfig = &#123; <span class="string">'HEADER_SEARCH_PATHS'</span> =&gt; <span class="string">'$(SDKROOT)/usr/include/libxml2'</span> &#125;</span></div><div class="line"></div><div class="line"><span class="meta">  #</span><span class="bash"> Finally, specify any Pods that this Pod depends on.</span></div><div class="line"><span class="meta">  #</span><span class="bash"></span></div><div class="line"><span class="meta">  #</span><span class="bash"> s.dependency <span class="string">'JSONKit'</span>, <span class="string">'~&gt; 1.4'</span></span></div><div class="line">end</div></pre></td></tr></table></figure>
 <p>注释里面描写的很详细，建议全部看完</p>
 <p>去掉注释版本</p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Pod::Spec.new do |s|</div><div class="line">  s.<span class="attr">name</span>         = <span class="string">"SIStore"</span></div><div class="line">  s.<span class="attr">version</span>      = <span class="string">"0.0.1"</span></div><div class="line">  s.<span class="attr">summary</span>      = <span class="string">"A short description of SIStore."</span></div><div class="line">  s.<span class="attr">homepage</span>     = <span class="string">"http://EXAMPLE/SIStore"</span></div><div class="line">  s.<span class="attr">license</span>      = 'MIT (example)'</div><div class="line">  s.<span class="attr">author</span>       = &#123; <span class="string">"Xiao ChenYu"</span> =&gt; <span class="string">"apple.iiiyu@gmail.com"</span> &#125;</div><div class="line">  s.<span class="attr">source</span>       = &#123; :<span class="attr">git</span> =&gt; <span class="string">"http://EXAMPLE/SIStore.git"</span>, :<span class="attr">tag</span> =&gt; <span class="string">"0.0.1"</span> &#125;</div><div class="line">  s.<span class="attr">source_files</span> = 'Classes', 'Classes<span class="comment">/**/</span>*.&#123;h,m&#125;'</div><div class="line">end</div></pre></td></tr></table></figure>
@@ -55,29 +562,536 @@ ga('create','UA-29764460-1','auto');ga('send','pageview');</script></head><body>
 <h2 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h2><p>cocoapods有缓存。 我一直测试刚刚搞好的自己的库一直不对。 改了2小时。 才反应过来我一直打的标签是同一个，然后cocoapods在本地缓存了一个。只对比了标签以至于我改的东西都没有用。哭。。。。</p>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="http://ishalou.com/blog/2012/10/16/how-to-create-a-cocoapods-spec-file/" target="_blank" rel="external">如何编写一个CocoaPods的spec文件</a></p>
 <p><a href="http://m.blog.csdn.net/blog/totogo2010/8198694" target="_blank" rel="external">CocoaPods一个Objective-C第三方库的管理利器</a></p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/" data-id="cj2j42tpu00293afy3obvf9xq" class="article-share-link">分享</a><div class="tags"><a href="/tags/iOS/">iOS</a></div><div class="post-nav"><a href="/2013/03/11/learning-ios-notes-seventeen/" class="pre">iOS笔记(17)</a><a href="/2013/02/22/learning-ios-notes-fifteen/" class="next">iOS笔记 (15)</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论 「请确保 disqus.com 可以正常加载」</button></div><script>var disqus_shortname = 'iiiyu';
-var disqus_identifier = '2013/03/01/learning-ios-notes-sixteen/';
-var disqus_title = 'iOS笔记(16)';
-var disqus_url = 'http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/';
-$('.btn_click_load').click(function() {
-  (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-  $('.btn_click_load').css('display','none');
-});
-$.ajax({
-  url: 'https://disqus.com/favicon.ico',
-  timeout: 3000,
-  type: 'GET',
-  success: (function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    $('.btn_click_load').css('display','none');
-  })(),
-  error: function() {
-    $('.btn_click_load').css('display','block');
-  }
-});</script><script id="dsq-count-scr" src="//iiiyu.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://iiiyu.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Emacs/" style="font-size: 15px;">Emacs</a> <a href="/tags/just-talk/" style="font-size: 15px;">just-talk</a> <a href="/tags/产品汪/" style="font-size: 15px;">产品汪</a> <a href="/tags/随便瞎扯/" style="font-size: 15px;">随便瞎扯</a> <a href="/tags/胡思乱想/" style="font-size: 15px;">胡思乱想</a> <a href="/tags/产品思考/" style="font-size: 15px;">产品思考</a> <a href="/tags/PM/" style="font-size: 15px;">PM</a> <a href="/tags/read-book-notes/" style="font-size: 15px;">read book notes</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a> <a href="/tags/Design/" style="font-size: 15px;">Design</a> <a href="/tags/Software/" style="font-size: 15px;">Software</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/10/2017-smartisan-digital-conference-view/">罗永浩的进化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/22/Be-misunderstood-of-the-miniapp/">被误解的微信小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/20/2017-world-theory-of-evolution/">2017年世界进化论</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/27/2016-Social-Product-Analysis/">2016年中国社交产品分析个人报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/14/2016-iOS-Human-Interface-Guidelines-1/">新 iOS Human Interface Guidelines  产品解读 （一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/A-product-manager-cranky-Martial-arts-world-but-not-fast-breaking/">鱼子酱的胡思乱想 —— 天下武功唯快不破</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/25/Read-Wechat-Thinking-Note/">读书笔记「微信思维」</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/19/CoreData-VS-Realm/">CoreData VS Realm （2016-02-23更新）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/12/2016-IT-professionals-Getting-Started/">2016年移动互联网职业入门规划指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/01/31/read-the-tipping-point/">读书笔记 「引爆点」</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//iiiyu.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.ohmyapps.com/" title="Oh My Apps" target="_blank">Oh My Apps</a><ul></ul><a href="http://www.ohmystarapp.com/" title="Oh My Star" target="_blank">Oh My Star</a><ul></ul><a href="http://griddiaryapp.com" title="Grid Diary" target="_blank">Grid Diary</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2017 <a href="/." rel="nofollow">萧宸宇.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.0.47/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/">http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" style="display: none">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//iiiyu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.btn_click_load').css('display','none');
+        })(),
+        error: function() {
+          $('.btn_click_load').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//iiiyu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2013/03/11/learning-ios-notes-seventeen/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2013/02/22/learning-ios-notes-fifteen/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="萧宸宇's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        yu@ohmyapps.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: yu@ohmyapps.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about-me" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/iyunsn" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/iiiyu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/10492272/#!/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+        <a href="https://www.v2ex.com/member/iYu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-v2ex">
+                <span class="visuallyhidden">V2EX</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2012&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>萧宸宇
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

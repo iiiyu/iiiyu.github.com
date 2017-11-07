@@ -7,6 +7,20 @@
     </url>
     
     <url>
+        <loc>http://iiiyu.com/tags/</loc>
+        <lastmod>2017-11-07T16:46:48.812Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://iiiyu.com/timeline/</loc>
+        <lastmod>2017-11-07T16:45:58.312Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://iiiyu.com/about-me/</loc>
         <lastmod>2016-01-04T14:15:34.000Z</lastmod>
         <changefreq>weekly</changefreq>

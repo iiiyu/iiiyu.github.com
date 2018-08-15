@@ -283,8 +283,8 @@ view的层级查看
     <meta property="og:article:tag" content="iOS"> 
 
     
-        <meta property="article:published_time" content="Mon Jan 14 2013 01:36:00 GMT+0800" />
-        <meta property="article:modified_time" content="Mon Feb 17 2014 12:19:58 GMT+0800" />
+        <meta property="article:published_time" content="Mon Jan 14 2013 01:36:00 GMT+1300" />
+        <meta property="article:modified_time" content="Mon Feb 17 2014 17:19:58 GMT+1300" />
     
 
     <!-- The Twitter Card protocol -->
@@ -319,8 +319,8 @@ view的层级查看
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://iiiyu.com/2013/01/14/simple-configuration-ponydebugger/index.html",
     "headline": "简单配置PonyDebugger",
-    "datePublished": "Mon Jan 14 2013 01:36:00 GMT+0800",
-    "dateModified": "Mon Feb 17 2014 12:19:58 GMT+0800",
+    "datePublished": "Mon Jan 14 2013 01:36:00 GMT+1300",
+    "dateModified": "Mon Feb 17 2014 17:19:58 GMT+1300",
     "author": {
         "@type": "Person",
         "name": "萧宸宇",
@@ -584,22 +584,22 @@ view的层级查看
 <li><strong>1.</strong> 安装 Xcode’s Command Line Tools </li>
 <li><strong>2.</strong> 在shell里面执行下面命令</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -sk https://cloud.github.com/downloads/square/PonyDebugger/bootstrap-ponyd.py | \</div><div class="line">  python - --ponyd-symlink=/usr/<span class="built_in">local</span>/bin/ponyd ~/Library/PonyDebugger</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sk https://cloud.github.com/downloads/square/PonyDebugger/bootstrap-ponyd.py | \</span><br><span class="line">  python - --ponyd-symlink=/usr/<span class="built_in">local</span>/bin/ponyd ~/Library/PonyDebugger</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>3.</strong> 安装成功以后，在shell里面执行</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ponyd serve --listen-interface=127.0.0.1</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ponyd serve --listen-interface=127.0.0.1</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p><strong>4.</strong> 打开你的浏览器 输入地址</p>
-<p>  <a href="http://localhost:9000" target="_blank" rel="external">http://localhost:9000</a></p>
+<p>  <a href="http://localhost:9000" target="_blank" rel="noopener">http://localhost:9000</a></p>
 </li>
 </ul>
 <p>如果看见的是这样<br><img src="http://ww4.sinaimg.cn/large/a74ecc4cjw1e0sfa4zcdkj.jpg" alt="test1"><br>说明服务器端已经安装好了。</p>
 <h3 id="iOS端"><a href="#iOS端" class="headerlink" title="iOS端"></a>iOS端</h3><ul>
 <li><strong>1.</strong> 把PonyDebugger作为你自己的项目的一个git submodule添加到你自己的项目里面</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /path/to/YourApplication</div><div class="line">mkdir Frameworks</div><div class="line">git submodule add git://github.com/square/PonyDebugger.git Frameworks/PonyDebugger</div><div class="line">git submodule update --init --recursive</div></pre></td></tr></table></figure>
-<p>PonyDebugger依赖于<a href="https://github.com/square/SocketRocket" target="_blank" rel="external">SocketRocket</a>所以当你update的时候也会把SocketRocket一起clone下来。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/YourApplication</span><br><span class="line">mkdir Frameworks</span><br><span class="line">git submodule add git://github.com/square/PonyDebugger.git Frameworks/PonyDebugger</span><br><span class="line">git submodule update --init --recursive</span><br></pre></td></tr></table></figure>
+<p>PonyDebugger依赖于<a href="https://github.com/square/SocketRocket" target="_blank" rel="noopener">SocketRocket</a>所以当你update的时候也会把SocketRocket一起clone下来。</p>
 <ul>
 <li><strong>2.</strong> 然后把PonyDebugger/PonyDebugger.xcodeproj 增加到你的项目里面去。</li>
 </ul>
@@ -627,14 +627,14 @@ view的层级查看
 <p>Foundation.framework</p>
 <p>到这里环境就配置好了，下面就来用把。 </p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>PDDebugger是一个单例 这样获得.</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PDDebugger *debugger = [PDDebugger defaultInstance];</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PDDebugger *debugger = [PDDebugger defaultInstance];</span><br></pre></td></tr></table></figure>
 <p>自己连接网络</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[debugger autoConnect];</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[debugger autoConnect];</span><br></pre></td></tr></table></figure>
 <p>或者亲自指定服务器端 比如 ws://localhost:9000/device</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[debugger connectToURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"ws://localhost:9000/device"</span>]];</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[debugger connectToURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"ws://localhost:9000/device"</span>]];</span><br></pre></td></tr></table></figure>
 <p>关闭连接</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[debugger disconnect];</div></pre></td></tr></table></figure>
-<p>更多用法 参考<br><a href="https://github.com/square/PonyDebugger" target="_blank" rel="external">主页</a></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[debugger disconnect];</span><br></pre></td></tr></table></figure>
+<p>更多用法 参考<br><a href="https://github.com/square/PonyDebugger" target="_blank" rel="noopener">主页</a></p>
 <p>这篇blog相当于简化翻译 囧。</p>
 
         
@@ -857,7 +857,7 @@ view的层级查看
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
             </ul>
         </li>
         

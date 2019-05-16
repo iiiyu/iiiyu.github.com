@@ -203,13 +203,18 @@
 <p>我这个人比较笨，最喜欢写 hello world。那就找时间一个一个来写呗。</p>
 <p>写之前 Google 了一下。所以以下内容大量参考:<a href="http://spin.atomicobject.com/2014/02/03/objective-c-delegate-pattern/" target="_blank" rel="noopener">Replacing the Objective-C “Delegate Pattern” with ReactiveCocoa</a>。能看原文就去看看。然后忽略掉以下的 hello world 就好了。</p>
 <a id="more"></a>
+
+
 <h2 id="实现功能说明"><a href="#实现功能说明" class="headerlink" title="实现功能说明"></a>实现功能说明</h2><p>本来想改成 TableView 的。改着改着感觉 TableView 的话。可能会牵扯到 MVVM 的问题。 才能架构出来一个正确的程序结构。而我只想说明简单的写清楚如何替代Delegate。所以相当于一个中文简化版本的 <a href="http://spin.atomicobject.com/2014/02/03/objective-c-delegate-pattern/" target="_blank" rel="noopener">Replacing the Objective-C “Delegate Pattern” with ReactiveCocoa</a>了。</p>
 <p>那就跟他一样写搜索把。然后实现过程中发现 iOS 8 用新的 UISearchController 来替代了 UISearchDisplayController 了。</p>
 <h2 id="UISearchController-Delegate-常规实现"><a href="#UISearchController-Delegate-常规实现" class="headerlink" title="UISearchController Delegate 常规实现"></a>UISearchController Delegate 常规实现</h2><p>一般来说我们会设置protocol.</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.searchController.searchResultsUpdater = <span class="keyword">self</span>;</span><br><span class="line"><span class="keyword">self</span>.searchController.delegate = <span class="keyword">self</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">self</span>.searchController.searchResultsUpdater = <span class="hljs-keyword">self</span>;</span><br><span class="line"><span class="hljs-keyword">self</span>.searchController.delegate = <span class="hljs-keyword">self</span>;</span><br></pre></td></tr></table></figure>
+
 <p>然后去委托的类里面实现相关的方法</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">#pragma</span> <span class="keyword">mark </span>- UISearchResultsUpdating</span><br><span class="line"></span><br><span class="line">- (void)updateSearchResultsForSearchController:(UISearchController *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">if</span> (searchController.searchBar<span class="meta">.text</span>.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">self.searchResults </span>= [<span class="keyword">self </span>search:searchController.searchBar<span class="meta">.text</span>]<span class="comment">;</span></span><br><span class="line">    &#125; <span class="meta">else</span> &#123;</span><br><span class="line">        <span class="keyword">self.searchResults </span>= <span class="keyword">self.searchTexts;</span></span><br><span class="line"><span class="keyword"> </span>   &#125;</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self.tableView </span>reloadData]<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark - UISearchControllerDelegate</span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)willPresentSearchController:(<span class="built_in">UISearchController</span> *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span>.searching = <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)willDismissSearchController:(<span class="built_in">UISearchController</span> *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span>.searching = <span class="literal">NO</span>;</span><br><span class="line">    [<span class="keyword">self</span>.tableView reloadData];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-symbol">#pragma</span> <span class="hljs-keyword">mark </span>- UISearchResultsUpdating</span><br><span class="line"></span><br><span class="line">- (void)updateSearchResultsForSearchController:(UISearchController *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-meta">if</span> (searchController.searchBar<span class="hljs-meta">.text</span>.length &gt; <span class="hljs-number">0</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">self.searchResults </span>= [<span class="hljs-keyword">self </span>search:searchController.searchBar<span class="hljs-meta">.text</span>]<span class="hljs-comment">;</span></span><br><span class="line">    &#125; <span class="hljs-meta">else</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">self.searchResults </span>= <span class="hljs-keyword">self.searchTexts;</span></span><br><span class="line"><span class="hljs-keyword"> </span>   &#125;</span><br><span class="line"></span><br><span class="line">    [<span class="hljs-keyword">self.tableView </span>reloadData]<span class="hljs-comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#pragma mark - UISearchControllerDelegate</span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)willPresentSearchController:(<span class="hljs-built_in">UISearchController</span> *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-keyword">self</span>.searching = <span class="hljs-literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)willDismissSearchController:(<span class="hljs-built_in">UISearchController</span> *)searchController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-keyword">self</span>.searching = <span class="hljs-literal">NO</span>;</span><br><span class="line">    [<span class="hljs-keyword">self</span>.tableView reloadData];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>普通情况下我们就是这样来使用 Delegate 的。</p>
 <p>平淡无奇。下面我们来用 RACSignal 的实现方法。</p>
 <h2 id="UISearchController-Delegate-RACSignal-实现"><a href="#UISearchController-Delegate-RACSignal-实现" class="headerlink" title="UISearchController Delegate RACSignal 实现"></a>UISearchController Delegate RACSignal 实现</h2><p>第一个要明确的是：我们要做什么。</p>
@@ -219,7 +224,7 @@
 <li>需要在进入和退出搜索的时候知道当前状态</li>
 </ol>
 <p>1对应的就是实现- (void)updateSearchResultsForSearchController:(UISearchController *)searchController</p>
-<p>2对应的是实现- (void)willPresentSearchController:(UISearchController <em>)searchController 和 - (void)willDismissSearchController:(UISearchController </em>)searchController。</p>
+<p>2对应的是实现- (void)willPresentSearchController:(UISearchController *)searchController 和 - (void)willDismissSearchController:(UISearchController *)searchController。</p>
 <p>现在，让我们来转换为 RAC 的思维模式思考问题。</p>
 <h3 id="RAC-模式"><a href="#RAC-模式" class="headerlink" title="RAC 模式"></a>RAC 模式</h3><ol>
 <li>UI 上需要搜索结果的 NSArray</li>
@@ -230,7 +235,8 @@
 <p>同理可以很容易想到。我们也需要把当前 UI 是否处于搜索状态跟会改变搜索状态的动作绑定起来。</p>
 <p>要怎么绑定呢？ 拥有刚刚 RAC 超过 Hello World 实力的我，想到，我需要构建出来两个RACSignal。</p>
 <p>然后进行类似：</p>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RAC(<span class="name">self</span>, searchResults) = SignalA<span class="comment">;</span></span><br><span class="line">RAC(<span class="name">self</span>, searching) = SignalB<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RAC(<span class="hljs-name">self</span>, searchResults) = SignalA<span class="hljs-comment">;</span></span><br><span class="line">RAC(<span class="hljs-name">self</span>, searching) = SignalB<span class="hljs-comment">;</span></span><br></pre></td></tr></table></figure>
+
 <p>这样的绑定就皆大欢喜了。</p>
 <p>主要用到了下面两个 RAC 的方法：</p>
 <p><strong>rac_signalForSelector:fromProtocol:</strong></p>
@@ -238,9 +244,11 @@
 <p><strong>rac_liftSelector:withSignalsFromArray:</strong></p>
 <p>这个方法它的意思是当传入的 Signals 都至少sendNext过一次，接下来只要其中任意一个signal有了新的内容。就会去触发第一个 selector 参数的方法。</p>
 <p>构造两个 Signal 的代码如下</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  UISearchController+RAC.m</span></span><br><span class="line"></span><br><span class="line">- (RACSignal *)rac_textSignal</span><br><span class="line">&#123;</span><br><span class="line">    self.searchResultsUpdater = self;</span><br><span class="line">    RACSignal *<span class="keyword">signal</span><span class="string"> </span>= objc_getAssociatedObject(self, _cmd);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">signal</span><span class="string"> !</span>= nil) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">signal</span><span class="string"></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">signal</span><span class="string"> </span>= [[self <span class="attribute">rac_signalForSelector</span>:@selector(<span class="attribute">updateSearchResultsForSearchController</span>:) <span class="attribute">fromProtocol</span>:@protocol(UISearchResultsUpdating)] <span class="attribute">map</span>:^id(RACTuple *tuple) &#123;</span><br><span class="line"></span><br><span class="line">        UISearchController *searchController = tuple.first;</span><br><span class="line">        <span class="keyword">return</span> searchController.searchBar.text;</span><br><span class="line">    &#125;];</span><br><span class="line"></span><br><span class="line">    objc_setAssociatedObject(self, _cmd, <span class="keyword">signal</span><span class="string"></span>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">signal</span><span class="string"></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (RACSignal *)rac_isActiveSignal</span><br><span class="line">&#123;</span><br><span class="line">    self.delegate = self;</span><br><span class="line">    RACSignal *<span class="keyword">signal</span><span class="string"> </span>= objc_getAssociatedObject(self, _cmd);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">signal</span><span class="string"> !</span>= nil) <span class="keyword">return</span> <span class="keyword">signal</span><span class="string"></span>;</span><br><span class="line"></span><br><span class="line">    RACSignal *willPresentSearching = [[self <span class="attribute">rac_signalForSelector</span>:@selector(<span class="attribute">willPresentSearchController</span>:) <span class="attribute">fromProtocol</span>:@protocol(UISearchControllerDelegate)] <span class="attribute">mapReplace</span>:@YES];</span><br><span class="line">    RACSignal *willDismissSearching = [[self <span class="attribute">rac_signalForSelector</span>:@selector(<span class="attribute">willDismissSearchController</span>:) <span class="attribute">fromProtocol</span>:@protocol(UISearchControllerDelegate)] <span class="attribute">mapReplace</span>:@NO];</span><br><span class="line">    <span class="keyword">signal</span><span class="string"> </span>= [RACSignal <span class="attribute">merge</span>:@[willPresentSearching, willDismissSearching]];</span><br><span class="line">    objc_setAssociatedObject(self, _cmd, <span class="keyword">signal</span><span class="string"></span>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">signal</span><span class="string"></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight qml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//  UISearchController+RAC.m</span></span><br><span class="line"></span><br><span class="line">- (RACSignal *)rac_textSignal</span><br><span class="line">&#123;</span><br><span class="line">    self.searchResultsUpdater = self;</span><br><span class="line">    RACSignal *<span class="hljs-keyword">signal</span><span class="hljs-string"> </span>= objc_getAssociatedObject(self, _cmd);</span><br><span class="line">    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">signal</span><span class="hljs-string"> !</span>= nil) &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">signal</span><span class="hljs-string"></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">signal</span><span class="hljs-string"> </span>= [[self <span class="hljs-attribute">rac_signalForSelector</span>:@selector(<span class="hljs-attribute">updateSearchResultsForSearchController</span>:) <span class="hljs-attribute">fromProtocol</span>:@protocol(UISearchResultsUpdating)] <span class="hljs-attribute">map</span>:^id(RACTuple *tuple) &#123;</span><br><span class="line"></span><br><span class="line">        UISearchController *searchController = tuple.first;</span><br><span class="line">        <span class="hljs-keyword">return</span> searchController.searchBar.text;</span><br><span class="line">    &#125;];</span><br><span class="line"></span><br><span class="line">    objc_setAssociatedObject(self, _cmd, <span class="hljs-keyword">signal</span><span class="hljs-string"></span>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">signal</span><span class="hljs-string"></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (RACSignal *)rac_isActiveSignal</span><br><span class="line">&#123;</span><br><span class="line">    self.delegate = self;</span><br><span class="line">    RACSignal *<span class="hljs-keyword">signal</span><span class="hljs-string"> </span>= objc_getAssociatedObject(self, _cmd);</span><br><span class="line">    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">signal</span><span class="hljs-string"> !</span>= nil) <span class="hljs-keyword">return</span> <span class="hljs-keyword">signal</span><span class="hljs-string"></span>;</span><br><span class="line"></span><br><span class="line">    RACSignal *willPresentSearching = [[self <span class="hljs-attribute">rac_signalForSelector</span>:@selector(<span class="hljs-attribute">willPresentSearchController</span>:) <span class="hljs-attribute">fromProtocol</span>:@protocol(UISearchControllerDelegate)] <span class="hljs-attribute">mapReplace</span>:@YES];</span><br><span class="line">    RACSignal *willDismissSearching = [[self <span class="hljs-attribute">rac_signalForSelector</span>:@selector(<span class="hljs-attribute">willDismissSearchController</span>:) <span class="hljs-attribute">fromProtocol</span>:@protocol(UISearchControllerDelegate)] <span class="hljs-attribute">mapReplace</span>:@NO];</span><br><span class="line">    <span class="hljs-keyword">signal</span><span class="hljs-string"> </span>= [RACSignal <span class="hljs-attribute">merge</span>:@[willPresentSearching, willDismissSearching]];</span><br><span class="line">    objc_setAssociatedObject(self, _cmd, <span class="hljs-keyword">signal</span><span class="hljs-string"></span>, OBJC_ASSOCIATION_RETAIN_NONATOMIC);</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">signal</span><span class="hljs-string"></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>最终绑定代码如下：</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  RACMasterViewController.m</span></span><br><span class="line"></span><br><span class="line">    RAC(<span class="keyword">self</span>, searchResults) = [<span class="keyword">self</span> rac_liftSelector:<span class="keyword">@selector</span>(search:) withSignalsFromArray:@[<span class="keyword">self</span>.searchController.rac_textSignal]];</span><br><span class="line">    [<span class="keyword">self</span>.searchController.rac_textSignal subscribeNext:^(<span class="keyword">id</span> x) &#123;</span><br><span class="line">        [<span class="keyword">self</span>.tableView reloadData];</span><br><span class="line">    &#125;];</span><br><span class="line">    RAC(<span class="keyword">self</span>, searching) = [<span class="keyword">self</span>.searchController rac_isActiveSignal];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//  RACMasterViewController.m</span></span><br><span class="line"></span><br><span class="line">    RAC(<span class="hljs-keyword">self</span>, searchResults) = [<span class="hljs-keyword">self</span> rac_liftSelector:<span class="hljs-keyword">@selector</span>(search:) withSignalsFromArray:@[<span class="hljs-keyword">self</span>.searchController.rac_textSignal]];</span><br><span class="line">    [<span class="hljs-keyword">self</span>.searchController.rac_textSignal subscribeNext:^(<span class="hljs-keyword">id</span> x) &#123;</span><br><span class="line">        [<span class="hljs-keyword">self</span>.tableView reloadData];</span><br><span class="line">    &#125;];</span><br><span class="line">    RAC(<span class="hljs-keyword">self</span>, searching) = [<span class="hljs-keyword">self</span>.searchController rac_isActiveSignal];</span><br></pre></td></tr></table></figure>
+
 <p>这样我们就写完了一个用 RAC 来替代 Delegate （protocol） 的例子</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>使用 RAC 其实最重要的思维的转变。 这个转变在写代码的时候如果我没有思考的很清楚。 那我写出来就一团乱麻。还是需要多加锻炼 MVVM 的思维。</p>
 <p><a href="https://github.com/iiiyu/RACSignalDemo" target="_blank" rel="noopener">实例代码已经上传Github</a></p>
@@ -344,105 +352,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -524,17 +528,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

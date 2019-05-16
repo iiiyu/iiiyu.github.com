@@ -197,6 +197,7 @@
 <h2 id="NSManagedObject"><a href="#NSManagedObject" class="headerlink" title="NSManagedObject"></a>NSManagedObject</h2><p><img src="http://ww1.sinaimg.cn/large/bfadf3bejw1e39yrt56ifj.jpg" alt></p>
 <p>Core Data是一次底层数据封装成面向对象的技术。最直接的表现就是在SQLite里面的一条记录在Core Data里面的表现是一个NSManagedObject对象。因此我们的增删改查都是基于操作对象的。恩这里多说一句，NSManagedObject是相对NSManagedObjectContext里面是唯一的。而真实的应用情况可能是NSManagedObjectContext会有多个。而NSManagedObjectContext线程不是安全的，所以可能有你多个NSManagedObjectContext里面各自有指向同一条数据的不同的NSManagedObject。这个情况需要你的程序设计和逻辑上去解决。暂时不讨论。</p>
 <a id="more"></a>
+
 <h3 id="使用NSManagedObject所经历的三种方法"><a href="#使用NSManagedObject所经历的三种方法" class="headerlink" title="使用NSManagedObject所经历的三种方法"></a>使用NSManagedObject所经历的三种方法</h3><p>对于NSManagedObject来说一般有以下几种使用方法：</p>
 <p>第一种就是我直接使用NSManagedObject来访问我的数据，因为Cocoa特有的KVC机制，使得NSManagedObject可以用KVC的方法去访问属性内容。这样的好处是你不用在NSManagedObject上去写特别的代码，就可以使用。一般入门例子都是这样写的。</p>
 <p>第二种是老头视频里面教过的。在点击Data Model选择Entity以后，在xCode的菜单里面有这样一个选项：</p>
@@ -210,19 +211,26 @@
 <h2 id="NSPredicate"><a href="#NSPredicate" class="headerlink" title="NSPredicate"></a>NSPredicate</h2><p>NSPredicate的作用不仅仅局限于Core Data里面。其他时候也有用到的地方。而在Core Data里面使用简单的说就是作为一个过滤条件。过滤掉我们不想查找的数据。就相当于SQL语句WHERE后面的那些条件。</p>
 <h2 id="NSSortDescriptor"><a href="#NSSortDescriptor" class="headerlink" title="NSSortDescriptor"></a>NSSortDescriptor</h2><p>查找到的数据是杂乱无章的。而我们往往希望是具有一定顺序的返回结果。NSSortDescriptor就是用来指定排序的属性和方式的。把NSSortDescriptor生成设置好然后给NSFetchRequest设置。这样我们的结果就可以是按照我们希望的顺序返回回来。以便我们操作。</p>
 <h2 id="实例代码"><a href="#实例代码" class="headerlink" title="实例代码"></a>实例代码</h2><p>新建NSManagedObject</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSManagedObject *newManagedObject = [NSEntityDescription <span class="string">insertNewObjectForEntityForName:</span>[entity name] <span class="string">inManagedObjectContext:</span>context];</span><br><span class="line">[newManagedObject <span class="string">setValue:</span>[NSDate date] <span class="string">forKey:</span>@<span class="string">"timeStamp"</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSManagedObject *newManagedObject = [NSEntityDescription <span class="hljs-string">insertNewObjectForEntityForName:</span>[entity name] <span class="hljs-string">inManagedObjectContext:</span>context];</span><br><span class="line">[newManagedObject <span class="hljs-string">setValue:</span>[NSDate date] <span class="hljs-string">forKey:</span>@<span class="hljs-string">"timeStamp"</span>];</span><br></pre></td></tr></table></figure>
+
 <p>删除NSManagedObject</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[context deleteObject:managedObject]</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ini hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-section">[context deleteObject:managedObject]</span><span class="hljs-comment">;</span></span><br></pre></td></tr></table></figure>
+
 <p>初始化NSPredicate</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSUInteger</span>  numberOfServings = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">NSPredicate</span> *predicate = <span class="literal">nil</span>;</span><br><span class="line">predicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"serves &gt; %i"</span>, numberOfServings];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSUInteger</span>  numberOfServings = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-built_in">NSPredicate</span> *predicate = <span class="hljs-literal">nil</span>;</span><br><span class="line">predicate = [<span class="hljs-built_in">NSPredicate</span> predicateWithFormat:<span class="hljs-string">@"serves &gt; %i"</span>, numberOfServings];</span><br></pre></td></tr></table></figure>
+
 <p>初始化NSSortDescriptor</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSSortDescriptor</span> *sort = [[<span class="built_in">NSSortDescriptor</span> alloc] initWithKey:<span class="string">@"name"</span> ascending:<span class="literal">YES</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSSortDescriptor</span> *sort = [[<span class="hljs-built_in">NSSortDescriptor</span> alloc] initWithKey:<span class="hljs-string">@"name"</span> ascending:<span class="hljs-literal">YES</span>];</span><br></pre></td></tr></table></figure>
+
 <p>初始化NSFetchRequest</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSManagedObjectContext</span> *moc = [<span class="keyword">self</span> managedObjectContext]; <span class="built_in">NSFetchRequest</span> *request = [[<span class="built_in">NSFetchRequest</span> alloc] init]; [request setEntity:[<span class="built_in">NSEntityDescription</span> entityForName:<span class="string">@"Recipe"</span></span><br><span class="line">                                                                                                                                                            inManagedObjectContext:moc]];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSManagedObjectContext</span> *moc = [<span class="hljs-keyword">self</span> managedObjectContext]; <span class="hljs-built_in">NSFetchRequest</span> *request = [[<span class="hljs-built_in">NSFetchRequest</span> alloc] init]; [request setEntity:[<span class="hljs-built_in">NSEntityDescription</span> entityForName:<span class="hljs-string">@"Recipe"</span></span><br><span class="line">                                                                                                                                                            inManagedObjectContext:moc]];</span><br></pre></td></tr></table></figure>
+
 <p>带有NSPredicate的初始化NSFetchRequest</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSUInteger</span>              numberOfServings = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">NSManagedObjectContext</span>  *moc = [<span class="keyword">self</span> managedObjectContext]; <span class="built_in">NSFetchRequest</span> *request = [[<span class="built_in">NSFetchRequest</span> alloc] init]; [request setEntity:[<span class="built_in">NSEntityDescription</span>    entityForName:<span class="string">@"Recipe"</span></span><br><span class="line">                                                                                                                                                                inManagedObjectContext:moc]];</span><br><span class="line"><span class="built_in">NSPredicate</span> *predicate = <span class="literal">nil</span>;</span><br><span class="line">predicate = [<span class="built_in">NSPredicate</span> predicateWithFormat:<span class="string">@"serves &gt; %i"</span>, numberOfServings]; [request setPredicate:predicate];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSUInteger</span>              numberOfServings = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-built_in">NSManagedObjectContext</span>  *moc = [<span class="hljs-keyword">self</span> managedObjectContext]; <span class="hljs-built_in">NSFetchRequest</span> *request = [[<span class="hljs-built_in">NSFetchRequest</span> alloc] init]; [request setEntity:[<span class="hljs-built_in">NSEntityDescription</span>    entityForName:<span class="hljs-string">@"Recipe"</span></span><br><span class="line">                                                                                                                                                                inManagedObjectContext:moc]];</span><br><span class="line"><span class="hljs-built_in">NSPredicate</span> *predicate = <span class="hljs-literal">nil</span>;</span><br><span class="line">predicate = [<span class="hljs-built_in">NSPredicate</span> predicateWithFormat:<span class="hljs-string">@"serves &gt; %i"</span>, numberOfServings]; [request setPredicate:predicate];</span><br></pre></td></tr></table></figure>
+
 <p>带有NSSortDescriptor的初始化NSFetchRequest</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSFetchRequest</span> *fetchRequest = <span class="literal">nil</span>;</span><br><span class="line">fetchRequest = [<span class="built_in">NSFetchRequest</span> fetchRequestWithEntityName:<span class="string">@"Recipe"</span>];</span><br><span class="line"><span class="built_in">NSSortDescriptor</span> *sort = [[<span class="built_in">NSSortDescriptor</span> alloc] initWithKey:<span class="string">@"name"</span> ascending:<span class="literal">YES</span>];</span><br><span class="line">[fetchRequest setSortDescriptors:[<span class="built_in">NSArray</span> arrayWithObject:sort]];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSFetchRequest</span> *fetchRequest = <span class="hljs-literal">nil</span>;</span><br><span class="line">fetchRequest = [<span class="hljs-built_in">NSFetchRequest</span> fetchRequestWithEntityName:<span class="hljs-string">@"Recipe"</span>];</span><br><span class="line"><span class="hljs-built_in">NSSortDescriptor</span> *sort = [[<span class="hljs-built_in">NSSortDescriptor</span> alloc] initWithKey:<span class="hljs-string">@"name"</span> ascending:<span class="hljs-literal">YES</span>];</span><br><span class="line">[fetchRequest setSortDescriptors:[<span class="hljs-built_in">NSArray</span> arrayWithObject:sort]];</span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -316,105 +324,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -500,17 +504,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

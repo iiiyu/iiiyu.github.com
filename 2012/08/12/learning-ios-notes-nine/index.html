@@ -195,18 +195,19 @@
         <div class="content">
             <h1 id="xCode4-配色主题"><a href="#xCode4-配色主题" class="headerlink" title="xCode4 配色主题"></a>xCode4 配色主题</h1><p>一直以来，我对写代码的各种颜色就乱折腾不不管是Vim还是Emacs花在上面的时间都蛮多的。也不知道是哪里来的精神。<br>这次换xCode了。也折腾过很多。今天小文问了一下。恩，觉得这个东西可以拿出来写一篇blog，来填补我还差3篇的坑。</p>
 <a id="more"></a>
-<h2 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Library/Developer/Xcode/UserData/</span><br></pre></td></tr></table></figure>
+
+<h2 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">cd</span> ~/Library/Developer/Xcode/UserData/</span><br></pre></td></tr></table></figure>
+
 <p>看看里面有没有一个叫FontAndColorThemes的文件夹，没有就新建立一个</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes</span><br></pre></td></tr></table></figure>
+
 <p>然后你下载的那些Themes就可以丢里面。重启xCode就能看见了。</p>
 <h2 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h2><h3 id="solarized"><a href="#solarized" class="headerlink" title="solarized"></a>solarized</h3><p>我见过史上最全最多的配色方案<a href="http://ethanschoonover.com/solarized" target="_blank" rel="noopener">solarized</a></p>
 <p>它居然支持我用过的所用编辑器和IDE:Vim,Emacs, IntelliJ IDEA, NetBeans, SeeStyle theme for Coda &amp; SubEthaEdit, TextMate, TextWrangler &amp; BBEdit ,Visual Studio, Xcode</p>
 <p>而且不仅仅是编辑器，连总端配色都用。一条龙服务啊 Xresources, iTerm2, OS X Terminal.app, Putty.</p>
 <p>完整版的地址在这里</p>
-<pre><code>https://github.com/altercation/solarized
-</code></pre><p>xCode4</p>
-<pre><code>https://github.com/brianmichel/solarized/tree/master/apple-xcode4-solarized
-</code></pre><p>把Solarized - Dark.dvtcolortheme和Solarized - Light.dvtcolortheme这两个文件丢到刚刚新建的~/Library/Developer/Xcode/UserData/FontAndColorThemes目录下重启xCode就可以用了。<br>效果如下:</p>
+<pre><code>https://github.com/altercation/solarized</code></pre><p>xCode4</p>
+<pre><code>https://github.com/brianmichel/solarized/tree/master/apple-xcode4-solarized</code></pre><p>把Solarized - Dark.dvtcolortheme和Solarized - Light.dvtcolortheme这两个文件丢到刚刚新建的~/Library/Developer/Xcode/UserData/FontAndColorThemes目录下重启xCode就可以用了。<br>效果如下:</p>
 <p>Solarized - Dark<br><img src="http://farm8.staticflickr.com/7249/7764088206_fa5ee8d24c.jpg" alt="Solarized - Dark"></p>
 <p>Solarized - Light<br><img src="http://farm9.staticflickr.com/8296/7764088580_7f10c462e4.jpg" alt="Solarized - Light"></p>
 <h3 id="zenburn"><a href="#zenburn" class="headerlink" title="zenburn"></a>zenburn</h3><p>zenburn的评价也很高，可是我不喜欢那灰蒙蒙的感觉<br>我是在<a href="http://allara.blogspot.com/2011/02/zenburn-theme-for-xcode-4.html" target="_blank" rel="noopener">这里</a>下载的</p>
@@ -217,11 +218,11 @@
 <p>我是在<a href="http://www.robinlu.com/blog/archives/320" target="_blank" rel="noopener">这里</a>下载到的</p>
 <p>DarkCity<br><img src="http://farm9.staticflickr.com/8431/7764089724_93d11895c2.jpg" alt="DarkCity"></p>
 <h3 id="tomorrow-theme"><a href="#tomorrow-theme" class="headerlink" title="tomorrow-theme"></a>tomorrow-theme</h3><p>summer推荐，也是各种编辑器方案都有</p>
-<pre><code>https://github.com/chriskempson/tomorrow-theme
-</code></pre><p>找到xCode4的两个文件 就ok了</p>
+<pre><code>https://github.com/chriskempson/tomorrow-theme</code></pre><p>找到xCode4的两个文件 就ok了</p>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>选个喜欢的进去根据自己的需求改吧。等等。怎么就完了。为什么在xCode里面不可以改变刚刚拷贝上去的主题</p>
 <h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>因为刚刚考进去的文件权限的问题，并不能修改主题怎么办</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 666 ~/Library/Developer/Xcode/UserData/FontAndColorThemes/*</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 666 ~/Library/Developer/Xcode/UserData/FontAndColorThemes/*</span><br></pre></td></tr></table></figure>
+
 <p>这下，你可以爽快的修改各种主题了。</p>
 
         </div>
@@ -316,105 +317,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -504,17 +501,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

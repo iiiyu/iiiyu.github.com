@@ -211,6 +211,8 @@
 <p>在一开始可能测试方法里面需要一些上下文环境。这些可以在Setup里面去完成。然后才可是执行自己写的测试方法。 然后测试结束以后，可能产生了一些垃圾数据文件什么的。这时候你可以在TearDown方法里面把他们处理掉。</p>
 <p>以上大部分都是我自己的粗浅理解，如果你需要更多关于单元测试请阅读更加系统专业的书籍。</p>
 <a id="more"></a>
+
+
 <h2 id="OCUnit"><a href="#OCUnit" class="headerlink" title="OCUnit"></a>OCUnit</h2><p>OCUnit是xCode里面自己带的单元测试框架。不必安装第三方的其他库就可以使用。最简单的就是创建项目的时候你把单元测试的那个勾点上。xCode就会自动的为你加入一个单元测试的target。快捷键Command + U。就可以运行测试。最喜欢这样方便又好用的东西了。当然运行OCUnit的测试输出的内容实在惨不忍睹。</p>
 <h3 id="创建一个OCUnit的Unit-Test"><a href="#创建一个OCUnit的Unit-Test" class="headerlink" title="创建一个OCUnit的Unit Test"></a>创建一个OCUnit的Unit Test</h3><h4 id="新项目使用OCUnit"><a href="#新项目使用OCUnit" class="headerlink" title="新项目使用OCUnit"></a>新项目使用OCUnit</h4><p><img src="http://ww1.sinaimg.cn/large/686e6613jw1e58kyt9nyhj20k80dnabp.jpg" alt></p>
 <p>选上Unit Test</p>
@@ -259,7 +261,8 @@
 <p>STAssertNoThrowSpecific(expr, specificException, description, …)</p>
 <p>STAssertNoThrowSpecificNamed(expr, specificException, aName, description, …)</p>
 <h3 id="比较经常使用的宏"><a href="#比较经常使用的宏" class="headerlink" title="比较经常使用的宏"></a>比较经常使用的宏</h3><p>STAssertTrue(expr, description, …)<br>STAssertFalse(expr, description, …)<br>STAssertNil(a1, description, …)<br>STAssertNotNil(a1, description, …)<br>STAssertEqualObjects(a1, a2, description, …)<br>STAssertEquals(a1, a2, description, …)<br>STFail(description, …)<br>STAssertThrows(expr, description, …)</p>
-<h3 id="写了几个测试方法的例子"><a href="#写了几个测试方法的例子" class="headerlink" title="写了几个测试方法的例子"></a>写了几个测试方法的例子</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">- (void)testOne &#123;</span><br><span class="line">	NSString *string1 = @<span class="string">"test"</span><span class="comment">;</span></span><br><span class="line">	NSString *string2 = @<span class="string">"test"</span><span class="comment">;</span></span><br><span class="line">	STAssertThrows([string1 isEqualToString:string2], @<span class="string">"FAILURE"</span>)<span class="comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)testTwo</span><br><span class="line">&#123;</span><br><span class="line">    int i = <span class="number">0</span><span class="comment">;</span></span><br><span class="line">    int <span class="keyword">j </span>= <span class="number">1</span><span class="comment">;</span></span><br><span class="line">    STAssertTrue(i &lt; <span class="keyword">j, </span>@<span class="string">" i: %d, j: %d"</span>, i,<span class="keyword">j);</span></span><br><span class="line"><span class="keyword">&#125;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">- </span>(void)testThree</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    NSString *oneStr = @<span class="string">"hello"</span><span class="comment">;</span></span><br><span class="line">    NSString *twoStr = @<span class="string">"world"</span><span class="comment">;</span></span><br><span class="line">    STAssertFalse([oneStr isEqualToString:twoStr], @<span class="string">"oneStr:%@, twoStr:%@"</span>, oneStr, twoStr)<span class="comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)testFour</span><br><span class="line">&#123;</span><br><span class="line">    NSArray *array = nil<span class="comment">;</span></span><br><span class="line">    STAssertNil(array, @<span class="string">"array:%@"</span>, array)<span class="comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (void)testFive</span><br><span class="line">&#123;</span><br><span class="line">    NSDictionary *<span class="keyword">dict </span>= @&#123;@<span class="string">"hello"</span>: @<span class="string">"word"</span>&#125;<span class="comment">;</span></span><br><span class="line">    STAssertNotNil(<span class="keyword">dict, </span>@<span class="string">"dict:%@"</span>, <span class="keyword">dict);</span></span><br><span class="line"><span class="keyword">&#125;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">- </span>(void)testSix</span><br><span class="line">&#123;</span><br><span class="line">    NSNumber *oneNum = @<span class="number">100</span><span class="comment">;</span></span><br><span class="line">    NSNumber *twoNum = @<span class="number">200</span><span class="comment">;</span></span><br><span class="line">    STAssertEqualObjects(oneNum, twoNum, @<span class="string">"oneNum:%@ twoNum:%@"</span>,oneNum, twoNum)<span class="comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)testSeven</span><br><span class="line">&#123;</span><br><span class="line">    NSArray *oneArray = @[@<span class="number">11</span>, @<span class="number">22</span>, @<span class="number">33</span>]<span class="comment">;</span></span><br><span class="line">    NSArray *twoArray = [oneArray copy]<span class="comment">;</span></span><br><span class="line">    STAssertEqualObjects(oneArray, twoArray, @<span class="string">"oneArray:%@, twoArray:%@"</span>, oneArray, twoArray)<span class="comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (void)testEight</span><br><span class="line">&#123;</span><br><span class="line">    NSUInteger uint_1 = <span class="number">4</span><span class="comment">;</span></span><br><span class="line">	NSUInteger uint_2 = <span class="number">4</span><span class="comment">;</span></span><br><span class="line">	STAssertEquals(uint_1, uint_2, @<span class="string">"FAILURE"</span>)<span class="comment">;</span></span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">- (void)testExample</span><br><span class="line">&#123;</span><br><span class="line">    STFail(@<span class="string">"Unit tests are not implemented yet in HelloAfterAddOCUnitUnitTest"</span>)<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="写了几个测试方法的例子"><a href="#写了几个测试方法的例子" class="headerlink" title="写了几个测试方法的例子"></a>写了几个测试方法的例子</h3><figure class="highlight mipsasm hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">- (void)testOne &#123;</span><br><span class="line">	NSString *string1 = @<span class="hljs-string">"test"</span><span class="hljs-comment">;</span></span><br><span class="line">	NSString *string2 = @<span class="hljs-string">"test"</span><span class="hljs-comment">;</span></span><br><span class="line">	STAssertThrows([string1 isEqualToString:string2], @<span class="hljs-string">"FAILURE"</span>)<span class="hljs-comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)testTwo</span><br><span class="line">&#123;</span><br><span class="line">    int i = <span class="hljs-number">0</span><span class="hljs-comment">;</span></span><br><span class="line">    int <span class="hljs-keyword">j </span>= <span class="hljs-number">1</span><span class="hljs-comment">;</span></span><br><span class="line">    STAssertTrue(i &lt; <span class="hljs-keyword">j, </span>@<span class="hljs-string">" i: %d, j: %d"</span>, i,<span class="hljs-keyword">j);</span></span><br><span class="line"><span class="hljs-keyword">&#125;</span></span><br><span class="line"><span class="hljs-keyword"></span></span><br><span class="line"><span class="hljs-keyword">- </span>(void)testThree</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    NSString *oneStr = @<span class="hljs-string">"hello"</span><span class="hljs-comment">;</span></span><br><span class="line">    NSString *twoStr = @<span class="hljs-string">"world"</span><span class="hljs-comment">;</span></span><br><span class="line">    STAssertFalse([oneStr isEqualToString:twoStr], @<span class="hljs-string">"oneStr:%@, twoStr:%@"</span>, oneStr, twoStr)<span class="hljs-comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)testFour</span><br><span class="line">&#123;</span><br><span class="line">    NSArray *array = nil<span class="hljs-comment">;</span></span><br><span class="line">    STAssertNil(array, @<span class="hljs-string">"array:%@"</span>, array)<span class="hljs-comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (void)testFive</span><br><span class="line">&#123;</span><br><span class="line">    NSDictionary *<span class="hljs-keyword">dict </span>= @&#123;@<span class="hljs-string">"hello"</span>: @<span class="hljs-string">"word"</span>&#125;<span class="hljs-comment">;</span></span><br><span class="line">    STAssertNotNil(<span class="hljs-keyword">dict, </span>@<span class="hljs-string">"dict:%@"</span>, <span class="hljs-keyword">dict);</span></span><br><span class="line"><span class="hljs-keyword">&#125;</span></span><br><span class="line"><span class="hljs-keyword"></span></span><br><span class="line"><span class="hljs-keyword">- </span>(void)testSix</span><br><span class="line">&#123;</span><br><span class="line">    NSNumber *oneNum = @<span class="hljs-number">100</span><span class="hljs-comment">;</span></span><br><span class="line">    NSNumber *twoNum = @<span class="hljs-number">200</span><span class="hljs-comment">;</span></span><br><span class="line">    STAssertEqualObjects(oneNum, twoNum, @<span class="hljs-string">"oneNum:%@ twoNum:%@"</span>,oneNum, twoNum)<span class="hljs-comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)testSeven</span><br><span class="line">&#123;</span><br><span class="line">    NSArray *oneArray = @[@<span class="hljs-number">11</span>, @<span class="hljs-number">22</span>, @<span class="hljs-number">33</span>]<span class="hljs-comment">;</span></span><br><span class="line">    NSArray *twoArray = [oneArray copy]<span class="hljs-comment">;</span></span><br><span class="line">    STAssertEqualObjects(oneArray, twoArray, @<span class="hljs-string">"oneArray:%@, twoArray:%@"</span>, oneArray, twoArray)<span class="hljs-comment">;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (void)testEight</span><br><span class="line">&#123;</span><br><span class="line">    NSUInteger uint_1 = <span class="hljs-number">4</span><span class="hljs-comment">;</span></span><br><span class="line">	NSUInteger uint_2 = <span class="hljs-number">4</span><span class="hljs-comment">;</span></span><br><span class="line">	STAssertEquals(uint_1, uint_2, @<span class="hljs-string">"FAILURE"</span>)<span class="hljs-comment">;</span></span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">- (void)testExample</span><br><span class="line">&#123;</span><br><span class="line">    STFail(@<span class="hljs-string">"Unit tests are not implemented yet in HelloAfterAddOCUnitUnitTest"</span>)<span class="hljs-comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>一会儿用xctool跑个华丽丽的出来看。</p>
 <h2 id="xctool"><a href="#xctool" class="headerlink" title="xctool"></a>xctool</h2><h3 id="xctool是什么"><a href="#xctool是什么" class="headerlink" title="xctool是什么"></a>xctool是什么</h3><p>xctool是Facebook开源的一个命令行工具，用来替代苹果的xcodebuild工具。</p>
 <p><a href="https://github.com/facebook/xctool" target="_blank" rel="noopener">github</a></p>
@@ -268,11 +271,14 @@
 <p>你可以用它来Build你的App。跑Tests。而且它跑Test输出是华丽丽的彩色。比xCode自带的不知好看多少倍。OCUnit本来被吐槽无数，遇上了xctool以后就逆袭了啊。</p>
 <p>世界上最最牛的SNS出品，肯定不会坑爹啊。</p>
 <h3 id="安装xctool"><a href="#安装xctool" class="headerlink" title="安装xctool"></a>安装xctool</h3><p>最方便 最推荐的是用Homebrew。如果你的Mac里面没有安装Homebrew我觉得是你的损失。</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>update</span><br><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>xctool</span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">brew </span>update</span><br><span class="line"><span class="hljs-keyword">brew </span><span class="hljs-keyword">install </span>xctool</span><br></pre></td></tr></table></figure>
+
 <h3 id="使用xctool来跑OCUnit测试"><a href="#使用xctool来跑OCUnit测试" class="headerlink" title="使用xctool来跑OCUnit测试"></a>使用xctool来跑OCUnit测试</h3><p>关于如何使用xctool，你去看官方文档肯定要比我结束好的多。 我就是过来跑测试的例子给你看而已。</p>
-<h4 id="测试一"><a href="#测试一" class="headerlink" title="测试一"></a>测试一</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xctool -project HelloOCUnit<span class="selector-class">.xcodeproj</span> -scheme HelloOCUnit  test</span><br></pre></td></tr></table></figure>
+<h4 id="测试一"><a href="#测试一" class="headerlink" title="测试一"></a>测试一</h4><figure class="highlight cmake hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xctool -<span class="hljs-keyword">project</span> HelloOCUnit.xcodeproj -scheme HelloOCUnit  <span class="hljs-keyword">test</span></span><br></pre></td></tr></table></figure>
+
 <p><img src="http://ww4.sinaimg.cn/large/686e6613jw1e58zjmagi8j20eh0li0wx.jpg" alt></p>
-<h4 id="测试二"><a href="#测试二" class="headerlink" title="测试二"></a>测试二</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xctool -project HelloAfterAddOCUnit<span class="selector-class">.xcodeproj</span> -scheme HelloAfterAddOCUnit  test</span><br><span class="line"></span><br><span class="line">xctool -project HelloAfterAddOCUnit<span class="selector-class">.xcodeproj</span> -scheme HelloAfterAddOCUnitUnitTest  test</span><br></pre></td></tr></table></figure>
+<h4 id="测试二"><a href="#测试二" class="headerlink" title="测试二"></a>测试二</h4><figure class="highlight cmake hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xctool -<span class="hljs-keyword">project</span> HelloAfterAddOCUnit.xcodeproj -scheme HelloAfterAddOCUnit  <span class="hljs-keyword">test</span></span><br><span class="line"></span><br><span class="line">xctool -<span class="hljs-keyword">project</span> HelloAfterAddOCUnit.xcodeproj -scheme HelloAfterAddOCUnitUnitTest  <span class="hljs-keyword">test</span></span><br></pre></td></tr></table></figure>
+
 <p><img src="http://ww4.sinaimg.cn/large/686e6613jw1e58zk5dk34j20h70li43i.jpg" alt></p>
 <p><a href="http://d.pr/f/EUCR" target="_blank" rel="noopener">项目一下载</a></p>
 <p><a href="http://d.pr/f/LPaY" target="_blank" rel="noopener">项目二下载</a></p>
@@ -370,105 +376,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -578,17 +580,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

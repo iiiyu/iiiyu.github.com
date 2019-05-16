@@ -199,6 +199,7 @@
 <p>因此呢，buffer的函意比檔案廣。不過我們初學，就把buffer當檔案好了。</p>
 <p><a href="http://homepage.mac.com/yenlung/WebWiki/EmacsTutor.html" target="_blank" rel="noopener">来自</a></p>
 <a id="more"></a>
+
 <h3 id="buffer的快捷键"><a href="#buffer的快捷键" class="headerlink" title="buffer的快捷键"></a>buffer的快捷键</h3><pre><code>C-x b 切换buffer（要输入buffer名字）
 C-x 方向键也可以切换buffer
 C-x C-w 保存buffer（也可以看做是另存为）
@@ -207,8 +208,7 @@ C-x 1 : 当前窗口最大化
 C-x 2 : 上下两窗口模式
 C-x 3 : 左右两窗口模式
 C-x 0 : 关闭当前窗口(Buffer仍然存在)
-C-x o : 切换窗口
-</code></pre><h2 id="mode"><a href="#mode" class="headerlink" title="mode"></a>mode</h2><h3 id="什么是mode"><a href="#什么是mode" class="headerlink" title="什么是mode"></a>什么是mode</h3><p>当我们启动某一文件时，Emacs会判断文件的类型，从而自动选择相应的模式。当然，我们也可以手动启动各种模式。先按M-x，然后输入模式的名称。</p>
+C-x o : 切换窗口</code></pre><h2 id="mode"><a href="#mode" class="headerlink" title="mode"></a>mode</h2><h3 id="什么是mode"><a href="#什么是mode" class="headerlink" title="什么是mode"></a>什么是mode</h3><p>当我们启动某一文件时，Emacs会判断文件的类型，从而自动选择相应的模式。当然，我们也可以手动启动各种模式。先按M-x，然后输入模式的名称。</p>
 <h3 id="mode有什么好处"><a href="#mode有什么好处" class="headerlink" title="mode有什么好处"></a>mode有什么好处</h3><p>mode的好处是不同的mode里面有不同的功能，比如“C模式”里面的源码可以高亮，可以缩进。org-mode里面可以分层等。不同的mode对于不同的文件类型做出正确的操作。这就用着很爽了嘛。</p>
 <h3 id="怎样启动mode"><a href="#怎样启动mode" class="headerlink" title="怎样启动mode"></a>怎样启动mode</h3><p>一般来说Emacs是根据你的文件后缀名来判断你的文件类型，进而自动启动相应的模式。比如.py就启动python-mode，.c就启动c-mode等。如果你想自己启动某一模式：<br>比如启动“C模式”，就是M-x c-mode。直接按下M-x，然后按两下Tab键，你将得到所有可执行的命令，这里面当然包括所有的模式。因此，你要想不起来某个命令的名称，就用这个方法。<br>如果是perl就是， M-x perl-mode或者是M-x cperl-mode </p>
 <h2 id="块操作"><a href="#块操作" class="headerlink" title="块操作"></a>块操作</h2><p>emacs以C-x r开头的命令来进行矩形操作。先用C-space或者C-@设一个mark，移动光标到另一点，用以下命令进行列操作：</p>
@@ -216,12 +216,10 @@ C-x o : 切换窗口
 C-x r y 粘贴一个矩形块
 C-x r o 插入一个矩形块
 C-x r c 清除一个矩形块(使其变成空白)
-C-x r t 在选定区域的所有列前插入样的字符
-</code></pre><h3 id="鼠标操作"><a href="#鼠标操作" class="headerlink" title="鼠标操作"></a>鼠标操作</h3><pre><code>按住鼠标左键移动 -- 标记文本块
+C-x r t 在选定区域的所有列前插入样的字符</code></pre><h3 id="鼠标操作"><a href="#鼠标操作" class="headerlink" title="鼠标操作"></a>鼠标操作</h3><pre><code>按住鼠标左键移动 -- 标记文本块
 鼠标右键单击 -- 将标记的文本块复制到剪贴板
 鼠标左键双击 -- 标记单词
-鼠标左键三击 -- 标记行
-</code></pre><h3 id="cua-mode"><a href="#cua-mode" class="headerlink" title="cua-mode"></a>cua-mode</h3><p>cua-mode支持的可视化块模式</p>
+鼠标左键三击 -- 标记行</code></pre><h3 id="cua-mode"><a href="#cua-mode" class="headerlink" title="cua-mode"></a>cua-mode</h3><p>cua-mode支持的可视化块模式</p>
 <p>除了emacs本身支持的列模式外，emacs还可以通过cua-mode支持一种可视化的列模式。在cua-mode下，按[C-return]会进入cua rectangle模式。在这个模式下可以通过鼠标点击确认起点，然后通过光标键来选中一个rect范围，这个rect会用另外的颜色显示出来。</p>
 <p>之后我们 就可以很方便地对这个rect进行操作。比如[M-up],[M-down],[M-left],[M-right]可以移动这个rect，[C- return]可以取消这个rect，[C-space]可以退出cua-rect模式并激活普通模式下的选择。<br>cua-mode下可以用以下命令进行列操作：</p>
 <pre><code>直接输入字符: 在每行前(或后)都插入这个字符
@@ -240,35 +238,27 @@ C-x r t 在选定区域的所有列前插入样的字符
 [M-s]: 把rect中的每一行替换为一个字符串(提示输入)
 [M-t]: 把rect整个替换为一个字符串(提示输入)
 [M-u]: 把rect中的内容全部转换为大写
-[M-|]: 对rect执行一个shell命令
-</code></pre><h2 id="我的配置的Emacs的独有功能"><a href="#我的配置的Emacs的独有功能" class="headerlink" title="我的配置的Emacs的独有功能"></a>我的配置的Emacs的独有功能</h2><p>说是独有功能其实也是很多配置文件拼凑起来的。只是之前介绍的都是emacs默认的东西。下面的功能对于大神来说都是很常见，我只是绑定了几个快捷键或者记录了几个常用的快捷键而已<br>怎样用我的配置的Emacs，</p>
+[M-|]: 对rect执行一个shell命令</code></pre><h2 id="我的配置的Emacs的独有功能"><a href="#我的配置的Emacs的独有功能" class="headerlink" title="我的配置的Emacs的独有功能"></a>我的配置的Emacs的独有功能</h2><p>说是独有功能其实也是很多配置文件拼凑起来的。只是之前介绍的都是emacs默认的东西。下面的功能对于大神来说都是很常见，我只是绑定了几个快捷键或者记录了几个常用的快捷键而已<br>怎样用我的配置的Emacs，</p>
 <p><a href="http://www.iiiyu.com/blog/2012/02/26/emacs-set-up-1/" target="_blank" rel="noopener">看这里</a></p>
 <h3 id="tabbar-mode"><a href="#tabbar-mode" class="headerlink" title="tabbar-mode"></a>tabbar-mode</h3><p><img src="http://farm8.staticflickr.com/7048/6981474533_0dd3e252a8.jpg" alt="Emacs tabbar"></p>
 <p>看到上面图上面那一排像标签页的东西了么，这个就是tabbar-mode的效果。启动配置了我的配置Emacs就默认启动了。<br>这些像标签的东西都是buffer。</p>
 <h4 id="tabbar-mode切换buffer快捷键"><a href="#tabbar-mode切换buffer快捷键" class="headerlink" title="tabbar-mode切换buffer快捷键"></a>tabbar-mode切换buffer快捷键</h4><pre><code>M-n 下一个buffer
-M-p 上一个buffer
-</code></pre><h3 id="ecb-active"><a href="#ecb-active" class="headerlink" title="ecb-active"></a>ecb-active</h3><p><img src="http://farm8.staticflickr.com/7048/6835347694_e3727987d8.jpg" alt="Emacs ecb"></p>
+M-p 上一个buffer</code></pre><h3 id="ecb-active"><a href="#ecb-active" class="headerlink" title="ecb-active"></a>ecb-active</h3><p><img src="http://farm8.staticflickr.com/7048/6835347694_e3727987d8.jpg" alt="Emacs ecb"></p>
 <p>哈哈有点IDE的感觉吧。</p>
 <h4 id="启动ecb"><a href="#启动ecb" class="headerlink" title="启动ecb"></a>启动ecb</h4><p>先打开一个你的源文件。<br>然后</p>
-<pre><code>M-x ecb-activate
-</code></pre><p>就启动ecb了</p>
+<pre><code>M-x ecb-activate</code></pre><p>就启动ecb了</p>
 <p>使用ecb的好处是你可以在左边的第一个小窗口选择文件夹，第二个小窗口选择文件，第三个小窗口选择当前文件里面的函数，第四个小窗口选择你打开过的文件。</p>
 <h3 id="python-mode"><a href="#python-mode" class="headerlink" title="python-mode"></a>python-mode</h3><p>只说一个 执行当前文件按</p>
-<pre><code>C-c C-c
-</code></pre><p>有个bug，执行的python是Emacs启动的，如果python文件里面有中文，那在Emacs启动的这个python线程下执行会报错。编码问题，但是没有找到解决的方法。</p>
+<pre><code>C-c C-c</code></pre><p>有个bug，执行的python是Emacs启动的，如果python文件里面有中文，那在Emacs启动的这个python线程下执行会报错。编码问题，但是没有找到解决的方法。</p>
 <h3 id="c-mode-or-cc-mode"><a href="#c-mode-or-cc-mode" class="headerlink" title="c-mode or cc-mode"></a>c-mode or cc-mode</h3><p>该模式下，tab被我替换成空格，一个tab设置为4个空格，缩进也是4个空格。</p>
 <h4 id="整理代码"><a href="#整理代码" class="headerlink" title="整理代码"></a>整理代码</h4><p>有一个比较常用的就是格式整理代码<br>可以选择部分代码整理，也可以整理全部代码。这样你的代码缩进就会非常漂亮了。</p>
-<pre><code>C-M-\ 整理代码
-</code></pre><h4 id="跳入函数"><a href="#跳入函数" class="headerlink" title="跳入函数"></a>跳入函数</h4><p>但我们查看某个函数想知道它实现的地方的时候</p>
+<pre><code>C-M-\ 整理代码</code></pre><h4 id="跳入函数"><a href="#跳入函数" class="headerlink" title="跳入函数"></a>跳入函数</h4><p>但我们查看某个函数想知道它实现的地方的时候</p>
 <pre><code>C-M-0 跳到函数实现的地方
-C-M-9 跳回来
-</code></pre><h4 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h4><p>这个高亮功能大爱</p>
+C-M-9 跳回来</code></pre><h4 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h4><p>这个高亮功能大爱</p>
 <p><img src="http://farm8.staticflickr.com/7203/6981473973_d1e6262cf1.jpg" alt="Emacs gao liang"></p>
 <p>看见这些花花绿绿没有，相同的函数或者变量是同一个颜色。非常好区分。<br>使用方法非常简单</p>
 <pre><code>C-f3 第一次标记颜色，第二次取消
-f3   查找相同的下一个
-</code></pre><h3 id="快捷键补遗"><a href="#快捷键补遗" class="headerlink" title="快捷键补遗"></a>快捷键补遗</h3><pre><code>S-方向键 可以在不同的窗口切换
-</code></pre><h2 id="完结语"><a href="#完结语" class="headerlink" title="完结语"></a>完结语</h2><p>零零碎碎，我把能一次想到的都一股脑的全部写完了。当然不可能面面俱到，比如强大如org-mode只字未提。而且大部份都是快捷键的说明而已。本来开始打算写调教Emacs系列能写十几篇。但个人思想上发生了一些变化，所以可能以后Emacs不会是主力编辑器了。</p>
+f3   查找相同的下一个</code></pre><h3 id="快捷键补遗"><a href="#快捷键补遗" class="headerlink" title="快捷键补遗"></a>快捷键补遗</h3><pre><code>S-方向键 可以在不同的窗口切换</code></pre><h2 id="完结语"><a href="#完结语" class="headerlink" title="完结语"></a>完结语</h2><p>零零碎碎，我把能一次想到的都一股脑的全部写完了。当然不可能面面俱到，比如强大如org-mode只字未提。而且大部份都是快捷键的说明而已。本来开始打算写调教Emacs系列能写十几篇。但个人思想上发生了一些变化，所以可能以后Emacs不会是主力编辑器了。</p>
 <p>不过也指不定那天抽风的有写出调教Emacs第二季强势归来</p>
 <p>写了两小篇在blog上挂着也不是事啊。就像写小说写了太监一样，不舒服。所以还是来完结一下。有始有终。做一个真男人。:)</p>
 
@@ -364,105 +354,101 @@ f3   查找相同的下一个
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -580,17 +566,9 @@ f3   查找相同的下一个
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

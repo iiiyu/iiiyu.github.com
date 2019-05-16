@@ -195,6 +195,7 @@
         <div class="content">
             <h1 id="使用CocoaPods"><a href="#使用CocoaPods" class="headerlink" title="使用CocoaPods"></a>使用CocoaPods</h1><h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>在iOS开发中，经常性的引用第三方开源的库。github上大量的库为我们开发iOS提供了强大丰富多样的资源。从新手一直过来的我们，面对使用越来越多的第三方库。手足无措。CocoaPods的出现使得一切变得Hacker起来。使用CocoaPods一定会让每次copy文件到项目的你喜极而泣的。</p>
 <a id="more"></a>
+
 <h2 id="之前的方式"><a href="#之前的方式" class="headerlink" title="之前的方式"></a>之前的方式</h2><p>在使用CocoaPods一般情况下是这样应用第三方库的。</p>
 <ol>
 <li>人工copy —— 为了使用，首先用git clone到某个目录。然后自己手动copy到自己的项目里面。(之前的大部分时间里面我都是这么干的)缺点: 跟原来的版本控制失去联系，如果库有升级，你需要从头来一次才能进行升级。然后自己的项目也会顺带管理这些代码，显得臃肿。</li>
@@ -204,22 +205,28 @@
 <p><a href="http://www.cocoapods.org/" target="_blank" rel="noopener">官网</a></p>
 <p><a href="https://github.com/CocoaPods/CocoaPods" target="_blank" rel="noopener">项目地址</a></p>
 <h2 id="Get-Started"><a href="#Get-Started" class="headerlink" title="Get Started"></a>Get Started</h2><p>CocoaPods 是一个 Ruby 的 Gem，所以只要在 Terminal 下输入一下就ok了。(因为os x自带了ruby，但是如果你要升级ruby这是另外一个事情了)</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ [sudo] gem install cocoapods</span><br><span class="line">$ pod setup</span><br></pre></td></tr></table></figure>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ [sudo] gem install cocoapods</span><br><span class="line">$ pod setup</span><br></pre></td></tr></table></figure>
+
 <h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>我们可以用cocoapods来先看看有没有我们需要添加的第三方库</p>
 <p>比如我们想用一个json库</p>
-<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">pod search json                                                                                                                                   </span><br><span class="line"></span><br><span class="line">-<span class="ruby">&gt; AnyJSON (<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>)</span></span><br><span class="line"><span class="ruby">   Encode / Decode JSON by any means possible.</span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Homepage:</span> <span class="symbol">https:</span>/<span class="regexp">/github.com/mattt</span><span class="regexp">/AnyJSON</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Source:</span>   <span class="symbol">https:</span>/<span class="regexp">/github.com/mattt</span><span class="regexp">/AnyJSON.git</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Versions:</span> <span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span> [master repo]</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby">-&gt; JSONKit (<span class="number">1.5</span>pre)</span></span><br><span class="line"><span class="ruby">   A Very High Performance Objective-C JSON Library.</span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Homepage:</span> <span class="symbol">https:</span>/<span class="regexp">/github.com/johnezang</span><span class="regexp">/JSONKit</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Source:</span>   <span class="symbol">git:</span>/<span class="regexp">/github.com/johnezang</span><span class="regexp">/JSONKit.git</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Versions:</span> <span class="number">1.5</span>pre, <span class="number">1.4</span> [master repo]</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby">-&gt; MTJSONDictionary (<span class="number">0</span>.<span class="number">0</span>.<span class="number">4</span>)</span></span><br><span class="line"><span class="ruby">   An NSDictionary category <span class="keyword">for</span> <span class="keyword">when</span> you<span class="string">'re working with it converting to/from JSON. DEPRECATED, use MTJSONUtils instead.</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Homepage:</span> <span class="symbol">https:</span>/<span class="regexp">/github.com/mysterioustrousers</span><span class="regexp">/MTJSONDictionary.git</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Source:</span>   <span class="symbol">https:</span>/<span class="regexp">/github.com/mysterioustrousers</span><span class="regexp">/MTJSONDictionary.git</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Versions:</span> <span class="number">0</span>.<span class="number">0</span>.<span class="number">4</span>, <span class="number">0</span>.<span class="number">0</span>.<span class="number">3</span>, <span class="number">0</span>.<span class="number">0</span>.<span class="number">2</span> [master repo]</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby">-&gt; MTJSONUtils (<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>)</span></span><br><span class="line"><span class="ruby">   NSObject category <span class="keyword">for</span> working JSON convertions with suport keypaths ([dict <span class="symbol">valueForComplexKeyPath:</span>@<span class="string">"parents[0].children[first].toys[last]"</span>])</span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Homepage:</span> <span class="symbol">https:</span>/<span class="regexp">/github.com/mysterioustrousers</span><span class="regexp">/MTJSONUtils.git</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Source:</span>   <span class="symbol">https:</span>/<span class="regexp">/github.com/mysterioustrousers</span><span class="regexp">/MTJSONUtils.git</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Versions:</span> <span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span> [master repo]</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby">-&gt; SBJson (<span class="number">3.1</span>.<span class="number">1</span>)</span></span><br><span class="line"><span class="ruby">   This library implements strict JSON parsing <span class="keyword">and</span> generation <span class="keyword">in</span> Objective-C.</span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Homepage:</span> <span class="symbol">http:</span>/<span class="regexp">/stig.github.com/json</span>-framework/</span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Source:</span>   <span class="symbol">https:</span>/<span class="regexp">/github.com/stig</span><span class="regexp">/json-framework.git</span></span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Versions:</span> <span class="number">3.1</span>.<span class="number">1</span>, <span class="number">3.1</span>, <span class="number">3.0</span>.<span class="number">4</span>, <span class="number">2.2</span>.<span class="number">3</span> [master repo]</span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby"></span></span><br><span class="line"><span class="ruby">-&gt; TouchJSON (<span class="number">1.0</span>)</span></span><br><span class="line"><span class="ruby">   TouchJSON is an Objective-C based parser <span class="keyword">and</span> generator <span class="keyword">for</span> JSON encoded data.</span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Homepage:</span> <span class="symbol">https:</span>/<span class="regexp">/github.com/</span>TouchCode/TouchJSON</span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Source:</span>   <span class="symbol">https:</span>/<span class="regexp">/github.com/</span>TouchCode/TouchJSON.git</span></span><br><span class="line"><span class="ruby">   - <span class="symbol">Versions:</span> <span class="number">1.0</span> [master repo]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight haml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">pod search json                                                                                                                                   </span><br><span class="line"></span><br><span class="line">-<span class="hljs-ruby">&gt; AnyJSON (<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>)</span></span><br><span class="line"><span class="hljs-ruby">   Encode / Decode JSON by any means possible.</span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Homepage:</span> <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/mattt</span><span class="hljs-regexp">/AnyJSON</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Source:</span>   <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/mattt</span><span class="hljs-regexp">/AnyJSON.git</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Versions:</span> <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span> [master repo]</span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby">-&gt; JSONKit (<span class="hljs-number">1.5</span>pre)</span></span><br><span class="line"><span class="hljs-ruby">   A Very High Performance Objective-C JSON Library.</span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Homepage:</span> <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/johnezang</span><span class="hljs-regexp">/JSONKit</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Source:</span>   <span class="hljs-symbol">git:</span>/<span class="hljs-regexp">/github.com/johnezang</span><span class="hljs-regexp">/JSONKit.git</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Versions:</span> <span class="hljs-number">1.5</span>pre, <span class="hljs-number">1.4</span> [master repo]</span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby">-&gt; MTJSONDictionary (<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">4</span>)</span></span><br><span class="line"><span class="hljs-ruby">   An NSDictionary category <span class="hljs-keyword">for</span> <span class="hljs-keyword">when</span> you<span class="hljs-string">'re working with it converting to/from JSON. DEPRECATED, use MTJSONUtils instead.</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Homepage:</span> <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/mysterioustrousers</span><span class="hljs-regexp">/MTJSONDictionary.git</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Source:</span>   <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/mysterioustrousers</span><span class="hljs-regexp">/MTJSONDictionary.git</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Versions:</span> <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">4</span>, <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">3</span>, <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">2</span> [master repo]</span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby">-&gt; MTJSONUtils (<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>)</span></span><br><span class="line"><span class="hljs-ruby">   NSObject category <span class="hljs-keyword">for</span> working JSON convertions with suport keypaths ([dict <span class="hljs-symbol">valueForComplexKeyPath:</span>@<span class="hljs-string">"parents[0].children[first].toys[last]"</span>])</span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Homepage:</span> <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/mysterioustrousers</span><span class="hljs-regexp">/MTJSONUtils.git</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Source:</span>   <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/mysterioustrousers</span><span class="hljs-regexp">/MTJSONUtils.git</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Versions:</span> <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span> [master repo]</span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby">-&gt; SBJson (<span class="hljs-number">3.1</span>.<span class="hljs-number">1</span>)</span></span><br><span class="line"><span class="hljs-ruby">   This library implements strict JSON parsing <span class="hljs-keyword">and</span> generation <span class="hljs-keyword">in</span> Objective-C.</span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Homepage:</span> <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/stig.github.com/json</span>-framework/</span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Source:</span>   <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/stig</span><span class="hljs-regexp">/json-framework.git</span></span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Versions:</span> <span class="hljs-number">3.1</span>.<span class="hljs-number">1</span>, <span class="hljs-number">3.1</span>, <span class="hljs-number">3.0</span>.<span class="hljs-number">4</span>, <span class="hljs-number">2.2</span>.<span class="hljs-number">3</span> [master repo]</span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby"></span></span><br><span class="line"><span class="hljs-ruby">-&gt; TouchJSON (<span class="hljs-number">1.0</span>)</span></span><br><span class="line"><span class="hljs-ruby">   TouchJSON is an Objective-C based parser <span class="hljs-keyword">and</span> generator <span class="hljs-keyword">for</span> JSON encoded data.</span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Homepage:</span> <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/</span>TouchCode/TouchJSON</span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Source:</span>   <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/</span>TouchCode/TouchJSON.git</span></span><br><span class="line"><span class="hljs-ruby">   - <span class="hljs-symbol">Versions:</span> <span class="hljs-number">1.0</span> [master repo]</span></span><br></pre></td></tr></table></figure>
+
 <p>恩出现很多 我们选一个自己会用的就好了。</p>
 <h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><p>我们进入我们的iOS项目目录下，然后新建立一个配置文件Podfile</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">touch Podfile</span></span><br><span class="line"><span class="attribute">vim Podfile</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attribute">touch Podfile</span></span><br><span class="line"><span class="hljs-attribute">vim Podfile</span></span><br></pre></td></tr></table></figure>
+
 <p>然后加入我们想要的第三方库和库的Version号(Podfile内容)</p>
-<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">platform</span> :ios</span><br><span class="line">dependency <span class="string">'JSONKit'</span>, <span class="string">'~&gt; 1.5pre'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight delphi hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">platform</span> :ios</span><br><span class="line">dependency <span class="hljs-string">'JSONKit'</span>, <span class="hljs-string">'~&gt; 1.5pre'</span></span><br></pre></td></tr></table></figure>
+
 <p>保存</p>
 <p>执行  </p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="hljs-keyword">install</span></span><br></pre></td></tr></table></figure>
+
 <p>完成以后<br>你在目录下可以看见一个后缀为.xcworkspace的文件(其实是一个目录，代表着xCode的workspace) 然后。以后你写项目都打开这个就好了。<br><img src="http://farm9.staticflickr.com/8185/8126953991_7164f1e696_b.jpg" alt="xcworkspace"><br>打开看以后会发现其实cocoapods做了一个事情就是他把第三方库都编译成了一个库文件。然后你的项目中去包含头文件，libPods.a被作为framework集成到目标项目。Pods.xcconfig 中配置了XCode编译的查找路径，通过这种方式将所有的第三方包来引入到项目中。</p>
 <p>啊哈哈，立马感觉引入一个第三方包都变得很现代有木有。</p>
 <p>如果需要加入新的库编写Podfile里面 再次执行</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="hljs-keyword">install</span></span><br></pre></td></tr></table></figure>
+
 <p>就好了。</p>
 <h3 id="向cocoapods提交新的第三方库"><a href="#向cocoapods提交新的第三方库" class="headerlink" title="向cocoapods提交新的第三方库"></a>向cocoapods提交新的第三方库</h3><p>如果你在pod search里面没有找到你想要的库怎么弄。cocoapods允许你自己提交，然后他们审核发布。(太人性化了，感动的想哭啊)</p>
 <p>简单的说，Spec就是每个包在CocoaPods中的配置文件，其中包括Package的名字，版本号，每个版本对应的下载地址，编译时的参数。等等。</p>
@@ -322,105 +329,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -510,17 +513,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

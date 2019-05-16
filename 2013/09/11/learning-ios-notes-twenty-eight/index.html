@@ -196,6 +196,7 @@
             <h2 id="扯淡"><a href="#扯淡" class="headerlink" title="扯淡"></a>扯淡</h2><p>习惯了，每次再写技术的东西的时候总要唠叨几句。本来唠叨的东西我应该会写成另外的blog。不过每次给自己下了一个底线要少少的写这些唠叨的话语。原因一是觉得我爱唠叨的话语可能会导致blog被墙。原因之二我不希望我变成一个IT评论家。</p>
 <p>对了,我发现我还是挺爱挖坑的。目前有两坑没有填完。一个是Core Data系列。一个是iCloud系列。两个系列我都只写了一个Hello World级别并没有再深入的继续写。恩，要抓紧了。其实ReactiveCocoa这个我觉得也可以作为一个系列来写。不过想了想我这种Hello World的水平。也写不出这么多来。就暂时写一篇好了。</p>
 <a id="more"></a>
+
 <h2 id="什么是ReactiveCocoa"><a href="#什么是ReactiveCocoa" class="headerlink" title="什么是ReactiveCocoa"></a>什么是ReactiveCocoa</h2><p>如果你有看Github的Trending Objective-C榜单，那你肯定是见过ReactiveCocoa了。如果你在weibo上关注唐巧、onevcat等国内一线知名开发者。那也应该听说过ReactiveCocoa了。</p>
 <p>ReactiveCocoa更加被Mattt Thompson大神称为开启一个新Objective-C纪元。</p>
 <p>当然也有人声称ReactiveCocoa是Cocoa的未来。<a href="http://spin.atomicobject.com/2013/04/28/reactivecocoa/" target="_blank" rel="noopener">ReactiveCocoa: The Future of Cocoa Programming</a></p>
@@ -209,8 +210,7 @@
 <h4 id="Reactive-Programming"><a href="#Reactive-Programming" class="headerlink" title="Reactive Programming"></a>Reactive Programming</h4><p><a href="http://zh.wikipedia.org/wiki/响应式编程" target="_blank" rel="noopener">wiki 响应式编程</a></p>
 <h4 id="Functional-programming"><a href="#Functional-programming" class="headerlink" title="Functional programming"></a>Functional programming</h4><p><a href="http://en.wikipedia.org/wiki/Functional_programming" target="_blank" rel="noopener">wiki Functional programming</a></p>
 <p>恩 简单来说 </p>
-<pre><code>Functional Reactive Programming = Functional programming + Reactive Programming
-</code></pre><p>(PS:特么太偷懒了还是解释一下)</p>
+<pre><code>Functional Reactive Programming = Functional programming + Reactive Programming</code></pre><p>(PS:特么太偷懒了还是解释一下)</p>
 <p>简单以</p>
 <p>a = b + c</p>
 <p>为例</p>
@@ -232,17 +232,19 @@
 <h2 id="ReactiveCocoa的基本使用方法"><a href="#ReactiveCocoa的基本使用方法" class="headerlink" title="ReactiveCocoa的基本使用方法"></a>ReactiveCocoa的基本使用方法</h2><p>(终于写到正主了,泪流满面)</p>
 <p>这里借用Limboy的<a href="http://blog.leezhong.com/ios/2013/06/19/frp-reactivecocoa.html" target="_blank" rel="noopener">blog</a>中的一段话作为开场解释。(因为我想了好久都没有想出超过他的比喻方法)</p>
 <pre><code>ReactiveCocoa是github去年开源的一个项目，是在iOS平台上对FRP的实现。FRP的核心是信号，信号在ReactiveCocoa(以下简称RAC)中是通过RACSignal来表示的，信号是数据流，可以被绑定和传递。
-可以把信号想象成水龙头，只不过里面不是水，而是玻璃球(value)，直径跟水管的内径一样，这样就能保证玻璃球是依次排列，不会出现并排的情况(数据都是线性处理的，不会出现并发情况)。水龙头的开关默认是关的，除非有了接收方(subscriber)，才会打开。这样只要有新的玻璃球进来，就会自动传送给接收方。可以在水龙头上加一个过滤嘴(filter)，不符合的不让通过，也可以加一个改动装置，把球改变成符合自己的需求(map)。也可以把多个水龙头合并成一个新的水龙头(combineLatest:reduce:)，这样只要其中的一个水龙头有玻璃球出来，这个新合并的水龙头就会得到这个球。
-</code></pre><h3 id="替代KVO"><a href="#替代KVO" class="headerlink" title="替代KVO"></a>替代KVO</h3><p><del>官方例子：官方的例子貌似用了比较老的函数。我改完以后看见<a href="http://www.jdon.com/45581" target="_blank" rel="noopener">什么是函数响应式编程(Functional Reactive Programming:FRP)</a>他也是这么改的。说明一下。</del></p>
+可以把信号想象成水龙头，只不过里面不是水，而是玻璃球(value)，直径跟水管的内径一样，这样就能保证玻璃球是依次排列，不会出现并排的情况(数据都是线性处理的，不会出现并发情况)。水龙头的开关默认是关的，除非有了接收方(subscriber)，才会打开。这样只要有新的玻璃球进来，就会自动传送给接收方。可以在水龙头上加一个过滤嘴(filter)，不符合的不让通过，也可以加一个改动装置，把球改变成符合自己的需求(map)。也可以把多个水龙头合并成一个新的水龙头(combineLatest:reduce:)，这样只要其中的一个水龙头有玻璃球出来，这个新合并的水龙头就会得到这个球。</code></pre><h3 id="替代KVO"><a href="#替代KVO" class="headerlink" title="替代KVO"></a>替代KVO</h3><p><del>官方例子：官方的例子貌似用了比较老的函数。我改完以后看见<a href="http://www.jdon.com/45581" target="_blank" rel="noopener">什么是函数响应式编程(Functional Reactive Programming:FRP)</a>他也是这么改的。说明一下。</del></p>
 <p>经过后来的使用才发现特么官方例子是2.0的。 现在重新改一下。随便说一句，用cocoapods安装的2.1.编译不过。具体原因还没有看。建议使用2.0</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"></span><br><span class="line">[RACObserve(<span class="keyword">self</span>, username) subscribeNext:^(<span class="built_in">NSString</span> *newName) &#123;</span><br><span class="line">								<span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, newName);</span><br><span class="line">							&#125;];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">@property</span> (<span class="hljs-keyword">strong</span>) <span class="hljs-built_in">NSString</span> *username;</span><br><span class="line"></span><br><span class="line">[RACObserve(<span class="hljs-keyword">self</span>, username) subscribeNext:^(<span class="hljs-built_in">NSString</span> *newName) &#123;</span><br><span class="line">								<span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"%@"</span>, newName);</span><br><span class="line">							&#125;];</span><br></pre></td></tr></table></figure>
+
 <p>在这句代码以后，只要你的username有变化。都可以打印出来。实现了KVO的功能却减少了无数的代码。体现了绑定和响应。</p>
 <p>高级一个点的官方例子</p>
-<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="name">RACObserve</span>(<span class="name">self</span>, username)</span><br><span class="line">  filter:^(<span class="name">NSString</span> *newName) &#123;</span><br><span class="line">		return [<span class="name">newName</span> hasPrefix:@<span class="string">"j"</span>]<span class="comment">;</span></span><br><span class="line">	&#125;]</span><br><span class="line"> subscribeNext:^(<span class="name">NSString</span> *newName) &#123;</span><br><span class="line">	 NSLog(<span class="name">@</span><span class="string">"%@"</span>, newName)<span class="comment">;</span></span><br><span class="line"> &#125;]<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight scheme hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="hljs-name">RACObserve</span>(<span class="hljs-name">self</span>, username)</span><br><span class="line">  filter:^(<span class="hljs-name">NSString</span> *newName) &#123;</span><br><span class="line">		return [<span class="hljs-name">newName</span> hasPrefix:@<span class="hljs-string">"j"</span>]<span class="hljs-comment">;</span></span><br><span class="line">	&#125;]</span><br><span class="line"> subscribeNext:^(<span class="hljs-name">NSString</span> *newName) &#123;</span><br><span class="line">	 NSLog(<span class="hljs-name">@</span><span class="hljs-string">"%@"</span>, newName)<span class="hljs-comment">;</span></span><br><span class="line"> &#125;]<span class="hljs-comment">;</span></span><br></pre></td></tr></table></figure>
+
 <p>第一个例子是简单的所有变化都会响应到。但是可能我只想响应部分情况。这时候就用filter来过滤。filter的block返回YES的情况就是需要触发的情况。其他就补返回。所以这代码以后。 username以j开头的才能打印出来。</p>
 <h3 id="流的实现"><a href="#流的实现" class="headerlink" title="流的实现"></a>流的实现</h3><p>以下是<a href="http://www.teehanlax.com/blog/getting-started-with-reactivecocoa/" target="_blank" rel="noopener">Getting Started with ReactiveCocoa</a>的例子和图片</p>
 <p>如何以最少的代码实现一个时钟应用</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">RAC(<span class="keyword">self</span>, timeLabel.text) = [[[RACSignal interval:<span class="number">1</span> onScheduler:[RACScheduler currentScheduler]] startWith:[<span class="built_in">NSDate</span> date]] map:^<span class="keyword">id</span> (<span class="built_in">NSDate</span> *value) &#123;</span><br><span class="line">	<span class="built_in">NSLog</span>(<span class="string">@"value:%@"</span>, value);</span><br><span class="line">	<span class="built_in">NSDateComponents</span> *dateComponents = [[<span class="built_in">NSCalendar</span> currentCalendar] components:<span class="built_in">NSHourCalendarUnit</span> |</span><br><span class="line">	 <span class="built_in">NSMinuteCalendarUnit</span> | </span><br><span class="line">	 <span class="built_in">NSSecondCalendarUnit</span> fromDate:value];</span><br><span class="line">	<span class="keyword">return</span> [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%02ld:%02ld:%02ld"</span>, (<span class="keyword">long</span>)dateComponents.hour, (<span class="keyword">long</span>)dateComponents.minute, (<span class="keyword">long</span>)dateComponents.second];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">RAC(<span class="hljs-keyword">self</span>, timeLabel.text) = [[[RACSignal interval:<span class="hljs-number">1</span> onScheduler:[RACScheduler currentScheduler]] startWith:[<span class="hljs-built_in">NSDate</span> date]] map:^<span class="hljs-keyword">id</span> (<span class="hljs-built_in">NSDate</span> *value) &#123;</span><br><span class="line">	<span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"value:%@"</span>, value);</span><br><span class="line">	<span class="hljs-built_in">NSDateComponents</span> *dateComponents = [[<span class="hljs-built_in">NSCalendar</span> currentCalendar] components:<span class="hljs-built_in">NSHourCalendarUnit</span> |</span><br><span class="line">	 <span class="hljs-built_in">NSMinuteCalendarUnit</span> | </span><br><span class="line">	 <span class="hljs-built_in">NSSecondCalendarUnit</span> fromDate:value];</span><br><span class="line">	<span class="hljs-keyword">return</span> [<span class="hljs-built_in">NSString</span> stringWithFormat:<span class="hljs-string">@"%02ld:%02ld:%02ld"</span>, (<span class="hljs-keyword">long</span>)dateComponents.hour, (<span class="hljs-keyword">long</span>)dateComponents.minute, (<span class="hljs-keyword">long</span>)dateComponents.second];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
 <p>实现的逻辑顺序是这样的。设置一个间隔为一秒。从现在开始调用的函数。并把当前实际传入。 这个函数返回一个NSString。 然后把这个NSString和界面上的textField绑定在了一起。从而实现了我认为我见过最简单时钟程序。表现了流和绑定响应。</p>
 <p><img src="http://teehanlax.com.s3.amazonaws.com/wordpress/wp-content/uploads/chaining.png" alt="原blog中对上述代码的流的形容图"></p>
 <h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><p>几乎每个ReactiveCocoa的Demo里面都会出现的例子。</p>
@@ -250,7 +252,8 @@
 <p><img src="http://blog.leezhong.com/image/FRP_register_demo.png" alt></p>
 <p>这个是用的leezhong的图。 应该是从<a href="https://speakerdeck.com/andrewsardone/reactivecocoa-at-mobidevday-2013" target="_blank" rel="noopener">这个演讲PPT里面来的，点过去还有视频哦</a></p>
 <p>就是说在必需验证每个所填写的数值符合标准。Button才能点击。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">RAC(<span class="keyword">self</span>, submitButton.enabled) = [RACSignal combineLatest:@[<span class="keyword">self</span>.usernameField.rac_textSignal,</span><br><span class="line">				 <span class="keyword">self</span>.passwordField.rac_textSignal]</span><br><span class="line">	reduce:^<span class="keyword">id</span> (<span class="built_in">NSString</span> *userName, <span class="built_in">NSString</span> *password) &#123;</span><br><span class="line">	<span class="keyword">return</span> @(userName.length &gt;= <span class="number">6</span> &amp;&amp; password.length &gt;= <span class="number">6</span>);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">RAC(<span class="hljs-keyword">self</span>, submitButton.enabled) = [RACSignal combineLatest:@[<span class="hljs-keyword">self</span>.usernameField.rac_textSignal,</span><br><span class="line">				 <span class="hljs-keyword">self</span>.passwordField.rac_textSignal]</span><br><span class="line">	reduce:^<span class="hljs-keyword">id</span> (<span class="hljs-built_in">NSString</span> *userName, <span class="hljs-built_in">NSString</span> *password) &#123;</span><br><span class="line">	<span class="hljs-keyword">return</span> @(userName.length &gt;= <span class="hljs-number">6</span> &amp;&amp; password.length &gt;= <span class="hljs-number">6</span>);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+
 <p>简单的解释就是把usernameField和passwordField的信号绑定在了一起做reduce处理以后。返回一个BOOL值去跟self.submitButton.enabled进行绑定。</p>
 <p><img src="http://teehanlax.com.s3.amazonaws.com/wordpress/wp-content/uploads/combining.png" alt></p>
 <p>囧。再次发现和leezhong借用的代码和图都是一样的。</p>
@@ -258,8 +261,7 @@
 <p><a href="https://github.com/ReactiveCocoa/ReactiveCocoa#when-to-use-reactivecocoa" target="_blank" rel="noopener">when-to-use-reactivecocoa</a></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实我对ReactiveCocoa了解还是在hello world阶段。 很多东西都理解的很粗糙。上面这一大陀blog。很多地方写的肯定不好。欢迎指出。其实很多时候觉得确实中文原创的技术文章十分少。很大一部分都是翻译的。国外的技术文章也确实写的牛写的好。但是总觉得自己应该写点自己思考的东西。</p>
 <p>对于ReactiveCocoa来说，我认为它确实是一个好东西。正如leezhong所说</p>
-<pre><code>RAC统一了对KVO、UI Event、Network request、Async work的处理，因为它们本质上都是值的变化(Values over time)。
-</code></pre><p>其实App上90%的操作不就只有这些么。所以我会一直对ReactiveCocoa投入时间去学习和使用。顺便说一句。阿里Mac Lab出品的Xiami for Mac。是我见过国内最好的Mac App之一。他们也用了ReactiveCocoa。然后你可以想象对他们做出那些响应交互ReactiveCocoa为他们提供了强有力的输出。</p>
+<pre><code>RAC统一了对KVO、UI Event、Network request、Async work的处理，因为它们本质上都是值的变化(Values over time)。</code></pre><p>其实App上90%的操作不就只有这些么。所以我会一直对ReactiveCocoa投入时间去学习和使用。顺便说一句。阿里Mac Lab出品的Xiami for Mac。是我见过国内最好的Mac App之一。他们也用了ReactiveCocoa。然后你可以想象对他们做出那些响应交互ReactiveCocoa为他们提供了强有力的输出。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><h3 id="FRP"><a href="#FRP" class="headerlink" title="FRP"></a>FRP</h3><p><a href="http://en.wikipedia.org/wiki/Functional_reactive_programming" target="_blank" rel="noopener">wiki Functional reactive programming</a></p>
 <p><a href="http://blog.zhaojie.me/2009/09/functional-reactive-programming-for-csharp.html" target="_blank" rel="noopener">趣味编程：Functional Reactive Programming</a></p>
 <p><a href="http://www.haskell.org/haskellwiki/Functional_Reactive_Programming" target="_blank" rel="noopener">haskell Functional Reactive Programming</a></p>
@@ -374,105 +376,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -590,17 +588,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

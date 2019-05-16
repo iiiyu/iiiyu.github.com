@@ -195,6 +195,7 @@
         <div class="content">
             <h1 id="iOS笔记——九宫解锁基础部分"><a href="#iOS笔记——九宫解锁基础部分" class="headerlink" title="iOS笔记——九宫解锁基础部分"></a>iOS笔记——九宫解锁基础部分</h1><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>为了第一个App，一步一步的做出来。所以先弄最基本的想做一个类似Android九宫解锁的View。一开始完全没有思路啊。后来看了好几遍老头的画笑脸以后才有点思路。所以来一步一步做吧。</p>
 <a id="more"></a>
+
 <h2 id="继续扯淡MVC"><a href="#继续扯淡MVC" class="headerlink" title="继续扯淡MVC"></a>继续扯淡MVC</h2><p>作为一个从iOS5开始学起开发的娃来说，什么nib xib文件都是浮云。哥只懂在Xcode里面的storyboard里面拖拖拽拽。奈何没几个代码实例是Storyboard写的。让想重用代码的我，无法直接⌘-c ⌘-v。很是郁闷哈。不过经过慢慢理解，对于Xcode4里面用stroyboard有了一些小小的心得。分享一下。</p>
 <p>一个VC是怎么构成的。在新建工程storyboard里面，我新拖入一个view<br>如图</p>
 <p><img src="http://farm8.staticflickr.com/7252/6856181868_05dbe1fd8f.jpg" alt="storyboard1"></p>
@@ -230,28 +231,36 @@
 <li>view上能画线</li>
 <li>controller能控制手指开始的地方，移动的地方，结束的地方。</li>
 </ul>
-<h2 id="一步一步"><a href="#一步一步" class="headerlink" title="一步一步"></a>一步一步</h2><h3 id="clone工程"><a href="#clone工程" class="headerlink" title="clone工程"></a>clone工程</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>://github.com/iiiyu/Draw-Lock-Login.git</span><br></pre></td></tr></table></figure>
+<h2 id="一步一步"><a href="#一步一步" class="headerlink" title="一步一步"></a>一步一步</h2><h3 id="clone工程"><a href="#clone工程" class="headerlink" title="clone工程"></a>clone工程</h3><figure class="highlight crmsh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-keyword">clone</span> <span class="hljs-title">git</span>://github.com/iiiyu/Draw-Lock-Login.git</span><br></pre></td></tr></table></figure>
+
 <p>项目结构</p>
 <p><img src="http://farm7.staticflickr.com/6037/7002295643_06f72a4961.jpg" alt="ios4-1"></p>
 <h3 id="Draw-Lock类分析-UIView"><a href="#Draw-Lock类分析-UIView" class="headerlink" title="Draw_Lock类分析(UIView)"></a>Draw_Lock类分析(UIView)</h3><p>点开Draw_Lock.m可以看到<br>两个方法,其中一个还是注释掉的。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">id</span>)initWithFrame:(<span class="built_in">CGRect</span>)frame</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> initWithFrame:frame];</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</span><br><span class="line">        <span class="comment">// Initialization code</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Only override drawRect: if you perform custom drawing.</span></span><br><span class="line"><span class="comment">// An empty implementation adversely affects performance during animation.</span></span><br><span class="line">- (<span class="keyword">void</span>)drawRect:(<span class="built_in">CGRect</span>)rect</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">id</span>)initWithFrame:(<span class="hljs-built_in">CGRect</span>)frame</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-keyword">self</span> = [<span class="hljs-keyword">super</span> initWithFrame:frame];</span><br><span class="line">    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">self</span>) &#123;</span><br><span class="line">        <span class="hljs-comment">// Initialization code</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Only override drawRect: if you perform custom drawing.</span></span><br><span class="line"><span class="hljs-comment">// An empty implementation adversely affects performance during animation.</span></span><br><span class="line">- (<span class="hljs-keyword">void</span>)drawRect:(<span class="hljs-built_in">CGRect</span>)rect</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>initWithFrame虽然看起来像初始化函数的样子，但是如果我们想初始化做一些事情的时候。是要重新写一个函数</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 老头说过不直接调用initWithFrame 而是调用awakeFromNib来进行初始化</span></span><br><span class="line"><span class="comment">// 进过测试 initWithFrame也不会被调用</span></span><br><span class="line">- (<span class="keyword">void</span>)awakeFromNib</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 老头说过不直接调用initWithFrame 而是调用awakeFromNib来进行初始化</span></span><br><span class="line"><span class="hljs-comment">// 进过测试 initWithFrame也不会被调用</span></span><br><span class="line">- (<span class="hljs-keyword">void</span>)awakeFromNib</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>如果需要初始化做一些事情，请重载awakeFromNib。</p>
 <p>drawRect函数一开始是被注释掉。但是此函数可以在view上进行绘画。关于Quartz请参考相关官方文档。</p>
 <p>仅仅记录我觉得重要的地方。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这个context就是画布，官方叫上下文。每次作画前要有。</span></span><br><span class="line"><span class="built_in">CGContextRef</span> context = <span class="built_in">UIGraphicsGetCurrentContext</span>();</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 这个context就是画布，官方叫上下文。每次作画前要有。</span></span><br><span class="line"><span class="hljs-built_in">CGContextRef</span> context = <span class="hljs-built_in">UIGraphicsGetCurrentContext</span>();</span><br></pre></td></tr></table></figure>
+
 <p>一开始我不会设置view的背景，就想把画一个和view相等的矩形。这样不就是背景了。后来发现是可以直接设置的。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置view的背景颜色</span></span><br><span class="line"><span class="keyword">self</span>.backgroundColor = [<span class="built_in">UIColor</span> darkGrayColor];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 设置view的背景颜色</span></span><br><span class="line"><span class="hljs-keyword">self</span>.backgroundColor = [<span class="hljs-built_in">UIColor</span> darkGrayColor];</span><br></pre></td></tr></table></figure>
+
 <p>把要加入的9个宫。看做一个个的view。我们先创建这些view。然后用addSubview加入Draw_Lock这个view当中，最后调整这些宫的位置就完成了图像的绘制。</p>
 <p>每一个宫由两张图片构成。一张为默认，一张为highlighted属性的。当我们碰到宫时候，设置他的highlighted为YES。</p>
 <p>然后是线的绘制。当手指触碰到宫的时候，才吧宫的中心作为起点开始绘制线。绘制的线在没有遇到第二个宫的时候跟随手指，如果遇到宫。就绘制完成一条直线。然后把终点的坐标为下一条线的起点。直到手指离开屏幕。</p>
 <h3 id="ViewController类分析（UIViewController）"><a href="#ViewController类分析（UIViewController）" class="headerlink" title="ViewController类分析（UIViewController）"></a>ViewController类分析（UIViewController）</h3><p>手指触摸开始</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-</span> (<span class="selector-tag">void</span>)<span class="selector-tag">touchesBegan</span><span class="selector-pseudo">:(NSSet</span> *)<span class="selector-tag">touches</span> <span class="selector-tag">withEvent</span><span class="selector-pseudo">:(UIEvent</span> *)<span class="selector-tag">event</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">-</span> (<span class="hljs-selector-tag">void</span>)<span class="hljs-selector-tag">touchesBegan</span><span class="hljs-selector-pseudo">:(NSSet</span> *)<span class="hljs-selector-tag">touches</span> <span class="hljs-selector-tag">withEvent</span><span class="hljs-selector-pseudo">:(UIEvent</span> *)<span class="hljs-selector-tag">event</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>手指移动</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-</span> (<span class="selector-tag">void</span>)<span class="selector-tag">touchesMoved</span><span class="selector-pseudo">:(NSSet</span> *)<span class="selector-tag">touches</span> <span class="selector-tag">withEvent</span><span class="selector-pseudo">:(UIEvent</span> *)<span class="selector-tag">event</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">-</span> (<span class="hljs-selector-tag">void</span>)<span class="hljs-selector-tag">touchesMoved</span><span class="hljs-selector-pseudo">:(NSSet</span> *)<span class="hljs-selector-tag">touches</span> <span class="hljs-selector-tag">withEvent</span><span class="hljs-selector-pseudo">:(UIEvent</span> *)<span class="hljs-selector-tag">event</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>触摸结束</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-</span> (<span class="selector-tag">void</span>)<span class="selector-tag">touchesEnded</span><span class="selector-pseudo">:(NSSet</span> *)<span class="selector-tag">touches</span> <span class="selector-tag">withEvent</span><span class="selector-pseudo">:(UIEvent</span> *)<span class="selector-tag">event</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">-</span> (<span class="hljs-selector-tag">void</span>)<span class="hljs-selector-tag">touchesEnded</span><span class="hljs-selector-pseudo">:(NSSet</span> *)<span class="hljs-selector-tag">touches</span> <span class="hljs-selector-tag">withEvent</span><span class="hljs-selector-pseudo">:(UIEvent</span> *)<span class="hljs-selector-tag">event</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>大概在山寨这个九宫的时候就遇到很多问题。隔了一天，能想到一一记录。当然，还有更多的问题。所以最好就直接看github项目里面有更详细的注释和完整的代码。很多时候，觉得写代码比写blog轻松多了。</p>
 
         </div>
@@ -346,105 +355,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -530,17 +535,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

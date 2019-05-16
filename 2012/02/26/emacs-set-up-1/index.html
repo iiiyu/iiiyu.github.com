@@ -200,19 +200,27 @@
 <p>  我不会Lisp，所以这些配置最多算我这个工具仔拼凑起来的。</p>
 <p>  所以，看这系列Blog的亲们。</p>
 <ul>
-<li>只要安装Emacs 23.3-23.4 (其他版本不知)</li>
-<li>会git clone</li>
-<li>知道~/目录</li>
+<li><p>只要安装Emacs 23.3-23.4 (其他版本不知)</p>
+</li>
+<li><p>会git clone</p>
+</li>
+<li><p>知道~/目录</p>
+</li>
 <li><p>不需要会Lisp</p>
 <p>就可以开始了。</p>
 <a id="more"></a>
+
+
+
 </li>
 </ul>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>首先确认你已经安装了Emacs。</p>
 <p>然后备份你之前的配置文件</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv ~/<span class="selector-class">.emacs</span> ~/emacs<span class="selector-class">.conf</span><span class="selector-class">.bak</span></span><br><span class="line">mv ~/<span class="selector-class">.emacs</span><span class="selector-class">.d</span> ~/emacs<span class="selector-class">.d</span><span class="selector-class">.bak</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv ~/<span class="hljs-selector-class">.emacs</span> ~/emacs<span class="hljs-selector-class">.conf</span><span class="hljs-selector-class">.bak</span></span><br><span class="line">mv ~/<span class="hljs-selector-class">.emacs</span><span class="hljs-selector-class">.d</span> ~/emacs<span class="hljs-selector-class">.d</span><span class="hljs-selector-class">.bak</span></span><br></pre></td></tr></table></figure>
+
 <p>然后clone我的配置</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>://github.com/iiiyu/.emacs.d.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-keyword">clone</span> <span class="hljs-title">git</span>://github.com/iiiyu/.emacs.d.git</span><br></pre></td></tr></table></figure>
+
 <p>然后你点开你的Emacs，如果他是这样的颜色并且下面没有提示报错的话。恭喜你。我们开始存活在Emacs中吧。</p>
 <p><img src="http://farm8.staticflickr.com/7058/6934750127_d78b255104.jpg" alt="Emacs"></p>
 <h1 id="存活"><a href="#存活" class="headerlink" title="存活"></a>存活</h1><ul>
@@ -230,8 +238,10 @@
 <li><strong>高级键位：一般情况下，用Emacs或者Vim的人都会把右边的Ctrl键和Caps Lock键交换位置，这可以大大提高使用Emacs的按键舒适度。强烈建议交换。Mac os在系统设置里面有。Gnome在键盘设置里面也有。Windows据说可以改注册表和软件修改具体要自己google哈。我用的是KBC proker 40%的键盘，硬件就支持了交换。</strong></li>
 </ul>
 <h3 id="幸存在Emacs"><a href="#幸存在Emacs" class="headerlink" title="幸存在Emacs"></a>幸存在Emacs</h3><p>   当你安装好一个编辑器后，你一定会想在其中输入点什么东西，然后看看这个编辑器是什么样子。但Emacs不是这样的，请按照下面的命令操作：</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">C</span>-x <span class="keyword">C</span>-f (会在Emacs的底部让你输入你想编辑的文件路径，输入完成以后，Emacs打开一个buffer，然后你就可以再里面尽情的输入文字了。)</span><br><span class="line"><span class="keyword">C</span>-d 删除一个字符</span><br><span class="line"><span class="keyword">C</span>-x <span class="keyword">C</span>-s 保存文件</span><br><span class="line"><span class="keyword">C</span>-x <span class="keyword">C</span>-c 退出Emacs</span><br></pre></td></tr></table></figure>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">推荐移动光标方法</span><br><span class="line"><span class="keyword">C</span>-p 上一行 </span><br><span class="line"><span class="keyword">C</span>-n 下一行</span><br><span class="line"><span class="keyword">C</span>-f 下一个字符</span><br><span class="line"><span class="keyword">C</span>-b 上一个字符</span><br><span class="line">(强例推荐使用其移动光标，但不必需) →你也可以使用光标键 (←↓↑→).</span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">C</span>-x <span class="hljs-keyword">C</span>-f (会在Emacs的底部让你输入你想编辑的文件路径，输入完成以后，Emacs打开一个buffer，然后你就可以再里面尽情的输入文字了。)</span><br><span class="line"><span class="hljs-keyword">C</span>-d 删除一个字符</span><br><span class="line"><span class="hljs-keyword">C</span>-x <span class="hljs-keyword">C</span>-s 保存文件</span><br><span class="line"><span class="hljs-keyword">C</span>-x <span class="hljs-keyword">C</span>-c 退出Emacs</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight mathematica hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">推荐移动光标方法</span><br><span class="line"><span class="hljs-keyword">C</span>-p 上一行 </span><br><span class="line"><span class="hljs-keyword">C</span>-n 下一行</span><br><span class="line"><span class="hljs-keyword">C</span>-f 下一个字符</span><br><span class="line"><span class="hljs-keyword">C</span>-b 上一个字符</span><br><span class="line">(强例推荐使用其移动光标，但不必需) →你也可以使用光标键 (←↓↑→).</span><br></pre></td></tr></table></figure>
+
 <p>你能在Emacs幸存下来只需要上述的那8个命令，你就可以编辑文本了，你一定要把这些命令练成一种下意识的状态。恭喜你，你已经在Emacs里面存活了。</p>
 
         </div>
@@ -326,105 +336,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -494,17 +500,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

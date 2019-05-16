@@ -206,6 +206,8 @@
 </ol>
 <p>所以，没有理由拒绝使用Core Data做为你App的持久化。Core Data应该是一个跟Apple混的第一选择。</p>
 <a id="more"></a>
+
+
 <h2 id="存储原理"><a href="#存储原理" class="headerlink" title="存储原理"></a>存储原理</h2><h3 id="NSManagedObjectModel"><a href="#NSManagedObjectModel" class="headerlink" title="NSManagedObjectModel"></a>NSManagedObjectModel</h3><h4 id="认识"><a href="#认识" class="headerlink" title="认识"></a>认识</h4><p>我个人是把NSManagedObjectModel看做为一个core data的schema。生成这个类的来源是xCode中的Data Model</p>
 <p><img src="http://ww3.sinaimg.cn/large/bfadf3bejw1e36lv4nn89j.jpg" alt></p>
 <p>点击之后会生成一个.xcdatamodeld的文件夹里面的数据具体是是用xml来存储的。<br>但是你在xCode里面看这个.xcdatamodeld文件夹是认为一个文件。然后可以用xCode来进行图形化的编辑。</p>
@@ -215,7 +217,8 @@
 <p><img src="http://ww3.sinaimg.cn/large/bfadf3bejw1e36mhk7obgj.jpg" alt></p>
 <p>我们编辑这个的这个文件，理论上来说只是一个资源文件。相当于数据库的schema。我们的数据库长什么样子，就是你来设计的。然后在程序中通过NSURL找到这个资源文件的位置。就可以初始化成为NSManagedObjectModel。</p>
 <h4 id="代码加载Data-Model"><a href="#代码加载Data-Model" class="headerlink" title="代码加载Data Model"></a>代码加载Data Model</h4><p>当我们设计好我们的Data Model以后。可以用以下代码，把Data Model加载到NSManagedObjectModel里面去。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)initializeCoreDataStack</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSURL</span> *modelURL = [[<span class="built_in">NSBundle</span> mainBundle] URLForResource:<span class="string">@"PPRecipes"</span> withExtension:<span class="string">@"momd"</span>];</span><br><span class="line">    ZAssert(modelURL, <span class="string">@"Failed to find model URL"</span>);</span><br><span class="line">    <span class="built_in">NSManagedObjectModel</span> *mom = <span class="literal">nil</span>;</span><br><span class="line">    mom = [[<span class="built_in">NSManagedObjectModel</span> alloc] initWithContentsOfURL:modelURL]; ZAssert(mom, <span class="string">@"Failed to initialize model"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)initializeCoreDataStack</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">NSURL</span> *modelURL = [[<span class="hljs-built_in">NSBundle</span> mainBundle] URLForResource:<span class="hljs-string">@"PPRecipes"</span> withExtension:<span class="hljs-string">@"momd"</span>];</span><br><span class="line">    ZAssert(modelURL, <span class="hljs-string">@"Failed to find model URL"</span>);</span><br><span class="line">    <span class="hljs-built_in">NSManagedObjectModel</span> *mom = <span class="hljs-literal">nil</span>;</span><br><span class="line">    mom = [[<span class="hljs-built_in">NSManagedObjectModel</span> alloc] initWithContentsOfURL:modelURL]; ZAssert(mom, <span class="hljs-string">@"Failed to initialize model"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这样我们就从main bundle里面把data model加载到NSManagedObjectModel这个类里面去了。</p>
 <h3 id="NSPersistentStoreCoordinator"><a href="#NSPersistentStoreCoordinator" class="headerlink" title="NSPersistentStoreCoordinator"></a>NSPersistentStoreCoordinator</h3><p>NSPersistentStoreCoordinator是整个Core Data的核心。因为承担着全部数据的持久化，加载数据，缓存数据的工作。可以看做Core Data的心脏。</p>
 <p>值得我们开心的事情是，虽然NSPersistentStoreCoordinator很重要，但是我们在写程序的时候其实只用初始化和设置一些很简单的参数就可以使用了。在我们App的整个生命周期里面其实并不会很频繁的使用到它。</p>
@@ -233,12 +236,15 @@
 </ol>
 <p>我就只使用SQLite。理论上来说，NSPersistentStore不管选择什么样的存储文件。你后面进行Core Data的操作都是一样的。并不需要修改你的逻辑代码。这就是Core Data把底层封装了一次的好处。(书上说iOS上不建议使用XML)</p>
 <p>有一点需要注意的是NSPersistentStoreCoordinator可以加入不止一个的NSPersistentStore。这个在某些特定场景还是很有用的，以后如果能写到在写把。</p>
-<h5 id="代码加载NSPersistentStoreCoordinator"><a href="#代码加载NSPersistentStoreCoordinator" class="headerlink" title="代码加载NSPersistentStoreCoordinator"></a>代码加载NSPersistentStoreCoordinator</h5><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">dispatch_queue_t<span class="built_in"> queue </span>= <span class="literal">NULL</span>;</span><br><span class="line">queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);</span><br><span class="line">dispatch_async(queue, ^&#123;</span><br><span class="line">    NSFileManager <span class="number">*f</span>ileManager = [NSFileManager defaultManager];</span><br><span class="line">    NSArray <span class="number">*d</span>irectoryArray = [fileManager URLsForDirectory:NSDocumentDirectory</span><br><span class="line">                                                  inDomains:NSUserDomainMask];</span><br><span class="line">    NSURL *storeURL = <span class="literal">nil</span>;</span><br><span class="line">    storeURL = [directoryArray lastObject];</span><br><span class="line">    storeURL = [storeURL URLByAppendingPathComponent:@<span class="string">"PPRecipes.sqlite"</span>];</span><br><span class="line">    NSError <span class="number">*e</span>rror = <span class="literal">nil</span>;</span><br><span class="line">    NSPersistentStore *store = <span class="literal">nil</span>;</span><br><span class="line">    store = [psc addPersistentStoreWithType:NSSQLiteStoreType</span><br><span class="line">                           configuration   :nil</span><br><span class="line">                           URL             :storeURL</span><br><span class="line">                           options         :nil</span><br><span class="line">                           <span class="builtin-name">error</span>           :&amp;<span class="builtin-name">error</span>];</span><br><span class="line">    <span class="keyword">if</span> (!store) &#123;</span><br><span class="line">        ALog(@<span class="string">"Error adding persistent store to coordinator %@\n%@"</span>,</span><br><span class="line">             [<span class="builtin-name">error</span> localizedDescription], [<span class="builtin-name">error</span> userInfo]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="代码加载NSPersistentStoreCoordinator"><a href="#代码加载NSPersistentStoreCoordinator" class="headerlink" title="代码加载NSPersistentStoreCoordinator"></a>代码加载NSPersistentStoreCoordinator</h5><figure class="highlight routeros hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">dispatch_queue_t<span class="hljs-built_in"> queue </span>= <span class="hljs-literal">NULL</span>;</span><br><span class="line">queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);</span><br><span class="line">dispatch_async(queue, ^&#123;</span><br><span class="line">    NSFileManager <span class="hljs-number">*f</span>ileManager = [NSFileManager defaultManager];</span><br><span class="line">    NSArray <span class="hljs-number">*d</span>irectoryArray = [fileManager URLsForDirectory:NSDocumentDirectory</span><br><span class="line">                                                  inDomains:NSUserDomainMask];</span><br><span class="line">    NSURL *storeURL = <span class="hljs-literal">nil</span>;</span><br><span class="line">    storeURL = [directoryArray lastObject];</span><br><span class="line">    storeURL = [storeURL URLByAppendingPathComponent:@<span class="hljs-string">"PPRecipes.sqlite"</span>];</span><br><span class="line">    NSError <span class="hljs-number">*e</span>rror = <span class="hljs-literal">nil</span>;</span><br><span class="line">    NSPersistentStore *store = <span class="hljs-literal">nil</span>;</span><br><span class="line">    store = [psc addPersistentStoreWithType:NSSQLiteStoreType</span><br><span class="line">                           configuration   :nil</span><br><span class="line">                           URL             :storeURL</span><br><span class="line">                           options         :nil</span><br><span class="line">                           <span class="hljs-builtin-name">error</span>           :&amp;<span class="hljs-builtin-name">error</span>];</span><br><span class="line">    <span class="hljs-keyword">if</span> (!store) &#123;</span><br><span class="line">        ALog(@<span class="hljs-string">"Error adding persistent store to coordinator %@\n%@"</span>,</span><br><span class="line">             [<span class="hljs-builtin-name">error</span> localizedDescription], [<span class="hljs-builtin-name">error</span> userInfo]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>由于这个过程是一个比较耗费资源的过程。所以我们应该把它放到后台线程里面去做。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSFileManager</span> *fileManager = [<span class="built_in">NSFileManager</span> defaultManager];</span><br><span class="line">        <span class="built_in">NSArray</span> *directoryArray = [fileManager URLsForDirectory:<span class="built_in">NSDocumentDirectory</span></span><br><span class="line">                                                      inDomains:<span class="built_in">NSUserDomainMask</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSFileManager</span> *fileManager = [<span class="hljs-built_in">NSFileManager</span> defaultManager];</span><br><span class="line">        <span class="hljs-built_in">NSArray</span> *directoryArray = [fileManager URLsForDirectory:<span class="hljs-built_in">NSDocumentDirectory</span></span><br><span class="line">                                                      inDomains:<span class="hljs-built_in">NSUserDomainMask</span>];</span><br></pre></td></tr></table></figure>
+
 <p>Apple中不管是OS X还是iOS能上架的App，都是沙箱机制。这个可以自己Goolge看相关的资料。这样的话每一个App都有自己的文件系统。这两句也比较常使用。就是可以获得自己沙箱中的Document文件夹路经。参数的信息直接查文档把。</p>
 <p>接下来很重要的一句是</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">store = [psc <span class="symbol">addPersistentStoreWithType:</span>NSSQLiteStoreType</span><br><span class="line">    					configuration   <span class="symbol">:nil</span></span><br><span class="line">    					URL             <span class="symbol">:storeURL</span></span><br><span class="line">    					options         <span class="symbol">:nil</span></span><br><span class="line">   						error           <span class="symbol">:&amp;error</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">store = [psc <span class="hljs-symbol">addPersistentStoreWithType:</span>NSSQLiteStoreType</span><br><span class="line">    					configuration   <span class="hljs-symbol">:nil</span></span><br><span class="line">    					URL             <span class="hljs-symbol">:storeURL</span></span><br><span class="line">    					options         <span class="hljs-symbol">:nil</span></span><br><span class="line">   						error           <span class="hljs-symbol">:&amp;error</span>];</span><br></pre></td></tr></table></figure>
+
 <p>此函数的第一个参数是指定NSPersistentStore的存储类型，我们之前说过的三种类型之一。NSSQLiteStoreType就代表这SQLite文件类型。</p>
 <p>第二个参数比较高级。我还没有用到过。文档上写的是设置为nil的时候是把NSPersistentStoreCoordinator作为默认的配置，如果是其他参数可能是把NSPersistentStoreCoordinator设置为其他的用途。</p>
 <p>第三个参数就是我们要存储文件的位置。刚刚我们不是获得的沙箱里面的Document文件夹路经了么。然后我们把文件名加入拼为了一个文件的完整路经传入。</p>
@@ -251,7 +257,8 @@
 <p><a href="http://www.cocoanetics.com/2012/07/multi-context-coredata/" target="_blank" rel="noopener">Multi-Context CoreData</a></p>
 <p><a href="http://www.cocoanetics.com/2013/02/zarra-on-locking/" target="_blank" rel="noopener">Zarra on Locking</a></p>
 <p>初级应用的话只用记住一个就ok了NSManagedObjectContext是有一个NSManagedObjectContextConcurrencyType的属性。如果我们是UI操作（主线程操作）我们应该把它设置为NSMainQueueConcurrencyType类型的。</p>
-<h4 id="代码加载NSManagedObjectContext"><a href="#代码加载NSManagedObjectContext" class="headerlink" title="代码加载NSManagedObjectContext"></a>代码加载NSManagedObjectContext</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSManagedObjectContext</span>                  *moc = <span class="literal">nil</span>;</span><br><span class="line"><span class="built_in">NSManagedObjectContextConcurrencyType</span>   ccType = <span class="built_in">NSMainQueueConcurrencyType</span>;</span><br><span class="line">moc = [[<span class="built_in">NSManagedObjectContext</span> alloc] initWithConcurrencyType:ccType];</span><br><span class="line">[moc setPersistentStoreCoordinator:psc];</span><br><span class="line">[<span class="keyword">self</span> setManagedObjectContext:moc];</span><br></pre></td></tr></table></figure>
+<h4 id="代码加载NSManagedObjectContext"><a href="#代码加载NSManagedObjectContext" class="headerlink" title="代码加载NSManagedObjectContext"></a>代码加载NSManagedObjectContext</h4><figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSManagedObjectContext</span>                  *moc = <span class="hljs-literal">nil</span>;</span><br><span class="line"><span class="hljs-built_in">NSManagedObjectContextConcurrencyType</span>   ccType = <span class="hljs-built_in">NSMainQueueConcurrencyType</span>;</span><br><span class="line">moc = [[<span class="hljs-built_in">NSManagedObjectContext</span> alloc] initWithConcurrencyType:ccType];</span><br><span class="line">[moc setPersistentStoreCoordinator:psc];</span><br><span class="line">[<span class="hljs-keyword">self</span> setManagedObjectContext:moc];</span><br></pre></td></tr></table></figure>
+
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="http://ww2.sinaimg.cn/large/a7480316jw1e39dc0y8o2j.jpg" alt></p>
 <p>至此，三个Core Data的核心类就已经简单说完了一次。他们的关系在上面的图片中表示的很清楚的样子。</p>
 <p>NSPersistentStoreCoordinator从NSManagedObjectModel得到模型然后选择NSPersistentStore作为持久化目的地。然后NSManagedObjectContext在作为NSPersistentStoreCoordinator的一个缓存区给我们操作。</p>
@@ -349,105 +356,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -529,17 +532,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

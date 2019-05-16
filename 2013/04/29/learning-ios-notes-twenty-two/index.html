@@ -198,19 +198,24 @@
 <p>第二:但Model改变的时候NSFetchedResultsController能及时的发出通知.准确的说,应该是当NSManagedObjectContext发生改变的时候,NSFetchedResultsController能知道这些变化,然后发出通知出来.以便UITableview能及时的更新.</p>
 <p>上一篇写了第一点. 现在写第二点.</p>
 <a id="more"></a>
+
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>如果在数据改变了的时候,我们用UITableView reload. 整个UITableView的数据确实能保持最新的情况. 但是问题是这样做的效率很低. 更希望的情况是,我哪一条数据增加,修改,删除. 就对应着UITableView里面的那一条数据在UI上增加,修改,删除.这样效率会有很大的提升. </p>
 <h2 id="直接操作"><a href="#直接操作" class="headerlink" title="直接操作"></a>直接操作</h2><p>首先是用Delegate来进行UITableView的改变.</p>
 <p>第一个方法,告诉UITableView数据要开始更新了,你UITableView赶紧准备好更新.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-</span> (void)<span class="selector-tag">controllerWillChangeContent</span><span class="selector-pseudo">:(NSFetchedResultsController</span> *)<span class="selector-tag">controller</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="selector-attr">[[self tableView]</span> <span class="selector-tag">beginUpdates</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight less hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">-</span> (void)<span class="hljs-selector-tag">controllerWillChangeContent</span><span class="hljs-selector-pseudo">:(NSFetchedResultsController</span> *)<span class="hljs-selector-tag">controller</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-selector-attr">[[self tableView]</span> <span class="hljs-selector-tag">beginUpdates</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>当然有开始就有结束,下面的方法就是告诉UITableView结束更新.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-</span> (void)<span class="selector-tag">controllerDidChangeContent</span><span class="selector-pseudo">:(NSFetchedResultsController</span> *)<span class="selector-tag">controller</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="selector-attr">[[self tableView]</span> <span class="selector-tag">endUpdates</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight less hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">-</span> (void)<span class="hljs-selector-tag">controllerDidChangeContent</span><span class="hljs-selector-pseudo">:(NSFetchedResultsController</span> *)<span class="hljs-selector-tag">controller</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-selector-attr">[[self tableView]</span> <span class="hljs-selector-tag">endUpdates</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这两个方法一看命名规则就能看出来是一个Delegate.在NSFetchedResultsController将要变换的时候,我们开启UITableView的编辑,然后在NSFetchedResultsController已经改变结束的时候结束UITableView的编辑.思维上自然而然,有始有终.</p>
 <p>接下来我们要在begin和end之间对tableview做出改变.</p>
 <p>改变section的方法.</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)controller:(<span class="built_in">NSFetchedResultsController</span> *)controller</span><br><span class="line">  didChangeSection:(<span class="keyword">id</span> &lt;<span class="built_in">NSFetchedResultsSectionInfo</span>&gt;)sectionInfo</span><br><span class="line">           atIndex:(<span class="built_in">NSUInteger</span>)sectionIndex</span><br><span class="line">     forChangeType:(<span class="built_in">NSFetchedResultsChangeType</span>)type</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSIndexSet</span> *indexSet = [<span class="built_in">NSIndexSet</span> indexSetWithIndex:sectionIndex];</span><br><span class="line">    <span class="keyword">switch</span>(type) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="built_in">NSFetchedResultsChangeInsert</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            [[<span class="keyword">self</span> tableView] insertSections:indexSet</span><br><span class="line">                            withRowAnimation:<span class="built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="built_in">NSFetchedResultsChangeDelete</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            [[<span class="keyword">self</span> tableView] deleteSections:indexSet</span><br><span class="line">                            withRowAnimation:<span class="built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)controller:(<span class="hljs-built_in">NSFetchedResultsController</span> *)controller</span><br><span class="line">  didChangeSection:(<span class="hljs-keyword">id</span> &lt;<span class="hljs-built_in">NSFetchedResultsSectionInfo</span>&gt;)sectionInfo</span><br><span class="line">           atIndex:(<span class="hljs-built_in">NSUInteger</span>)sectionIndex</span><br><span class="line">     forChangeType:(<span class="hljs-built_in">NSFetchedResultsChangeType</span>)type</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">NSIndexSet</span> *indexSet = [<span class="hljs-built_in">NSIndexSet</span> indexSetWithIndex:sectionIndex];</span><br><span class="line">    <span class="hljs-keyword">switch</span>(type) &#123;</span><br><span class="line">        <span class="hljs-keyword">case</span> <span class="hljs-built_in">NSFetchedResultsChangeInsert</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            [[<span class="hljs-keyword">self</span> tableView] insertSections:indexSet</span><br><span class="line">                            withRowAnimation:<span class="hljs-built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">case</span> <span class="hljs-built_in">NSFetchedResultsChangeDelete</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            [[<span class="hljs-keyword">self</span> tableView] deleteSections:indexSet</span><br><span class="line">                            withRowAnimation:<span class="hljs-built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这个方法是在section改变的时候调用.改变类型支持两种NSFetchedResultsChangeInsert和NSFetchedResultsChangeDelete..这样我们能操作UITableView里面section变化了.</p>
 <p>接下来的方法是改变cell内容的.</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)controller:(<span class="built_in">NSFetchedResultsController</span> *)controller didChangeObject:(<span class="keyword">id</span>)anObject</span><br><span class="line">       atIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">     forChangeType:(<span class="built_in">NSFetchedResultsChangeType</span>)type</span><br><span class="line">      newIndexPath:(<span class="built_in">NSIndexPath</span> *)newIndexPath</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSArray</span> *newArray = [<span class="built_in">NSArray</span> arrayWithObject:newIndexPath]; <span class="built_in">NSArray</span> *oldArray = [<span class="built_in">NSArray</span> arrayWithObject:indexPath]; <span class="keyword">switch</span>(type) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="built_in">NSFetchedResultsChangeInsert</span>:</span><br><span class="line">            [[<span class="keyword">self</span> tableView] insertRowsAtIndexPaths:newArray</span><br><span class="line">                                    withRowAnimation:<span class="built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="built_in">NSFetchedResultsChangeDelete</span>:</span><br><span class="line">            [[<span class="keyword">self</span> tableView] deleteRowsAtIndexPaths:oldArray</span><br><span class="line">                                    withRowAnimation:<span class="built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="built_in">NSFetchedResultsChangeUpdate</span>: &#123;</span><br><span class="line">            <span class="built_in">UITableViewCell</span> *cell = <span class="literal">nil</span>;</span><br><span class="line">            <span class="built_in">NSManagedObject</span> *object = <span class="literal">nil</span>;</span><br><span class="line">            cell = [[<span class="keyword">self</span> tableView] cellForRowAtIndexPath:indexPath];</span><br><span class="line">            object = [[<span class="keyword">self</span> fetchedResultsController] objectAtIndexPath:indexPath]; [[cell textLabel] setText:[object valueForKey:<span class="string">@"name"</span>]];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="built_in">NSFetchedResultsChangeMove</span>:</span><br><span class="line">            </span><br><span class="line">            [[<span class="keyword">self</span> tableView] deleteRowsAtIndexPaths:oldArray</span><br><span class="line">                                    withRowAnimation:<span class="built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            [[<span class="keyword">self</span> tableView] insertRowsAtIndexPaths:newArray</span><br><span class="line">                                    withRowAnimation:<span class="built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">        <span class="keyword">break</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)controller:(<span class="hljs-built_in">NSFetchedResultsController</span> *)controller didChangeObject:(<span class="hljs-keyword">id</span>)anObject</span><br><span class="line">       atIndexPath:(<span class="hljs-built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">     forChangeType:(<span class="hljs-built_in">NSFetchedResultsChangeType</span>)type</span><br><span class="line">      newIndexPath:(<span class="hljs-built_in">NSIndexPath</span> *)newIndexPath</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">NSArray</span> *newArray = [<span class="hljs-built_in">NSArray</span> arrayWithObject:newIndexPath]; <span class="hljs-built_in">NSArray</span> *oldArray = [<span class="hljs-built_in">NSArray</span> arrayWithObject:indexPath]; <span class="hljs-keyword">switch</span>(type) &#123;</span><br><span class="line">        <span class="hljs-keyword">case</span> <span class="hljs-built_in">NSFetchedResultsChangeInsert</span>:</span><br><span class="line">            [[<span class="hljs-keyword">self</span> tableView] insertRowsAtIndexPaths:newArray</span><br><span class="line">                                    withRowAnimation:<span class="hljs-built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        <span class="hljs-keyword">case</span> <span class="hljs-built_in">NSFetchedResultsChangeDelete</span>:</span><br><span class="line">            [[<span class="hljs-keyword">self</span> tableView] deleteRowsAtIndexPaths:oldArray</span><br><span class="line">                                    withRowAnimation:<span class="hljs-built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        <span class="hljs-keyword">case</span> <span class="hljs-built_in">NSFetchedResultsChangeUpdate</span>: &#123;</span><br><span class="line">            <span class="hljs-built_in">UITableViewCell</span> *cell = <span class="hljs-literal">nil</span>;</span><br><span class="line">            <span class="hljs-built_in">NSManagedObject</span> *object = <span class="hljs-literal">nil</span>;</span><br><span class="line">            cell = [[<span class="hljs-keyword">self</span> tableView] cellForRowAtIndexPath:indexPath];</span><br><span class="line">            object = [[<span class="hljs-keyword">self</span> fetchedResultsController] objectAtIndexPath:indexPath]; [[cell textLabel] setText:[object valueForKey:<span class="hljs-string">@"name"</span>]];</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">case</span> <span class="hljs-built_in">NSFetchedResultsChangeMove</span>:</span><br><span class="line">            </span><br><span class="line">            [[<span class="hljs-keyword">self</span> tableView] deleteRowsAtIndexPaths:oldArray</span><br><span class="line">                                    withRowAnimation:<span class="hljs-built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">            [[<span class="hljs-keyword">self</span> tableView] insertRowsAtIndexPaths:newArray</span><br><span class="line">                                    withRowAnimation:<span class="hljs-built_in">UITableViewRowAnimationFade</span>];</span><br><span class="line">        <span class="hljs-keyword">break</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>在这个方法里面我们可以增删改Cell的.并且可以有动画.</p>
 <h2 id="NSFetchedResultsController的原理"><a href="#NSFetchedResultsController的原理" class="headerlink" title="NSFetchedResultsController的原理"></a>NSFetchedResultsController的原理</h2><p>上面我们已经可以无痛的使用NSFetchedResultsController了。而且各种数据都可以自动更新，但是它是一个什么原理呢？</p>
 <p>NSFetchedResultsController的核心其实是作为一个观察者去监听NSManagedObjectContext的通知。当NSManagedObjectContext发生改变的时候NSFetchedResultsController就知道了变化。所以，我们初始化一个NSFetchedResultsController的时候，也就监听了对应的NSManagedObjectContext的通知。具体的是三个通知。</p>
@@ -317,105 +322,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -493,17 +494,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

@@ -197,6 +197,7 @@
 <p>##开篇扯淡<br>圣诞渐进，各种App都在黑五一波冰点。可以遇见的是12月25号前也会有一大波来临。但是！！！今年买软件貌似已经花了很多钱了。而且，也没有几个想入的了。所以就忍忍吧。</p>
 <p>然后，做个宣传啊。我们国际化大厂Sumi的App Grid Diary在紧锣密鼓的开发2.0. 完全iOS7设计。各种给力。到时候希望能给大家带来一个好的App吧。</p>
 <a id="more"></a>
+
 <p>##CocoaPods</p>
 <p>CocoaPods 不必在介绍了吧。如果你是一个iOS or OSX的开发者。然后你跟我说你还没有用过CocoaPods。我肯定会觉得你不够潮(low爆了)。</p>
 <p>其实我之前又写过两篇介绍CocoaPods的</p>
@@ -214,15 +215,18 @@
 <p>首先，去把它fork到自己的项目里面去。(什么不会fork？去面壁去)</p>
 <p>然后，把fork到自己帐号下的项目clone出来 cd进去</p>
 <p>输入</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod spec create https:<span class="regexp">//gi</span>thub.com<span class="regexp">/iiiyu/</span>XCAsyncTestCase</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod spec create https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/iiiyu/</span>XCAsyncTestCase</span><br></pre></td></tr></table></figure>
+
 <p>接着你会看到</p>
 <p><img src="http://ww4.sinaimg.cn/large/686e6613gw1ebpcdvd99xj20lc09f0ui.jpg" alt></p>
 <p>这个很正常，很多项目都没有tag。反正在自己的下面。可以瞎搞。给项目加入一个tag。以便pod能自动识别。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">tag</span> -<span class="keyword">a</span> <span class="number">0.0</span>.<span class="number">1</span> -<span class="keyword">m</span> <span class="comment">"Tag release 0.0.1”</span></span><br><span class="line"></span><br><span class="line">git push —<span class="keyword">tags</span></span><br><span class="line"></span><br><span class="line">rm -rf XCAsyncTestCase.podspec</span><br><span class="line"></span><br><span class="line">pod spec create http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iiiyu/XCAsyncTestCase</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-keyword">tag</span> -<span class="hljs-keyword">a</span> <span class="hljs-number">0.0</span>.<span class="hljs-number">1</span> -<span class="hljs-keyword">m</span> <span class="hljs-comment">"Tag release 0.0.1”</span></span><br><span class="line"></span><br><span class="line">git push —<span class="hljs-keyword">tags</span></span><br><span class="line"></span><br><span class="line">rm -rf XCAsyncTestCase.podspec</span><br><span class="line"></span><br><span class="line">pod spec create http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/iiiyu/XCAsyncTestCase</span><br></pre></td></tr></table></figure>
+
 <p>接着你会看到</p>
 <p><img src="http://ww1.sinaimg.cn/large/686e6613gw1ebpcfwf0wsj20i6023mxh.jpg" alt></p>
 <p>OK。 然后用你自己喜欢的编辑器打开。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">mate</span> <span class="selector-tag">XCAsyncTestCase</span><span class="selector-class">.podspec</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-tag">mate</span> <span class="hljs-selector-tag">XCAsyncTestCase</span><span class="hljs-selector-class">.podspec</span></span><br></pre></td></tr></table></figure>
+
 <p>接着其实不用怎么改里面的内容</p>
 <p>我把注释删掉 作者改成原来的作者。然后需要的源码位置改成正确的</p>
 <p>大概就是这样</p>
@@ -230,9 +234,11 @@
 <p>当然 最重要的是s.source_files这个。你要把你要包含的文件路径找对了。 然后用通配符匹配好了。就OK了。</p>
 <p>当然其他项，你看看注释啥的 选择性的填一些。在这里是一个五分钟的hello world。不深入讨论</p>
 <p>接着 把修改好的文件push到github上去</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span> XCAsyncTestCase.podspec</span><br><span class="line"></span><br><span class="line">git commit -<span class="keyword">am</span> <span class="comment">"add XCAsyncTestCase.podspec file”</span></span><br><span class="line"></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-built_in">add</span> XCAsyncTestCase.podspec</span><br><span class="line"></span><br><span class="line">git commit -<span class="hljs-keyword">am</span> <span class="hljs-comment">"add XCAsyncTestCase.podspec file”</span></span><br><span class="line"></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
 <p>最后，在你项目的Podfile里面加入这个第三方库的地址。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="string">'XCAsyncTestCase'</span>, :<span class="function"><span class="params">git</span> =&gt;</span> <span class="string">'https://github.com/iiiyu/XCAsyncTestCase.git'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="hljs-string">'XCAsyncTestCase'</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">'https://github.com/iiiyu/XCAsyncTestCase.git'</span></span><br></pre></td></tr></table></figure>
+
 <p>就可以畅快的使用pod install了</p>
 <p>五分钟打完收工有木有。很简单直白有木有。</p>
 <p>当然这里只是一个hello world。 如果库中有一些高端设置比如要包含资源文件啊。 加入库依赖啊。 配置一些xcconfig。更多内容 请查看<a href="http://cocoapods.org" target="_blank" rel="noopener">越来越好看的官方网站</a></p>
@@ -240,12 +246,15 @@
 <p>以下是我平时使用经常用到的Podfile会用到的一些写法。</p>
 <h3 id="福利一"><a href="#福利一" class="headerlink" title="福利一"></a>福利一</h3><p>首先是有一些库编译时候会有警告。但是作为一个有洁癖的人呢不想看见这些</p>
 <p>可以在platform :ios,  ‘x.0’的后面加入这句</p>
-<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inhibit_all_warnings!</span><br></pre></td></tr></table></figure>
+<figure class="highlight erlang-repl hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inhibit_all_warnings!</span><br></pre></td></tr></table></figure>
+
 <p>这样编译这些第三方库的时候就没有那些烦人的小警告了。</p>
 <h3 id="福利二"><a href="#福利二" class="headerlink" title="福利二"></a>福利二</h3><p>使用福利一是不是很爽呢。但是有一个神库ReactiveCocoa。当你关闭所有警告的时候。它就编译不过了。可急坏了。其实很简单对他单独设置打开编译警告就好了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="string">'ReactiveCocoa'</span>, <span class="string">'~&gt; 2.1.8'</span>, :<span class="function"><span class="params">inhibit_warnings</span> =&gt;</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="hljs-string">'ReactiveCocoa'</span>, <span class="hljs-string">'~&gt; 2.1.8'</span>, :<span class="hljs-function"><span class="hljs-params">inhibit_warnings</span> =&gt;</span> <span class="hljs-literal">true</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="福利三"><a href="#福利三" class="headerlink" title="福利三"></a>福利三</h3><p>如果你有多个Targets需要pod的库怎么办<br>也很简单。Podfile的头部加入</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">link_with</span> [<span class="string">'AAAAA'</span>, <span class="string">'BBBBB'</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attribute">link_with</span> [<span class="hljs-string">'AAAAA'</span>, <span class="hljs-string">'BBBBB'</span>]</span><br></pre></td></tr></table></figure>
+
 <p>AAAAA和BBBBB都是你target的名字，这样不同的target都会有pod库了。我主要是用来解决Unit Test需要pod install一些库的问题。当初也是找了老半天才找到。</p>
 <p>##总结<br>CocoaPods很好用。而且一直在进化。我发现我怎么写介绍都只停留在很浅显的基础上。更多更深入的内容需要自己使用了。然后慢慢积累的。总之。不用CocoaPods的Cocoa开发太不潮了。</p>
 
@@ -341,105 +350,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -501,17 +506,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

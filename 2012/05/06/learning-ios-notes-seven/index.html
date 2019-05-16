@@ -195,24 +195,25 @@
         <div class="content">
             <h1 id="iOS笔记-Core-Location定位"><a href="#iOS笔记-Core-Location定位" class="headerlink" title="iOS笔记 Core Location定位"></a>iOS笔记 Core Location定位</h1><h2 id="主要问题"><a href="#主要问题" class="headerlink" title="主要问题"></a>主要问题</h2><p>很多应用上需要获得当前用户所在的位置，有或者需要在地图上根据座标显示一些点一些信息。这次主要分享Core Location定位当前位置我遇到的问题。</p>
 <a id="more"></a>
+
 <h2 id="第一个方案"><a href="#第一个方案" class="headerlink" title="第一个方案"></a>第一个方案</h2><p>根据我看的文档所示定位分为一下几个步骤：</p>
 <ul>
 <li>包含Core Location framework</li>
 <li>创建一个CLLocationManager的实例</li>
 <li>设置CLLocationManagerDelegate委托</li>
-<li>实现CLLocationManagerDelegate委托里面的- (void)locationManager:(CLLocationManager <em>)manager didUpdateToLocation:(CLLocation </em>)newLocation fromLocation:(CLLocation *)oldLocation方法</li>
+<li>实现CLLocationManagerDelegate委托里面的- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation方法</li>
 </ul>
-<p>其中原理就不细说了。只说实现问题。在完成了- (void)locationManager:(CLLocationManager <em>)manager didUpdateToLocation:(CLLocation </em>)newLocation fromLocation:(CLLocation *)oldLocation以后。当我们想要定位的时候。需要启动startUpdatingLocation。因为启用定位是一个耗电的工程。如果时刻定位的话，程序会变成电池杀手。所以，各种大牛建议，定位只在需要的时候定位。完成以后我们应该用停止它stopUpdatingLocation。</p>
-<p>调用你实例的CLLocationManager startUpdatingLocation以后，会轮询- (void)locationManager:(CLLocationManager <em>)manager didUpdateToLocation:(CLLocation </em>)newLocation fromLocation:(CLLocation *)oldLocation方法。直到stopUpdatingLocation为止。因此可以用一个数组存储一定的newLocation。然后取平均值。本来我以为这样可能会取值准确一些。但是我实际定位估计有2-3km的距离。起初我以为是用ip来定位可能误差较大没有在意(用的iPad wifi测试).后来用其他App看到定位很准确，没有这么大的误差,就觉得做错了。然后尝试第二种方案。</p>
+<p>其中原理就不细说了。只说实现问题。在完成了- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation以后。当我们想要定位的时候。需要启动startUpdatingLocation。因为启用定位是一个耗电的工程。如果时刻定位的话，程序会变成电池杀手。所以，各种大牛建议，定位只在需要的时候定位。完成以后我们应该用停止它stopUpdatingLocation。</p>
+<p>调用你实例的CLLocationManager startUpdatingLocation以后，会轮询- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation方法。直到stopUpdatingLocation为止。因此可以用一个数组存储一定的newLocation。然后取平均值。本来我以为这样可能会取值准确一些。但是我实际定位估计有2-3km的距离。起初我以为是用ip来定位可能误差较大没有在意(用的iPad wifi测试).后来用其他App看到定位很准确，没有这么大的误差,就觉得做错了。然后尝试第二种方案。</p>
 <h2 id="第二个方案"><a href="#第二个方案" class="headerlink" title="第二个方案"></a>第二个方案</h2><p>隐约记得有种叫火星座标的东西。在<a href="http://www.v2ex.com/t/11666" target="_blank" rel="noopener">这里V2EX</a>普及了一下知识以后，觉得难道是火星人搞鬼了。然后纠结于解决方法。最后忘记在哪里看到MKMapView里面有一个userLocation的属性。就应该是当前位置座标。干净尝试一下:</p>
 <ul>
 <li>包含MapKit framework</li>
 <li>创建MKMapView一个实例类</li>
 <li>设置MKMapViewDelegate委托</li>
-<li>实现MKMapViewDelegate委托中的- (void)mapView:(MKMapView <em>)mapView didUpdateUserLocation:(MKUserLocation </em>)userLocation<br>方法</li>
+<li>实现MKMapViewDelegate委托中的- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation<br>方法</li>
 <li>MKMapView实例调用setShowsUserLocation</li>
 </ul>
-<p>这样在- (void)mapView:(MKMapView <em>)mapView didUpdateUserLocation:(MKUserLocation </em>)userLocation方法里面userLocation就可以取得当前用户的位置。而且很准确。</p>
+<p>这样在- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation方法里面userLocation就可以取得当前用户的位置。而且很准确。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我不知道第一个方案为什么不准确，而第二个比较准确。跟曹哥讨论以后，曹哥告诉我说有人为了获得位置可能会建立一个不显示的MKMapView而仅仅是为了获得坐标。特此记录。</p>
 
         </div>
@@ -307,105 +308,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -475,17 +472,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

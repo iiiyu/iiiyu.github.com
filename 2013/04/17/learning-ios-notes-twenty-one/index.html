@@ -199,6 +199,8 @@
 <p>第一:NSFetchedResultsController是作用在Core Data上的,通过NSFetchRequest来查询Core Data里面的数据.可以返回按照组分好的数据.这样便于UITableView来显示.</p>
 <p>第二:但Modle改变的时候NSFetchedResultsController能及时的发出通知.准确的说,应该是当NSManagedObjectContext发生改变的时候,NSFetchedResultsController能知道这些变化,然后发出通知出来.以便UITableview能及时的更新.</p>
 <a id="more"></a>
+
+
 <h2 id="实现一个NSFetchedResultsController作为Data-source的UITableView"><a href="#实现一个NSFetchedResultsController作为Data-source的UITableView" class="headerlink" title="实现一个NSFetchedResultsController作为Data source的UITableView"></a>实现一个NSFetchedResultsController作为Data source的UITableView</h2><h3 id="创建一个最小带Core-Data的工程"><a href="#创建一个最小带Core-Data的工程" class="headerlink" title="创建一个最小带Core Data的工程"></a>创建一个最小带Core Data的工程</h3><p><img src="http://ww3.sinaimg.cn/large/a74ecc4cjw1e3tlc32lbhj20k80dndhr.jpg" alt></p>
 <p>选择Master-Detail Application</p>
 <p><img src="http://ww4.sinaimg.cn/large/a74eed94jw1e3tle5fxqnj20k80dn0uf.jpg" alt></p>
@@ -208,32 +210,42 @@
 <h4 id="首先修改Data-Model"><a href="#首先修改Data-Model" class="headerlink" title="首先修改Data Model"></a>首先修改Data Model</h4><p>增加一个字段用来分组. 我们增加一个同样的Date用来记录此时的分钟数量.</p>
 <p><img src="http://ww4.sinaimg.cn/large/bfadf3bejw1e3tn8pouqgj.jpg" alt></p>
 <h3 id="初始化一个NSFetchedResultsController"><a href="#初始化一个NSFetchedResultsController" class="headerlink" title="初始化一个NSFetchedResultsController"></a>初始化一个NSFetchedResultsController</h3><p>这里假设你看过我的Core Data笔记1,2.默认你已经做好了Core Data stack的全部工作.然后再开始NSFetchedResultsController的初始化.</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSFetchedResultsController</span> *)fetchedResultsController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (_fetchedResultsController != <span class="literal">nil</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> _fetchedResultsController;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">NSFetchRequest</span> *fetchRequest = [[<span class="built_in">NSFetchRequest</span> alloc] init];</span><br><span class="line">    <span class="comment">// Edit the entity name as appropriate.</span></span><br><span class="line">    <span class="built_in">NSEntityDescription</span> *entity = [<span class="built_in">NSEntityDescription</span> entityForName:<span class="string">@"Event"</span> inManagedObjectContext:<span class="keyword">self</span>.managedObjectContext];</span><br><span class="line">    [fetchRequest setEntity:entity];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set the batch size to a suitable number.</span></span><br><span class="line">    [fetchRequest setFetchBatchSize:<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Edit the sort key as appropriate.</span></span><br><span class="line">    <span class="built_in">NSSortDescriptor</span>    *sortDescriptor = [[<span class="built_in">NSSortDescriptor</span> alloc] initWithKey:<span class="string">@"timeStamp"</span> ascending:<span class="literal">NO</span>];</span><br><span class="line">    <span class="built_in">NSArray</span>             *sortDescriptors = @[sortDescriptor];</span><br><span class="line"></span><br><span class="line">    [fetchRequest setSortDescriptors:sortDescriptors];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Edit the section name key path and cache name if appropriate.</span></span><br><span class="line">    <span class="comment">// nil for section name key path means "no sections".</span></span><br><span class="line">    <span class="built_in">NSFetchedResultsController</span> *aFetchedResultsController = [[<span class="built_in">NSFetchedResultsController</span> alloc] initWithFetchRequest:fetchRequest managedObjectContext:<span class="keyword">self</span>.managedObjectContext sectionNameKeyPath:<span class="string">@"sectionMinute"</span> cacheName:<span class="string">@"Master"</span>];</span><br><span class="line">    aFetchedResultsController.delegate = <span class="keyword">self</span>;</span><br><span class="line">    <span class="keyword">self</span>.fetchedResultsController = aFetchedResultsController;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">NSError</span> *error = <span class="literal">nil</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (![<span class="keyword">self</span>.fetchedResultsController performFetch:&amp;error]) &#123;</span><br><span class="line">        <span class="comment">// Replace this implementation with code to handle the error appropriately.</span></span><br><span class="line">        <span class="comment">// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.</span></span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"Unresolved error %@, %@"</span>, error, [error userInfo]);</span><br><span class="line">        abort();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> _fetchedResultsController;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-built_in">NSFetchedResultsController</span> *)fetchedResultsController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (_fetchedResultsController != <span class="hljs-literal">nil</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> _fetchedResultsController;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">NSFetchRequest</span> *fetchRequest = [[<span class="hljs-built_in">NSFetchRequest</span> alloc] init];</span><br><span class="line">    <span class="hljs-comment">// Edit the entity name as appropriate.</span></span><br><span class="line">    <span class="hljs-built_in">NSEntityDescription</span> *entity = [<span class="hljs-built_in">NSEntityDescription</span> entityForName:<span class="hljs-string">@"Event"</span> inManagedObjectContext:<span class="hljs-keyword">self</span>.managedObjectContext];</span><br><span class="line">    [fetchRequest setEntity:entity];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// Set the batch size to a suitable number.</span></span><br><span class="line">    [fetchRequest setFetchBatchSize:<span class="hljs-number">20</span>];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// Edit the sort key as appropriate.</span></span><br><span class="line">    <span class="hljs-built_in">NSSortDescriptor</span>    *sortDescriptor = [[<span class="hljs-built_in">NSSortDescriptor</span> alloc] initWithKey:<span class="hljs-string">@"timeStamp"</span> ascending:<span class="hljs-literal">NO</span>];</span><br><span class="line">    <span class="hljs-built_in">NSArray</span>             *sortDescriptors = @[sortDescriptor];</span><br><span class="line"></span><br><span class="line">    [fetchRequest setSortDescriptors:sortDescriptors];</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// Edit the section name key path and cache name if appropriate.</span></span><br><span class="line">    <span class="hljs-comment">// nil for section name key path means "no sections".</span></span><br><span class="line">    <span class="hljs-built_in">NSFetchedResultsController</span> *aFetchedResultsController = [[<span class="hljs-built_in">NSFetchedResultsController</span> alloc] initWithFetchRequest:fetchRequest managedObjectContext:<span class="hljs-keyword">self</span>.managedObjectContext sectionNameKeyPath:<span class="hljs-string">@"sectionMinute"</span> cacheName:<span class="hljs-string">@"Master"</span>];</span><br><span class="line">    aFetchedResultsController.delegate = <span class="hljs-keyword">self</span>;</span><br><span class="line">    <span class="hljs-keyword">self</span>.fetchedResultsController = aFetchedResultsController;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-built_in">NSError</span> *error = <span class="hljs-literal">nil</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">if</span> (![<span class="hljs-keyword">self</span>.fetchedResultsController performFetch:&amp;error]) &#123;</span><br><span class="line">        <span class="hljs-comment">// Replace this implementation with code to handle the error appropriately.</span></span><br><span class="line">        <span class="hljs-comment">// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.</span></span><br><span class="line">        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"Unresolved error %@, %@"</span>, error, [error userInfo]);</span><br><span class="line">        abort();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> _fetchedResultsController;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这里是工程里面的NSFetchedResultsController的set方法.可以看出,第一我们创建一个NSFetchRequest查询.然后在用这个NSFetchRequest去创建一个NSFetchedResultsController.</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] <span class="string">initWithFetchRequest:</span>fetchRequest <span class="string">managedObjectContext:</span>self.managedObjectContext <span class="string">sectionNameKeyPath:</span>@<span class="string">"sectionMinute"</span> <span class="string">cacheName:</span>@<span class="string">"Master"</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] <span class="hljs-string">initWithFetchRequest:</span>fetchRequest <span class="hljs-string">managedObjectContext:</span>self.managedObjectContext <span class="hljs-string">sectionNameKeyPath:</span>@<span class="hljs-string">"sectionMinute"</span> <span class="hljs-string">cacheName:</span>@<span class="hljs-string">"Master"</span>];</span><br></pre></td></tr></table></figure>
+
 <p>第一个参数就是NSFetchRequest.</p>
 <p>第二个参数是要指定在哪个context里面进行查询</p>
 <p>第三个参数是根据什么key来分组.sectionNameKeyPath本来是nil是不分组,我改为我们需要分组的key值”sectionMinute”.</p>
 <p>第四个参数  <a href="http://developer.apple.com/library/ios/#documentation/CoreData/Reference/NSFetchedResultsController_Class/Reference/Reference.html" target="_blank" rel="noopener">官方解释是这里</a>点到The Cache的地方. 我的理解是cache只保留很少的一部分数据在磁盘上面,如果使用了Cache,在重建UITableView的时候, 就优先查询cache里面的数据.然后要在-performFetch:执行的时候才会去刷新新的数据.这样有助于UITableView的流畅性.</p>
 <p>然后我加入Sections的方法</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSString</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView titleForHeaderInSection:(<span class="built_in">NSInteger</span>)section</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSArray</span> *sections = [[<span class="keyword">self</span> fetchedResultsController] sections]; <span class="keyword">id</span> &lt;<span class="built_in">NSFetchedResultsSectionInfo</span>&gt; sectionInfo = <span class="literal">nil</span>;</span><br><span class="line">    sectionInfo = [sections objectAtIndex:section];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> [sectionInfo name];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-built_in">NSString</span> *)tableView:(<span class="hljs-built_in">UITableView</span> *)tableView titleForHeaderInSection:(<span class="hljs-built_in">NSInteger</span>)section</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">NSArray</span> *sections = [[<span class="hljs-keyword">self</span> fetchedResultsController] sections]; <span class="hljs-keyword">id</span> &lt;<span class="hljs-built_in">NSFetchedResultsSectionInfo</span>&gt; sectionInfo = <span class="hljs-literal">nil</span>;</span><br><span class="line">    sectionInfo = [sections objectAtIndex:section];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">return</span> [sectionInfo name];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>接着我添加</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/erica/</span>NSDate-Extensions.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/erica/</span>NSDate-Extensions.git</span><br></pre></td></tr></table></figure>
+
 <p>这个NSDate库进来.自己按照他的写法,写一个能获得当前时间秒数为0的方法.用来分组.</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (NSDate *) dateAtStartOfMinutes</span><br><span class="line">&#123;</span><br><span class="line">    NSDateComponents *components = [CURRENT_CALENDAR <span class="string">components:</span>DATE_COMPONENTS <span class="string">fromDate:</span>self];</span><br><span class="line">	[components <span class="string">setSecond:</span><span class="number">0</span>];</span><br><span class="line">	<span class="keyword">return</span> [CURRENT_CALENDAR <span class="string">dateFromComponents:</span>components];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (NSDate *) dateAtStartOfMinutes</span><br><span class="line">&#123;</span><br><span class="line">    NSDateComponents *components = [CURRENT_CALENDAR <span class="hljs-string">components:</span>DATE_COMPONENTS <span class="hljs-string">fromDate:</span>self];</span><br><span class="line">	[components <span class="hljs-string">setSecond:</span><span class="hljs-number">0</span>];</span><br><span class="line">	<span class="hljs-keyword">return</span> [CURRENT_CALENDAR <span class="hljs-string">dateFromComponents:</span>components];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>然后改写insert方法</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)insertNewObject:(<span class="keyword">id</span>)sender</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSManagedObjectContext</span> *context = [<span class="keyword">self</span>.fetchedResultsController managedObjectContext];</span><br><span class="line">    <span class="built_in">NSEntityDescription</span> *entity = [[<span class="keyword">self</span>.fetchedResultsController fetchRequest] entity];</span><br><span class="line">    <span class="built_in">NSManagedObject</span> *newManagedObject = [<span class="built_in">NSEntityDescription</span> insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// If appropriate, configure the new managed object.</span></span><br><span class="line">    <span class="comment">// Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.</span></span><br><span class="line">    [newManagedObject setValue:[<span class="built_in">NSDate</span> date] forKey:<span class="string">@"timeStamp"</span>];</span><br><span class="line">    [newManagedObject setValue:[[<span class="built_in">NSDate</span> date] dateAtStartOfMinutes]  forKey:<span class="string">@"sectionMinute"</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Save the context.</span></span><br><span class="line">    <span class="built_in">NSError</span> *error = <span class="literal">nil</span>;</span><br><span class="line">    <span class="keyword">if</span> (![context save:&amp;error]) &#123;</span><br><span class="line">         <span class="comment">// Replace this implementation with code to handle the error appropriately.</span></span><br><span class="line">         <span class="comment">// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. </span></span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"Unresolved error %@, %@"</span>, error, [error userInfo]);</span><br><span class="line">        abort();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)insertNewObject:(<span class="hljs-keyword">id</span>)sender</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">NSManagedObjectContext</span> *context = [<span class="hljs-keyword">self</span>.fetchedResultsController managedObjectContext];</span><br><span class="line">    <span class="hljs-built_in">NSEntityDescription</span> *entity = [[<span class="hljs-keyword">self</span>.fetchedResultsController fetchRequest] entity];</span><br><span class="line">    <span class="hljs-built_in">NSManagedObject</span> *newManagedObject = [<span class="hljs-built_in">NSEntityDescription</span> insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// If appropriate, configure the new managed object.</span></span><br><span class="line">    <span class="hljs-comment">// Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.</span></span><br><span class="line">    [newManagedObject setValue:[<span class="hljs-built_in">NSDate</span> date] forKey:<span class="hljs-string">@"timeStamp"</span>];</span><br><span class="line">    [newManagedObject setValue:[[<span class="hljs-built_in">NSDate</span> date] dateAtStartOfMinutes]  forKey:<span class="hljs-string">@"sectionMinute"</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment">// Save the context.</span></span><br><span class="line">    <span class="hljs-built_in">NSError</span> *error = <span class="hljs-literal">nil</span>;</span><br><span class="line">    <span class="hljs-keyword">if</span> (![context save:&amp;error]) &#123;</span><br><span class="line">         <span class="hljs-comment">// Replace this implementation with code to handle the error appropriately.</span></span><br><span class="line">         <span class="hljs-comment">// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. </span></span><br><span class="line">        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"Unresolved error %@, %@"</span>, error, [error userInfo]);</span><br><span class="line">        abort();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>其实就是加入了</p>
-<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">newManagedObject</span> setValue:[[<span class="name">NSDate</span> date] dateAtStartOfMinutes]  forKey:@<span class="string">"sectionMinute"</span>]<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight scheme hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="hljs-name">newManagedObject</span> setValue:[[<span class="hljs-name">NSDate</span> date] dateAtStartOfMinutes]  forKey:@<span class="hljs-string">"sectionMinute"</span>]<span class="hljs-comment">;</span></span><br></pre></td></tr></table></figure>
+
 <p>这句.</p>
 <p>这样,简单的使用NSFetchedResultsController来显示分组的UITableView就搞定了.<br>当然因为建立的工程模板原因.很大一部分都是xCode搞定的.</p>
 <h3 id="被遗忘的地方"><a href="#被遗忘的地方" class="headerlink" title="被遗忘的地方"></a>被遗忘的地方</h3><p>Sections数量,决定了有多少组</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSInteger</span>)numberOfSectionsInTableView:(<span class="built_in">UITableView</span> *)tableView</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> [[<span class="keyword">self</span>.fetchedResultsController sections] count];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-built_in">NSInteger</span>)numberOfSectionsInTableView:(<span class="hljs-built_in">UITableView</span> *)tableView</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> [[<span class="hljs-keyword">self</span>.fetchedResultsController sections] count];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>如果在初始化NSFetchedResultsController的时候sectionNameKeyPath为nil.这里应该会返回1.(就算没有数据也会返回1)</p>
 <p>Row数量,决定每一组分别有多少行数据.</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSInteger</span>)tableView:(<span class="built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">id</span> &lt;<span class="built_in">NSFetchedResultsSectionInfo</span>&gt; sectionInfo = [<span class="keyword">self</span>.fetchedResultsController sections][section];</span><br><span class="line">    <span class="keyword">return</span> [sectionInfo numberOfObjects];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-built_in">NSInteger</span>)tableView:(<span class="hljs-built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="hljs-built_in">NSInteger</span>)section</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-keyword">id</span> &lt;<span class="hljs-built_in">NSFetchedResultsSectionInfo</span>&gt; sectionInfo = [<span class="hljs-keyword">self</span>.fetchedResultsController sections][section];</span><br><span class="line">    <span class="hljs-keyword">return</span> [sectionInfo numberOfObjects];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>我前面说过NSFetchedResultsController就是为了配合UITableView而设计的.所以自然有根据indexPath来取对应的NSManagedObject的方法.</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- (UITableViewCell *)<span class="string">tableView:</span>(UITableView *)tableView <span class="string">cellForRowAtIndexPath:</span>(NSIndexPath *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    UITableViewCell *cell = [tableView <span class="string">dequeueReusableCellWithIdentifier:</span>@<span class="string">"Cell"</span> <span class="string">forIndexPath:</span>indexPath];</span><br><span class="line">    [self <span class="string">configureCell:</span>cell <span class="string">atIndexPath:</span>indexPath];</span><br><span class="line">    <span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)<span class="string">configureCell:</span>(UITableViewCell *)cell <span class="string">atIndexPath:</span>(NSIndexPath *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    NSManagedObject *object = [self.fetchedResultsController <span class="string">objectAtIndexPath:</span>indexPath];</span><br><span class="line">    cell.textLabel.text = [[object <span class="string">valueForKey:</span>@<span class="string">"timeStamp"</span>] description];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- (UITableViewCell *)<span class="hljs-string">tableView:</span>(UITableView *)tableView <span class="hljs-string">cellForRowAtIndexPath:</span>(NSIndexPath *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    UITableViewCell *cell = [tableView <span class="hljs-string">dequeueReusableCellWithIdentifier:</span>@<span class="hljs-string">"Cell"</span> <span class="hljs-string">forIndexPath:</span>indexPath];</span><br><span class="line">    [self <span class="hljs-string">configureCell:</span>cell <span class="hljs-string">atIndexPath:</span>indexPath];</span><br><span class="line">    <span class="hljs-keyword">return</span> cell;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)<span class="hljs-string">configureCell:</span>(UITableViewCell *)cell <span class="hljs-string">atIndexPath:</span>(NSIndexPath *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">    NSManagedObject *object = [self.fetchedResultsController <span class="hljs-string">objectAtIndexPath:</span>indexPath];</span><br><span class="line">    cell.textLabel.text = [[object <span class="hljs-string">valueForKey:</span>@<span class="hljs-string">"timeStamp"</span>] description];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="show"><a href="#show" class="headerlink" title="show"></a>show</h3><p><img src="http://ww3.sinaimg.cn/large/a74ecc4cjw1e3tydp5hsqj208w0geabq.jpg" alt></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>写Blog实在是太累了. NSFetchedResultsController努力一天也才一点点.回去继续写. 下次要写NSFetchedResultsController通知方法.</p>
 
@@ -329,105 +341,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -517,17 +525,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

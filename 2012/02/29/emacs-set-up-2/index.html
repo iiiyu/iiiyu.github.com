@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="更好 更强 更快上次的那些操作只能让你存活下来。 现在让我们感觉更好一些。 有时候，你可能按了一次C-c或者M-x。然后发现自己按错了。想消除这些命令这时候你可是使用 C-g 取消操作 如果你不确定你现在按没有按命令。你可以狂按几次C-g。">
+    <meta name="description" content="更好 更强 更快上次的那些操作只能让你存活下来。 现在让我们感觉更好一些。 有时候，你可能按了一次C-c或者M-x。然后发现自己按错了。想消除这些命令这时候你可是使用 C-g 取消操作如果你不确定你现在按没有按命令。你可以狂按几次C-g。">
 <meta name="keywords" content="Emacs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="调教Emacs(二)——更好 更强 更快">
 <meta property="og:url" content="https://iiiyu.com/2012/02/29/emacs-set-up-2/index.html">
 <meta property="og:site_name" content="萧宸宇">
-<meta property="og:description" content="更好 更强 更快上次的那些操作只能让你存活下来。 现在让我们感觉更好一些。 有时候，你可能按了一次C-c或者M-x。然后发现自己按错了。想消除这些命令这时候你可是使用 C-g 取消操作 如果你不确定你现在按没有按命令。你可以狂按几次C-g。">
+<meta property="og:description" content="更好 更强 更快上次的那些操作只能让你存活下来。 现在让我们感觉更好一些。 有时候，你可能按了一次C-c或者M-x。然后发现自己按错了。想消除这些命令这时候你可是使用 C-g 取消操作如果你不确定你现在按没有按命令。你可以狂按几次C-g。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://iiiyu.com/images/og_image.png">
 <meta property="og:updated_time" content="2019-02-11T09:28:48.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="调教Emacs(二)——更好 更强 更快">
-<meta name="twitter:description" content="更好 更强 更快上次的那些操作只能让你存活下来。 现在让我们感觉更好一些。 有时候，你可能按了一次C-c或者M-x。然后发现自己按错了。想消除这些命令这时候你可是使用 C-g 取消操作 如果你不确定你现在按没有按命令。你可以狂按几次C-g。">
+<meta name="twitter:description" content="更好 更强 更快上次的那些操作只能让你存活下来。 现在让我们感觉更好一些。 有时候，你可能按了一次C-c或者M-x。然后发现自己按错了。想消除这些命令这时候你可是使用 C-g 取消操作如果你不确定你现在按没有按命令。你可以狂按几次C-g。">
 <meta name="twitter:image" content="https://iiiyu.com/images/og_image.png">
 
 
@@ -196,14 +196,13 @@
             <h1 id="更好-更强-更快"><a href="#更好-更强-更快" class="headerlink" title="更好 更强 更快"></a>更好 更强 更快</h1><p><a href="/blog/2012/02/26/emacs-set-up-1/">上次</a>的那些操作只能让你存活下来。</p>
 <p>现在让我们感觉更好一些。</p>
 <p>有时候，你可能按了一次C-c或者M-x。然后发现自己按错了。想消除这些命令这时候你可是使用</p>
-<pre><code>C-g 取消操作
-</code></pre><p>如果你不确定你现在按没有按命令。你可以狂按几次C-g。</p>
+<pre><code>C-g 取消操作</code></pre><p>如果你不确定你现在按没有按命令。你可以狂按几次C-g。</p>
 <a id="more"></a>
+
 <h2 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h2><h3 id="更好的光标移动"><a href="#更好的光标移动" class="headerlink" title="更好的光标移动"></a>更好的光标移动</h3><pre><code>C-a 行首
 C-e 行尾
 M-f 下一个单词
-M-b 上一个单词
-</code></pre><h3 id="更快的光标移动"><a href="#更快的光标移动" class="headerlink" title="更快的光标移动"></a>更快的光标移动</h3><pre><code>M-m 移动到第一个非空格字符 (back-to-indentation)
+M-b 上一个单词</code></pre><h3 id="更快的光标移动"><a href="#更快的光标移动" class="headerlink" title="更快的光标移动"></a>更快的光标移动</h3><pre><code>M-m 移动到第一个非空格字符 (back-to-indentation)
 M-a 句子头
 M-e 句子尾
 M-{ 段落头
@@ -214,14 +213,12 @@ M-&lt; 文件头
 M-&gt; 文件尾 
 M-r 窗口中间
 M-x goto-char RET N 文件的第 N 字节
-M-x goto-line RET N 文件第 N 行
-</code></pre><h3 id="更强的光标移动"><a href="#更强的光标移动" class="headerlink" title="更强的光标移动"></a>更强的光标移动</h3><pre><code>C-M-a 到函数头
+M-x goto-line RET N 文件第 N 行</code></pre><h3 id="更强的光标移动"><a href="#更强的光标移动" class="headerlink" title="更强的光标移动"></a>更强的光标移动</h3><pre><code>C-M-a 到函数头
 C-M-e 到函数尾
 C-M-f 到下一个同级语法结构 
 C-M-b 到上一个同级语法结构
 C-M-d 进入到下一级结构里
-C-M-u 进入到上一级结构里
-</code></pre><p>   文档一般都有各种结构，比如LISP里有S表达式，C语言里的函数，LaTeX 里的 \begin{…}…\end{…} … 如果我们能够已文档的语法单位来移动，就会使操作非常高效。</p>
+C-M-u 进入到上一级结构里</code></pre><p>   文档一般都有各种结构，比如LISP里有S表达式，C语言里的函数，LaTeX 里的 \begin{…}…\end{…} … 如果我们能够已文档的语法单位来移动，就会使操作非常高效。</p>
 <p>   defun。efun 在 LISP 里就是最高一级的 sexp，而在 C 语言里，它的含义就是函数。</p>
 <p>C-M-a   到 defun 头<br>C-M-e   到 defun 尾</p>
 <p>这样，我们在C语言程序里可以一个函数一个函数的跳过。也可以从一个函数中间一下跳到函数开头或末尾。</p>
@@ -231,7 +228,8 @@ C-M-u 进入到上一级结构里
 <p>Gnus: 一个thread。包括所有的 Re:<br>其实 defun 可以被看作最高一级的 sexp。所以范围小一点的移动操作就是在同级 sexp 之间移动。</p>
 <p>C-M-f   到下一个同级语法结构<br>C-M-b   到上一个同级语法结构</p>
 <p>注意，这种移动不能越过语法结构的边界而进入上一级结构。所以，你如果在</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="built_in">i</span>=<span class="number">0</span>; <span class="built_in">i</span>&lt;<span class="number">10</span>; <span class="built_in">i</span>++) &#123; ...&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-built_in">i</span>=<span class="hljs-number">0</span>; <span class="hljs-built_in">i</span>&lt;<span class="hljs-number">10</span>; <span class="hljs-built_in">i</span>++) &#123; ...&#125;</span><br></pre></td></tr></table></figure>
+
 <p>的 for 循环的括号里向右移动，到达右边括号时，就会被提示到达边界。<br>注意，文档中的注释在这两个操作中会被跳过，这是非常方便的。</p>
 <p>进入和退出子结构:</p>
 <p>在LISP中，S表达式是嵌套的括号，进入子结构就是进入到这一级 (…) 里面。而在 C 语言中，进入子结构就是进入 (…), {…}, […] 的里面。 C-M-d: 进入到下一级结构里。C-M-u: 进入到上一级结构里。</p>
@@ -255,8 +253,7 @@ C-s 搜索
 C-r 逆向搜索
 C-M-s 正则搜索
 
-M-x replace-string 替换文本
-</code></pre><p>其实不管是Emacs还是Vim。这些动作你都要在不断的使用中变成下意识的动作。这样，你在键盘上的效率就会越来越高。</p>
+M-x replace-string 替换文本</code></pre><p>其实不管是Emacs还是Vim。这些动作你都要在不断的使用中变成下意识的动作。这样，你在键盘上的效率就会越来越高。</p>
 <p>随便说一句，推荐学Emacs的原因还有。在终端里面我用过的bash和zsh都是支持Emacs按键的。Mac OS里面所有的文本输入框也是部分支持Emacs的。虽然man等是支持vim的按键方式，可是我们不是还有info是Emacs的方式么。</p>
 
         </div>
@@ -351,105 +348,101 @@ M-x replace-string 替换文本
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -523,17 +516,9 @@ M-x replace-string 替换文本
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

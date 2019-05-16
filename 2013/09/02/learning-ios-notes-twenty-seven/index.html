@@ -195,6 +195,7 @@
         <div class="content">
             <h2 id="什么是NSUserDefaults"><a href="#什么是NSUserDefaults" class="headerlink" title="什么是NSUserDefaults"></a>什么是NSUserDefaults</h2><p>NSUserDefaults的持久化本体是一个<a href="http://zh.wikipedia.org/zh/Plist" target="_blank" rel="noopener">plist</a>.内存单例是一个操作类似NSDictionary的类。 而NSUserDefaults的出现我想是因为在每一个程序当中。我们都会设定一些选项。比如桌面壁纸、声音大小、提醒日期等，我们希望就算App关闭以后。我们再次打开的时候还在的东西。但是它并不适合存储App中关键的内容和用户自己产生的大量数据。 大量数据应该用更加合理的方式去做持久化(Document or Core Data).</p>
 <a id="more"></a>
+
 <h3 id="NSUserDefaults简单代码讲解"><a href="#NSUserDefaults简单代码讲解" class="headerlink" title="NSUserDefaults简单代码讲解"></a>NSUserDefaults简单代码讲解</h3><p>使用NSUserDefaults其实巨简单。 </p>
 <p>大概步骤如下:</p>
 <ol>
@@ -202,23 +203,29 @@
 <li>然后就可以用这个单例的实例类进行读写操作。</li>
 <li>读当然没啥问题，但是写了的话这时候只是操作了在内存里面的这个单例实例。需要做持久化的动作。为什么这个动作要自己来做呢。我想是持久化都是进行IO操作。而IO操作其实很多时候就是性能的瓶颈所在。我们可能很短的时间内一次性操作很多次NSUserDefaults。这样就只用在结束的时候保存一次。IO操作就很少。反之如果每次写NSUserDefaults的时候都去做持久化。那刚刚的情况就会在很短的时间内操作多次IO。这是应该避免的。</li>
 </ol>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 首先把数据从plist里面读到内存里面的单例来</span></span><br><span class="line">NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 进行增加or修改操作</span></span><br><span class="line">[standardDefaults <span class="string">setObject:</span>@<span class="string">"a123456789"</span> <span class="string">forKey:</span>@<span class="string">"userID"</span>];</span><br><span class="line">[standardDefaults <span class="string">setInteger:</span><span class="number">24</span> <span class="string">forKey:</span>@<span class="string">"age"</span>];</span><br><span class="line">[standardDefaults <span class="string">setBool:</span>YES <span class="string">forKey:</span>@<span class="string">"isLogin"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除操作</span></span><br><span class="line">[standardDefaults <span class="string">removeObjectForKey:</span>@<span class="string">"debts"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从内存里面写入plist进行持久化</span></span><br><span class="line">[standardDefaults synchronize];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 读取操作</span></span><br><span class="line">NSString *userID = [standardDefaults <span class="string">stringForKey:</span>@<span class="string">"userID"</span>];</span><br><span class="line">BOOL isLogin = [standardDefaults <span class="string">boolForKey:</span>@<span class="string">"isLogin"</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 首先把数据从plist里面读到内存里面的单例来</span></span><br><span class="line">NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 进行增加or修改操作</span></span><br><span class="line">[standardDefaults <span class="hljs-string">setObject:</span>@<span class="hljs-string">"a123456789"</span> <span class="hljs-string">forKey:</span>@<span class="hljs-string">"userID"</span>];</span><br><span class="line">[standardDefaults <span class="hljs-string">setInteger:</span><span class="hljs-number">24</span> <span class="hljs-string">forKey:</span>@<span class="hljs-string">"age"</span>];</span><br><span class="line">[standardDefaults <span class="hljs-string">setBool:</span>YES <span class="hljs-string">forKey:</span>@<span class="hljs-string">"isLogin"</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 删除操作</span></span><br><span class="line">[standardDefaults <span class="hljs-string">removeObjectForKey:</span>@<span class="hljs-string">"debts"</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 从内存里面写入plist进行持久化</span></span><br><span class="line">[standardDefaults synchronize];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 读取操作</span></span><br><span class="line">NSString *userID = [standardDefaults <span class="hljs-string">stringForKey:</span>@<span class="hljs-string">"userID"</span>];</span><br><span class="line">BOOL isLogin = [standardDefaults <span class="hljs-string">boolForKey:</span>@<span class="hljs-string">"isLogin"</span>];</span><br></pre></td></tr></table></figure>
+
 <p>当然还有现代一点的写法。下面两种都是一个效果</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 常见方法</span></span><br><span class="line"><span class="built_in">NSUserDefaults</span> *standardDefaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line"><span class="keyword">if</span> ([standardDefaults stringForKey:<span class="string">@"favoriteColor"</span>] == <span class="literal">nil</span>) &#123;</span><br><span class="line">[standardDefaults setObject:<span class="string">@"Green"</span> forKey:<span class="string">@"favoriteColor"</span>];</span><br><span class="line">[standardDefaults synchronize];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 现代高端上档次方法</span></span><br><span class="line"><span class="built_in">NSUserDefaults</span> *standardDefaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line">[standardDefaults registerDefaults:@&#123;<span class="string">@"favoriteColor"</span>: <span class="string">@"Green"</span>&#125;];</span><br><span class="line">[standardDefaults synchronize];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 常见方法</span></span><br><span class="line"><span class="hljs-built_in">NSUserDefaults</span> *standardDefaults = [<span class="hljs-built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line"><span class="hljs-keyword">if</span> ([standardDefaults stringForKey:<span class="hljs-string">@"favoriteColor"</span>] == <span class="hljs-literal">nil</span>) &#123;</span><br><span class="line">[standardDefaults setObject:<span class="hljs-string">@"Green"</span> forKey:<span class="hljs-string">@"favoriteColor"</span>];</span><br><span class="line">[standardDefaults synchronize];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 现代高端上档次方法</span></span><br><span class="line"><span class="hljs-built_in">NSUserDefaults</span> *standardDefaults = [<span class="hljs-built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line">[standardDefaults registerDefaults:@&#123;<span class="hljs-string">@"favoriteColor"</span>: <span class="hljs-string">@"Green"</span>&#125;];</span><br><span class="line">[standardDefaults synchronize];</span><br></pre></td></tr></table></figure>
+
 <h2 id="iCloud的Key-Value"><a href="#iCloud的Key-Value" class="headerlink" title="iCloud的Key-Value"></a>iCloud的Key-Value</h2><p>简单的，可以把iCloud的key-value当作一个在云端的NSUserDefaults。</p>
 <p>我的用法是，App的Setting最终设置决定的还是NSUserDefaults。iCloud的Key-Value作为数据源来对NSUserDefaults进行修改。这样的优点在于，就算iCloud关闭或者iCloud的数据没有同步回来。你的App依然可以正常的工作和运行。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSUserDefaults</span> *standardDefaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSUserDefaults</span> *standardDefaults = [<span class="hljs-built_in">NSUserDefaults</span> standardUserDefaults];</span><br></pre></td></tr></table></figure>
+
 <p>对应</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="hljs-built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br></pre></td></tr></table></figure>
+
 <p>其他操作跟NSUserDefaults一样一样的。</p>
 <p>只有一个值得注意的是NSUbiquitousKeyValueStore需要去监听<br>NSUbiquitousKeyValueStoreDidChangeExternallyNotification事件。就可以知道NSUbiquitousKeyValueStore是否已经同步更新完成。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br><span class="line">[[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="keyword">self</span></span><br><span class="line">          selector:<span class="keyword">@selector</span>(updateKVStoreItems:)</span><br><span class="line">          name:<span class="built_in">NSUbiquitousKeyValueStoreDidChangeExternallyNotification</span></span><br><span class="line">          object:store];</span><br><span class="line">[store synchronize];</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="hljs-built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br><span class="line">[[<span class="hljs-built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="hljs-keyword">self</span></span><br><span class="line">          selector:<span class="hljs-keyword">@selector</span>(updateKVStoreItems:)</span><br><span class="line">          name:<span class="hljs-built_in">NSUbiquitousKeyValueStoreDidChangeExternallyNotification</span></span><br><span class="line">          object:store];</span><br><span class="line">[store synchronize];</span><br></pre></td></tr></table></figure>
+
 <p>然后实现updateKVStoreItems:方法</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)updateKVStoreItems:(<span class="built_in">NSNotification</span>*)notification &#123;</span><br><span class="line">   <span class="comment">// Get the list of keys that changed.</span></span><br><span class="line">   <span class="built_in">NSDictionary</span>* userInfo = [notification userInfo];</span><br><span class="line">   <span class="built_in">NSNumber</span>* reasonForChange = [userInfo objectForKey:<span class="built_in">NSUbiquitousKeyValueStoreChangeReasonKey</span>];</span><br><span class="line">   <span class="built_in">NSInteger</span> reason = <span class="number">-1</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// If a reason could not be determined, do not update anything.</span></span><br><span class="line">   <span class="keyword">if</span> (!reasonForChange)</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// Update only for changes from the server.</span></span><br><span class="line">   reason = [reasonForChange integerValue];</span><br><span class="line">   <span class="keyword">if</span> ((reason == <span class="built_in">NSUbiquitousKeyValueStoreServerChange</span>) ||</span><br><span class="line">         (reason == <span class="built_in">NSUbiquitousKeyValueStoreInitialSyncChange</span>)) &#123;</span><br><span class="line">      <span class="comment">// If something is changing externally, get the changes</span></span><br><span class="line">      <span class="comment">// and update the corresponding keys locally.</span></span><br><span class="line">      <span class="built_in">NSArray</span>* changedKeys = [userInfo objectForKey:<span class="built_in">NSUbiquitousKeyValueStoreChangedKeysKey</span>];</span><br><span class="line">      <span class="built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br><span class="line">      <span class="built_in">NSUserDefaults</span>* userDefaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line"> </span><br><span class="line">      <span class="comment">// This loop assumes you are using the same key names in both</span></span><br><span class="line">      <span class="comment">// the user defaults database and the iCloud key-value store</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="built_in">NSString</span>* key <span class="keyword">in</span> changedKeys) &#123;</span><br><span class="line">         <span class="keyword">id</span> value = [store objectForKey:key];</span><br><span class="line">         [userDefaults setObject:value forKey:key];</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)updateKVStoreItems:(<span class="hljs-built_in">NSNotification</span>*)notification &#123;</span><br><span class="line">   <span class="hljs-comment">// Get the list of keys that changed.</span></span><br><span class="line">   <span class="hljs-built_in">NSDictionary</span>* userInfo = [notification userInfo];</span><br><span class="line">   <span class="hljs-built_in">NSNumber</span>* reasonForChange = [userInfo objectForKey:<span class="hljs-built_in">NSUbiquitousKeyValueStoreChangeReasonKey</span>];</span><br><span class="line">   <span class="hljs-built_in">NSInteger</span> reason = <span class="hljs-number">-1</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="hljs-comment">// If a reason could not be determined, do not update anything.</span></span><br><span class="line">   <span class="hljs-keyword">if</span> (!reasonForChange)</span><br><span class="line">      <span class="hljs-keyword">return</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="hljs-comment">// Update only for changes from the server.</span></span><br><span class="line">   reason = [reasonForChange integerValue];</span><br><span class="line">   <span class="hljs-keyword">if</span> ((reason == <span class="hljs-built_in">NSUbiquitousKeyValueStoreServerChange</span>) ||</span><br><span class="line">         (reason == <span class="hljs-built_in">NSUbiquitousKeyValueStoreInitialSyncChange</span>)) &#123;</span><br><span class="line">      <span class="hljs-comment">// If something is changing externally, get the changes</span></span><br><span class="line">      <span class="hljs-comment">// and update the corresponding keys locally.</span></span><br><span class="line">      <span class="hljs-built_in">NSArray</span>* changedKeys = [userInfo objectForKey:<span class="hljs-built_in">NSUbiquitousKeyValueStoreChangedKeysKey</span>];</span><br><span class="line">      <span class="hljs-built_in">NSUbiquitousKeyValueStore</span>* store = [<span class="hljs-built_in">NSUbiquitousKeyValueStore</span> defaultStore];</span><br><span class="line">      <span class="hljs-built_in">NSUserDefaults</span>* userDefaults = [<span class="hljs-built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line"> </span><br><span class="line">      <span class="hljs-comment">// This loop assumes you are using the same key names in both</span></span><br><span class="line">      <span class="hljs-comment">// the user defaults database and the iCloud key-value store</span></span><br><span class="line">      <span class="hljs-keyword">for</span> (<span class="hljs-built_in">NSString</span>* key <span class="hljs-keyword">in</span> changedKeys) &#123;</span><br><span class="line">         <span class="hljs-keyword">id</span> value = [store objectForKey:key];</span><br><span class="line">         [userDefaults setObject:value forKey:key];</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>超级简单吧。</p>
 <h2 id="第三方库推荐"><a href="#第三方库推荐" class="headerlink" title="第三方库推荐"></a>第三方库推荐</h2><p>当然有大神写的第三方库。并且实现了NSUserDefaults白名单功能。因为可能你存在NSUserDefaults里面的东西不想要也不需要全部同步到NSUbiquitousKeyValueStore上去把。</p>
 <p>对了忘记说一点NSUbiquitousKeyValueStore可是有大小和条目限制的。你不要把他当作无穷无尽的东西来用。具体限制是最大空间1 MB。 最多1024个key。记住不要拿来当作主要数据存储哦。</p>
-<p>MK大神应该还是如雷贯耳的把。 不知道么。 MKNetworkKit是他写的。还不知道么。<br><a href="http://www.amazon.com/gp/product/1118449959/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1118449959&amp;linkCode=as2&amp;tag=blogmugunthku-20" target="_blank" rel="noopener">iOS 6 Programming Pushing the Limits: Advanced Application Development for Apple iPhone, iPad and iPod Touch</a> 可是他写的哦。我和我的小伙伴都从MK大神的书里面学到很多不错的东西</p>
+<p>MK大神应该还是如雷贯耳的把。 不知道么。 MKNetworkKit是他写的。还不知道么。<br><a href="http://www.amazon.com/gp/product/1118449959/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1118449959&linkCode=as2&tag=blogmugunthku-20" target="_blank" rel="noopener">iOS 6 Programming Pushing the Limits: Advanced Application Development for Apple iPhone, iPad and iPod Touch</a> 可是他写的哦。我和我的小伙伴都从MK大神的书里面学到很多不错的东西</p>
 <p><a href="https://github.com/MugunthKumar/MKiCloudSync" target="_blank" rel="noopener">MKiCloudSync</a></p>
 <p><a href="https://github.com/Daij-Djan/DDiCloudSync" target="_blank" rel="noopener">DDiCloudSync</a></p>
 <p><a href="https://github.com/futuretap/FTiCloudSync" target="_blank" rel="noopener">FTiCloudSync</a></p>
@@ -322,105 +329,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -490,17 +493,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

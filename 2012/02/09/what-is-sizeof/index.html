@@ -199,19 +199,23 @@
 </blockquote>
 <p>sizeof is an operator：sizeof是一个操作符。擦 这货居然是操作符。<br>最后一句我们可以得到的信息还有sizeof操作符的结果类型是size_t，它在头文件中typedef为unsigned　int类型。该类型保证能容纳实现所建立的最大对象的字节大小。</p>
 <a id="more"></a>
+
 <p>我们先记住什么时候可能用到sizeof,因为我们毕竟是学了用的.sizeof的应用场景一般是神马呢：</p>
 <ul>
 <li>sizeof操作符的一个主要用途是与存储分配和I/O系统那样的例程进行通信。例如：</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span>　*<span class="title">malloc</span><span class="params">(<span class="keyword">size_t</span>　size)</span></span></span><br><span class="line"><span class="function">size_t　<span class="title">fread</span><span class="params">(<span class="keyword">void</span>　*　ptr,<span class="keyword">size_t</span>　size,<span class="keyword">size_t</span>　nmemb,FILE　*　stream)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span>　*<span class="hljs-title">malloc</span><span class="hljs-params">(<span class="hljs-keyword">size_t</span>　size)</span></span></span><br><span class="line"><span class="hljs-function">size_t　<span class="hljs-title">fread</span><span class="hljs-params">(<span class="hljs-keyword">void</span>　*　ptr,<span class="hljs-keyword">size_t</span>　size,<span class="hljs-keyword">size_t</span>　nmemb,FILE　*　stream)</span></span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>用它可以看看一类型的对象在内存中所占的单元字节。</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void　*　memset(void　*　s,int　c,sizeof(s))</span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span>　*　<span class="hljs-title">memset</span><span class="hljs-params">(<span class="hljs-keyword">void</span>　*　s,<span class="hljs-keyword">int</span>　c,<span class="hljs-keyword">sizeof</span>(s))</span></span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>在动态分配一对象时,可以让系统知道要分配多少内存。</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> * pointer = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">int</span> * pointer = <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>) * <span class="hljs-number">10</span>)</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>便于一些类型的扩充,在windows中就有很多结构内型就有一个专用的字段是用来放该类型的字节大小。</p>
 </li>
@@ -222,15 +226,21 @@
 </ul>
 <p>知道怎么用以后我们来深入的蛋疼的讨论一下吧：<br>那我们考虑一下它既然是操作符那是一元的呢还是一元的呢还是一元的呢。。。。。。。。。。。。。</p>
 <p>网上有人说sizeof是一元操作符，网上还有人说sizeof更像一个特殊的宏，它是在编译阶段求值的。<br>举个例子：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof(a=3):%d\n"</span>,<span class="keyword">sizeof</span>(a = <span class="number">3</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d\n"</span>,a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> a = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sizeof(a=3):%d\n"</span>,<span class="hljs-keyword">sizeof</span>(a = <span class="hljs-number">3</span>));</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"a:%d\n"</span>,a);</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>输出为什么是4，0而不是期望中的4，3？？？就在于sizeof在编译阶段处理的特性。由于sizeof不能被编译成机器码，所以sizeof作用范围内，也就是()里面的内容也不能被编译，而是被替换成类型。=操作符返回左操作数的类型，所以a=3相当于int，而代码也被替换为：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"sizeof(a=3):%d\n"</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%d\n"</span>,a);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"sizeof(a=3):%d\n"</span>,<span class="hljs-number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"a:%d\n"</span>,a);</span><br></pre></td></tr></table></figure>
+
+
 <p>所以，sizeof是不可能支持链式表达式的，这也是和一元操作符不一样的地方。<br>结论：好，记住：sizeof 在 计算变量所占空间大小时， 括号可以省略， 而计算类型(模子)大小时不能省略。 一般情况下， 咱也别偷这个懒， 乖乖的写上括号， 继续装作一个 “函数” 做一个 ， “披着函数皮的操作符” 。 做我的操作符，让人家认为是函数去吧。 不要把sizeof当成函数，也不要看作一元操作符，把他当成一个特殊的编译预处理。</p>
 <p>其实说到这里也差不多了，最后看一下几个比较飘逸的例子：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sizeof</span>（<span class="keyword">int</span>）*p 表示什么意思？</span><br><span class="line"><span class="keyword">int</span> *p = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">sizeof</span>(p)的值是多少？</span><br><span class="line"><span class="keyword">sizeof</span>(*p)呢？</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">sizeof</span> (a) 的值是多少？</span><br><span class="line"><span class="keyword">sizeof</span>(a[<span class="number">100</span>])呢？<span class="comment">//请尤其注意本例。</span></span><br><span class="line"><span class="keyword">sizeof</span>(&amp;a)呢？</span><br><span class="line"><span class="keyword">sizeof</span>(&amp;a[<span class="number">0</span>])呢？</span><br><span class="line"><span class="keyword">int</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> b[<span class="number">100</span>])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">sizeof</span>(b);<span class="comment">// sizeof (b) 的值是多少？</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">sizeof</span>（<span class="hljs-keyword">int</span>）*p 表示什么意思？</span><br><span class="line"><span class="hljs-keyword">int</span> *p = <span class="hljs-literal">NULL</span>;</span><br><span class="line"><span class="hljs-keyword">sizeof</span>(p)的值是多少？</span><br><span class="line"><span class="hljs-keyword">sizeof</span>(*p)呢？</span><br><span class="line"><span class="hljs-keyword">int</span> a[<span class="hljs-number">100</span>];</span><br><span class="line"><span class="hljs-keyword">sizeof</span> (a) 的值是多少？</span><br><span class="line"><span class="hljs-keyword">sizeof</span>(a[<span class="hljs-number">100</span>])呢？<span class="hljs-comment">//请尤其注意本例。</span></span><br><span class="line"><span class="hljs-keyword">sizeof</span>(&amp;a)呢？</span><br><span class="line"><span class="hljs-keyword">sizeof</span>(&amp;a[<span class="hljs-number">0</span>])呢？</span><br><span class="line"><span class="hljs-keyword">int</span> b[<span class="hljs-number">100</span>];</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fun</span><span class="hljs-params">(<span class="hljs-keyword">int</span> b[<span class="hljs-number">100</span>])</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line"><span class="hljs-keyword">sizeof</span>(b);<span class="hljs-comment">// sizeof (b) 的值是多少？</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>时间不早了  1点多了 明天还要上班  睡了  结果自己看吧。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> b[<span class="number">100</span>])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"fun()sizeof(b):%d\n"</span>,<span class="keyword">sizeof</span>(b));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *p = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">int</span> b[<span class="number">100</span>]; </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof(p):%d\n"</span>,<span class="keyword">sizeof</span>(p));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof(*p):%d\n"</span>,<span class="keyword">sizeof</span>(*p));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof(a):%d\n"</span>,<span class="keyword">sizeof</span>(a));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof(a[100]):%d\n"</span>,<span class="keyword">sizeof</span>(a[<span class="number">100</span>]));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof(&amp;a):%d\n"</span>,<span class="keyword">sizeof</span>(&amp;a));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof(&amp;a[0]):%d\n"</span>,<span class="keyword">sizeof</span>(&amp;a[<span class="number">0</span>]));</span><br><span class="line">    fun(a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#inlcude <span class="hljs-meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fun</span><span class="hljs-params">(<span class="hljs-keyword">int</span> b[<span class="hljs-number">100</span>])</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"fun()sizeof(b):%d\n"</span>,<span class="hljs-keyword">sizeof</span>(b));</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> *p = <span class="hljs-literal">NULL</span>;</span><br><span class="line">    <span class="hljs-keyword">int</span> a[<span class="hljs-number">100</span>];</span><br><span class="line">    <span class="hljs-keyword">int</span> b[<span class="hljs-number">100</span>]; </span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sizeof(p):%d\n"</span>,<span class="hljs-keyword">sizeof</span>(p));</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sizeof(*p):%d\n"</span>,<span class="hljs-keyword">sizeof</span>(*p));</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sizeof(a):%d\n"</span>,<span class="hljs-keyword">sizeof</span>(a));</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sizeof(a[100]):%d\n"</span>,<span class="hljs-keyword">sizeof</span>(a[<span class="hljs-number">100</span>]));</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sizeof(&amp;a):%d\n"</span>,<span class="hljs-keyword">sizeof</span>(&amp;a));</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"sizeof(&amp;a[0]):%d\n"</span>,<span class="hljs-keyword">sizeof</span>(&amp;a[<span class="hljs-number">0</span>]));</span><br><span class="line">    fun(a);</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -324,105 +334,101 @@
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -476,17 +482,9 @@
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

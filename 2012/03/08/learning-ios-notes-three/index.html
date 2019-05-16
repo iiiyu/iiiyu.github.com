@@ -196,17 +196,17 @@
             <h1 id="iOS笔记番外篇"><a href="#iOS笔记番外篇" class="headerlink" title="iOS笔记番外篇"></a>iOS笔记番外篇</h1><h2 id="开始之前的扯淡"><a href="#开始之前的扯淡" class="headerlink" title="开始之前的扯淡"></a>开始之前的扯淡</h2><p>反正在等IPad3的发布，就顺手写篇blog。本来觉得这个时候写IOS笔记3还有点过早。因为好像没有太多的干货能拿出来。可是在看了老头用xcode、git来教怎么管理代码的时候，我彻底崩溃了。VS新版没见过，目前Xcode是体验最好的IDE，没有之一。Emacs系列突然觉得没有必要更新的冲动。</p>
 <p>虽然我们居住在神奇的天朝，但是我们还是要感谢这个时代。因为科技和人类文明的进步，使得我们可以看到一流名校的课程。就算那个号称天朝最公平的考试失败以后，只要你想学，还是可以学到这个世界上一流的课程。</p>
 <p>多媒体的表现力要远远丰富于文字。清楚直观的5分钟视频，可能换成文字描述写一个小时都写不好。所以如果这篇看不懂的话直接看视频吧。（没找到链接）</p>
-<pre><code>Xcode and Source Code Management (October 7, 2011) - HD
-</code></pre><blockquote>
+<pre><code>Xcode and Source Code Management (October 7, 2011) - HD</code></pre><blockquote>
 <p>人生是一场冒险。对我来说：活下去，然后活的爽一些。就够了。</p>
 </blockquote>
 <a id="more"></a>
+
+
 <h2 id="补遗笔记二"><a href="#补遗笔记二" class="headerlink" title="补遗笔记二"></a>补遗笔记二</h2><p>上次忘记写一个很有特色的东西。方法之前的+、-符号。这个其实很简单。在笔记一里面就有：</p>
-<pre><code>在ObjC中一个类中的方法有两种类型：实例方法，类方法。实例方法前用(-)号表明,类方法用(+)
-</code></pre><p>可是我这个人对专有名词都他喵的没感觉。比较喜欢通俗易懂的解释。</p>
+<pre><code>在ObjC中一个类中的方法有两种类型：实例方法，类方法。实例方法前用(-)号表明,类方法用(+)</code></pre><p>可是我这个人对专有名词都他喵的没感觉。比较喜欢通俗易懂的解释。</p>
 <pre><code>+的方法，调用的时候，是[类名字 方法]
--的方法，调用的时候，是[类实例 方法]
-</code></pre><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *str = [[<span class="built_in">NSString</span> alloc] init];<span class="comment">//这个 alloc就是+号定义的</span></span><br><span class="line">[str floatValue]; <span class="comment">//这个floatValue就是-号定义的</span></span><br></pre></td></tr></table></figure>
+-的方法，调用的时候，是[类实例 方法]</code></pre><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSString</span> *str = [[<span class="hljs-built_in">NSString</span> alloc] init];<span class="hljs-comment">//这个 alloc就是+号定义的</span></span><br><span class="line">[str floatValue]; <span class="hljs-comment">//这个floatValue就是-号定义的</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>其实，我觉得Git完全有必要单独出来写一篇。因为它太重要太强大了。用了Git以后再也没有想过用其他的版本管理。原因是用的太爽，如果有一天出现了比Git用起来还爽的。我也肯定会用。可是现在only git。</p>
 <p>对于Git的中文心得，教程等等。我都自认怎么写都写的不可能有阳志平大哥写的好。所以这里只是告诉你Git是IOS开发必须的技能。你可以通过下面链接来学习</p>
 <p><a href="http://rogerdudler.github.com/git-guide/index.zh.html" target="_blank" rel="noopener">git - 简易指南</a></p>
@@ -221,8 +221,7 @@
 Command + v #替换了第一个地方
 Command + g #到了下一个替换的地方
 #重复 Command + v和 Command + g
-#完成替换
-</code></pre><p>其实这个小技巧你可以再Mac的任意编辑文本处使用。</p>
+#完成替换</code></pre><p>其实这个小技巧你可以再Mac的任意编辑文本处使用。</p>
 <h4 id="一些界面说明"><a href="#一些界面说明" class="headerlink" title="一些界面说明"></a>一些界面说明</h4><p><img src="http://farm8.staticflickr.com/7040/6816041908_bc88f08c2b.jpg" alt="xcode1"></p>
 <p>看见右边有的文件后面是M有的是A。至今我没有看见哪里说明过这个是什么。其实很简单，通过Git管理你的项目以后，xcode自然能追踪你的文件情况。M是modified的缩写。A自然是add的缩写。（其实在没有用Git的时候xcode也能追逐，估计是跟关闭之前的保存的那一次对比吧）</p>
 <p><img src="http://farm8.staticflickr.com/7192/6816060622_aaf083d9bf.jpg" alt="xcode2"></p>
@@ -324,105 +323,101 @@ Command + g #到了下一个替换的地方
     
         
 <div class="card widget">
-    <div class="card-content">
-        <nav class="level" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        萧宸宇
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        屠勇恶龙
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Auckland - New Zealand</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/archives/">
-                    <p class="heading">
-                        文章
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        82
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/categories/">
-                    <p class="heading">
-                        分类
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        0
-                    </p>
-                </a>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <a href="/tags/">
-                    <p class="heading">
-                        标签
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        18
-                    </p>
-                </a>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
-                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+  <div class="card-content">
+    <nav class="level" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered">
+        <div>
+          
+          <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+           
+          <p class="is-size-4 is-block">
+            萧宸宇
+          </p>
+           
+          <p class="is-size-6 is-block">
+            屠勇恶龙
+          </p>
+           
+          <p class="is-size-6 is-flex is-flex-center has-text-grey">
+            <i class="fas fa-map-marker-alt has-mr-7"></i>
+            <span>Auckland - New Zealand</span>
+          </p>
+          
         </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
-                
-                <i class="fab fa-linkedin"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
+      </div>
+    </nav>
+    <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/archives/">
+          <p class="heading">
+            文章
+          </p>
+          <p class="title has-text-weight-normal">
+            82
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/categories/">
+          <p class="heading">
+            分类
+          </p>
+          <p class="title has-text-weight-normal">
+            0
+          </p>
+        </a>
+      </div>
+      <div class="level-item has-text-centered is-marginless">
+        <a href="/tags/">
+          <p class="heading">
+            标签
+          </p>
+          <p class="title has-text-weight-normal">
+            18
+          </p>
+        </a>
+      </div>
+    </nav>
+    <div class="level">
+      <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+        关注我</a>
     </div>
+     
+    <div class="level is-mobile">
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
+        
+        <i class="fab fa-github"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
+        
+        <i class="fab fa-linkedin"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+        
+        <i class="fab fa-facebook"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+        
+        <i class="fab fa-twitter"></i>
+        
+      </a>
+      
+      <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
+        
+        <i class="fas fa-rss"></i>
+        
+      </a>
+      
+    </div>
+    
+  </div>
 </div>
 
     
@@ -504,17 +499,9 @@ Command + g #到了下一个替换的地方
                 
                 
                 <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                    <a class="button is-white is-large" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         
-                        <i class="fab fa-creative-commons"></i>&nbsp;
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        <i class="fab fa-creative-commons"></i>&nbsp;<i class="fab fa-creative-commons-by"></i>&nbsp;<i class="fab fa-creative-commons-nc"></i>&nbsp;<i class="fab fa-creative-commons-sa"></i>&nbsp;
                         
                     </a>
                 </p>

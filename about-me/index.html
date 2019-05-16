@@ -5,15 +5,18 @@
     <!--
         © Material Theme
         https://github.com/viosey/hexo-theme-material
-        Version: 1.5.0 -->
+        Version: 1.5.6 -->
     <script>
-        window.materialVersion = "1.5.0"
+        window.materialVersion = "1.5.6"
         // Delete localstorage with these tags
         window.oldVersion = [
             'codestartv1',
             '1.3.4',
             '1.4.0',
-            '1.4.0b1'
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
         ]
     </script>
 
@@ -24,14 +27,24 @@
 
 
 
+    <link rel="dns-prefetch" href="https://iiiyu.disqus.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com"/>
 
 
 
 
 
-
-
-
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Title -->
     
@@ -42,51 +55,18 @@
         萧宸宇
     </title>
 
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="萧宸宇">
-    <meta name="description" itemprop="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-    <meta name="keywords" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
 
-    <!--iOS -->
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+    <meta name="keywords" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+    <meta name="theme-color" content="#0097A7">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="萧宸宇">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-        
-            <link rel=alternate type="application/atom+xml" href="atom.xml">
-        
-    
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -96,10 +76,16 @@
         
     <![endif]-->
 
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
 
@@ -244,9 +230,10 @@
     </style>
 
 
-<!-- Import Material Icon -->
+<!-- Import Material Icons -->
 
-    <link rel="stylesheet" href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css">
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
 
 
@@ -256,26 +243,43 @@
         <script>lsloader.load("jq_js","https://cdn.bootcss.com/jquery/2.2.1/jquery.js", true)</script>
     
 
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="萧宸宇">
+    <meta name="msapplication-starturl" content="https://iiiyu.com/about-me/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="萧宸宇">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://iiiyu.com">
+    <meta property="og:url" content="https://iiiyu.com/about-me/">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="关于我 | 萧宸宇">
-    <meta property="og:image" content="http://iiiyu.com/img/favicon.png" />
+    <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
     
 
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="关于我 | 萧宸宇">
-    <meta name="twitter:description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-    <meta name="twitter:image" content="http://iiiyu.com/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://iiiyu.com" />
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://iiiyu.com/about-me/index.html" />
+        <link rel="canonical" href="https://iiiyu.com/about-me/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -319,7 +323,7 @@
                     
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
                         </button>
                     
 
@@ -390,7 +394,8 @@
     
 
     <!-- Share -->
-    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
     <i class="material-icons" role="presentation">share</i>
     <span class="visuallyhidden">share</span>
 </button>
@@ -401,7 +406,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于我&url=http://iiiyu.com/about-me/index.html&pic=http://iiiyu.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于我&url=https://iiiyu.com/about-me/index.html&pic=https://iiiyu.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -410,7 +415,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于我&url=http://iiiyu.com/about-me/index.html&via=萧宸宇" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于我&url=https://iiiyu.com/about-me/index.html&via=萧宸宇" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -419,7 +424,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://iiiyu.com/about-me/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://iiiyu.com/about-me/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -428,7 +433,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://iiiyu.com/about-me/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://iiiyu.com/about-me/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -443,7 +448,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=http://iiiyu.com/about-me/index.html&text=关于我" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://iiiyu.com/about-me/index.html&text=关于我" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -451,6 +456,7 @@
     
 </ul>
 
+    
 </div>
 
                 
@@ -458,28 +464,29 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="自我描述"><a href="#自我描述" class="headerlink" title="自我描述"></a>自我描述</h2><p>（2016-01-04更新）</p>
+        <h2 id="自我描述"><a href="#自我描述" class="headerlink" title="自我描述"></a>自我描述</h2><p>（2019-01-26更新）</p>
 <p>88年大约冬季的时候，诞生在中国西南边陲的一个小城里面。从小没经历过大苦大难，也自然没有体验过大富大贵。<del>城市经过20多年翻天覆地的变化还是只有三条街。</del><br> 最近两年回去变化还是挺大的，不过增添了陌生感。这种陌生感就是曾经下课时偷偷去看的暗恋女孩，早已经嫁作人妇形同陌路的那种。</p>
 <p>一直梦想走出边疆看一看中国的大好河山。吃遍中国各地美食。<del>现在也只能在梦里想一下。</del><br> 工作几年还是漂泊过一些地方，虽然并没有能周游中国。但是也是慕名去过不同的城市寻找美食。</p>
 <p><del>初中的时候学过几天C语言，就被那老师忽悠觉得自己是吃这碗饭的人。高考时候志愿表上就填了一所大学，一个专业。四年过后事实证明当时我装B了。</del><br>现在时代变化好快都跟不上时代了。</p>
 <p><del>工作几年，现在只会编写一些简单的iOS程序来糊口。能力没咋长，各种乱七八糟的毛长不少。比如隔几天要去吃顿好的，比如看见了个软件就想买买了又不用，比如看见了书就要买，买了回来就吃灰。</del></p>
-<p>最近一年看到自己可能不是能把技术做到Top 5%的人以上的人，也算热爱这个行业。因此在转型做产品中。</p>
-<p>伪独立App开发者、白日空想家、YY大师、嘴炮高手、面基达人。</p>
-<h2 id="住过的城市"><a href="#住过的城市" class="headerlink" title="住过的城市"></a>住过的城市</h2><p><strong>昆明</strong><br>在昆明上了四年大学，看过两次雪。<del>收获了一段爱情</del>据说要改成找到了真爱，也失去了母校。</p>
+<p><del>最近一年看到自己可能不是能把技术做到Top 5%的人以上的人，也算热爱这个行业。因此在转型做产品中。</del></p>
+<p><del>伪独立App开发者、白日空想家、YY大师、嘴炮高手、面基达人。</del></p>
+<p>目前打工，艰难生存中。</p>
+<h2 id="住过的城市"><a href="#住过的城市" class="headerlink" title="住过的城市"></a>住过的城市</h2><p><strong>开远</strong><br>在这长到了18岁，已经没法回去的地方。</p>
+<p><strong>昆明</strong><br>在昆明上了四年大学，看过两次雪。<del>收获了一段爱情</del>据说要改成找到了真爱，也失去了母校。</p>
 <p><strong>东莞</strong><br>在中国最神奇的城市——东莞。我以为去东莞是去追寻自己的理想去改变这个世界，后来才发现是我想多了。但是来东莞是我开眼看世界的第一步。在东莞，我认识了一群可爱的人和他们一起踢球一起喝酒。认识了会做饭的少年。</p>
 <p><strong>厦门</strong><br><del>才到厦门的几天时间里面，我仿佛就融入了进去，习惯了厦门的这种节奏。</del> 吃遍了斗西路附近的很多小吃。很奇怪的感觉，仿佛早在500年前就约定好今生见面那种。同时也希望我能在这里和曹哥一起做出改变小部分人的一小点点习惯的事情。</p>
-<p><strong>北京</strong><br>在帝都小半年，没去过故宫，没去过长城，没去过天安门，天天面基。匆匆而来，匆匆而走。</p>
+<p><strong>北京</strong><br>在帝都大半年，没去过故宫，没去过长城，没去过天安门，天天面基。匆匆而来，匆匆而走。</p>
 <p><strong>深圳</strong><br>除了房租就是贵，暂时没感受。</p>
+<p><strong>奥克兰</strong><br>钓鱼抓虾，上天入地。我来了。</p>
 <h2 id="主要修炼技能"><a href="#主要修炼技能" class="headerlink" title="主要修炼技能"></a>主要修炼技能</h2><ul>
-<li>OmniGraffle 和 Sketch 配合完成产品原型</li>
-<li>只会一些比较基础的 Cocoa &amp;&amp; Cocoa Touch 编程</li>
+<li>How to Be Rich</li>
 <li>思考</li>
 <li>读书</li>
 <li>品味</li>
 </ul>
 <h2 id="值得炫耀"><a href="#值得炫耀" class="headerlink" title="值得炫耀"></a>值得炫耀</h2><ul>
-<li>全面正版化</li>
-<li>有媳妇儿 （PS:逼死单身狗）</li>
+<li>没有任何值得炫耀的东西</li>
 </ul>
 <h2 id="主要爱好"><a href="#主要爱好" class="headerlink" title="主要爱好"></a>主要爱好</h2><ul>
 <li>看乱七八糟的书</li>
@@ -489,15 +496,17 @@
 <li>吃乱七八糟的美食</li>
 </ul>
 <h2 id="无力改变"><a href="#无力改变" class="headerlink" title="无力改变"></a>无力改变</h2><ul>
-<li>每年额外再上互联网上话费200刀</li>
 <li>懒癌末期</li>
 </ul>
 <h2 id="目前为止打过酱油的App"><a href="#目前为止打过酱油的App" class="headerlink" title="目前为止打过酱油的App"></a>目前为止打过酱油的App</h2><p><a href="https://itunes.apple.com/us/app/oh-my-star/id788446112?l=en&amp;mt=12" target="_blank" rel="noopener">OhMyStar</a></p>
-<p><a href="https://itunes.apple.com/us/app/grid-diary-simplest-way-to/id597077261?mt=8" target="_blank" rel="noopener">GridDiary</a></p>
-<h2 id="哪里可以找到我"><a href="#哪里可以找到我" class="headerlink" title="哪里可以找到我"></a>哪里可以找到我</h2><p>微博: <a href="http://weibo.com/iyunsn" target="_blank" rel="noopener">Yu_我就想叫一个简单的昵称</a></p>
+<p><del><a href="https://itunes.apple.com/us/app/grid-diary-simplest-way-to/id597077261?mt=8" target="_blank" rel="noopener">GridDiary</a></del> 格志已经出了2，跟我理论上没有任何关系了。<a href="https://itunes.apple.com/app/id1392523148" target="_blank" rel="noopener">GridDiary2</a></p>
+<h2 id="哪里可以找到我"><a href="#哪里可以找到我" class="headerlink" title="哪里可以找到我"></a>哪里可以找到我</h2><p><del>微博: <a href="http://weibo.com/iyunsn" target="_blank" rel="noopener">Yu_我就想叫一个简单的昵称</a></del></p>
+<p>Bilibili: <a href="http://space.bilibili.com/10492272?" target="_blank" rel="noopener">iiiYu</a></p>
 <p>Email: <a href="yu@ohmyapps.com">Yu</a></p>
 <p>Github: <a href="https://github.com/iiiyu" target="_blank" rel="noopener">iiiyu</a></p>
 <p>Twitter: <a href="https://twitter.com/iyunsn" target="_blank" rel="noopener">@iyunsn</a></p>
+<p>Facebook: <a href="https://www.facebook.com/iiiyu" target="_blank" rel="noopener">iiiyu</a></p>
+<p>Linkedin: <a href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/" target="_blank" rel="noopener">Ewan Xiao</a></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -506,7 +515,7 @@
                             <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://iiiyu.com/about-me/index.html">http://iiiyu.com/about-me/index.html</a>
+                        <strong>本文链接：</strong><a href="https://iiiyu.com/about-me/index.html">https://iiiyu.com/about-me/index.html</a>
                     </p>
                 </blockquote>
         
@@ -551,18 +560,19 @@
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
             color: #fff;
             background-color: #757575;
-            text-shadow: 0
+            text-shadow: 0;
+            display: none
         }
 </style>
 	
 <div class="btn_click_load"> 
-    <button class="disqus_click_btn" style="display: none">阅读评论（请确保 disqus 可以正常加载）</button>
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
 </div>
 
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://iiiyu.com/about-me/index.html';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://iiiyu.com/about-me/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://iiiyu.com/about-me/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://iiiyu.com/about-me/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
@@ -577,10 +587,10 @@
             s.src = '//iiiyu.disqus.com/embed.js';
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
-            $('.btn_click_load').css('display','none');
+            $('.disqus_click_btn').css('display','none');
         })(),
         error: function() {
-          $('.btn_click_load').css('display','block');
+          $('.disqus_click_btn').css('display','block');
         }
     });
     $('.btn_click_load').click(function() {  //click to load comments
@@ -591,7 +601,7 @@
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
         })();
-        $('.btn_click_load').css('display','none');
+        $('.disqus_click_btn').css('display','none');
     });
 </script>
   	
@@ -703,7 +713,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
             </ul>
         </li>
         
@@ -852,7 +862,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Telegram -->
     
-    
+
     <!-- V2EX -->
     
         <a href="https://www.v2ex.com/member/iYu" target="_blank">
@@ -861,12 +871,15 @@ It will not impact the appearance and can give developers a lot of support :)
             </button><!--
      --></a>
     
+
+    <!-- Segmentfault -->
+    
 </div>
 
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©&nbsp;2012&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>萧宸宇
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;萧宸宇
             
         </div>
 
@@ -896,7 +909,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
 
 
 
@@ -991,6 +1004,16 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2012;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
     (function(){
         var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
 
@@ -999,7 +1022,7 @@ It will not impact the appearance and can give developers a lot of support :)
             lsloader.runInlineScript(item.id,item.id);
         }
     })()
-console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
 </script>
 
                 </main>

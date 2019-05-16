@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://iiiyu.disqus.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            在2019写给18岁的自己 | 
+        
+        萧宸宇
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+    <meta name="keywords" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计,随便瞎扯,写给18岁的自己">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","https://cdn.bootcss.com/jquery/2.2.1/jquery.js", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="萧宸宇">
+    <meta name="msapplication-starturl" content="https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="萧宸宇">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="在2019写给18岁的自己 | 萧宸宇">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+    <meta property="og:article:tag" content="随便瞎扯"> <meta property="og:article:tag" content="写给18岁的自己"> 
+
+    
+        <meta property="article:published_time" content="Sun Feb 17 2019 12:46:19 GMT+1300">
+        <meta property="article:modified_time" content="Thu May 16 2019 12:27:33 GMT+1200">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/index.html",
+    "headline": "在2019写给18岁的自己",
+    "datePublished": "Sun Feb 17 2019 12:46:19 GMT+1300",
+    "dateModified": "Thu May 16 2019 12:27:33 GMT+1200",
+    "author": {
+        "@type": "Person",
+        "name": "萧宸宇",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "如果不能成为拯救世界的神，那就堕落到征服世界的魔吧。"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "萧宸宇",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",随便瞎扯,写给18岁的自己iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计",
+    "description": "iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-29764460-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前情回顾"><span class="post-toc-number">1.</span> <span class="post-toc-text">前情回顾</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瞎扯"><span class="post-toc-number">2.</span> <span class="post-toc-text">瞎扯</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#首先接受平凡的自己"><span class="post-toc-number">3.</span> <span class="post-toc-text">首先接受平凡的自己</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#把人生中长期目标制定的具体简单直接一点"><span class="post-toc-number">4.</span> <span class="post-toc-text">把人生中长期目标制定的具体简单直接一点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#做一个有趣的人"><span class="post-toc-number">5.</span> <span class="post-toc-text">做一个有趣的人</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">6.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#硬广时间"><span class="post-toc-number">7.</span> <span class="post-toc-text">硬广时间</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 52 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                在2019写给18岁的自己
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>萧宸宇</strong>
+        <span>2月 17, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/写给18岁的自己/">写给18岁的自己</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/随便瞎扯/">随便瞎扯</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=在2019写给18岁的自己&url=https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/index.html&pic=https://iiiyu.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=在2019写给18岁的自己&url=https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/index.html&via=萧宸宇" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/index.html&text=在2019写给18岁的自己" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>本文具有强烈的个人感情色彩,如有观看不适,请尽快关闭. 本文仅作为个人学习记录使用,也欢迎在<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW" target="_blank" rel="noopener">许可协议</a>范围内转载或使用,请尊重版权并且保留原文链接,谢谢您的理解合作. 如果您觉得本站对您能有帮助,您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="前情回顾"><a href="#前情回顾" class="headerlink" title="前情回顾"></a>前情回顾</h2><p><a href="https://iiiyu.com/2012/02/09/junior-it-people-c-study-guide/">2012版本写给18岁的自己</a></p>
+<p><a href="http://iiiyu.com/2016/01/12/2016-it-professionals-getting-started/">2016版本写给18岁的自己</a></p>
+<p><a href="">2019版本写给18岁的自己</a></p>
+<h2 id="瞎扯"><a href="#瞎扯" class="headerlink" title="瞎扯"></a>瞎扯</h2><p>已经过了30岁了，怎么看都是一个废材肥宅。毫无事业上的建树。所以这个系列从一开始的觉得要给年轻人一些建议的想法。变成现在更像是自省。想象现在时间节点上的我如果能见到18岁的自己。会给自己说一些什么样的话。顺便如果有人从这些文字里面有所感悟，那这篇文字就变得有价值了那么一点点。</p>
+<p>至于说我永远回不到过去，很多马后炮似乎没啥卵用。那种下一棵树的最好时间是10年前。第二好的时间是此时此刻。所以我们一直拥有着第二好的时机不是么。</p>
+<h2 id="首先接受平凡的自己"><a href="#首先接受平凡的自己" class="headerlink" title="首先接受平凡的自己"></a>首先接受平凡的自己</h2><p>小时候以为自己与众不同。但是从已经过去的人生里面来看，我确实就是一个普普通通的人。但是估计是受到了青春期看了太多乱七八糟的热血励志书。一直认为自己总有哪里是独一无二的，哪里是过于长人的。</p>
+<p>这样的思维导致我行为做事的方法：</p>
+<ol>
+<li>做重大选择的时候是逆势而为的，以为可以人定胜天。</li>
+<li>错误的评估自己的能力，制定了自己到达不了的目标。</li>
+</ol>
+<p>人家说“在风口上，猪都能飞”。而逆着历史的洪流，我这头猪分分钟就被淹没了。制定了艰难的目标，因为现实跟目标差距过大，逐渐陷入焦虑中。处于焦虑烦躁的情绪中，做事效率降低。导致恶性循环。</p>
+<p>直观结果就是经济上无房无存款，事业上浑浑噩噩。每天人也过的不太开心。</p>
+<p>从开始认识到我就是一个普通人。到接受我是一个普通人的设定，我大概花了3年左右的时间。</p>
+<p>接受了普通人都设定以后：</p>
+<ol>
+<li>选择都时候会顺势而为</li>
+<li>不制定过于艰辛的目标</li>
+<li>就算今天混过了一天，没那么多负罪感</li>
+</ol>
+<h2 id="把人生中长期目标制定的具体简单直接一点"><a href="#把人生中长期目标制定的具体简单直接一点" class="headerlink" title="把人生中长期目标制定的具体简单直接一点"></a>把人生中长期目标制定的具体简单直接一点</h2><p>如果在18岁的时候把目标就确定成为</p>
+<ol>
+<li>我一定要买房</li>
+<li>我一定要出国</li>
+<li>我一定要进大公司</li>
+<li>我一定要找个非常漂亮的女朋友</li>
+<li>等等</li>
+</ol>
+<p>这样简单清晰的目标，现在的人生进程上可能不想现在这样没多少选择的可能性。</p>
+<p>但是，小时候一直以“改变世界”。这样宏大不着边际的长期目标作为指导思想。导致现在职业上啥都不精通！</p>
+<h2 id="做一个有趣的人"><a href="#做一个有趣的人" class="headerlink" title="做一个有趣的人"></a>做一个有趣的人</h2><p>因为自己小时候的原因。发现自己没有任何特别有意思的技能。</p>
+<p>现在的我可以接受自己是一个普通人，甚至能接受自己可能智商、情商都低于普通人。但是我真不能接受我是一个无趣的人。</p>
+<p>拿如何做一个有趣的人？可能接下来我需要不断的学习一下技能</p>
+<ol>
+<li>提高审美</li>
+<li>学习音乐</li>
+<li>理解人类文明</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上应该就是我在31岁的时候想给18岁的自己说的话。千言万语，写下来寥寥无几。本来想继续写《IT 入门人士指南》系列。但是觉得自己技术稀烂，不适合继续更新了。</p>
+<h2 id="硬广时间"><a href="#硬广时间" class="headerlink" title="硬广时间"></a>硬广时间</h2><p>我目前现在生活在新西兰。如果需要<a href="http://www.memezhua.com/catalog/category/view/s/yingernaifen/id/220/" target="_blank" rel="noopener">婴儿奶粉</a>、<a href="http://www.memezhua.com/catalog/category/view/s/jingpin-nz/id/981/" target="_blank" rel="noopener">保健品</a>、<a href="http://www.memezhua.com/catalog/product/view/id/10427/s/ause7111/" target="_blank" rel="noopener">程序员熬夜神器</a>。均可通过<a href="http://www.memezhua.com/" target="_blank" rel="noopener">么么爪新西兰代购</a>购买。价格在海外直邮上有一定优势，但是淘宝上低价没法比。优势上只能用我那可能并不存在的人品担保都是正品。</p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/">https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #757575;
+            text-shadow: 0;
+            display: none
+        }
+</style>
+	
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn">阅读评论（请确保 disqus 可以正常加载）</button>
+</div>
+
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/ls-javascript" id="disqus-lazy-load-script">
+    $.ajax({
+        url: 'https://disqus.com/next/config.json',
+        timeout: 4000,
+        type: 'GET',
+        success: (function() {
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//iiiyu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            $('.disqus_click_btn').css('display','none');
+        })(),
+        error: function() {
+          $('.disqus_click_btn').css('display','block');
+        }
+    });
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//iiiyu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.disqus_click_btn').css('display','none');
+    });
+</script>
+  	
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/01/25/A-Product-Design-About-E-cigarette/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="萧宸宇's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        yu@ohmyapps.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: yu@ohmyapps.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about-me" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/iyunsn" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/iiiyu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/10492272/#!/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+        <a href="https://www.v2ex.com/member/iYu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-v2ex">
+                <span class="visuallyhidden">V2EX</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;萧宸宇
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","https://cdn.bootcss.com/nprogress/0.2.0/nprogress.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2012;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

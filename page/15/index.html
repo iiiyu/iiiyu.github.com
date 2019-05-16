@@ -5,15 +5,18 @@
     <!--
         © Material Theme
         https://github.com/viosey/hexo-theme-material
-        Version: 1.5.0 -->
+        Version: 1.5.6 -->
     <script>
-        window.materialVersion = "1.5.0"
+        window.materialVersion = "1.5.6"
         // Delete localstorage with these tags
         window.oldVersion = [
             'codestartv1',
             '1.3.4',
             '1.4.0',
-            '1.4.0b1'
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
         ]
     </script>
 
@@ -24,14 +27,24 @@
 
 
 
+    <link rel="dns-prefetch" href="https://iiiyu.disqus.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com"/>
 
 
 
 
 
-
-
-
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Title -->
     
@@ -40,51 +53,18 @@
         萧宸宇
     </title>
 
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="theme-color" content="#0097A7">
-    <meta name="author" content="萧宸宇">
-    <meta name="description" itemprop="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-    <meta name="keywords" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
 
-    <!--iOS -->
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+    <meta name="keywords" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+    <meta name="theme-color" content="#0097A7">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="萧宸宇">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-        
-            <link rel=alternate type="application/atom+xml" href="atom.xml">
-        
-    
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -94,10 +74,16 @@
         
     <![endif]-->
 
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
 
@@ -242,9 +228,10 @@
     </style>
 
 
-<!-- Import Material Icon -->
+<!-- Import Material Icons -->
 
-    <link rel="stylesheet" href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css">
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
 
 
@@ -254,26 +241,43 @@
         <script>lsloader.load("jq_js","https://cdn.bootcss.com/jquery/2.2.1/jquery.js", true)</script>
     
 
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="萧宸宇">
+    <meta name="msapplication-starturl" content="https://iiiyu.com/page/15/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="萧宸宇">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel=alternate type="application/atom+xml" href="atom.xml">
+        
+    
+
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://iiiyu.com">
+    <meta property="og:url" content="https://iiiyu.com/page/15/">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="萧宸宇">
-    <meta property="og:image" content="http://iiiyu.com/img/favicon.png" />
+    <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
     
 
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="萧宸宇">
-    <meta name="twitter:description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-    <meta name="twitter:image" content="http://iiiyu.com/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="http://iiiyu.com" />
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://iiiyu.com/page/15/index.html" />
+        <link rel="canonical" href="https://iiiyu.com/page/15/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -317,7 +321,7 @@
                     
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
                         </button>
                     
 
@@ -330,6 +334,128 @@
     
 
     <!-- Normal Post -->
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2012/03/14/emacs-set-up-3/">调教Emacs(三)——完结篇</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            调教Emacs(完结篇)Buffer我記得剛開始用emacs，每次都被buffer嚇到：buffer, buffer，怎麼到處都是buffer？那我要怎麼編檔案（file）？
+其實概略的說，buffer就是file。所以呢，每次看到buffer，你就想是file。那用我們平日的概念，就可以明白了。叫buffer更精確。為什麼呢？比方說你用XX文書處理，我們都用New去建一個新檔，還沒存的時候就叫什麼「未命名的檔案」之類的。其實，還沒存，硬碟都還沒紀錄下來，怎麼能叫檔案？所以，emacs叫buffer。
+再深入一點，buffer的名字和檔案通常一樣，但也可以不一樣。還有呢，emacs的buffer可以有很多模式，有些buffer還真的不準備變成檔案的。
+因此呢，buffer的函意比檔案廣。不過我們初學，就把buffer當檔案好了。
+来自
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2012/03/14/emacs-set-up-3/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
+            </div>
+            <div>
+                <strong>萧宸宇</strong>
+                <span>3月 14, 2012</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2012/03/08/learning-ios-notes-three/">iOS笔记 (3)</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            iOS笔记番外篇开始之前的扯淡反正在等IPad3的发布，就顺手写篇blog。本来觉得这个时候写IOS笔记3还有点过早。因为好像没有太多的干货能拿出来。可是在看了老头用xcode、git来教怎么管理代码的时候，我彻底崩溃了。VS新版没见过，目前Xcode是体验最好的IDE，没有之一。Emacs系列突然觉得没有必要更新的冲动。
+虽然我们居住在神奇的天朝，但是我们还是要感谢这个时代。因为科技和人类文明的进步，使得我们可以看到一流名校的课程。就算那个号称天朝最公平的考试失败以后，只要你想学，还是可以学到这个世界上一流的课程。
+多媒体的表现力要远远丰富于文字。清楚直观的5分钟视频，可能换成文字描述写一个小时都写不好。所以如果这篇看不懂的话直接看视频吧。（没找到链接）
+Xcode and Source Code Management (October 7, 2011) - HD
+
+人生是一场冒险。对我来说：活下去，然后活的爽一些。就够了。
+
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2012/03/08/learning-ios-notes-three/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
+            </div>
+            <div>
+                <strong>萧宸宇</strong>
+                <span>3月 08, 2012</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
     
         
             
@@ -550,137 +676,11 @@ Camera
             
         
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2012/02/26/emacs-set-up-1/">调教Emacs(一)——存活</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            序  一直以来，各界对编辑器的争论由来依旧。最后都会沦为Emacs vs Vim。这里就不在过多的讨论了。
-  不管是Emacs还是Vim都是需要一个长期的调教过程。才会让你用的很爽。如果你妄想今天安上他们，明天就变得像魔术师一样的按键。那你洗洗睡吧亲。明天去泡妞别做宅男了。它们会耗费你大量的时间，用那些时间说不定你都可以找一个妹子了。
-  在我学习使用Emacs的时候，入门资料相当少。有一些写的好的，却又各种Lisp配置。可是要了亲的命了。就想找一个先教我用的爽的，那些各种配置，各种文件能不能先放放。就只是先让我用的爽爽。
-  我提供了一些基本配置。几乎没有改里面的内容，但是可以用。可能用的不是很爽，但是基本的功能都有了。先用用心里有个谱。然后再去研究高深的使用。
-  我不会Lisp，所以这些配置最多算我这个工具仔拼凑起来的。
-  所以，看这系列Blog的亲们。
-
-只要安装Emacs 23.3-23.4 (其他版本不知)
-会git clone
-知道~/目录
-不需要会Lisp
-就可以开始了。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2012/02/26/emacs-set-up-1/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>2月 26, 2012</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2012/02/26/january-reading-notea/">一月读书笔记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            一月读书笔记   疯狂的周末。拿起积灰的kindle，看完了2本书。在信哥的推荐下，用了两天看完了《天才在左，疯子在右》。看的是天涯的整理版。知道是最初发在天涯鬼话的。有宣传说是真实的案例，看豆瓣书评说很假。仁者见仁智者见智吧。之所以很快看完了。是因为引起了我深深的共鸣。里面说的案例除了两个杀人的精神病的想法看着很恶心恐怖。其他的案例我都能看懂，更有的想法我也曾经想过。里面有一个说法，就是说这些沉浸在自己世界里面的人们，都有一套自己完美的逻辑，而且无法反驳。疯了的可能是我，也可能是世界。这个书不错，当做恐怖小说看吧。
-
-桃花坞里桃花庵，桃花庵下桃花仙。桃花仙人种桃树，又摘桃花换酒钱。酒醒只在花前坐，酒醉还来花下眠。半醉半醒日复日，花落花开年复年。但愿老死花酒间，不愿鞠躬车马前。车尘马足显者事，酒盏花枝隐士缘。若将显者比隐士，一在平地一在天。若将花酒比车马，彼何碌碌我何闲。别人笑我太疯癫，我笑他人看不穿。不见五陵豪杰墓，无花无酒锄作田。——唐寅
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2012/02/26/january-reading-notea/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>2月 26, 2012</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
 
     
     <!-- Index nav -->
         <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/page/14/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/16/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
+            <a class="extend prev" rel="prev" href="/page/14/"><button aria-label="Last page" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/16/"><button aria-label="Next page" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
         </nav>
     
 
@@ -783,7 +783,7 @@ Camera
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
             </ul>
         </li>
         
@@ -940,7 +940,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Telegram -->
     
-    
+
     <!-- V2EX -->
     
         <a href="https://www.v2ex.com/member/iYu" target="_blank">
@@ -949,12 +949,15 @@ It will not impact the appearance and can give developers a lot of support :)
             </button><!--
      --></a>
     
+
+    <!-- Segmentfault -->
+    
 </div>
 
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©&nbsp;2012&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>萧宸宇
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;萧宸宇
             
         </div>
 
@@ -984,7 +987,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
 
 
 
@@ -1079,6 +1082,16 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2012;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
     (function(){
         var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
 
@@ -1087,7 +1100,7 @@ It will not impact the appearance and can give developers a lot of support :)
             lsloader.runInlineScript(item.id,item.id);
         }
     })()
-console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
 </script>
 
                 </main>

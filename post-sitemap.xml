@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
         <loc>https://iiiyu.com</loc>
         <changefreq>daily</changefreq>
@@ -7,16 +8,8 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2012/02/09/junior-it-people-c-study-guide/</loc>
-        <lastmod>2019-05-16T00:28:31.398Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://iiiyu.com/2019/02/17/write-to-18-years-old-me-in-2019/</loc>
-        <lastmod>2019-05-16T00:27:33.395Z</lastmod>
+        <lastmod>2019-05-16T03:56:38.720Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +17,15 @@
 
     <url>
         <loc>https://iiiyu.com/2016/01/12/2016-IT-professionals-Getting-Started/</loc>
-        <lastmod>2019-02-16T23:57:01.816Z</lastmod>
+        <lastmod>2019-05-16T03:56:13.294Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://iiiyu.com/2012/02/09/junior-it-people-c-study-guide/</loc>
+        <lastmod>2019-05-16T00:28:31.398Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -127,7 +128,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2015/01/16/read-contagious/</loc>
+        <loc>https://iiiyu.com/2012/04/20/new-beginning/</loc>
         <lastmod>2019-02-11T09:28:48.920Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -135,7 +136,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2012/04/20/new-beginning/</loc>
+        <loc>https://iiiyu.com/2015/01/16/read-contagious/</loc>
         <lastmod>2019-02-11T09:28:48.920Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -271,14 +272,6 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2014/12/26/learning-ios-notes-thirty-six/</loc>
-        <lastmod>2019-02-11T09:28:48.909Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://iiiyu.com/2014/03/18/learning-ios-notes-thirty-three/</loc>
         <lastmod>2019-02-11T09:28:48.909Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -287,8 +280,8 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2013/12/19/learning-ios-notes-thirty-one/</loc>
-        <lastmod>2019-02-11T09:28:48.908Z</lastmod>
+        <loc>https://iiiyu.com/2014/12/26/learning-ios-notes-thirty-six/</loc>
+        <lastmod>2019-02-11T09:28:48.909Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -296,6 +289,14 @@
 
     <url>
         <loc>https://iiiyu.com/2014/03/19/learning-ios-notes-thirty-four/</loc>
+        <lastmod>2019-02-11T09:28:48.908Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://iiiyu.com/2013/12/19/learning-ios-notes-thirty-one/</loc>
         <lastmod>2019-02-11T09:28:48.908Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -319,14 +320,6 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2012/08/13/learning-ios-notes-ten/</loc>
-        <lastmod>2019-02-11T09:28:48.906Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://iiiyu.com/2013/03/01/learning-ios-notes-sixteen/</loc>
         <lastmod>2019-02-11T09:28:48.906Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -335,8 +328,8 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2013/03/11/learning-ios-notes-seventeen/</loc>
-        <lastmod>2019-02-11T09:28:48.905Z</lastmod>
+        <loc>https://iiiyu.com/2012/08/13/learning-ios-notes-ten/</loc>
+        <lastmod>2019-02-11T09:28:48.906Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -344,6 +337,14 @@
 
     <url>
         <loc>https://iiiyu.com/2012/05/06/learning-ios-notes-seven/</loc>
+        <lastmod>2019-02-11T09:28:48.905Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://iiiyu.com/2013/03/11/learning-ios-notes-seventeen/</loc>
         <lastmod>2019-02-11T09:28:48.905Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -391,7 +392,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2012/03/21/learning-ios-notes-four/</loc>
+        <loc>https://iiiyu.com/2012/04/03/learning-ios-notes-five/</loc>
         <lastmod>2019-02-11T09:28:48.902Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -399,7 +400,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2012/04/03/learning-ios-notes-five/</loc>
+        <loc>https://iiiyu.com/2012/03/21/learning-ios-notes-four/</loc>
         <lastmod>2019-02-11T09:28:48.902Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -423,7 +424,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2012/07/07/learning-ios-notes-eight/</loc>
+        <loc>https://iiiyu.com/2013/03/29/learning-ios-notes-eighteen/</loc>
         <lastmod>2019-02-11T09:28:48.900Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -431,7 +432,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2013/03/29/learning-ios-notes-eighteen/</loc>
+        <loc>https://iiiyu.com/2012/07/07/learning-ios-notes-eight/</loc>
         <lastmod>2019-02-11T09:28:48.900Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -495,7 +496,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2012/02/07/how-to-install-octopress-on-heroku/</loc>
+        <loc>https://iiiyu.com/2012/11/18/excellent-design-vs-baddesign/</loc>
         <lastmod>2019-02-11T09:28:48.895Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -503,7 +504,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2012/11/18/excellent-design-vs-baddesign/</loc>
+        <loc>https://iiiyu.com/2012/02/07/how-to-install-octopress-on-heroku/</loc>
         <lastmod>2019-02-11T09:28:48.895Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -599,7 +600,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2017/01/20/2017-world-theory-of-evolution/</loc>
+        <loc>https://iiiyu.com/2019/01/25/A-Product-Design-About-E-cigarette/</loc>
         <lastmod>2019-02-11T09:28:48.887Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -607,7 +608,7 @@
     </url>
 
     <url>
-        <loc>https://iiiyu.com/2019/01/25/A-Product-Design-About-E-cigarette/</loc>
+        <loc>https://iiiyu.com/2017/01/20/2017-world-theory-of-evolution/</loc>
         <lastmod>2019-02-11T09:28:48.887Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

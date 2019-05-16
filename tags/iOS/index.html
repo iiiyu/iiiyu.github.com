@@ -1,1361 +1,1642 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.6 -->
-    <script>
-        window.materialVersion = "1.5.6"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0',
-            '1.5.2',
-            '1.5.5'
-        ]
-    </script>
+<title>标签: iOS - 萧宸宇</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
 
 
+    <meta name="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+<meta name="keywords" content="iOS,Mac,OS X,产品经理,产品,App,App,Apple,Android">
+<meta property="og:type" content="website">
+<meta property="og:title" content="萧宸宇">
+<meta property="og:url" content="https://iiiyu.com/tags/iOS/index.html">
+<meta property="og:site_name" content="萧宸宇">
+<meta property="og:description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://iiiyu.com/images/og_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="萧宸宇">
+<meta name="twitter:description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
+<meta name="twitter:image" content="https://iiiyu.com/images/og_image.png">
 
 
 
-    <link rel="dns-prefetch" href="https://iiiyu.disqus.com"/>
 
 
+<link rel="alternative" href="/atom.xml" title="萧宸宇" type="application/atom+xml">
 
-    <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
 
 
+<link rel="icon" href="/images/favicon.svg">
 
-    <link rel="dns-prefetch" href="https://lib.baomitu.com"/>
 
-
-
-
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Title -->
-    
-    <title>
-        
-            标签: iOS | 
-        
-        萧宸宇
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" href="/img/favicon.png">
-
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-    <meta name="keywords" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-    <meta name="theme-color" content="#0097A7">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
-  
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
-
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <style>
-        @font-face {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 300;
-            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
-            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
-        }
-
-        @font-face {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: regular;
-            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
-            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
-        }
-
-        @font-face {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 500;
-            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
-            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
-        }
-    </style>
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-
-
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","https://cdn.bootcss.com/jquery/2.2.1/jquery.js", true)</script>
-    
-
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="萧宸宇">
-    <meta name="msapplication-starturl" content="https://iiiyu.com/tags/iOS/">
-    <meta name="msapplication-navbutton-color" content="#0097A7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="萧宸宇">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-        
-            <link rel=alternate type="application/atom+xml" href="atom.xml">
-        
-    
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://iiiyu.com/tags/iOS/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: iOS | 萧宸宇">
-    <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="iOS Cocoa OSX 如果不能成为拯救世界的神 那就堕落到征服世界的魔吧 产品 产品原型 产品设计">
-    
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="https://iiiyu.com/tags/iOS/index.html" />
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
 
 
     
-
-    <!-- Analytics -->
     
-        <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-29764460-1', 'auto');ga('send', 'pageview');
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-29764460-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-29764460-1');
 </script>
+
+
+    
     
     
     
 
-    <!-- Custom Head -->
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
     
 
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
 </head>
-
-
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="萧宸宇" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
                 
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
+                <a class="navbar-item" href="/">首页</a>
+                
+                <a class="navbar-item" href="/archives">归档</a>
+                
+                <a class="navbar-item" href="/tags">标签</a>
+                
+                <a class="navbar-item" href="/about-me">关于</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
                     
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span id="MD-burger-id" class="MD-burger-layer"></span>
-                        </button>
                     
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/01/19/CoreData-VS-Realm/">CoreData VS Realm （2016-02-23更新）</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文具有强烈的个人感情色彩,如有观看不适,请尽快关闭. 本文仅作为个人学习记录使用,也欢迎在许可协议范围内转载或使用,请尊重版权并且保留原文链接,谢谢您的理解合作. 如果您觉得本站对您能有帮助,您可以使用RSS方式订阅本站,这样您将能在第一时间获取本站信息.
-碎碎念OhMyStar 2 也进行了一段时日，我把持久化的方式从CoreData 换到了 Realm。有些感悟，顺手就记录一下吧。以下评论都是自己很主观的感受，无实际测试数据支持。
-论 iOS 的持久化iOS 持久化其实也没多少选择， 高端一点CoreData、Realm、FMDB、KV类(LevelDB等)。低端一些直接一个 NSArray 就写成 Plist 也能持久化下来。
-在网络环境越来越快的当下和大部分应用数据都可能是网络应用，如果业务逻辑并不复杂，其实极端一点就只用写到 JSON 转 Object 就好了。而且一堆这样好用的封装，远有Mantle 近有YYModel。
-所以需要持久化的时候，我觉的可以慎重的评估一下需求。想明白了，后面可以节省很多事情。
-本文章主要对比 Realm 和 CoreData，其他的就不涉及了。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/01/19/CoreData-VS-Realm/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>1月 19, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2014/12/26/learning-ios-notes-thirty-six/">iOS 学习笔记 (36)  ReactiveCocoa 用 RACSignal 替代 Delegate</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文仅作为个人学习记录使用,也欢迎在许可协议范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用RSS方式订阅本站,这样您将能在第一时间获取本站信息.
-开篇扯淡最近又在看  ReactiveCocoa 了（下面用 RAC 来替代 ReactiveCocoa）。虽然依然是 hello world 级别。但是 hello world 也是可以分级别的。这次自我感觉是一个偏向中级的 hello world。
-我们先来张图：
-
-在 RAC 的文档和一些介绍 RAC 的 Keynote 资料里面我们可以看到说 RACSignal 可以来替代 Delegate、 Block Callbacks、Target Action、KVO、Notifications。
-但是貌似没有一种 hello world 的方式来进行说明如何替代的。
-插嘴:在中文 blog 里面见过几个写 RAC 的比较好哒。一个是limboy大大的几篇深入浅出令人叹为观止，李忠大大不但研究透彻了然后还结合自己的实战经验写成很好的文章来分享。 另一个是sunnyxx的Reactive Cocoa Tutorial系列这个系列比较偏向研究 RAC 是如何实现和工作的。
-我这个人比较笨，最喜欢写 hello world。那就找时间一个一个来写呗。
-写之前 Google 了一下。所以以下内容大量参考:Replacing the Objective-C “Delegate Pattern” with ReactiveCocoa。能看原文就去看看。然后忽略掉以下的 hello world 就好了。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2014/12/26/learning-ios-notes-thirty-six/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>12月 26, 2014</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2014/04/08/learning-ios-notes-thirty-five/">iOS笔记(35) 格志周年系列之夏令时(三) 临时花絮</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文仅作为个人学习记录使用,也欢迎在许可协议范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用RSS方式订阅本站,这样您将能在第一时间获取本站信息.
-开篇扯淡说曹操，曹操到。嘛当，还说总结一下时间的问题。这不blog这个系列没有写完。又爆了出一个时间相关的Bug。我只能说编程路茫茫，吾将上下求索。这次就着热乎着，来说是一个遇到了什么问题。
-遇到的问题有日本用户反馈，新版本更新以后，他日历上的时间全部乱了。而且无法写入日记。经过与用户沟通（感谢喵神onevcat的日文人肉翻译）分析得到用户使用和历（日本日历）。然后debug进去果然日期全部乱了。跟进去debug了一番，发现是之前解决夏令时的函数只考虑了公历！！！而iOS系统默认有三种日历。公历、和历、佛历。又一次无情的证明了我是一个天朝土包子。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2014/04/08/learning-ios-notes-thirty-five/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>4月 08, 2014</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2014/03/19/learning-ios-notes-thirty-four/">iOS笔记(34) 格志周年系列之夏令时(二)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文仅作为个人学习记录使用,也欢迎在许可协议范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用RSS方式订阅本站,这样您将能在第一时间获取本站信息.
-开篇扯淡恩，两月没更新blog，hexo都出来新主题来着。其实昨天为了找个背景图找了一小时我会随便乱说。就是为了找一个配合网站标题的背景图。其实hexo默认的就蛮好了，但是为了显示那么一点点与众不同还是替换了一下。
-扯淡结束，接上一篇格志周年系列之夏令时(一)
-第一阶段Bug上次说过一个中国高富帅用户发Email来说，他去泰国旅游的时候，日记都不见了。
-其实不是日记不见了，日记都好好的躺在sqlite文件里面。而是查询不出来了。日记的保存是用了一个函数去获得了每天的00:00:00. 然后作为唯一标识来区别和查询。
-那日期出了啥问题？
-我们来快速的分析一下
-调用的是
-12345678- (NSDate *) dateAtStartOfDay&#123;	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];	components.hour = 0;	components.minute = 0;	components.second = 0;	return [CURRENT_CALENDAR dateFromComponents:components];&#125;
-里面有两个宏
-12#define DATE_COMPONENTS (NSYearCalendarUnit| NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekCalendarUnit |  NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit)#define CURRENT_CALENDAR [NSCalendar currentCalendar]
-假设你使用过Cocoa时间这些类的话能很容易的看出。dateAtStartOfDay函数就是把你持有的date以当前日历为基础，其他不改，小时，分钟，秒钟设置都为0。这样就能得到一个基于当前日历下的date这一天的00:00:00。
-简单看上去没有什么问题，回到高富帅的问题。他出国玩一圈咋时间就变了呢？答案是[NSCalendar currentCalendar]改变了。NSCalendar的改变使得dateAtStartOfDay返回的时间也变了。debug到这一步才发觉靠当初为什么没有想到有时区的这个问题。
-自己给自己找一个理由就是到目前为止，我只用过大天朝的+8时间。潜意识里面根本没有说换一个时区这样的概念。(后来某一天我翻了本C语言的书第一章就说了国际化时间的问题，再后来weibo上大家都纷纷表示时间是编程里面一个基础点而且做好不容易，只能说我还是太菜太年轻了。这些是后话了)
-说道这里那就开始科普一下地球上时间的问题
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2014/03/19/learning-ios-notes-thirty-four/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>3月 19, 2014</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2014/03/18/learning-ios-notes-thirty-three/">iOS笔记(33) 格志周年系列之夏令时(一)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文仅作为个人学习记录使用,也欢迎在许可协议范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用RSS方式订阅本站,这样您将能在第一时间获取本站信息.
-开篇扯淡两月没写blog，没羞没皮了。以后作息规律一些，blog更新还是频繁一些。格志在2014年2月11日就整整上线一周年了。2013一年做格志，由于自己的技术实在比较菜。导致从上线的第一天起，整个团队跟着一直打补丁。小的坑就不说了，大的坑有两，一个iCloud + Core Data世界性难题。一个是全球时间问题。这篇blog就用来专门记下时间的坑。中间还有个插曲——格志在三月上线了2.0的全新专门为iOS 7设计的版本。时间问题在去年10月份改完以为对了就没有改过。结果3月9号是3月的第二个周日，美国地区进入夏令时。格志中又再次发生了时间问题，导致日记显示不全。之前开会说过放错不可怕，可怕的是放同样的错误。再次放错以后我都呆住了。那可是我写过测试用例的啊。结果当时一run测试就挂掉了。瞬间脑子蒙掉。然后上周通宵了一天，基本每天到3点把世界时间问题给彻底搞定。（希望是彻底）所以趁着我现在还有印象，记录一下。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2014/03/18/learning-ios-notes-thirty-three/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>3月 18, 2014</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2013/12/25/learning-ios-notes-thirty-two/">iOS笔记(32) UbiquityStoreManager 学习笔记1</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文仅作为个人学习记录使用,也欢迎在许可协议范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用RSS方式订阅本站,这样您将能在第一时间获取本站信息.
-开篇扯淡现在都是进入互联网时代，一个互联网的App数据肯定是存在互联网上的。到处都是云，到处都是服务器。如果数据是存储在云端or服务器端。每次数据的读取和修改直接作用于服务器。这样不管你用多少设备，多少平台。数据都能保证是唯一的。但是还有些App需要一些更好的性能和效果的时候往往等不起网络的数据传来传去。这时候需要一些折中的办法来解决这些问题。iCloud就是Apple给出的解决方案。就普通用户来看，iCloud应该是在Apple系中的最优选择。但是从开发者的角度来看iCloud就是个无穷无尽的深渊。
-全球有很多开发者致力开发第三方库以便让iCloud能被使用。
-UbiquityStoreManager就是其中之一。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2013/12/25/learning-ios-notes-thirty-two/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>12月 25, 2013</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2013/12/19/learning-ios-notes-thirty-one/">iOS笔记(31) CocoaPods 手把手五分钟教你制作自己的podspec文件</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文仅作为个人记录使用，也欢迎在许可协议范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用RSS方式订阅本站，这样您将能在第一时间获取本站信息。
-##开篇扯淡圣诞渐进，各种App都在黑五一波冰点。可以遇见的是12月25号前也会有一大波来临。但是！！！今年买软件貌似已经花了很多钱了。而且，也没有几个想入的了。所以就忍忍吧。
-然后，做个宣传啊。我们国际化大厂Sumi的App Grid Diary在紧锣密鼓的开发2.0. 完全iOS7设计。各种给力。到时候希望能给大家带来一个好的App吧。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2013/12/19/learning-ios-notes-thirty-one/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>12月 19, 2013</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2013/12/02/learning-ios-notes-thirty/">iOS学习笔记(30) Core Data是如何保存的？</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文仅作为个人记录使用，也欢迎在许可协议范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用RSS方式订阅本站，这样您将能在第一时间获取本站信息。
-开场扯淡恩 一个月没有写一篇blog了。恩。就这样把。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2013/12/02/learning-ios-notes-thirty/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>12月 02, 2013</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2013/10/15/learning-ios-notes-twenty-nine/">iOS学习笔记(29) 爱不释手的ReactiveCocoa之UIButton</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            开场扯淡ReactiveCocoa的迭代速度相当快，一群富有才华和激情的人们在不断的进化ReactiveCocoa。欣欣向荣的景象啊。我这种hello world级别的也就只能使用他们的劳动成果了。上篇blog的时候我还在用1.9.x的版本 现在我已经全面转向2.x了。值得注意的是霓虹友人提交的cocoapods上ReactiveCocoa 2.1 版本我无法编译通过。目前我使用的还是2.0的版本。
-介于一个月没有更新blog的速度，这次来写少一点的内容。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2013/10/15/learning-ios-notes-twenty-nine/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>10月 15, 2013</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2013/09/11/learning-ios-notes-twenty-eight/">iOS学习笔记(28) ReactiveCocoa 迎接下一个更加美好的世界（2013-10-13 update 2.0）</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            扯淡习惯了，每次再写技术的东西的时候总要唠叨几句。本来唠叨的东西我应该会写成另外的blog。不过每次给自己下了一个底线要少少的写这些唠叨的话语。原因一是觉得我爱唠叨的话语可能会导致blog被墙。原因之二我不希望我变成一个IT评论家。
-对了,我发现我还是挺爱挖坑的。目前有两坑没有填完。一个是Core Data系列。一个是iCloud系列。两个系列我都只写了一个Hello World级别并没有再深入的继续写。恩，要抓紧了。其实ReactiveCocoa这个我觉得也可以作为一个系列来写。不过想了想我这种Hello World的水平。也写不出这么多来。就暂时写一篇好了。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2013/09/11/learning-ios-notes-twenty-eight/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="萧宸宇's avatar">
-            </div>
-            <div>
-                <strong>萧宸宇</strong>
-                <span>9月 11, 2013</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/tags/iOS/page/2/">2</a><a class="page-number" href="/tags/iOS/page/3/">3</a><a class="page-number" href="/tags/iOS/page/4/">4</a><a class="extend next" rel="next" href="/tags/iOS/page/2/"><button aria-label="Next page" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 52 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="萧宸宇's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        yu@ohmyapps.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="mailto: yu@ohmyapps.com" target="_blank" title="Email Me">
+                    <a class="navbar-item" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
                         
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        <i class="fab fa-linkedin"></i>
                         
-                        Email Me
                     </a>
-                </li>
+                    
+                    <a class="navbar-item" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
+                        
+                        <i class="fab fa-facebook"></i>
+                        
+                    </a>
+                    
+                    <a class="navbar-item" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
+                        
+                        <i class="fab fa-twitter"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">iOS</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2016/01/19/CoreData-VS-Realm/"><i class="fas fa-angle-double-right"></i>CoreData VS Realm （2016-02-23更新）</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2016-01-18T21:22:16.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2016 1月 19日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.889Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    18 分钟 读完 (大约 2703 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>本文具有强烈的个人感情色彩,如有观看不适,请尽快关闭. 本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW" target="_blank" rel="noopener">许可协议</a>范围内转载或使用,请尊重版权并且保留原文链接,谢谢您的理解合作. 如果您觉得本站对您能有帮助,您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>OhMyStar 2 也进行了一段时日，我把持久化的方式从CoreData 换到了 Realm。有些感悟，顺手就记录一下吧。以下评论都是自己很主观的感受，无实际测试数据支持。</p>
+<h2 id="论-iOS-的持久化"><a href="#论-iOS-的持久化" class="headerlink" title="论 iOS 的持久化"></a>论 iOS 的持久化</h2><p>iOS 持久化其实也没多少选择， 高端一点CoreData、Realm、FMDB、KV类(LevelDB等)。低端一些直接一个 NSArray 就写成 Plist 也能持久化下来。</p>
+<p>在网络环境越来越快的当下和大部分应用数据都可能是网络应用，如果业务逻辑并不复杂，其实极端一点就只用写到 JSON 转 Object 就好了。而且一堆这样好用的封装，远有<a href="https://github.com/Mantle/Mantle" target="_blank" rel="noopener">Mantle</a> 近有<a href="https://github.com/ibireme/YYModel" target="_blank" rel="noopener">YYModel</a>。</p>
+<p>所以需要持久化的时候，我觉的可以慎重的评估一下需求。想明白了，后面可以节省很多事情。</p>
+<p>本文章主要对比 Realm 和 CoreData，其他的就不涉及了。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/Mac/">Mac</a>,&nbsp;<a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2016/01/19/CoreData-VS-Realm/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2014/12/26/learning-ios-notes-thirty-six/"><i class="fas fa-angle-double-right"></i>iOS 学习笔记 (36)  ReactiveCocoa 用 RACSignal 替代 Delegate</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2014-12-26T05:36:31.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2014 12月 26日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.909Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    10 分钟 读完 (大约 1498 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/4.0/deed.zh_TW" target="_blank" rel="noopener">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="开篇扯淡"><a href="#开篇扯淡" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>最近又在看  ReactiveCocoa 了（下面用 RAC 来替代 ReactiveCocoa）。虽然依然是 hello world 级别。但是 hello world 也是可以分级别的。这次自我感觉是一个偏向中级的 hello world。</p>
+<p>我们先来张图：</p>
+<p><img src="http://ww4.sinaimg.cn/large/a6d3226bgw1enpq6o5sz5j20ai09uglz.jpg" alt></p>
+<p>在 RAC 的文档和一些介绍 RAC 的 Keynote 资料里面我们可以看到说 RACSignal 可以来替代 Delegate、 Block Callbacks、Target Action、KVO、Notifications。</p>
+<p>但是貌似没有一种 hello world 的方式来进行说明如何替代的。</p>
+<p>插嘴:在中文 blog 里面见过几个写 RAC 的比较好哒。一个是<a href="http://limboy.me" target="_blank" rel="noopener">limboy大大</a>的几篇深入浅出令人叹为观止，李忠大大不但研究透彻了然后还结合自己的实战经验写成很好的文章来分享。 另一个是<a href="http://blog.sunnyxx.com/tags/Reactive%20Cocoa%20Tutorial/" target="_blank" rel="noopener">sunnyxx的Reactive Cocoa Tutorial系列</a>这个系列比较偏向研究 RAC 是如何实现和工作的。</p>
+<p>我这个人比较笨，最喜欢写 hello world。那就找时间一个一个来写呗。</p>
+<p>写之前 Google 了一下。所以以下内容大量参考:<a href="http://spin.atomicobject.com/2014/02/03/objective-c-delegate-pattern/" target="_blank" rel="noopener">Replacing the Objective-C “Delegate Pattern” with ReactiveCocoa</a>。能看原文就去看看。然后忽略掉以下的 hello world 就好了。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2014/12/26/learning-ios-notes-thirty-six/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2014/04/08/learning-ios-notes-thirty-five/"><i class="fas fa-angle-double-right"></i>iOS笔记(35) 格志周年系列之夏令时(三) 临时花絮</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2014-04-08T10:49:48.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2014 4月 8日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.907Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    7 分钟 读完 (大约 995 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="noopener">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="开篇扯淡"><a href="#开篇扯淡" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>说曹操，曹操到。嘛当，还说总结一下时间的问题。这不blog这个系列没有写完。又爆了出一个时间相关的Bug。我只能说编程路茫茫，吾将上下求索。这次就着热乎着，来说是一个遇到了什么问题。</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>有日本用户反馈，新版本更新以后，他日历上的时间全部乱了。而且无法写入日记。经过与用户沟通（感谢喵神onevcat的日文人肉翻译）分析得到用户使用和历（日本日历）。然后debug进去果然日期全部乱了。跟进去debug了一番，发现是之前解决夏令时的函数只考虑了公历！！！而iOS系统默认有三种日历。公历、和历、佛历。又一次无情的证明了我是一个天朝土包子。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2014/04/08/learning-ios-notes-thirty-five/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2014/03/19/learning-ios-notes-thirty-four/"><i class="fas fa-angle-double-right"></i>iOS笔记(34) 格志周年系列之夏令时(二)</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2014-03-19T07:37:48.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2014 3月 19日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.908Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    11 分钟 读完 (大约 1597 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="noopener">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="开篇扯淡"><a href="#开篇扯淡" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>恩，两月没更新blog，hexo都出来新主题来着。其实昨天为了找个背景图找了一小时我会随便乱说。就是为了找一个配合网站标题的背景图。其实hexo默认的就蛮好了，但是为了显示那么一点点与众不同还是替换了一下。</p>
+<p>扯淡结束，接上一篇<a href="https://iiiyu.com/2014/03/18/learning-ios-notes-thirty-three/">格志周年系列之夏令时(一)</a></p>
+<h2 id="第一阶段Bug"><a href="#第一阶段Bug" class="headerlink" title="第一阶段Bug"></a>第一阶段Bug</h2><p>上次说过一个中国高富帅用户发Email来说，他去泰国旅游的时候，日记都不见了。</p>
+<p>其实不是日记不见了，日记都好好的躺在sqlite文件里面。而是查询不出来了。日记的保存是用了一个函数去获得了每天的00:00:00. 然后作为唯一标识来区别和查询。</p>
+<p>那日期出了啥问题？</p>
+<p>我们来快速的分析一下</p>
+<p>调用的是</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (NSDate *) dateAtStartOfDay</span><br><span class="line">&#123;</span><br><span class="line">	NSDateComponents *<span class="built_in">components</span> = [CURRENT_CALENDAR <span class="built_in">components</span>:DATE_COMPONENTS fromDate:self];</span><br><span class="line">	<span class="built_in">components</span>.hour = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">components</span>.minute = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">components</span>.<span class="built_in">second</span> = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">return</span> [CURRENT_CALENDAR dateFromComponents:<span class="built_in">components</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>里面有两个宏</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define DATE_COMPONENTS (NSYearCalendarUnit| <span class="type">NSMonthCalendarUnit</span> | <span class="type">NSDayCalendarUnit</span> | <span class="type">NSWeekCalendarUnit</span> |  <span class="type">NSHourCalendarUnit</span> | <span class="type">NSMinuteCalendarUnit</span> | <span class="type">NSSecondCalendarUnit</span> | <span class="type">NSWeekdayCalendarUnit</span> | <span class="type">NSWeekdayOrdinalCalendarUnit</span>)</span><br><span class="line">#define CURRENT_CALENDAR [NSCalendar currentCalendar]</span><br></pre></td></tr></table></figure>
+<p>假设你使用过Cocoa时间这些类的话能很容易的看出。dateAtStartOfDay函数就是把你持有的date以当前日历为基础，其他不改，小时，分钟，秒钟设置都为0。这样就能得到一个基于当前日历下的date这一天的00:00:00。</p>
+<p>简单看上去没有什么问题，回到高富帅的问题。他出国玩一圈咋时间就变了呢？答案是[NSCalendar currentCalendar]改变了。NSCalendar的改变使得dateAtStartOfDay返回的时间也变了。debug到这一步才发觉靠当初为什么没有想到有时区的这个问题。</p>
+<p>自己给自己找一个理由就是到目前为止，我只用过大天朝的+8时间。潜意识里面根本没有说换一个时区这样的概念。(后来某一天我翻了本C语言的书第一章就说了国际化时间的问题，再后来weibo上大家都纷纷表示时间是编程里面一个基础点而且做好不容易，只能说我还是太菜太年轻了。这些是后话了)</p>
+<p>说道这里那就开始科普一下地球上时间的问题</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2014/03/19/learning-ios-notes-thirty-four/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2014/03/18/learning-ios-notes-thirty-three/"><i class="fas fa-angle-double-right"></i>iOS笔记(33) 格志周年系列之夏令时(一)</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2014-03-18T08:23:35.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2014 3月 18日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.909Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    6 分钟 读完 (大约 870 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="noopener">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="开篇扯淡"><a href="#开篇扯淡" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>两月没写blog，没羞没皮了。以后作息规律一些，blog更新还是频繁一些。格志在2014年2月11日就整整上线一周年了。2013一年做格志，由于自己的技术实在比较菜。导致从上线的第一天起，整个团队跟着一直打补丁。小的坑就不说了，大的坑有两，一个iCloud + Core Data世界性难题。一个是全球时间问题。这篇blog就用来专门记下时间的坑。中间还有个插曲——格志在三月上线了2.0的全新专门为iOS 7设计的版本。时间问题在去年10月份改完以为对了就没有改过。结果3月9号是3月的第二个周日，美国地区进入夏令时。格志中又再次发生了时间问题，导致日记显示不全。之前开会说过放错不可怕，可怕的是放同样的错误。再次放错以后我都呆住了。那可是我写过测试用例的啊。结果当时一run测试就挂掉了。瞬间脑子蒙掉。然后上周通宵了一天，基本每天到3点把世界时间问题给彻底搞定。（希望是彻底）所以趁着我现在还有印象，记录一下。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2014/03/18/learning-ios-notes-thirty-three/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2013/12/25/learning-ios-notes-thirty-two/"><i class="fas fa-angle-double-right"></i>iOS笔记(32) UbiquityStoreManager 学习笔记1</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2013-12-25T10:22:33.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2013 12月 25日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.910Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    6 分钟 读完 (大约 864 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>本文仅作为个人学习记录使用,也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="noopener">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助,您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站,这样您将能在第一时间获取本站信息.</p>
+<h2 id="开篇扯淡"><a href="#开篇扯淡" class="headerlink" title="开篇扯淡"></a>开篇扯淡</h2><p>现在都是进入互联网时代，一个互联网的App数据肯定是存在互联网上的。到处都是云，到处都是服务器。如果数据是存储在云端or服务器端。每次数据的读取和修改直接作用于服务器。这样不管你用多少设备，多少平台。数据都能保证是唯一的。但是还有些App需要一些更好的性能和效果的时候往往等不起网络的数据传来传去。这时候需要一些折中的办法来解决这些问题。iCloud就是Apple给出的解决方案。就普通用户来看，iCloud应该是在Apple系中的最优选择。但是从开发者的角度来看iCloud就是个无穷无尽的深渊。</p>
+<p>全球有很多开发者致力开发第三方库以便让iCloud能被使用。</p>
+<p>UbiquityStoreManager就是其中之一。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2013/12/25/learning-ios-notes-thirty-two/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2013/12/19/learning-ios-notes-thirty-one/"><i class="fas fa-angle-double-right"></i>iOS笔记(31) CocoaPods 手把手五分钟教你制作自己的podspec文件</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2013-12-19T07:11:16.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2013 12月 19日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.908Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    9 分钟 读完 (大约 1423 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="noopener">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<p>##开篇扯淡<br>圣诞渐进，各种App都在黑五一波冰点。可以遇见的是12月25号前也会有一大波来临。但是！！！今年买软件貌似已经花了很多钱了。而且，也没有几个想入的了。所以就忍忍吧。</p>
+<p>然后，做个宣传啊。我们国际化大厂Sumi的App Grid Diary在紧锣密鼓的开发2.0. 完全iOS7设计。各种给力。到时候希望能给大家带来一个好的App吧。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2013/12/19/learning-ios-notes-thirty-one/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2013/12/02/learning-ios-notes-thirty/"><i class="fas fa-angle-double-right"></i>iOS学习笔记(30) Core Data是如何保存的？</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2013-12-02T05:33:18.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2013 12月 2日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.910Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    3 分钟 读完 (大约 497 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>本文仅作为个人记录使用，也欢迎在<a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank" rel="noopener">许可协议</a>范围内转载或使用，请尊重版权并且保留原文链接，谢谢您的理解合作。如果您觉得本站对您能有帮助，您可以使用<a href="https://iiiyu.com/atom.xml">RSS</a>方式订阅本站，这样您将能在第一时间获取本站信息。</p>
+<h2 id="开场扯淡"><a href="#开场扯淡" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>恩 一个月没有写一篇blog了。恩。就这样把。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2013/12/02/learning-ios-notes-thirty/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2013/10/15/learning-ios-notes-twenty-nine/"><i class="fas fa-angle-double-right"></i>iOS学习笔记(29) 爱不释手的ReactiveCocoa之UIButton</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2013-10-15T08:53:11.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2013 10月 15日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.913Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    5 分钟 读完 (大约 738 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2 id="开场扯淡"><a href="#开场扯淡" class="headerlink" title="开场扯淡"></a>开场扯淡</h2><p>ReactiveCocoa的迭代速度相当快，一群富有才华和激情的人们在不断的进化ReactiveCocoa。欣欣向荣的景象啊。我这种hello world级别的也就只能使用他们的劳动成果了。上篇blog的时候我还在用1.9.x的版本 现在我已经全面转向2.x了。值得注意的是霓虹友人提交的cocoapods上ReactiveCocoa 2.1 版本我无法编译通过。目前我使用的还是2.0的版本。</p>
+<p>介于一个月没有更新blog的速度，这次来写少一点的内容。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2013/10/15/learning-ios-notes-twenty-nine/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2013/09/11/learning-ios-notes-twenty-eight/"><i class="fas fa-angle-double-right"></i>iOS学习笔记(28) ReactiveCocoa 迎接下一个更加美好的世界（2013-10-13 update 2.0）</a>
+            
+        </h1>
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2013-09-11T08:45:13.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2013 9月 11日</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-02-11T09:28:48.912Z"><i class="far fa-calendar-check">&nbsp;</i>2019 2月 11日</time>
+                
+                
+                
+                <span class="level-item has-text-grey">
+                    <i class="far fa-clock"></i>&nbsp;
+                    
+                    
+                    21 分钟 读完 (大约 3096 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2 id="扯淡"><a href="#扯淡" class="headerlink" title="扯淡"></a>扯淡</h2><p>习惯了，每次再写技术的东西的时候总要唠叨几句。本来唠叨的东西我应该会写成另外的blog。不过每次给自己下了一个底线要少少的写这些唠叨的话语。原因一是觉得我爱唠叨的话语可能会导致blog被墙。原因之二我不希望我变成一个IT评论家。</p>
+<p>对了,我发现我还是挺爱挖坑的。目前有两坑没有填完。一个是Core Data系列。一个是iCloud系列。两个系列我都只写了一个Hello World级别并没有再深入的继续写。恩，要抓紧了。其实ReactiveCocoa这个我觉得也可以作为一个系列来写。不过想了想我这种Hello World的水平。也写不出这么多来。就暂时写一篇好了。</p>
+        </div>
+        
+        
+        
+        <hr style="height:1px;margin:1rem 0">
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/iOS/">iOS</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2013/09/11/learning-ios-notes-twenty-eight/#more"><i class="fas fa-book-reader has-text-grey"></i>&nbsp;&nbsp;阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/tags/iOS/page/0/">上一页</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/tags/iOS/page/2/">下一页</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link is-current" href="/tags/iOS/">1</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/iOS/page/2/">2</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/iOS/page/3/">3</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/iOS/page/4/">4</a></li>
             
         </ul>
-    </li>
+    </nav>
+</div>
+</div>
+                
 
-    <!-- Homepage -->
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
     
-        <li id="sidebar-first-li">
-            <a href="/">
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level" style="margin-bottom:1rem">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-96x96 has-mb-6" src="https://www.gravatar.com/avatar/23f825ece6cc6745affca8c58c8c22cc?s=96" alt="萧宸宇">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        萧宸宇
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        屠勇恶龙
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Auckland - New Zealand</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level menu-list is-mobile" style="margin-bottom:1rem">
+            <div class="level-item has-text-centered is-marginless">
+                <a href="/archives/">
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        82
+                    </p>
+                </a>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <a href="/categories/">
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </a>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <a href="/tags/">
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        18
+                    </p>
+                </a>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://twitter.com/iyunsn" target="_blank">
+                <i class="fab fa-github"></i>&nbsp;&nbsp;关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/iiiyu">
                 
-                    <i class="material-icons sidebar-material-icons">home</i>
+                <i class="fab fa-github"></i>
                 
-                主页
             </a>
-        </li>
-        
-            <li class="divider"></li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Linkedin" href="https://www.linkedin.com/in/ewan-xiao-b887a2a8/">
                 
-                    <i class="material-icons sidebar-material-icons">inbox</i>
+                <i class="fab fa-linkedin"></i>
                 
-                    归档
-                <b class="caret"></b>
             </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/01/">一月 2015<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/12/">十二月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/10/">十月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/04/">四月 2014<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/03/">三月 2014<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2014/01/">一月 2014<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/12/">十二月 2013<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/10/">十月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/09/">九月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/08/">八月 2013<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/06/">六月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/05/">五月 2013<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/04/">四月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/03/">三月 2013<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/02/">二月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2013/01/">一月 2013<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/12/">十二月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/11/">十一月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/10/">十月 2012<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/09/">九月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/08/">八月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/07/">七月 2012<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/05/">五月 2012<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/04/">四月 2012<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/03/">三月 2012<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2012/02/">二月 2012<span class="sidebar_archives-count">9</span></a>
-            </ul>
-        </li>
-        
-            <li class="divider"></li>
-        
-    
-
-    <!-- Categories  -->
-    
-
-    <!-- Pages  -->
-    
-        <li>
-            <a href="/tags" title="标签云">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://www.facebook.com/iiiyu">
                 
-                    <i class="material-icons sidebar-material-icons">bookmark</i>
+                <i class="fab fa-facebook"></i>
                 
-                标签云
             </a>
-        </li>
-        
-    
-        <li>
-            <a href="/timeline" title="时间轴">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="https://twitter.com/iyunsn">
                 
-                    <i class="material-icons sidebar-material-icons">timeline</i>
+                <i class="fab fa-twitter"></i>
                 
-                时间轴
             </a>
-        </li>
-        
-    
-        <li>
-            <a href="/about-me" title="关于我">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/atom.xml">
                 
-                    <i class="material-icons sidebar-material-icons">person</i>
+                <i class="fas fa-rss"></i>
                 
-                关于我
             </a>
-        </li>
+            
+        </div>
         
-            <li class="divider"></li>
-        
-    
-
-    <!-- Article Number  -->
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-
-<!-- Theme Material -->
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
     </div>
+</div>
 
-    <!-- Sidebar Image -->
     
+        
 
-</aside>
+    
+        
 
-                    
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/iyunsn" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-
-    <!-- Google + -->
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-        <a href="https://github.com/iiiyu" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
-                <span class="visuallyhidden">Github</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-        <a href="https://space.bilibili.com/10492272/#!/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
-                <span class="visuallyhidden">Bilibili</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Telegram -->
-    
-
-    <!-- V2EX -->
-    
-        <a href="https://www.v2ex.com/member/iYu" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-v2ex">
-                <span class="visuallyhidden">V2EX</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Segmentfault -->
-    
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="http://www.memezhua.com" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">么么爪</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.memezhua.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
 </div>
 
 
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;萧宸宇
+    
+        
+<div class="card widget is-hidden-mobile">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Design/" style="font-size: 10px;">Design</a> <a href="/tags/Emacs/" style="font-size: 11.25px;">Emacs</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/PM/" style="font-size: 13.75px;">PM</a> <a href="/tags/Software/" style="font-size: 10px;">Software</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/just-talk/" style="font-size: 18.75px;">just-talk</a> <a href="/tags/read-book-notes/" style="font-size: 15px;">read book notes</a> <a href="/tags/产品思考/" style="font-size: 12.5px;">产品思考</a> <a href="/tags/产品汪/" style="font-size: 16.25px;">产品汪</a> <a href="/tags/写给18岁的自己/" style="font-size: 11.25px;">写给18岁的自己</a> <a href="/tags/徒步指南/" style="font-size: 10px;">徒步指南</a> <a href="/tags/新西兰/" style="font-size: 10px;">新西兰</a> <a href="/tags/新西兰徒步/" style="font-size: 10px;">新西兰徒步</a> <a href="/tags/新西兰徒步指北/" style="font-size: 10px;">新西兰徒步指北</a> <a href="/tags/新西兰徒步指南/" style="font-size: 10px;">新西兰徒步指南</a> <a href="/tags/胡思乱想/" style="font-size: 13.75px;">胡思乱想</a> <a href="/tags/随便瞎扯/" style="font-size: 17.5px;">随便瞎扯</a>
+    </div>
+</div>
+
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
             
-        </div>
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-16T23:46:19.000Z">2019 2月 17日</time></div>
+                    <a href="/2019/02/17/write-to-18-years-old-me-in-2019/" class="has-link-black-ter is-size-6">在2019写给18岁的自己</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-25T09:20:49.000Z">2019 1月 25日</time></div>
+                    <a href="/2019/01/25/A-Product-Design-About-E-cigarette/" class="has-link-black-ter is-size-6">一个关于电子烟的互联网生意设计</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-26T12:00:58.000Z">2018 8月 27日</time></div>
+                    <a href="/2018/08/27/New-Zealand-Hiking-Guide-No-2-Shakespear-Regional-Park/" class="has-link-black-ter is-size-6">新西兰徒步指北 - 奥克兰 - Shakespear Regional Park</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T11:41:28.000Z">2018 8月 15日</time></div>
+                    <a href="/2018/08/15/New-Zealand-Hiking-Guide-No-1-Maraetai-Coastal/" class="has-link-black-ter is-size-6">新西兰徒步指北 - 奥克兰 Maraetai Coastal</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-11-07T12:41:16.000Z">2017 11月 8日</time></div>
+                    <a href="/2017/11/08/Product-Q-A-with-OhMyStar2/" class="has-link-black-ter is-size-6">OhMyStar2 产品方面的自问自答</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
 
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Design/">
+                        <span class="tag">Design</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Emacs/">
+                        <span class="tag">Emacs</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Mac/">
+                        <span class="tag">Mac</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/PM/">
+                        <span class="tag">PM</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software/">
+                        <span class="tag">Software</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/iOS/">
+                        <span class="tag">iOS</span>
+                        <span class="tag is-grey">39</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/just-talk/">
+                        <span class="tag">just-talk</span>
+                        <span class="tag is-grey">16</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/read-book-notes/">
+                        <span class="tag">read book notes</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/产品思考/">
+                        <span class="tag">产品思考</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/产品汪/">
+                        <span class="tag">产品汪</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/写给18岁的自己/">
+                        <span class="tag">写给18岁的自己</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/徒步指南/">
+                        <span class="tag">徒步指南</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/新西兰/">
+                        <span class="tag">新西兰</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/新西兰徒步/">
+                        <span class="tag">新西兰徒步</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/新西兰徒步指北/">
+                        <span class="tag">新西兰徒步指北</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/新西兰徒步指南/">
+                        <span class="tag">新西兰徒步指南</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/胡思乱想/">
+                        <span class="tag">胡思乱想</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/随便瞎扯/">
+                        <span class="tag">随便瞎扯</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
             </div>
         </div>
+    </div>
+</div>
+        
+        </div>
     
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-16T23:46:19.000Z">2019 2月 17日</time></div>
+                    <a href="/2019/02/17/write-to-18-years-old-me-in-2019/" class="has-link-black-ter is-size-6">在2019写给18岁的自己</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-25T09:20:49.000Z">2019 1月 25日</time></div>
+                    <a href="/2019/01/25/A-Product-Design-About-E-cigarette/" class="has-link-black-ter is-size-6">一个关于电子烟的互联网生意设计</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-26T12:00:58.000Z">2018 8月 27日</time></div>
+                    <a href="/2018/08/27/New-Zealand-Hiking-Guide-No-2-Shakespear-Regional-Park/" class="has-link-black-ter is-size-6">新西兰徒步指北 - 奥克兰 - Shakespear Regional Park</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-08-15T11:41:28.000Z">2018 8月 15日</time></div>
+                    <a href="/2018/08/15/New-Zealand-Hiking-Guide-No-1-Maraetai-Coastal/" class="has-link-black-ter is-size-6">新西兰徒步指北 - 奥克兰 Maraetai Coastal</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-11-07T12:41:16.000Z">2017 11月 8日</time></div>
+                    <a href="/2017/11/08/Product-Q-A-with-OhMyStar2/" class="has-link-black-ter is-size-6">OhMyStar2 产品方面的自问自答</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Design/">
+                        <span class="tag">Design</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Emacs/">
+                        <span class="tag">Emacs</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Mac/">
+                        <span class="tag">Mac</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/PM/">
+                        <span class="tag">PM</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Software/">
+                        <span class="tag">Software</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/iOS/">
+                        <span class="tag">iOS</span>
+                        <span class="tag is-grey">39</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/just-talk/">
+                        <span class="tag">just-talk</span>
+                        <span class="tag is-grey">16</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/read-book-notes/">
+                        <span class="tag">read book notes</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/产品思考/">
+                        <span class="tag">产品思考</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/产品汪/">
+                        <span class="tag">产品汪</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/写给18岁的自己/">
+                        <span class="tag">写给18岁的自己</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/徒步指南/">
+                        <span class="tag">徒步指南</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/新西兰/">
+                        <span class="tag">新西兰</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/新西兰徒步/">
+                        <span class="tag">新西兰徒步</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/新西兰徒步指北/">
+                        <span class="tag">新西兰徒步指北</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/新西兰徒步指南/">
+                        <span class="tag">新西兰徒步指南</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/胡思乱想/">
+                        <span class="tag">胡思乱想</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/随便瞎扯/">
+                        <span class="tag">随便瞎扯</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="萧宸宇" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 萧宸宇&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
 </footer>
 
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
 
 
-    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
 
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
 
+    
+    
 
-    <script>lsloader.load("np_js","https://cdn.bootcss.com/nprogress/0.2.0/nprogress.js", true)</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-   <!-- 使用 DISQUS js 代码 -->
-
-
-
-
-
-
-<!-- UC Browser Compatible -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
 <script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Import prettify js  -->
-
-
-
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-
-    
-    
-</script>
-
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
         });
     });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
 </script>
 
-<!-- Custom Footer -->
 
-
-
-<script>
-    var copyrightNow = new Date().getFullYear();
-    var textContent = document.querySelector('span[year]')
-
-    copyrightSince = 2012;
-    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
-        textContent.textContent = copyrightNow
-    } else {
-        textContent.textContent = copyrightSince + ' - ' + copyrightNow
-    }
-
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
-            </div>
-        </body>
     
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
 </html>
